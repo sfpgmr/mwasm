@@ -10,8 +10,8 @@ this.Z = 0x3;
   (export "memory" (memory $memory))
   
   (func $test (result i32)
-    i32.const {this.X}
-    i32.const {this.Y}
+    i32.const @X
+    i32.const @Y
     i32.add
   )
 )

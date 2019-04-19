@@ -4,7 +4,7 @@
   "description": "wasmテキストフォーマットに定数ラベルを定義・利用できるようにする",
   "main": "index.js",
   "scripts": {
-    "test": "pegjs --trace -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/masm ./tests/test.wat -o ./test.wasm"
+    "test": "pegjs --trace -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./tests/test.wat -o ./test.wasm"
   },
   "repository": {
     "type": "git",
