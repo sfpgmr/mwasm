@@ -1,0 +1,18 @@
+;; code
+(export "test2" (func $test2))
+(func $test2 (result i32)
+  i32.const @X;; comment
+  i32.const {$ $.X + $.Y }
+  i32.add
+  {
+    // JSによるWASMソースコード生成
+    let instructions = '';
+    for(let i = 0;i < 4; ++ i ){
+      ++$.X; 
+      instructions += `
+i32.const ${$.X + $.Y}
+i32.add`;
+    }
+    return instructions;
+  }
+)
