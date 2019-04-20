@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+const mwasm = require('../index.js');
+mwasm();
