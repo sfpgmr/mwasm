@@ -1,6 +1,6 @@
 ;; code
-(export "test2" (func $test2))
-(func $test2 (result i32)
+(export "test3" (func $test2))
+(func $test3 (result i32)
   i32.const @X;; comment
   i32.const {$ $.X + $.Y }
   i32.add
@@ -16,6 +16,3 @@ i32.add`;
     return instructions;
   }
 )
-
-{@include './test_inc2.mwat'}
-

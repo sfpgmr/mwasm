@@ -1,19 +1,19 @@
-;; block
 {@
 $.X = 0x1;
 $.Y = 2;
 $.Z = 0x3;
 }
 
-;; code
 (module
-  (export "test" (func $test))
   (memory $memory 1)
   (export "memory" (memory $memory))
   {@include './test_inc.mwat'}
+{@if $.X < 1}
+  (export "test" (func $test))
   (func $test (result i32)
     i32.const @X;; comment
     i32.const {$ $.X + $.Y }
+    {@if $.Y}
     i32.add
     {
       // JSによるWASMソースコード生成
@@ -26,5 +26,14 @@ i32.add`;
       }
       return instructions;
     }
+    {@endif}
   )
+{@else}
+  (export "testa" (func $testa))
+  (func $testa (result i32)
+    i32.const @X;; comment
+    i32.const {$ $.X + $.Y }
+    i32.add
+  )
+{@endif}
 )
