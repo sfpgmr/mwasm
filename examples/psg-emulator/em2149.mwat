@@ -1,20 +1,65 @@
 {@
 
 // データオフセット
-const struct = 
+const dataStructure = 
 [
   ['@default,'u32'],
   ['voltbl',16 * 2]
   ['reg',32],
   ['out','i32'],
   'clk','rate','base_incr','quality','count'
-}];
+  [['count','volume','freq','edge','tmask','nmask'],3],
+  'mask',
+  'base_count',
+  'env_volume',
+  'env_ptr',
+  'env_face',
 
+  'env_continue',
+  'env_attack',
+  'env_alternate',
+  'env_hold',
+  'env_pause',
+  'env_reset',
 
-$.voltbl = 0;
-$.reg = $.voltbl + 32 * 2 * 4;
-$.out = $reg + 0x20 * 4;
-$.clk = $.out + 4;
+  'env_freq',
+  'env_count',
+
+  'noise_seed',
+  'noise_count',
+  'noise_freq',
+
+  'realstep',
+  'psgtime',
+  'psgstep',
+
+  'adr',
+  ['ch_out',3]
+];
+
+// データ構造のビルド
+const struct = {};
+let default = 'i32';
+
+function sizet(type){
+  let bits = type.slice(-2) | 0;
+  if(bits == 32) return 4;
+  return 8;
+}
+
+for(let data of dataStructure){
+  if(data instanceof Array){
+    if(data[0] == '@default'){
+      default = data[1]
+    } else {
+      struct[data[0]];
+    }
+  } else {
+
+  }
+
+}
+
 
 }
 
