@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "wasmテキストフォーマットにマクロ機能を追加するプリプロセッサ",
   "main": "index.js",
-  "bin":"bin/mwasm",
+  "bin": "bin/mwasm",
   "scripts": {
     "test": "pegjs -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./tests/test.mwat -o ./tests/test.wasm",
     "trace": "pegjs --trace -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./tests/test.mwat -o ./tests/test.wasm"
@@ -23,8 +23,9 @@
   "homepage": "https://github.com/sfpgmr/mwasm#readme",
   "devDependencies": {
     "pegjs": "^0.10.0",
-    "rollup-plugin-node-resolve": "^4.2.3",
-    "rollup-plugin-commonjs": "^9.3.4"
+    "rollup": "^1.10.1",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.3"
   },
   "dependencies": {
     "wabt": "^1.0.10"
