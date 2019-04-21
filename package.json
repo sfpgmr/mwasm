@@ -1,8 +1,9 @@
 {
   "name": "mwasm",
-  "version": "0.0.1",
-  "description": "wasmテキストフォーマットに定数ラベルを定義・利用できるようにする",
+  "version": "0.0.2",
+  "description": "wasmテキストフォーマットにマクロ機能を追加するプリプロセッサ",
   "main": "index.js",
+  "bin":"bin/mwasm",
   "scripts": {
     "test": "pegjs -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./tests/test.mwat -o ./tests/test.wasm",
     "trace": "pegjs --trace -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./tests/test.mwat -o ./tests/test.wasm"
@@ -26,7 +27,6 @@
     "rollup-plugin-commonjs": "^9.3.4"
   },
   "dependencies": {
-    "minimist": "^1.2.0",
     "wabt": "^1.0.10"
   }
 }
