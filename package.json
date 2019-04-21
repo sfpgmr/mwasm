@@ -5,6 +5,8 @@
   "main": "index.js",
   "bin": "bin/mwasm",
   "scripts": {
+    "build":
+    "pegjs -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c ",
     "test": "pegjs -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./tests/test.mwat -o ./tests/test.wasm",
     "trace": "pegjs --trace -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./tests/test.mwat -o ./tests/test.wasm"
   },
