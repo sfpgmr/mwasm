@@ -2694,7 +2694,6 @@ var index = async () => {
       preprocessTokens(tokens,baseName){
         const preprocessed = [];
         for(const token of tokens){
-          console.log(token.type);
           switch(token.type){
             case 'LineTerminator':
               preprocessed.push('\n');
@@ -2732,7 +2731,6 @@ var index = async () => {
               preprocessed.push(this.eval(token.code));
               break;
             case 'SourceInclude':
-              console.log(token.pathExpression);
               let src = this.evalExpression(token.pathExpression);
               token.baseName = baseName;
               const includedSource = this.preprocess(src,token);
@@ -2752,7 +2750,6 @@ var index = async () => {
       }
 
       eval(code){
-        console.log(code);
         let func = new Function('$',code);
         return func.bind(this)(this.context);
       }
@@ -2781,7 +2778,7 @@ var index = async () => {
     if(args.output){
        await fs.promises.writeFile(args.output,Buffer.from(wasmModule.toBinary({}).buffer));
     } else {
-      console.log(wasmModule.toText({ foldExprs: false, inlineExport: false }));
+      console.info(wasmModule.toText({ foldExprs: false, inlineExport: false }));
     }
 
 
