@@ -7,8 +7,8 @@
   "scripts": {
     "build":
     "pegjs -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c ",
-    "test": "pegjs -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./tests/test.mwat -o ./tests/test.wasm",
-    "trace": "pegjs --trace -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./tests/test.mwat -o ./tests/test.wasm"
+    "test": "pegjs -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./examples/psg-emulator/em2149.mwat -o ./examples/psg-emulator/em2149.wasm",
+    "trace": "pegjs --trace -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./examples/psg-emulator/em2149.mwat -o ./examples/psg-emulator/em2149.wasm"
   },
   "repository": {
     "type": "git",

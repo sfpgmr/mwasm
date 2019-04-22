@@ -1,0 +1,711 @@
+[
+  {
+    "type": "MemoryMap",
+    "defines": [
+      {
+        "type": "MemoryLabel",
+        "id": "voltable",
+        "varType": {
+          "type": "type",
+          "vartype": "u32",
+          "size": 4,
+          "integer": true,
+          "unsigned": true,
+          "start": {
+            "offset": 14,
+            "line": 2,
+            "column": 3
+          },
+          "end": {
+            "offset": 17,
+            "line": 2,
+            "column": 6
+          }
+        },
+        "numExpression": "16*2+$.X[3]",
+        "initExpression": "0",
+        "start": {
+          "offset": 14,
+          "line": 2,
+          "column": 3
+        },
+        "end": {
+          "offset": 44,
+          "line": 2,
+          "column": 33
+        }
+      }
+    ],
+    "start": {
+      "offset": 0,
+      "line": 1,
+      "column": 1
+    },
+    "end": {
+      "offset": 46,
+      "line": 3,
+      "column": 2
+    }
+  },
+  {
+    "type": "LineTerminator",
+    "start": {
+      "offset": 46,
+      "line": 3,
+      "column": 2
+    },
+    "end": {
+      "offset": 47,
+      "line": 4,
+      "column": 1
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": "(",
+    "start": {
+      "offset": 48,
+      "line": 5,
+      "column": 1
+    },
+    "end": {
+      "offset": 49,
+      "line": 5,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "module",
+    "start": {
+      "offset": 49,
+      "line": 5,
+      "column": 2
+    },
+    "end": {
+      "offset": 55,
+      "line": 5,
+      "column": 8
+    }
+  },
+  {
+    "type": "LineTerminator",
+    "start": {
+      "offset": 55,
+      "line": 5,
+      "column": 8
+    },
+    "end": {
+      "offset": 56,
+      "line": 6,
+      "column": 1
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": "(",
+    "start": {
+      "offset": 58,
+      "line": 6,
+      "column": 3
+    },
+    "end": {
+      "offset": 59,
+      "line": 6,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "memory",
+    "start": {
+      "offset": 59,
+      "line": 6,
+      "column": 4
+    },
+    "end": {
+      "offset": 65,
+      "line": 6,
+      "column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$memory",
+    "start": {
+      "offset": 66,
+      "line": 6,
+      "column": 11
+    },
+    "end": {
+      "offset": 73,
+      "line": 6,
+      "column": 18
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "1",
+    "start": {
+      "offset": 74,
+      "line": 6,
+      "column": 19
+    },
+    "end": {
+      "offset": 75,
+      "line": 6,
+      "column": 20
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": ")",
+    "start": {
+      "offset": 75,
+      "line": 6,
+      "column": 20
+    },
+    "end": {
+      "offset": 76,
+      "line": 6,
+      "column": 21
+    }
+  },
+  {
+    "type": "LineTerminator",
+    "start": {
+      "offset": 76,
+      "line": 6,
+      "column": 21
+    },
+    "end": {
+      "offset": 77,
+      "line": 7,
+      "column": 1
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": "(",
+    "start": {
+      "offset": 79,
+      "line": 7,
+      "column": 3
+    },
+    "end": {
+      "offset": 80,
+      "line": 7,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "export",
+    "start": {
+      "offset": 80,
+      "line": 7,
+      "column": 4
+    },
+    "end": {
+      "offset": 86,
+      "line": 7,
+      "column": 10
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "\"memory\"",
+    "start": {
+      "offset": 87,
+      "line": 7,
+      "column": 11
+    },
+    "end": {
+      "offset": 95,
+      "line": 7,
+      "column": 19
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": "(",
+    "start": {
+      "offset": 96,
+      "line": 7,
+      "column": 20
+    },
+    "end": {
+      "offset": 97,
+      "line": 7,
+      "column": 21
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "memory",
+    "start": {
+      "offset": 97,
+      "line": 7,
+      "column": 21
+    },
+    "end": {
+      "offset": 103,
+      "line": 7,
+      "column": 27
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$memory",
+    "start": {
+      "offset": 104,
+      "line": 7,
+      "column": 28
+    },
+    "end": {
+      "offset": 111,
+      "line": 7,
+      "column": 35
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": ")",
+    "start": {
+      "offset": 111,
+      "line": 7,
+      "column": 35
+    },
+    "end": {
+      "offset": 112,
+      "line": 7,
+      "column": 36
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": ")",
+    "start": {
+      "offset": 112,
+      "line": 7,
+      "column": 36
+    },
+    "end": {
+      "offset": 113,
+      "line": 7,
+      "column": 37
+    }
+  },
+  {
+    "type": "LineTerminator",
+    "start": {
+      "offset": 113,
+      "line": 7,
+      "column": 37
+    },
+    "end": {
+      "offset": 114,
+      "line": 8,
+      "column": 1
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": "(",
+    "start": {
+      "offset": 116,
+      "line": 8,
+      "column": 3
+    },
+    "end": {
+      "offset": 117,
+      "line": 8,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "export",
+    "start": {
+      "offset": 117,
+      "line": 8,
+      "column": 4
+    },
+    "end": {
+      "offset": 123,
+      "line": 8,
+      "column": 10
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "\"test\"",
+    "start": {
+      "offset": 124,
+      "line": 8,
+      "column": 11
+    },
+    "end": {
+      "offset": 130,
+      "line": 8,
+      "column": 17
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": "(",
+    "start": {
+      "offset": 131,
+      "line": 8,
+      "column": 18
+    },
+    "end": {
+      "offset": 132,
+      "line": 8,
+      "column": 19
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 132,
+      "line": 8,
+      "column": 19
+    },
+    "end": {
+      "offset": 136,
+      "line": 8,
+      "column": 23
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$test",
+    "start": {
+      "offset": 137,
+      "line": 8,
+      "column": 24
+    },
+    "end": {
+      "offset": 142,
+      "line": 8,
+      "column": 29
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": ")",
+    "start": {
+      "offset": 142,
+      "line": 8,
+      "column": 29
+    },
+    "end": {
+      "offset": 143,
+      "line": 8,
+      "column": 30
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": ")",
+    "start": {
+      "offset": 143,
+      "line": 8,
+      "column": 30
+    },
+    "end": {
+      "offset": 144,
+      "line": 8,
+      "column": 31
+    }
+  },
+  {
+    "type": "LineTerminator",
+    "start": {
+      "offset": 144,
+      "line": 8,
+      "column": 31
+    },
+    "end": {
+      "offset": 145,
+      "line": 9,
+      "column": 1
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": "(",
+    "start": {
+      "offset": 147,
+      "line": 9,
+      "column": 3
+    },
+    "end": {
+      "offset": 148,
+      "line": 9,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 148,
+      "line": 9,
+      "column": 4
+    },
+    "end": {
+      "offset": 152,
+      "line": 9,
+      "column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$test",
+    "start": {
+      "offset": 153,
+      "line": 9,
+      "column": 9
+    },
+    "end": {
+      "offset": 158,
+      "line": 9,
+      "column": 14
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": "(",
+    "start": {
+      "offset": 159,
+      "line": 9,
+      "column": 15
+    },
+    "end": {
+      "offset": 160,
+      "line": 9,
+      "column": 16
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "result",
+    "start": {
+      "offset": 160,
+      "line": 9,
+      "column": 16
+    },
+    "end": {
+      "offset": 166,
+      "line": 9,
+      "column": 22
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32",
+    "start": {
+      "offset": 167,
+      "line": 9,
+      "column": 23
+    },
+    "end": {
+      "offset": 170,
+      "line": 9,
+      "column": 26
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": ")",
+    "start": {
+      "offset": 170,
+      "line": 9,
+      "column": 26
+    },
+    "end": {
+      "offset": 171,
+      "line": 9,
+      "column": 27
+    }
+  },
+  {
+    "type": "LineTerminator",
+    "start": {
+      "offset": 171,
+      "line": 9,
+      "column": 27
+    },
+    "end": {
+      "offset": 172,
+      "line": 10,
+      "column": 1
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.const",
+    "start": {
+      "offset": 176,
+      "line": 10,
+      "column": 5
+    },
+    "end": {
+      "offset": 185,
+      "line": 10,
+      "column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "1",
+    "start": {
+      "offset": 186,
+      "line": 10,
+      "column": 15
+    },
+    "end": {
+      "offset": 187,
+      "line": 10,
+      "column": 16
+    }
+  },
+  {
+    "type": "LineTerminator",
+    "start": {
+      "offset": 187,
+      "line": 10,
+      "column": 16
+    },
+    "end": {
+      "offset": 188,
+      "line": 11,
+      "column": 1
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.const",
+    "start": {
+      "offset": 192,
+      "line": 11,
+      "column": 5
+    },
+    "end": {
+      "offset": 201,
+      "line": 11,
+      "column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "2",
+    "start": {
+      "offset": 202,
+      "line": 11,
+      "column": 15
+    },
+    "end": {
+      "offset": 203,
+      "line": 11,
+      "column": 16
+    }
+  },
+  {
+    "type": "LineTerminator",
+    "start": {
+      "offset": 203,
+      "line": 11,
+      "column": 16
+    },
+    "end": {
+      "offset": 204,
+      "line": 12,
+      "column": 1
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.add",
+    "start": {
+      "offset": 208,
+      "line": 12,
+      "column": 5
+    },
+    "end": {
+      "offset": 215,
+      "line": 12,
+      "column": 12
+    }
+  },
+  {
+    "type": "LineTerminator",
+    "start": {
+      "offset": 215,
+      "line": 12,
+      "column": 12
+    },
+    "end": {
+      "offset": 216,
+      "line": 13,
+      "column": 1
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": ")",
+    "start": {
+      "offset": 218,
+      "line": 13,
+      "column": 3
+    },
+    "end": {
+      "offset": 219,
+      "line": 13,
+      "column": 4
+    }
+  },
+  {
+    "type": "LineTerminator",
+    "start": {
+      "offset": 219,
+      "line": 13,
+      "column": 4
+    },
+    "end": {
+      "offset": 220,
+      "line": 14,
+      "column": 1
+    }
+  },
+  {
+    "type": "Separator",
+    "kind": ")",
+    "start": {
+      "offset": 220,
+      "line": 14,
+      "column": 1
+    },
+    "end": {
+      "offset": 221,
+      "line": 14,
+      "column": 2
+    }
+  },
+  {
+    "type": "LineTerminator",
+    "start": {
+      "offset": 221,
+      "line": 14,
+      "column": 2
+    },
+    "end": {
+      "offset": 222,
+      "line": 15,
+      "column": 1
+    }
+  }
+]
