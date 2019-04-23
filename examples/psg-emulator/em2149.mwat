@@ -1,9 +1,13 @@
 {@memorymap
+  ;;; comment
   u32 voltable[16*2+$.X[3]] {0};;;comment
+  u32 voltableb;
 }
 
 (module
-  (memory $memory 1)
+  (memory $memory 1 
+    (data $voltable ($const offset ))
+  )
   (export "memory" (memory $memory))
   (export "test" (func $test))
   (func $test (result i32)
