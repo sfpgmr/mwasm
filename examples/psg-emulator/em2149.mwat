@@ -1,8 +1,12 @@
-{@memorymap
+(@memorymap offset 0
   ;;; comment
-  u32 voltable[16*2+$.X[3]] {0};;;comment
-  u32 voltableb;
-}
+  i32 voltable[16*2+$.X[3]] {0};;;comment
+  {
+    $$.defines = 
+
+  }
+  i32 data,data1,data2;
+)
 
 (module
   (memory $memory 1 
@@ -11,8 +15,8 @@
   (export "memory" (memory $memory))
   (export "test" (func $test))
   (func $test (result i32)
-    i32.const 1
-    i32.const 2
-    i32.add
+    i32.const %voltable
+    i32.load
+    i32.const %voltable data
   )
 )
