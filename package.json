@@ -5,8 +5,7 @@
   "main": "index.js",
   "bin": "bin/mwasm",
   "scripts": {
-    "build":
-    "pegjs -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c ",
+    "build": "pegjs -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c ",
     "test": "pegjs -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./examples/psg-emulator/em2149.mwat -o ./examples/psg-emulator/em2149.wasm",
     "trace": "pegjs --trace -o ./lib/mwasm-parser.js ./lib/mwasm.pegjs && rollup -c && ./bin/mwasm ./examples/psg-emulator/em2149.mwat -o ./examples/psg-emulator/em2149.wasm"
   },
@@ -27,7 +26,9 @@
     "pegjs": "^0.10.0",
     "rollup": "^1.10.1",
     "rollup-plugin-commonjs": "^9.3.4",
-    "rollup-plugin-node-resolve": "^4.2.3"
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "tape": "^4.10.1",
+    "tape-async": "^2.3.0"
   },
   "dependencies": {
     "wabt": "^1.0.10"
