@@ -1,563 +1,628 @@
 [
   {
-    "type": "Separator",
-    "kind": "(",
+    "type": "Block",
+    "tokens": [
+      {
+        "type": "Identifier",
+        "name": "module",
+        "start": {
+          "offset": 1,
+          "line": 1,
+          "column": 2
+        },
+        "end": {
+          "offset": 7,
+          "line": 1,
+          "column": 8
+        }
+      },
+      {
+        "type": "LineTerminator",
+        "start": {
+          "offset": 7,
+          "line": 1,
+          "column": 8
+        },
+        "end": {
+          "offset": 8,
+          "line": 2,
+          "column": 1
+        }
+      },
+      {
+        "type": "Block",
+        "tokens": [
+          {
+            "type": "Identifier",
+            "name": "memory",
+            "start": {
+              "offset": 11,
+              "line": 2,
+              "column": 4
+            },
+            "end": {
+              "offset": 17,
+              "line": 2,
+              "column": 10
+            }
+          },
+          {
+            "type": "Skip",
+            "start": {
+              "offset": 17,
+              "line": 2,
+              "column": 10
+            },
+            "end": {
+              "offset": 18,
+              "line": 2,
+              "column": 11
+            }
+          },
+          {
+            "type": "Identifier",
+            "name": "$memory",
+            "start": {
+              "offset": 18,
+              "line": 2,
+              "column": 11
+            },
+            "end": {
+              "offset": 25,
+              "line": 2,
+              "column": 18
+            }
+          },
+          {
+            "type": "Skip",
+            "start": {
+              "offset": 25,
+              "line": 2,
+              "column": 18
+            },
+            "end": {
+              "offset": 26,
+              "line": 2,
+              "column": 19
+            }
+          },
+          {
+            "type": "Identifier",
+            "name": "1",
+            "start": {
+              "offset": 26,
+              "line": 2,
+              "column": 19
+            },
+            "end": {
+              "offset": 27,
+              "line": 2,
+              "column": 20
+            }
+          },
+          {
+            "type": "Skip",
+            "start": {
+              "offset": 27,
+              "line": 2,
+              "column": 20
+            },
+            "end": {
+              "offset": 28,
+              "line": 2,
+              "column": 21
+            }
+          }
+        ],
+        "start": {
+          "offset": 10,
+          "line": 2,
+          "column": 3
+        },
+        "end": {
+          "offset": 29,
+          "line": 2,
+          "column": 22
+        }
+      },
+      {
+        "type": "LineTerminator",
+        "start": {
+          "offset": 29,
+          "line": 2,
+          "column": 22
+        },
+        "end": {
+          "offset": 30,
+          "line": 3,
+          "column": 1
+        }
+      },
+      {
+        "type": "Block",
+        "tokens": [
+          {
+            "type": "Identifier",
+            "name": "export",
+            "start": {
+              "offset": 33,
+              "line": 3,
+              "column": 4
+            },
+            "end": {
+              "offset": 39,
+              "line": 3,
+              "column": 10
+            }
+          },
+          {
+            "type": "Skip",
+            "start": {
+              "offset": 39,
+              "line": 3,
+              "column": 10
+            },
+            "end": {
+              "offset": 40,
+              "line": 3,
+              "column": 11
+            }
+          },
+          {
+            "type": "StringLiteral",
+            "value": "\"memory\"",
+            "start": {
+              "offset": 40,
+              "line": 3,
+              "column": 11
+            },
+            "end": {
+              "offset": 48,
+              "line": 3,
+              "column": 19
+            }
+          },
+          {
+            "type": "Skip",
+            "start": {
+              "offset": 48,
+              "line": 3,
+              "column": 19
+            },
+            "end": {
+              "offset": 49,
+              "line": 3,
+              "column": 20
+            }
+          },
+          {
+            "type": "Block",
+            "tokens": [
+              {
+                "type": "Identifier",
+                "name": "memory",
+                "start": {
+                  "offset": 50,
+                  "line": 3,
+                  "column": 21
+                },
+                "end": {
+                  "offset": 56,
+                  "line": 3,
+                  "column": 27
+                }
+              },
+              {
+                "type": "Skip",
+                "start": {
+                  "offset": 56,
+                  "line": 3,
+                  "column": 27
+                },
+                "end": {
+                  "offset": 57,
+                  "line": 3,
+                  "column": 28
+                }
+              },
+              {
+                "type": "Identifier",
+                "name": "$memory",
+                "start": {
+                  "offset": 57,
+                  "line": 3,
+                  "column": 28
+                },
+                "end": {
+                  "offset": 64,
+                  "line": 3,
+                  "column": 35
+                }
+              }
+            ],
+            "start": {
+              "offset": 49,
+              "line": 3,
+              "column": 20
+            },
+            "end": {
+              "offset": 65,
+              "line": 3,
+              "column": 36
+            }
+          }
+        ],
+        "start": {
+          "offset": 32,
+          "line": 3,
+          "column": 3
+        },
+        "end": {
+          "offset": 66,
+          "line": 3,
+          "column": 37
+        }
+      },
+      {
+        "type": "LineTerminator",
+        "start": {
+          "offset": 66,
+          "line": 3,
+          "column": 37
+        },
+        "end": {
+          "offset": 67,
+          "line": 4,
+          "column": 1
+        }
+      },
+      {
+        "type": "Block",
+        "tokens": [
+          {
+            "type": "Identifier",
+            "name": "export",
+            "start": {
+              "offset": 70,
+              "line": 4,
+              "column": 4
+            },
+            "end": {
+              "offset": 76,
+              "line": 4,
+              "column": 10
+            }
+          },
+          {
+            "type": "Skip",
+            "start": {
+              "offset": 76,
+              "line": 4,
+              "column": 10
+            },
+            "end": {
+              "offset": 77,
+              "line": 4,
+              "column": 11
+            }
+          },
+          {
+            "type": "StringLiteral",
+            "value": "\"test\"",
+            "start": {
+              "offset": 77,
+              "line": 4,
+              "column": 11
+            },
+            "end": {
+              "offset": 83,
+              "line": 4,
+              "column": 17
+            }
+          },
+          {
+            "type": "Skip",
+            "start": {
+              "offset": 83,
+              "line": 4,
+              "column": 17
+            },
+            "end": {
+              "offset": 84,
+              "line": 4,
+              "column": 18
+            }
+          },
+          {
+            "type": "Block",
+            "tokens": [
+              {
+                "type": "Identifier",
+                "name": "func",
+                "start": {
+                  "offset": 85,
+                  "line": 4,
+                  "column": 19
+                },
+                "end": {
+                  "offset": 89,
+                  "line": 4,
+                  "column": 23
+                }
+              },
+              {
+                "type": "Skip",
+                "start": {
+                  "offset": 89,
+                  "line": 4,
+                  "column": 23
+                },
+                "end": {
+                  "offset": 90,
+                  "line": 4,
+                  "column": 24
+                }
+              },
+              {
+                "type": "Identifier",
+                "name": "$test",
+                "start": {
+                  "offset": 90,
+                  "line": 4,
+                  "column": 24
+                },
+                "end": {
+                  "offset": 95,
+                  "line": 4,
+                  "column": 29
+                }
+              }
+            ],
+            "start": {
+              "offset": 84,
+              "line": 4,
+              "column": 18
+            },
+            "end": {
+              "offset": 96,
+              "line": 4,
+              "column": 30
+            }
+          }
+        ],
+        "start": {
+          "offset": 69,
+          "line": 4,
+          "column": 3
+        },
+        "end": {
+          "offset": 97,
+          "line": 4,
+          "column": 31
+        }
+      },
+      {
+        "type": "LineTerminator",
+        "start": {
+          "offset": 97,
+          "line": 4,
+          "column": 31
+        },
+        "end": {
+          "offset": 98,
+          "line": 5,
+          "column": 1
+        }
+      },
+      {
+        "type": "Block",
+        "tokens": [
+          {
+            "type": "Identifier",
+            "name": "func",
+            "start": {
+              "offset": 101,
+              "line": 5,
+              "column": 4
+            },
+            "end": {
+              "offset": 105,
+              "line": 5,
+              "column": 8
+            }
+          },
+          {
+            "type": "Skip",
+            "start": {
+              "offset": 105,
+              "line": 5,
+              "column": 8
+            },
+            "end": {
+              "offset": 106,
+              "line": 5,
+              "column": 9
+            }
+          },
+          {
+            "type": "Identifier",
+            "name": "$test",
+            "start": {
+              "offset": 106,
+              "line": 5,
+              "column": 9
+            },
+            "end": {
+              "offset": 111,
+              "line": 5,
+              "column": 14
+            }
+          },
+          {
+            "type": "Skip",
+            "start": {
+              "offset": 111,
+              "line": 5,
+              "column": 14
+            },
+            "end": {
+              "offset": 112,
+              "line": 5,
+              "column": 15
+            }
+          },
+          {
+            "type": "Block",
+            "tokens": [
+              {
+                "type": "Identifier",
+                "name": "result",
+                "start": {
+                  "offset": 113,
+                  "line": 5,
+                  "column": 16
+                },
+                "end": {
+                  "offset": 119,
+                  "line": 5,
+                  "column": 22
+                }
+              },
+              {
+                "type": "Skip",
+                "start": {
+                  "offset": 119,
+                  "line": 5,
+                  "column": 22
+                },
+                "end": {
+                  "offset": 120,
+                  "line": 5,
+                  "column": 23
+                }
+              },
+              {
+                "type": "Identifier",
+                "name": "i32",
+                "start": {
+                  "offset": 120,
+                  "line": 5,
+                  "column": 23
+                },
+                "end": {
+                  "offset": 123,
+                  "line": 5,
+                  "column": 26
+                }
+              }
+            ],
+            "start": {
+              "offset": 112,
+              "line": 5,
+              "column": 15
+            },
+            "end": {
+              "offset": 124,
+              "line": 5,
+              "column": 27
+            }
+          },
+          {
+            "type": "LineTerminator",
+            "start": {
+              "offset": 124,
+              "line": 5,
+              "column": 27
+            },
+            "end": {
+              "offset": 125,
+              "line": 6,
+              "column": 1
+            }
+          },
+          {
+            "type": "Identifier",
+            "name": "i32.const",
+            "start": {
+              "offset": 129,
+              "line": 6,
+              "column": 5
+            },
+            "end": {
+              "offset": 138,
+              "line": 6,
+              "column": 14
+            }
+          },
+          {
+            "type": "Skip",
+            "start": {
+              "offset": 138,
+              "line": 6,
+              "column": 14
+            },
+            "end": {
+              "offset": 139,
+              "line": 6,
+              "column": 15
+            }
+          },
+          {
+            "type": "Identifier",
+            "name": "1",
+            "start": {
+              "offset": 139,
+              "line": 6,
+              "column": 15
+            },
+            "end": {
+              "offset": 140,
+              "line": 6,
+              "column": 16
+            }
+          },
+          {
+            "type": "LineTerminator",
+            "start": {
+              "offset": 140,
+              "line": 6,
+              "column": 16
+            },
+            "end": {
+              "offset": 141,
+              "line": 7,
+              "column": 1
+            }
+          }
+        ],
+        "start": {
+          "offset": 100,
+          "line": 5,
+          "column": 3
+        },
+        "end": {
+          "offset": 144,
+          "line": 7,
+          "column": 4
+        }
+      },
+      {
+        "type": "LineTerminator",
+        "start": {
+          "offset": 144,
+          "line": 7,
+          "column": 4
+        },
+        "end": {
+          "offset": 145,
+          "line": 8,
+          "column": 1
+        }
+      }
+    ],
     "start": {
       "offset": 0,
       "line": 1,
-      "column": 1
-    },
-    "end": {
-      "offset": 1,
-      "line": 1,
-      "column": 2
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "module",
-    "start": {
-      "offset": 1,
-      "line": 1,
-      "column": 2
-    },
-    "end": {
-      "offset": 7,
-      "line": 1,
-      "column": 8
-    }
-  },
-  {
-    "type": "LineTerminator",
-    "start": {
-      "offset": 7,
-      "line": 1,
-      "column": 8
-    },
-    "end": {
-      "offset": 8,
-      "line": 2,
-      "column": 1
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": "(",
-    "start": {
-      "offset": 10,
-      "line": 2,
-      "column": 3
-    },
-    "end": {
-      "offset": 11,
-      "line": 2,
-      "column": 4
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "memory",
-    "start": {
-      "offset": 11,
-      "line": 2,
-      "column": 4
-    },
-    "end": {
-      "offset": 17,
-      "line": 2,
-      "column": 10
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "$memory",
-    "start": {
-      "offset": 18,
-      "line": 2,
-      "column": 11
-    },
-    "end": {
-      "offset": 25,
-      "line": 2,
-      "column": 18
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "1",
-    "start": {
-      "offset": 26,
-      "line": 2,
-      "column": 19
-    },
-    "end": {
-      "offset": 27,
-      "line": 2,
-      "column": 20
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": ")",
-    "start": {
-      "offset": 28,
-      "line": 2,
-      "column": 21
-    },
-    "end": {
-      "offset": 29,
-      "line": 2,
-      "column": 22
-    }
-  },
-  {
-    "type": "LineTerminator",
-    "start": {
-      "offset": 29,
-      "line": 2,
-      "column": 22
-    },
-    "end": {
-      "offset": 30,
-      "line": 3,
-      "column": 1
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": "(",
-    "start": {
-      "offset": 32,
-      "line": 3,
-      "column": 3
-    },
-    "end": {
-      "offset": 33,
-      "line": 3,
-      "column": 4
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "export",
-    "start": {
-      "offset": 33,
-      "line": 3,
-      "column": 4
-    },
-    "end": {
-      "offset": 39,
-      "line": 3,
-      "column": 10
-    }
-  },
-  {
-    "type": "StringLiteral",
-    "value": "\"memory\"",
-    "start": {
-      "offset": 40,
-      "line": 3,
-      "column": 11
-    },
-    "end": {
-      "offset": 48,
-      "line": 3,
-      "column": 19
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": "(",
-    "start": {
-      "offset": 49,
-      "line": 3,
-      "column": 20
-    },
-    "end": {
-      "offset": 50,
-      "line": 3,
-      "column": 21
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "memory",
-    "start": {
-      "offset": 50,
-      "line": 3,
-      "column": 21
-    },
-    "end": {
-      "offset": 56,
-      "line": 3,
-      "column": 27
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "$memory",
-    "start": {
-      "offset": 57,
-      "line": 3,
-      "column": 28
-    },
-    "end": {
-      "offset": 64,
-      "line": 3,
-      "column": 35
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": ")",
-    "start": {
-      "offset": 64,
-      "line": 3,
-      "column": 35
-    },
-    "end": {
-      "offset": 65,
-      "line": 3,
-      "column": 36
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": ")",
-    "start": {
-      "offset": 65,
-      "line": 3,
-      "column": 36
-    },
-    "end": {
-      "offset": 66,
-      "line": 3,
-      "column": 37
-    }
-  },
-  {
-    "type": "LineTerminator",
-    "start": {
-      "offset": 66,
-      "line": 3,
-      "column": 37
-    },
-    "end": {
-      "offset": 67,
-      "line": 4,
-      "column": 1
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": "(",
-    "start": {
-      "offset": 69,
-      "line": 4,
-      "column": 3
-    },
-    "end": {
-      "offset": 70,
-      "line": 4,
-      "column": 4
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "export",
-    "start": {
-      "offset": 70,
-      "line": 4,
-      "column": 4
-    },
-    "end": {
-      "offset": 76,
-      "line": 4,
-      "column": 10
-    }
-  },
-  {
-    "type": "StringLiteral",
-    "value": "\"test\"",
-    "start": {
-      "offset": 77,
-      "line": 4,
-      "column": 11
-    },
-    "end": {
-      "offset": 83,
-      "line": 4,
-      "column": 17
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": "(",
-    "start": {
-      "offset": 84,
-      "line": 4,
-      "column": 18
-    },
-    "end": {
-      "offset": 85,
-      "line": 4,
-      "column": 19
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "func",
-    "start": {
-      "offset": 85,
-      "line": 4,
-      "column": 19
-    },
-    "end": {
-      "offset": 89,
-      "line": 4,
-      "column": 23
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "$test",
-    "start": {
-      "offset": 90,
-      "line": 4,
-      "column": 24
-    },
-    "end": {
-      "offset": 95,
-      "line": 4,
-      "column": 29
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": ")",
-    "start": {
-      "offset": 95,
-      "line": 4,
-      "column": 29
-    },
-    "end": {
-      "offset": 96,
-      "line": 4,
-      "column": 30
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": ")",
-    "start": {
-      "offset": 96,
-      "line": 4,
-      "column": 30
-    },
-    "end": {
-      "offset": 97,
-      "line": 4,
-      "column": 31
-    }
-  },
-  {
-    "type": "LineTerminator",
-    "start": {
-      "offset": 97,
-      "line": 4,
-      "column": 31
-    },
-    "end": {
-      "offset": 98,
-      "line": 5,
-      "column": 1
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": "(",
-    "start": {
-      "offset": 100,
-      "line": 5,
-      "column": 3
-    },
-    "end": {
-      "offset": 101,
-      "line": 5,
-      "column": 4
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "func",
-    "start": {
-      "offset": 101,
-      "line": 5,
-      "column": 4
-    },
-    "end": {
-      "offset": 105,
-      "line": 5,
-      "column": 8
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "$test",
-    "start": {
-      "offset": 106,
-      "line": 5,
-      "column": 9
-    },
-    "end": {
-      "offset": 111,
-      "line": 5,
-      "column": 14
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": "(",
-    "start": {
-      "offset": 112,
-      "line": 5,
-      "column": 15
-    },
-    "end": {
-      "offset": 113,
-      "line": 5,
-      "column": 16
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "result",
-    "start": {
-      "offset": 113,
-      "line": 5,
-      "column": 16
-    },
-    "end": {
-      "offset": 119,
-      "line": 5,
-      "column": 22
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "i32",
-    "start": {
-      "offset": 120,
-      "line": 5,
-      "column": 23
-    },
-    "end": {
-      "offset": 123,
-      "line": 5,
-      "column": 26
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": ")",
-    "start": {
-      "offset": 123,
-      "line": 5,
-      "column": 26
-    },
-    "end": {
-      "offset": 124,
-      "line": 5,
-      "column": 27
-    }
-  },
-  {
-    "type": "LineTerminator",
-    "start": {
-      "offset": 124,
-      "line": 5,
-      "column": 27
-    },
-    "end": {
-      "offset": 125,
-      "line": 6,
-      "column": 1
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "i32.const",
-    "start": {
-      "offset": 129,
-      "line": 6,
-      "column": 5
-    },
-    "end": {
-      "offset": 138,
-      "line": 6,
-      "column": 14
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "1",
-    "start": {
-      "offset": 139,
-      "line": 6,
-      "column": 15
-    },
-    "end": {
-      "offset": 140,
-      "line": 6,
-      "column": 16
-    }
-  },
-  {
-    "type": "LineTerminator",
-    "start": {
-      "offset": 140,
-      "line": 6,
-      "column": 16
-    },
-    "end": {
-      "offset": 141,
-      "line": 7,
-      "column": 1
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": ")",
-    "start": {
-      "offset": 143,
-      "line": 7,
-      "column": 3
-    },
-    "end": {
-      "offset": 144,
-      "line": 7,
-      "column": 4
-    }
-  },
-  {
-    "type": "LineTerminator",
-    "start": {
-      "offset": 144,
-      "line": 7,
-      "column": 4
-    },
-    "end": {
-      "offset": 145,
-      "line": 8,
-      "column": 1
-    }
-  },
-  {
-    "type": "Separator",
-    "kind": ")",
-    "start": {
-      "offset": 145,
-      "line": 8,
       "column": 1
     },
     "end": {
