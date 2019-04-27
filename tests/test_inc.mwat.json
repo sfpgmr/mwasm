@@ -57,7 +57,7 @@
   },
   {
     "type": "StringLiteral",
-    "value": "\"test3\"",
+    "value": "\"test2\"",
     "start": {
       "offset": 16,
       "line": 2,
@@ -225,7 +225,7 @@
   },
   {
     "type": "Identifier",
-    "name": "$test3",
+    "name": "$test2",
     "start": {
       "offset": 45,
       "line": 3,
@@ -533,15 +533,43 @@
   },
   {
     "type": "WhiteSpace",
-    "value": "\n",
+    "value": "\n\n",
     "start": {
       "offset": 323,
       "line": 18,
       "column": 2
     },
     "end": {
-      "offset": 324,
-      "line": 19,
+      "offset": 325,
+      "line": 20,
+      "column": 1
+    }
+  },
+  {
+    "type": "SourceInclude",
+    "pathExpression": "'./test_inc2.mwat'",
+    "start": {
+      "offset": 325,
+      "line": 20,
+      "column": 1
+    },
+    "end": {
+      "offset": 354,
+      "line": 20,
+      "column": 30
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n\n",
+    "start": {
+      "offset": 354,
+      "line": 20,
+      "column": 30
+    },
+    "end": {
+      "offset": 356,
+      "line": 22,
       "column": 1
     }
   }

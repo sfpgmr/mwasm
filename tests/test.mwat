@@ -3,15 +3,23 @@ $.X = 0x1;
 $.Y = 2;
 $.Z = 0x3;
 }
+(;;
+aaaaa
+;;)
 
 (module
-  (memory $memory 1)
+  (memory $memory 1
+    (map (offset 0)
+      (#label (i32 16))
+      (#label1 i64 )
+    )
+  )
   (export "memory" (memory $memory))
   {@include './test_inc.mwat'}
 {@if $.X < 1}
   (export "test" (func $test))
   (func $test (result i32)
-    i32.const @X;; comment
+    i32.const {$ $.X };; comment
     i32.const {$ $.X + $.Y }
     {@if $.Y}
     i32.add
@@ -26,6 +34,14 @@ i32.add`;
       }
       return instructions;
     }
+    
+    ;; i32.add [#label] #label
+    ;; i32.const #label
+    ;; i32.load
+    ;; i32.const #label
+    ;; i32.add
+    ;; i32.store [#label] 
+
     {@endif}
   )
 {@else}

@@ -18,6 +18,7 @@ run: $(TARGET)
 
 .PHONY: test
 test:run
+	mwasm ./tests/test.mwat -o ./tests/test.wasm
 
 .PHONY: clean
 clean:
