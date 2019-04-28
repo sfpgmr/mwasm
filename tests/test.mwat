@@ -8,12 +8,18 @@ $.Z = 0x3;
 aaaaa
 ;;)
 
+{@struct structA 
+
+}
+
 (module
   (memory $memory 1
     {@map 
       offset 0
       #label i32[16] ${[]} 
-      #label1 i64 
+      #label1 i64
+      #label2 i32
+      #label3 f32
     }
   )
   (export "memory" (memory $memory))
