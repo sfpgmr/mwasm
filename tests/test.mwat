@@ -2,6 +2,7 @@
 $.X = 0x1;
 $.Y = 2;
 $.Z = 0x3;
+
 }
 (;;
 aaaaa
@@ -9,47 +10,48 @@ aaaaa
 
 (module
   (memory $memory 1
-    (map (offset 0)
-      (#label (i32 16))
-      (#label1 i64 )
-    )
+    {@map 
+      offset 0
+      #label i32[16] ${[]} 
+      #label1 i64 
+    }
   )
   (export "memory" (memory $memory))
   {@include './test_inc.mwat'}
-{@if $.X < 1}
-  (export "test" (func $test))
-  (func $test (result i32)
-    i32.const {$ $.X };; comment
-    i32.const {$ $.X + $.Y }
-    {@if $.Y}
-    i32.add
-    {
-      // JSによるWASMソースコード生成
-      let instructions = '';
-      for(let i = 0;i < 4; ++ i ){
-        ++$.X; 
-        instructions += `
-i32.const ${$.X + $.Y}
-i32.add`;
-      }
-      return instructions;
-    }
-    
-    ;; i32.add [#label] #label
-    ;; i32.const #label
-    ;; i32.load
-    ;; i32.const #label
-    ;; i32.add
-    ;; i32.store [#label] 
+  {@if $.X < 1}
+    (export "test" (func $test))
+    (func $test (result i32)
+      i32.const {$ $.X };; comment
+      i32.const {$ $.X + $.Y }
+      {@if $.Y}
+        i32.add
+        {
+          // JSによるWASMソースコード生成
+          let instructions = '';
+          for(let i = 0;i < 4; ++ i ){
+            ++$.X; 
+            instructions += `
+    i32.const ${$.X + $.Y}
+    i32.add`;
+          }
+          return instructions;
+        }
+        
+        ;; i32.add [#label] #label
+        ;; i32.const #label
+        ;; i32.load
+        ;; i32.const #label
+        ;; i32.add
+        ;; i32.store [#label] 
 
-    {@endif}
-  )
-{@else}
-  (export "testa" (func $testa))
-  (func $testa (result i32)
-    i32.const @X;; comment
-    i32.const {$ $.X + $.Y }
-    i32.add
-  )
-{@endif}
+      {@endif}
+    )
+  {@else}
+    (export "testa" (func $testa))
+    (func $testa (result i32)
+      i32.const @X;; comment
+      i32.const {$ $.X + $.Y }
+      i32.add
+    )
+  {@endif}
 )
