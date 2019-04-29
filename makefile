@@ -1,10 +1,14 @@
 
 VPATH = ./lib/:./:./bin
-PARSERS = ./lib/mwasm-parser.js ./lib/preprocess-parser.js
+
+# PARSERS = ./lib/mwasm-parser.js ./lib/preprocess-parser.js
+PARSERS = ./lib/preprocess-parser.js
 SRC_FILES = index.mjs
+
 TARGET = index.js
 TRACE = 
 PEG = pegjs $(TRACE) -o $@ $<
+MWASM = mwasm $@ $<
 
 $(TARGET): $(PARSERS) $(SRC_FILES)
 	rollup -c
@@ -17,8 +21,10 @@ run: $(TARGET)
 	mwasm ./examples/psg-emulator/em2149.mwat -o ./examples/psg-emulator/em2149.wasm
 
 .PHONY: test
-test:run
-	mwasm ./tests/test.mwat -o ./tests/test.wasm
+#test: run
+test: $(TARGET)
+#	mwasm ./tests/test/test.mwat -o ./tests/test/test.wasm
+	mwasm ./tests/test-map/test-map.mwat -o ./tests/test-map/test-map.wasm
 
 .PHONY: clean
 clean:

@@ -1,0 +1,11 @@
+{@map 
+  offset 
+
+(;;  #label i32[16];
+  #label1 i64;
+  #label2 i32;
+  #label3 f32;
+  #label4 f64;
+;;)
+
+}

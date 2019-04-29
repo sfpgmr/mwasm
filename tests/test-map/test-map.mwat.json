@@ -1,0 +1,45 @@
+[
+  {
+    "type": "MemoryMap",
+    "defines": [
+      {
+        "type": "Offset",
+        "offset": null,
+        "start": {
+          "offset": 9,
+          "line": 2,
+          "column": 3
+        },
+        "end": {
+          "offset": 18,
+          "line": 4,
+          "column": 1
+        }
+      }
+    ],
+    "start": {
+      "offset": 0,
+      "line": 1,
+      "column": 1
+    },
+    "end": {
+      "offset": 105,
+      "line": 11,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 105,
+      "line": 11,
+      "column": 2
+    },
+    "end": {
+      "offset": 106,
+      "line": 12,
+      "column": 1
+    }
+  }
+]
