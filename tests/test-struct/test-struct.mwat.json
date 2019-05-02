@@ -1,0 +1,344 @@
+[
+  {
+    "type": "StructDefinition",
+    "id": "Foo",
+    "defines": [
+      {
+        "type": "MemoryLabel",
+        "id": [
+          {
+            "type": "MemoryLabelId",
+            "id": "s_label",
+            "numExpression": "16",
+            "start": {
+              "offset": 20,
+              "line": 2,
+              "column": 7
+            },
+            "end": {
+              "offset": 31,
+              "line": 2,
+              "column": 18
+            }
+          }
+        ],
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "start": {
+            "offset": 16,
+            "line": 2,
+            "column": 3
+          },
+          "end": {
+            "offset": 19,
+            "line": 2,
+            "column": 6
+          }
+        },
+        "initExpression": null,
+        "start": {
+          "offset": 16,
+          "line": 2,
+          "column": 3
+        },
+        "end": {
+          "offset": 32,
+          "line": 2,
+          "column": 19
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": [
+          {
+            "type": "MemoryLabelId",
+            "id": "s_label2",
+            "numExpression": null,
+            "start": {
+              "offset": 39,
+              "line": 3,
+              "column": 7
+            },
+            "end": {
+              "offset": 47,
+              "line": 3,
+              "column": 15
+            }
+          },
+          {
+            "type": "MemoryLabelId",
+            "id": "s_label2_1",
+            "numExpression": null,
+            "start": {
+              "offset": 48,
+              "line": 3,
+              "column": 16
+            },
+            "end": {
+              "offset": 58,
+              "line": 3,
+              "column": 26
+            }
+          },
+          {
+            "type": "MemoryLabelId",
+            "id": "s_label2_2",
+            "numExpression": null,
+            "start": {
+              "offset": 59,
+              "line": 3,
+              "column": 27
+            },
+            "end": {
+              "offset": 69,
+              "line": 3,
+              "column": 37
+            }
+          }
+        ],
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "i64",
+          "size": 8,
+          "integer": true,
+          "unsigned": false,
+          "start": {
+            "offset": 35,
+            "line": 3,
+            "column": 3
+          },
+          "end": {
+            "offset": 38,
+            "line": 3,
+            "column": 6
+          }
+        },
+        "initExpression": null,
+        "start": {
+          "offset": 35,
+          "line": 3,
+          "column": 3
+        },
+        "end": {
+          "offset": 70,
+          "line": 3,
+          "column": 38
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": [
+          {
+            "type": "MemoryLabelId",
+            "id": "s_label3",
+            "numExpression": null,
+            "start": {
+              "offset": 77,
+              "line": 4,
+              "column": 7
+            },
+            "end": {
+              "offset": 85,
+              "line": 4,
+              "column": 15
+            }
+          }
+        ],
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "start": {
+            "offset": 73,
+            "line": 4,
+            "column": 3
+          },
+          "end": {
+            "offset": 76,
+            "line": 4,
+            "column": 6
+          }
+        },
+        "initExpression": null,
+        "start": {
+          "offset": 73,
+          "line": 4,
+          "column": 3
+        },
+        "end": {
+          "offset": 86,
+          "line": 4,
+          "column": 16
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": [
+          {
+            "type": "MemoryLabelId",
+            "id": "s_label4",
+            "numExpression": null,
+            "start": {
+              "offset": 93,
+              "line": 5,
+              "column": 7
+            },
+            "end": {
+              "offset": 101,
+              "line": 5,
+              "column": 15
+            }
+          }
+        ],
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "f64",
+          "size": 8,
+          "integer": false,
+          "unsigned": false,
+          "start": {
+            "offset": 89,
+            "line": 5,
+            "column": 3
+          },
+          "end": {
+            "offset": 92,
+            "line": 5,
+            "column": 6
+          }
+        },
+        "initExpression": null,
+        "start": {
+          "offset": 89,
+          "line": 5,
+          "column": 3
+        },
+        "end": {
+          "offset": 102,
+          "line": 5,
+          "column": 16
+        }
+      }
+    ],
+    "start": {
+      "offset": 0,
+      "line": 1,
+      "column": 1
+    },
+    "end": {
+      "offset": 104,
+      "line": 6,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n\n",
+    "start": {
+      "offset": 104,
+      "line": 6,
+      "column": 2
+    },
+    "end": {
+      "offset": 106,
+      "line": 8,
+      "column": 1
+    }
+  },
+  {
+    "type": "MemoryMap",
+    "defines": [
+      {
+        "type": "MemoryLabel",
+        "id": [
+          {
+            "type": "MemoryLabelId",
+            "id": "foo",
+            "numExpression": null,
+            "start": {
+              "offset": 119,
+              "line": 9,
+              "column": 7
+            },
+            "end": {
+              "offset": 122,
+              "line": 9,
+              "column": 10
+            }
+          },
+          {
+            "type": "MemoryLabelId",
+            "id": "foo_1",
+            "numExpression": "8",
+            "start": {
+              "offset": 123,
+              "line": 9,
+              "column": 11
+            },
+            "end": {
+              "offset": 131,
+              "line": 9,
+              "column": 19
+            }
+          }
+        ],
+        "varType": {
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "Foo",
+          "start": {
+            "offset": 115,
+            "line": 9,
+            "column": 3
+          },
+          "end": {
+            "offset": 118,
+            "line": 9,
+            "column": 6
+          }
+        },
+        "initExpression": null,
+        "start": {
+          "offset": 115,
+          "line": 9,
+          "column": 3
+        },
+        "end": {
+          "offset": 132,
+          "line": 9,
+          "column": 20
+        }
+      }
+    ],
+    "start": {
+      "offset": 106,
+      "line": 8,
+      "column": 1
+    },
+    "end": {
+      "offset": 134,
+      "line": 10,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 134,
+      "line": 10,
+      "column": 2
+    },
+    "end": {
+      "offset": 135,
+      "line": 11,
+      "column": 1
+    }
+  }
+]

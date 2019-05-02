@@ -1,11 +1,7 @@
 {@map 
-  offset 
-
-(;;  #label i32[16];
-  #label1 i64;
-  #label2 i32;
-  #label3 f32;
-  #label4 f64;
-;;)
-
+  offset {10};
+  i32 label[16] {return [1,2,3,4];};
+  i64 label2,label2_1,label2_2;
+  i32 label3;
+  f64 label4;
 }

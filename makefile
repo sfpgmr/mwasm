@@ -25,6 +25,7 @@ run: $(TARGET)
 test: $(TARGET)
 #	mwasm ./tests/test/test.mwat -o ./tests/test/test.wasm
 	mwasm ./tests/test-map/test-map.mwat -o ./tests/test-map/test-map.wasm
+	mwasm ./tests/test-struct/test-struct.mwat -o ./tests/test-struct/test-struct.mwasm
 
 .PHONY: clean
 clean:

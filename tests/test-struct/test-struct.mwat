@@ -1,0 +1,23 @@
+{@struct Foo 
+  i32 s_label[16];
+  i64 s_label2,s_label2_1,s_label2_2;
+  i32 s_label3;
+  f64 s_label4;
+}
+
+{@
+
+$.X = 1;
+
+}
+
+{@map 
+  Foo foo,foo_1[8];
+}
+
+(export "test" (func $test))
+(func $test (result i32)
+  i32.load (i32.const ${$_.foo.s_label[0]})
+  i32.const $X
+  i32.add 
+)
