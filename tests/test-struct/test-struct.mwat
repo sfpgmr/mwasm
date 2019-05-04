@@ -1,23 +1,66 @@
-{@struct Foo 
-  i32 s_label[16];
-  i64 s_label2,s_label2_1,s_label2_2;
-  i32 s_label3;
-  f64 s_label4;
+{@struct PSG 
+    (;; Volume Table ;;)
+    u32 voltbl;
+
+    u32 reg[0x20];
+    i32 out;
+
+    u32 clk, rate, base_incr, quality;
+
+    u32 count[3];
+    u32 volume[3];
+    u32 freq[3];
+    u32 edge[3];
+    u32 tmask[3];
+    u32 nmask[3];
+    u32 mask;
+
+    u32 base_count;
+
+    u32 env_volume;
+    u32 env_ptr;
+    u32 env_face;
+
+    u32 env_continue;
+    u32 env_attack;
+    u32 env_alternate;
+    u32 env_hold;
+    u32 env_pause;
+    u32 env_reset;
+
+    u32 env_freq;
+    u32 env_count;
+
+    u32 noise_seed;
+    u32 noise_count;
+    u32 noise_freq;
+
+    (;; rate converter ;;)
+    u32 realstep;
+    u32 psgtime;
+    u32 psgstep;
+
+    (;; I/O Ctrl ;;)
+    u32 adr;
+
+    (;; output of channels ;;)
+    i32 ch_out[3];
 }
 
 {@
-
+// ローカル変数の定義
 $.X = 1;
-
 }
 
 {@map 
-  Foo foo,foo_1[8];
+  PSG psg;
+  f32 output[1024];
 }
 
 (export "test" (func $test))
 (func $test (result i32)
-  i32.load (i32.const ${$_.foo.s_label[0]})
-  i32.const $X
-  i32.add 
+  (i32.add 
+    (i32.load (i32.const {$.foo.s_label}))
+    (i32.const {$.X})
+  )
 )

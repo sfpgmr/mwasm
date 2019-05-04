@@ -26,6 +26,7 @@ test: $(TARGET)
 #	mwasm ./tests/test/test.mwat -o ./tests/test/test.wasm
 	mwasm ./tests/test-map/test-map.mwat -o ./tests/test-map/test-map.wasm
 	mwasm ./tests/test-struct/test-struct.mwat -o ./tests/test-struct/test-struct.mwasm
+	mwasm ./examples/psg-emulator/em2149.mwat -o ./examples/psg-emulator/em2149.wasm
 
 .PHONY: clean
 clean:

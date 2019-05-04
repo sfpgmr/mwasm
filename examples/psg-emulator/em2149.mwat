@@ -1,3 +1,57 @@
+{@struct PSG 
+    (;; Volume Table ;;)
+    u32 voltbl;
+
+    u32 reg[0x20];
+    i32 out;
+
+    u32 clk, rate, base_incr, quality;
+
+    u32 count[3];
+    u32 volume[3];
+    u32 freq[3];
+    u32 edge[3];
+    u32 tmask[3];
+    u32 nmask[3];
+    u32 mask;
+
+    u32 base_count;
+
+    u32 env_volume;
+    u32 env_ptr;
+    u32 env_face;
+
+    u32 env_continue;
+    u32 env_attack;
+    u32 env_alternate;
+    u32 env_hold;
+    u32 env_pause;
+    u32 env_reset;
+
+    u32 env_freq;
+    u32 env_count;
+
+    u32 noise_seed;
+    u32 noise_count;
+    u32 noise_freq;
+
+    (;; rate converter ;;)
+    u32 realstep;
+    u32 psgtime;
+    u32 psgstep;
+
+    (;; I/O Ctrl ;;)
+    u32 adr;
+
+    (;; output of channels ;;)
+    i32 ch_out[3];
+}
+
+{@map
+  PSG psg;
+  i32 OutputBuffer[1024];
+}
+
 (module
   (memory $memory 1 )
   (export "memory" (memory $memory))
