@@ -5,23 +5,21 @@
     "defines": [
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "voltbl",
-            "numExpression": null,
-            "start": {
-              "offset": 47,
-              "line": 3,
-              "column": 9
-            },
-            "end": {
-              "offset": 53,
-              "line": 3,
-              "column": 15
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "voltbl",
+          "numExpression": null,
+          "start": {
+            "offset": 47,
+            "line": 3,
+            "column": 9
+          },
+          "end": {
+            "offset": 53,
+            "line": 3,
+            "column": 15
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -53,23 +51,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "reg",
-            "numExpression": "0x20",
-            "start": {
-              "offset": 64,
-              "line": 5,
-              "column": 9
-            },
-            "end": {
-              "offset": 73,
-              "line": 5,
-              "column": 18
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "reg",
+          "numExpression": "0x20",
+          "start": {
+            "offset": 64,
+            "line": 5,
+            "column": 9
+          },
+          "end": {
+            "offset": 73,
+            "line": 5,
+            "column": 18
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -101,23 +97,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "out",
-            "numExpression": null,
-            "start": {
-              "offset": 83,
-              "line": 6,
-              "column": 9
-            },
-            "end": {
-              "offset": 86,
-              "line": 6,
-              "column": 12
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "out",
+          "numExpression": null,
+          "start": {
+            "offset": 83,
+            "line": 6,
+            "column": 9
+          },
+          "end": {
+            "offset": 86,
+            "line": 6,
+            "column": 12
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "i32",
@@ -149,68 +143,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "clk",
-            "numExpression": null,
-            "start": {
-              "offset": 97,
-              "line": 8,
-              "column": 9
-            },
-            "end": {
-              "offset": 100,
-              "line": 8,
-              "column": 12
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "clk",
+          "numExpression": null,
+          "start": {
+            "offset": 97,
+            "line": 8,
+            "column": 9
           },
-          {
-            "type": "MemoryLabelId",
-            "id": "rate",
-            "numExpression": null,
-            "start": {
-              "offset": 102,
-              "line": 8,
-              "column": 14
-            },
-            "end": {
-              "offset": 106,
-              "line": 8,
-              "column": 18
-            }
-          },
-          {
-            "type": "MemoryLabelId",
-            "id": "base_incr",
-            "numExpression": null,
-            "start": {
-              "offset": 108,
-              "line": 8,
-              "column": 20
-            },
-            "end": {
-              "offset": 117,
-              "line": 8,
-              "column": 29
-            }
-          },
-          {
-            "type": "MemoryLabelId",
-            "id": "quality",
-            "numExpression": null,
-            "start": {
-              "offset": 119,
-              "line": 8,
-              "column": 31
-            },
-            "end": {
-              "offset": 126,
-              "line": 8,
-              "column": 38
-            }
+          "end": {
+            "offset": 100,
+            "line": 8,
+            "column": 12
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -242,23 +189,159 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "count",
-            "numExpression": "3",
-            "start": {
-              "offset": 137,
-              "line": 10,
-              "column": 9
-            },
-            "end": {
-              "offset": 145,
-              "line": 10,
-              "column": 17
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "rate",
+          "numExpression": null,
+          "start": {
+            "offset": 102,
+            "line": 8,
+            "column": 14
+          },
+          "end": {
+            "offset": 106,
+            "line": 8,
+            "column": 18
           }
-        ],
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "u32",
+          "size": 4,
+          "integer": true,
+          "unsigned": true,
+          "start": {
+            "offset": 93,
+            "line": 8,
+            "column": 5
+          },
+          "end": {
+            "offset": 96,
+            "line": 8,
+            "column": 8
+          }
+        },
+        "initExpression": null,
+        "start": {
+          "offset": 93,
+          "line": 8,
+          "column": 5
+        },
+        "end": {
+          "offset": 127,
+          "line": 8,
+          "column": 39
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "base_incr",
+          "numExpression": null,
+          "start": {
+            "offset": 108,
+            "line": 8,
+            "column": 20
+          },
+          "end": {
+            "offset": 117,
+            "line": 8,
+            "column": 29
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "u32",
+          "size": 4,
+          "integer": true,
+          "unsigned": true,
+          "start": {
+            "offset": 93,
+            "line": 8,
+            "column": 5
+          },
+          "end": {
+            "offset": 96,
+            "line": 8,
+            "column": 8
+          }
+        },
+        "initExpression": null,
+        "start": {
+          "offset": 93,
+          "line": 8,
+          "column": 5
+        },
+        "end": {
+          "offset": 127,
+          "line": 8,
+          "column": 39
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "quality",
+          "numExpression": null,
+          "start": {
+            "offset": 119,
+            "line": 8,
+            "column": 31
+          },
+          "end": {
+            "offset": 126,
+            "line": 8,
+            "column": 38
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "u32",
+          "size": 4,
+          "integer": true,
+          "unsigned": true,
+          "start": {
+            "offset": 93,
+            "line": 8,
+            "column": 5
+          },
+          "end": {
+            "offset": 96,
+            "line": 8,
+            "column": 8
+          }
+        },
+        "initExpression": null,
+        "start": {
+          "offset": 93,
+          "line": 8,
+          "column": 5
+        },
+        "end": {
+          "offset": 127,
+          "line": 8,
+          "column": 39
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "count",
+          "numExpression": "3",
+          "start": {
+            "offset": 137,
+            "line": 10,
+            "column": 9
+          },
+          "end": {
+            "offset": 145,
+            "line": 10,
+            "column": 17
+          }
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -290,23 +373,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "volume",
-            "numExpression": "3",
-            "start": {
-              "offset": 155,
-              "line": 11,
-              "column": 9
-            },
-            "end": {
-              "offset": 164,
-              "line": 11,
-              "column": 18
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "volume",
+          "numExpression": "3",
+          "start": {
+            "offset": 155,
+            "line": 11,
+            "column": 9
+          },
+          "end": {
+            "offset": 164,
+            "line": 11,
+            "column": 18
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -338,23 +419,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "freq",
-            "numExpression": "3",
-            "start": {
-              "offset": 174,
-              "line": 12,
-              "column": 9
-            },
-            "end": {
-              "offset": 181,
-              "line": 12,
-              "column": 16
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "freq",
+          "numExpression": "3",
+          "start": {
+            "offset": 174,
+            "line": 12,
+            "column": 9
+          },
+          "end": {
+            "offset": 181,
+            "line": 12,
+            "column": 16
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -386,23 +465,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "edge",
-            "numExpression": "3",
-            "start": {
-              "offset": 191,
-              "line": 13,
-              "column": 9
-            },
-            "end": {
-              "offset": 198,
-              "line": 13,
-              "column": 16
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "edge",
+          "numExpression": "3",
+          "start": {
+            "offset": 191,
+            "line": 13,
+            "column": 9
+          },
+          "end": {
+            "offset": 198,
+            "line": 13,
+            "column": 16
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -434,23 +511,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "tmask",
-            "numExpression": "3",
-            "start": {
-              "offset": 208,
-              "line": 14,
-              "column": 9
-            },
-            "end": {
-              "offset": 216,
-              "line": 14,
-              "column": 17
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "tmask",
+          "numExpression": "3",
+          "start": {
+            "offset": 208,
+            "line": 14,
+            "column": 9
+          },
+          "end": {
+            "offset": 216,
+            "line": 14,
+            "column": 17
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -482,23 +557,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "nmask",
-            "numExpression": "3",
-            "start": {
-              "offset": 226,
-              "line": 15,
-              "column": 9
-            },
-            "end": {
-              "offset": 234,
-              "line": 15,
-              "column": 17
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "nmask",
+          "numExpression": "3",
+          "start": {
+            "offset": 226,
+            "line": 15,
+            "column": 9
+          },
+          "end": {
+            "offset": 234,
+            "line": 15,
+            "column": 17
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -530,23 +603,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "mask",
-            "numExpression": null,
-            "start": {
-              "offset": 244,
-              "line": 16,
-              "column": 9
-            },
-            "end": {
-              "offset": 248,
-              "line": 16,
-              "column": 13
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "mask",
+          "numExpression": null,
+          "start": {
+            "offset": 244,
+            "line": 16,
+            "column": 9
+          },
+          "end": {
+            "offset": 248,
+            "line": 16,
+            "column": 13
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -578,23 +649,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "base_count",
-            "numExpression": null,
-            "start": {
-              "offset": 259,
-              "line": 18,
-              "column": 9
-            },
-            "end": {
-              "offset": 269,
-              "line": 18,
-              "column": 19
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "base_count",
+          "numExpression": null,
+          "start": {
+            "offset": 259,
+            "line": 18,
+            "column": 9
+          },
+          "end": {
+            "offset": 269,
+            "line": 18,
+            "column": 19
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -626,23 +695,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "env_volume",
-            "numExpression": null,
-            "start": {
-              "offset": 280,
-              "line": 20,
-              "column": 9
-            },
-            "end": {
-              "offset": 290,
-              "line": 20,
-              "column": 19
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "env_volume",
+          "numExpression": null,
+          "start": {
+            "offset": 280,
+            "line": 20,
+            "column": 9
+          },
+          "end": {
+            "offset": 290,
+            "line": 20,
+            "column": 19
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -674,23 +741,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "env_ptr",
-            "numExpression": null,
-            "start": {
-              "offset": 300,
-              "line": 21,
-              "column": 9
-            },
-            "end": {
-              "offset": 307,
-              "line": 21,
-              "column": 16
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "env_ptr",
+          "numExpression": null,
+          "start": {
+            "offset": 300,
+            "line": 21,
+            "column": 9
+          },
+          "end": {
+            "offset": 307,
+            "line": 21,
+            "column": 16
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -722,23 +787,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "env_face",
-            "numExpression": null,
-            "start": {
-              "offset": 317,
-              "line": 22,
-              "column": 9
-            },
-            "end": {
-              "offset": 325,
-              "line": 22,
-              "column": 17
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "env_face",
+          "numExpression": null,
+          "start": {
+            "offset": 317,
+            "line": 22,
+            "column": 9
+          },
+          "end": {
+            "offset": 325,
+            "line": 22,
+            "column": 17
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -770,23 +833,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "env_continue",
-            "numExpression": null,
-            "start": {
-              "offset": 336,
-              "line": 24,
-              "column": 9
-            },
-            "end": {
-              "offset": 348,
-              "line": 24,
-              "column": 21
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "env_continue",
+          "numExpression": null,
+          "start": {
+            "offset": 336,
+            "line": 24,
+            "column": 9
+          },
+          "end": {
+            "offset": 348,
+            "line": 24,
+            "column": 21
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -818,23 +879,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "env_attack",
-            "numExpression": null,
-            "start": {
-              "offset": 358,
-              "line": 25,
-              "column": 9
-            },
-            "end": {
-              "offset": 368,
-              "line": 25,
-              "column": 19
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "env_attack",
+          "numExpression": null,
+          "start": {
+            "offset": 358,
+            "line": 25,
+            "column": 9
+          },
+          "end": {
+            "offset": 368,
+            "line": 25,
+            "column": 19
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -866,23 +925,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "env_alternate",
-            "numExpression": null,
-            "start": {
-              "offset": 378,
-              "line": 26,
-              "column": 9
-            },
-            "end": {
-              "offset": 391,
-              "line": 26,
-              "column": 22
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "env_alternate",
+          "numExpression": null,
+          "start": {
+            "offset": 378,
+            "line": 26,
+            "column": 9
+          },
+          "end": {
+            "offset": 391,
+            "line": 26,
+            "column": 22
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -914,23 +971,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "env_hold",
-            "numExpression": null,
-            "start": {
-              "offset": 401,
-              "line": 27,
-              "column": 9
-            },
-            "end": {
-              "offset": 409,
-              "line": 27,
-              "column": 17
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "env_hold",
+          "numExpression": null,
+          "start": {
+            "offset": 401,
+            "line": 27,
+            "column": 9
+          },
+          "end": {
+            "offset": 409,
+            "line": 27,
+            "column": 17
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -962,23 +1017,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "env_pause",
-            "numExpression": null,
-            "start": {
-              "offset": 419,
-              "line": 28,
-              "column": 9
-            },
-            "end": {
-              "offset": 428,
-              "line": 28,
-              "column": 18
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "env_pause",
+          "numExpression": null,
+          "start": {
+            "offset": 419,
+            "line": 28,
+            "column": 9
+          },
+          "end": {
+            "offset": 428,
+            "line": 28,
+            "column": 18
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -1010,23 +1063,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "env_reset",
-            "numExpression": null,
-            "start": {
-              "offset": 438,
-              "line": 29,
-              "column": 9
-            },
-            "end": {
-              "offset": 447,
-              "line": 29,
-              "column": 18
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "env_reset",
+          "numExpression": null,
+          "start": {
+            "offset": 438,
+            "line": 29,
+            "column": 9
+          },
+          "end": {
+            "offset": 447,
+            "line": 29,
+            "column": 18
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -1058,23 +1109,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "env_freq",
-            "numExpression": null,
-            "start": {
-              "offset": 458,
-              "line": 31,
-              "column": 9
-            },
-            "end": {
-              "offset": 466,
-              "line": 31,
-              "column": 17
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "env_freq",
+          "numExpression": null,
+          "start": {
+            "offset": 458,
+            "line": 31,
+            "column": 9
+          },
+          "end": {
+            "offset": 466,
+            "line": 31,
+            "column": 17
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -1106,23 +1155,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "env_count",
-            "numExpression": null,
-            "start": {
-              "offset": 476,
-              "line": 32,
-              "column": 9
-            },
-            "end": {
-              "offset": 485,
-              "line": 32,
-              "column": 18
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "env_count",
+          "numExpression": null,
+          "start": {
+            "offset": 476,
+            "line": 32,
+            "column": 9
+          },
+          "end": {
+            "offset": 485,
+            "line": 32,
+            "column": 18
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -1154,23 +1201,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "noise_seed",
-            "numExpression": null,
-            "start": {
-              "offset": 496,
-              "line": 34,
-              "column": 9
-            },
-            "end": {
-              "offset": 506,
-              "line": 34,
-              "column": 19
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "noise_seed",
+          "numExpression": null,
+          "start": {
+            "offset": 496,
+            "line": 34,
+            "column": 9
+          },
+          "end": {
+            "offset": 506,
+            "line": 34,
+            "column": 19
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -1202,23 +1247,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "noise_count",
-            "numExpression": null,
-            "start": {
-              "offset": 516,
-              "line": 35,
-              "column": 9
-            },
-            "end": {
-              "offset": 527,
-              "line": 35,
-              "column": 20
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "noise_count",
+          "numExpression": null,
+          "start": {
+            "offset": 516,
+            "line": 35,
+            "column": 9
+          },
+          "end": {
+            "offset": 527,
+            "line": 35,
+            "column": 20
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -1250,23 +1293,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "noise_freq",
-            "numExpression": null,
-            "start": {
-              "offset": 537,
-              "line": 36,
-              "column": 9
-            },
-            "end": {
-              "offset": 547,
-              "line": 36,
-              "column": 19
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "noise_freq",
+          "numExpression": null,
+          "start": {
+            "offset": 537,
+            "line": 36,
+            "column": 9
+          },
+          "end": {
+            "offset": 547,
+            "line": 36,
+            "column": 19
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -1298,23 +1339,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "realstep",
-            "numExpression": null,
-            "start": {
-              "offset": 585,
-              "line": 39,
-              "column": 9
-            },
-            "end": {
-              "offset": 593,
-              "line": 39,
-              "column": 17
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "realstep",
+          "numExpression": null,
+          "start": {
+            "offset": 585,
+            "line": 39,
+            "column": 9
+          },
+          "end": {
+            "offset": 593,
+            "line": 39,
+            "column": 17
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -1346,23 +1385,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "psgtime",
-            "numExpression": null,
-            "start": {
-              "offset": 603,
-              "line": 40,
-              "column": 9
-            },
-            "end": {
-              "offset": 610,
-              "line": 40,
-              "column": 16
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "psgtime",
+          "numExpression": null,
+          "start": {
+            "offset": 603,
+            "line": 40,
+            "column": 9
+          },
+          "end": {
+            "offset": 610,
+            "line": 40,
+            "column": 16
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -1394,23 +1431,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "psgstep",
-            "numExpression": null,
-            "start": {
-              "offset": 620,
-              "line": 41,
-              "column": 9
-            },
-            "end": {
-              "offset": 627,
-              "line": 41,
-              "column": 16
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "psgstep",
+          "numExpression": null,
+          "start": {
+            "offset": 620,
+            "line": 41,
+            "column": 9
+          },
+          "end": {
+            "offset": 627,
+            "line": 41,
+            "column": 16
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -1442,23 +1477,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "adr",
-            "numExpression": null,
-            "start": {
-              "offset": 659,
-              "line": 44,
-              "column": 9
-            },
-            "end": {
-              "offset": 662,
-              "line": 44,
-              "column": 12
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "adr",
+          "numExpression": null,
+          "start": {
+            "offset": 659,
+            "line": 44,
+            "column": 9
+          },
+          "end": {
+            "offset": 662,
+            "line": 44,
+            "column": 12
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "u32",
@@ -1490,23 +1523,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "ch_out",
-            "numExpression": "3",
-            "start": {
-              "offset": 704,
-              "line": 47,
-              "column": 9
-            },
-            "end": {
-              "offset": 713,
-              "line": 47,
-              "column": 18
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "ch_out",
+          "numExpression": "3",
+          "start": {
+            "offset": 704,
+            "line": 47,
+            "column": 9
+          },
+          "end": {
+            "offset": 713,
+            "line": 47,
+            "column": 18
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "i32",
@@ -1595,23 +1626,21 @@
     "defines": [
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "psg",
-            "numExpression": null,
-            "start": {
-              "offset": 759,
-              "line": 56,
-              "column": 7
-            },
-            "end": {
-              "offset": 762,
-              "line": 56,
-              "column": 10
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "psg",
+          "numExpression": null,
+          "start": {
+            "offset": 759,
+            "line": 56,
+            "column": 7
+          },
+          "end": {
+            "offset": 762,
+            "line": 56,
+            "column": 10
           }
-        ],
+        },
         "varType": {
           "type": "Struct",
           "varType": "Struct",
@@ -1641,23 +1670,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "output",
-            "numExpression": "1024",
-            "start": {
-              "offset": 770,
-              "line": 57,
-              "column": 7
-            },
-            "end": {
-              "offset": 782,
-              "line": 57,
-              "column": 19
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "output",
+          "numExpression": "1024",
+          "start": {
+            "offset": 770,
+            "line": 57,
+            "column": 7
+          },
+          "end": {
+            "offset": 782,
+            "line": 57,
+            "column": 19
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "f32",

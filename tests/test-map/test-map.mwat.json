@@ -31,23 +31,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "label",
-            "numExpression": "16",
-            "start": {
-              "offset": 28,
-              "line": 3,
-              "column": 7
-            },
-            "end": {
-              "offset": 37,
-              "line": 3,
-              "column": 16
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "label",
+          "numExpression": "16",
+          "start": {
+            "offset": 28,
+            "line": 3,
+            "column": 7
+          },
+          "end": {
+            "offset": 37,
+            "line": 3,
+            "column": 16
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "i32",
@@ -92,53 +90,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "label2",
-            "numExpression": null,
-            "start": {
-              "offset": 65,
-              "line": 4,
-              "column": 7
-            },
-            "end": {
-              "offset": 71,
-              "line": 4,
-              "column": 13
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "label2",
+          "numExpression": null,
+          "start": {
+            "offset": 65,
+            "line": 4,
+            "column": 7
           },
-          {
-            "type": "MemoryLabelId",
-            "id": "label2_1",
-            "numExpression": null,
-            "start": {
-              "offset": 72,
-              "line": 4,
-              "column": 14
-            },
-            "end": {
-              "offset": 80,
-              "line": 4,
-              "column": 22
-            }
-          },
-          {
-            "type": "MemoryLabelId",
-            "id": "label2_2",
-            "numExpression": null,
-            "start": {
-              "offset": 81,
-              "line": 4,
-              "column": 23
-            },
-            "end": {
-              "offset": 89,
-              "line": 4,
-              "column": 31
-            }
+          "end": {
+            "offset": 71,
+            "line": 4,
+            "column": 13
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "i64",
@@ -170,23 +136,113 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "label3",
-            "numExpression": null,
-            "start": {
-              "offset": 97,
-              "line": 5,
-              "column": 7
-            },
-            "end": {
-              "offset": 103,
-              "line": 5,
-              "column": 13
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "label2_1",
+          "numExpression": null,
+          "start": {
+            "offset": 72,
+            "line": 4,
+            "column": 14
+          },
+          "end": {
+            "offset": 80,
+            "line": 4,
+            "column": 22
           }
-        ],
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "i64",
+          "size": 8,
+          "integer": true,
+          "unsigned": false,
+          "start": {
+            "offset": 61,
+            "line": 4,
+            "column": 3
+          },
+          "end": {
+            "offset": 64,
+            "line": 4,
+            "column": 6
+          }
+        },
+        "initExpression": null,
+        "start": {
+          "offset": 61,
+          "line": 4,
+          "column": 3
+        },
+        "end": {
+          "offset": 90,
+          "line": 4,
+          "column": 32
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "label2_2",
+          "numExpression": null,
+          "start": {
+            "offset": 81,
+            "line": 4,
+            "column": 23
+          },
+          "end": {
+            "offset": 89,
+            "line": 4,
+            "column": 31
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "i64",
+          "size": 8,
+          "integer": true,
+          "unsigned": false,
+          "start": {
+            "offset": 61,
+            "line": 4,
+            "column": 3
+          },
+          "end": {
+            "offset": 64,
+            "line": 4,
+            "column": 6
+          }
+        },
+        "initExpression": null,
+        "start": {
+          "offset": 61,
+          "line": 4,
+          "column": 3
+        },
+        "end": {
+          "offset": 90,
+          "line": 4,
+          "column": 32
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "label3",
+          "numExpression": null,
+          "start": {
+            "offset": 97,
+            "line": 5,
+            "column": 7
+          },
+          "end": {
+            "offset": 103,
+            "line": 5,
+            "column": 13
+          }
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "i32",
@@ -218,23 +274,21 @@
       },
       {
         "type": "MemoryLabel",
-        "id": [
-          {
-            "type": "MemoryLabelId",
-            "id": "label4",
-            "numExpression": null,
-            "start": {
-              "offset": 111,
-              "line": 6,
-              "column": 7
-            },
-            "end": {
-              "offset": 117,
-              "line": 6,
-              "column": 13
-            }
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "label4",
+          "numExpression": null,
+          "start": {
+            "offset": 111,
+            "line": 6,
+            "column": 7
+          },
+          "end": {
+            "offset": 117,
+            "line": 6,
+            "column": 13
           }
-        ],
+        },
         "varType": {
           "type": "PrimitiveType",
           "varType": "f64",

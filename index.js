@@ -270,13 +270,15 @@ function peg$parse(input, options) {
       peg$c97 = "{@map",
       peg$c98 = peg$literalExpectation("{@map", false),
       peg$c99 = function(defines) {
-        return node('MemoryMap',{defines:removeWhiteSpace(defines)});
+        return node('MemoryMap',{defines:nomalizeDefines(defines)});
       },
       peg$c100 = ",",
       peg$c101 = peg$literalExpectation(",", false),
       peg$c102 = function(type, head, tail) { return buildList(head,tail,3);},
       peg$c103 = function(type, id, code) {return code;},
-      peg$c104 = function(type, id, initExpression) {return node('MemoryLabel',{id:id,varType:type,initExpression:initExpression});},
+      peg$c104 = function(type, id, initExpression) {
+        return node('MemoryLabel',{id:id,varType:type,initExpression:initExpression});
+      },
       peg$c105 = "offset",
       peg$c106 = peg$literalExpectation("offset", false),
       peg$c107 = function(offset) {return offset;},
@@ -312,13 +314,7 @@ function peg$parse(input, options) {
       peg$c135 = "{@struct",
       peg$c136 = peg$literalExpectation("{@struct", false),
       peg$c137 = function(id, defines) {
-        const filteredDefines = defines.filter(d=>d.type == 'MemoryLabel');
-        // calc size of struct
-        // const size = filteredDefines.reduce((a,c)=>{
-        //   console.log(c);
-        //   a + c.varType.size;
-        // });
-        return node("StructDefinition",{id:id,defines:filteredDefines});
+        return node("StructDefinition",{id:id,defines:nomalizeDefines(defines)});
       },
       peg$c138 = function(id) {
         return node("Struct",{varType:'Struct',id:id});
@@ -3504,6 +3500,22 @@ function peg$parse(input, options) {
       return tokens.filter(d=>(d && d.type != 'WhiteSpace' && d.type != "Comment" && d.type != "LineTerminator"));
     }
 
+    function nomalizeDefines(defines){
+      const normalizedDefines = [];
+
+      removeWhiteSpace(defines)
+      .forEach(define=>{
+        if(define.type == "MemoryLabel"){
+          define.id.forEach(id=>{
+            normalizedDefines.push(Object.assign({},define,{id:id}));
+          });
+        } else {
+            normalizedDefines.push(define);
+        }
+      });
+      return normalizedDefines;
+    }
+
 
 
   peg$result = peg$startRuleFunction();
@@ -3530,11 +3542,11 @@ var preprocessParser = {
   parse:       peg$parse
 };
 
-function error(message,token){
-  if(token){
+function error(message, token) {
+  if (token) {
     throw new Error(`Error: line:${token.start.line} column:${token.start.column} :${message}:`)
   } else {
-    throw new Error(message);    
+    throw new Error(message);
   }
 }
 
@@ -3588,28 +3600,28 @@ var index = async () => {
     const wabt_ = wabt();
 
     class Context {
-      constructor(preprocessParser$$1,mwasmParser){
+      constructor(preprocessParser$$1, mwasmParser) {
         this.preprocessParser = preprocessParser$$1;
         this.mwasmParser = mwasmParser;
-        this.includeFileTree = {parent:null,childs:{}};
+        this.includeFileTree = { parent: null, childs: {} };
         this.path = path;
         this.require = require;
         this.pathStack = [];
         this.context = {};
       }
 
-      readSourceFile(srcPath){
+      readSourceFile(srcPath) {
         srcPath = path.normalize(srcPath);
-        let src = fs.readFileSync(srcPath,'utf-8');
+        let src = fs.readFileSync(srcPath, 'utf-8');
         return src;
       }
 
-      checkIncludeLoop(baseName){
+      checkIncludeLoop(baseName) {
         let current = this.includeFileTree;
-        function check(b){
-          if(current.parent && current.parent.childs[b]){
+        function check(b) {
+          if (current.parent && current.parent.childs[b]) {
             return false;
-          } else if(current.parent){
+          } else if (current.parent) {
             current = current.parent;
             return check(b);
           }
@@ -3619,16 +3631,16 @@ var index = async () => {
       }
 
 
-      preprocess(srcPath,srcToken,skip = true){
+      preprocess(srcPath, srcToken, skip = true) {
 
         const baseName = path.basename(srcPath);
 
-        if(!this.checkIncludeLoop(baseName,srcToken)){
-          error(`include Loop Detected:${srcToken.baseName}:'${baseName}'`,srcToken);
+        if (!this.checkIncludeLoop(baseName, srcToken)) {
+          error(`include Loop Detected:${srcToken.baseName}:'${baseName}'`, srcToken);
         }
 
-        if(!(baseName in this.includeFileTree.childs)){
-          const inode =  {name:baseName,parent:this.includeFileTree,childs:{}};
+        if (!(baseName in this.includeFileTree.childs)) {
+          const inode = { name: baseName, parent: this.includeFileTree, childs: {} };
           inode.parent.childs[baseName] = inode;
           this.includeFileTree = inode;
         } else {
@@ -3640,18 +3652,19 @@ var index = async () => {
 
         let tokens = this.preprocessParser.parse(srcStr);
 
-        fs.writeFileSync(`./${baseName}.json`,JSON.stringify(tokens,null,2),'utf-8');
+        fs.writeFileSync(`./${baseName}.json`, JSON.stringify(tokens, null, 2), 'utf-8');
 
-        const preprocessed = this.preprocessTokens(tokens,baseName,skip);
+        const preprocessed = this.preprocessTokens(tokens, baseName, skip);
 
         this.includeFileTree = this.includeFileTree.parent;
         return preprocessed.join('');
       }
 
-      preprocessTokens(tokens,baseName,skip){
+      preprocessTokens(tokens, baseName, skip) {
         const preprocessed = [];
-        for(const token of tokens){
-          switch(token.type){
+        const rootContext = this.context;
+        for (const token of tokens) {
+          switch (token.type) {
             case 'LineTerminator':
               !skip && preprocessed.push(token.value);
               break;
@@ -3668,13 +3681,13 @@ var index = async () => {
               !skip && preprocessed.push(token.value);
               break;
             case 'Condition':
-              if(this.evalExpression(token.expression)){
-                if(token.if){
-                  preprocessed.push(...this.preprocessTokens(token.if,baseName,skip));
-                } 
+              if (this.evalExpression(token.expression)) {
+                if (token.if) {
+                  preprocessed.push(...this.preprocessTokens(token.if, baseName, skip));
+                }
               } else {
-                if(token.else){
-                  preprocessed.push(...this.preprocessTokens(token.else,baseName,skip));
+                if (token.else) {
+                  processed.push(...this.preprocessTokens(token.else, baseName, skip));
                 }
               }
               break;
@@ -3690,79 +3703,120 @@ var index = async () => {
             case 'SourceInclude':
               let src = this.evalExpression(token.pathExpression);
               token.baseName = baseName;
-              const includedSource = this.preprocess(src,token,skip);
+              const includedSource = this.preprocess(src, token, skip);
               preprocessed.push(...includedSource);
               break;
             case 'PropertyGet':
-              if(this.context[token.propertyName]){
+              if (this.context[token.propertyName]) {
                 preprocessed.push(this.context[token.propertyName] + '');
               } else {
-                error(`error:context property name '${token.propertyName}' is not found.`,token);
+                error(`error:context property name '${token.propertyName}' is not found.`, token);
               }
               break;
             case 'WhiteSpace':
-                preprocessed.push(skip ? ' ' : token.value);
+              preprocessed.push(skip ? ' ' : token.value);
+              break;
+            case 'StructDefinition':
+              if (token.id in this.context) {
+                error(`error:Struct name '${token.id}' is already defined.`, token);
+              } else {
+                // 
+                let context = this.context[token.id] =
+                  {
+                    type: token.type,
+                    size: 0
+                  };
+                this.defineMember(token.defines,context);
+                for(const i in context){
+                  console.info(i,context[i].size,context[i].num);
+                }
+              }
+              break;
+            case 'MemoryMap':
+              {
+                this.defineMember(token.defines,this.context);
+              }
               break;
             default:
-              error(`unknown token type '${token.type}'`,token);
+              error(`unknown token type '${token.type}'`, token);
           }
         }
         return preprocessed;
       }
 
-      parseMwat(srcText){
+      parseMwat(srcText) {
 
       }
 
 
-      eval(code,options){
-        let func = new Function('$','options',code);
-        return func.bind(this)(this.context,options);
+      eval(code, options) {
+        let func = new Function('$', 'options', code);
+        return func.bind(this)(this.context, options);
       }
 
-      evalExpression(code,options){
-        return this.eval('return ' + code,options);
+      evalExpression(code, options) {
+        return this.eval('return ' + code, options);
       }
 
-      makeMemoryMap(token){
-        const defines = token.defines;
-        const memoryMap = this.memoryMap = {};
+      defineMember(defines, currentContext) {
         let offset = 0;
+        const rootContext = this.context;
+        for (const def of defines) {
+          switch (def.type) {
+            case "MemoryLabel":
+              switch (def.varType.type) {
+                case "PrimitiveType":
+                case "Struct":
 
-
-        for(const define of defines){
-          if(define.id in memoryMap){
-            error(`${define.id} is already deined.`,define);
-          }
-          memoryMap[define.id] = offset;
-          const num = define.numExpression ? this.evalExpression(define.numExpression) : 1;
-          const size = define.varType.size;
-          const varSize = num * size;
-
-          if(define.initExpression){
-            const buffer = new ArrayBuffer(varSize);
-            const dview = new DataView(buffer);
-            let initData = this.evalExpression(define.initExpression);
-            if(define.varType.integer){
-              if(define.varType.signed)
-                ;
+                  console.info(def);
+                  if (def.id.id in currentContext) {
+                    error(`error:struct member name '${def.id.id}' is already defined.`, def);
+                  } else {
+                    let c;
+                    if (def.varType.type == "PrimitiveType") {
+                      c = currentContext[def.id.id] = Object.assign({}, def.varType, { offset: offset });
+                    } else {
+                      if (!def.varType.id in rootContext) {
+                        error(`error:Struct '${def.varType.id}' is not defined.`, def);
+                      }
+                      let structType = rootContext[def.varType.id];
+                      if (structType.type != 'StructDefinition') {
+                        error(`error:Struct '${def.varType.id}' is not struct type.`, def);
+                      }
+                      c = currentContext[def.id.id] = structType;
+                    }
+                    let num;
+                    if (def.id.numExpression) {
+                      num = this.evalExpression(def.id.numExpression);
+                      if (isNaN(num)) {
+                        error(`error:number suffix is illegal.`, def);
+                      }
+                      c.num = num;
+                    } else {
+                      num = 1;
+                      c.num = num;
+                    }
+                    offset += c.size * num;
+                    currentContext.size += c.size * num;
+                    // 初期値の設定
+                  }
+                  break;
               }
-              dview.setUint8();
-            }
-            if(initData instanceof Uint8Array ){
-              if(initData.byteLength > varSize){
-                error(`size of init value is too long.${define}`,defines);
-              }
-              let datastring = '';
-              initData.forEach(v=>{datastring += '\\' + ('0' + v.toString(16)).slice(-2);});
-            }
+              break;
+            case "WhiteSpace":
+            case "Comment":
+              // skip
+              break;
+            default:
+              error(`error: '${def.type}' is unrecogniezed.`);
           }
-          offset += num * size;
+
         }
+      }
     }
-    
+
     const mwasmParser = null;
-    const context = new Context(preprocessParser,mwasmParser);
+    const context = new Context(preprocessParser, mwasmParser);
 
     let startInput = path.resolve(args.input);
     let chdir = path.dirname(startInput);
@@ -3770,20 +3824,20 @@ var index = async () => {
     process.chdir(chdir);
 
     const preprocessedSourceText = context.preprocess(startInput);
-    await fs.promises.writeFile(path.basename(args.input,'.mwat') + '.wat',preprocessedSourceText,'utf-8');
+    await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.wat', preprocessedSourceText, 'utf-8');
     process.chdir(backup);
 
-    let wasmModule = wabt_.parseWat(args.input,preprocessedSourceText);
-    if(args.output){
-       await fs.promises.writeFile(args.output,Buffer.from(wasmModule.toBinary({}).buffer));
+    let wasmModule = wabt_.parseWat(args.input, preprocessedSourceText);
+    if (args.output) {
+      await fs.promises.writeFile(args.output, Buffer.from(wasmModule.toBinary({}).buffer));
     } else {
       console.info(wasmModule.toText({ foldExprs: false, inlineExport: false }));
     }
 
   } catch (e) {
-    console.error(e.message,e.stack);
+    console.error(e.message, e.stack);
     process.exit();
-  } 
+  }
 };
 
 module.exports = index;
