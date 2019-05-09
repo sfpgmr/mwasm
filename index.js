@@ -3727,14 +3727,14 @@ var index = async () => {
                     size: 0
                   };
                 this.defineMember(token.defines,context);
-                for(const i in context){
-                  console.info(i,context[i].size,context[i].num);
-                }
+                console.info(context);
               }
               break;
             case 'MemoryMap':
               {
                 this.defineMember(token.defines,this.context);
+
+                  console.log(this.context);
               }
               break;
             default:
@@ -3768,7 +3768,6 @@ var index = async () => {
                 case "PrimitiveType":
                 case "Struct":
 
-                  console.info(def);
                   if (def.id.id in currentContext) {
                     error(`error:struct member name '${def.id.id}' is already defined.`, def);
                   } else {
@@ -3783,7 +3782,7 @@ var index = async () => {
                       if (structType.type != 'StructDefinition') {
                         error(`error:Struct '${def.varType.id}' is not struct type.`, def);
                       }
-                      c = currentContext[def.id.id] = structType;
+                      c = currentContext[def.id.id] = Object.assign({},structType,{offset:offset});
                     }
                     let num;
                     if (def.id.numExpression) {
@@ -3791,10 +3790,8 @@ var index = async () => {
                       if (isNaN(num)) {
                         error(`error:number suffix is illegal.`, def);
                       }
-                      c.num = num;
                     } else {
                       num = 1;
-                      c.num = num;
                     }
                     offset += c.size * num;
                     currentContext.size += c.size * num;
