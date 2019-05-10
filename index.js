@@ -3542,6 +3542,8 @@ var preprocessParser = {
   parse:       peg$parse
 };
 
+const $attributes = '_attributes_';//Symbol('attributes');
+
 function error(message, token) {
   if (token) {
     throw new Error(`Error: line:${token.start.line} column:${token.start.column} :${message}:`)
@@ -3723,18 +3725,19 @@ var index = async () => {
                 // 
                 let context = this.context[token.id] =
                   {
-                    type: token.type,
-                    size: 0
+                    [$attributes]:{
+                      type: token.type,
+                      size: 0
+                    }
                   };
-                this.defineMember(token.defines,context);
-                console.info(context);
+                this.defineMember(token.defines,context,token.id);
+                //console.info(context);
               }
               break;
             case 'MemoryMap':
               {
+                this.context[$attributes] = {type:token.type,size:0};
                 this.defineMember(token.defines,this.context);
-
-                  console.log(this.context);
               }
               break;
             default:
@@ -3758,31 +3761,41 @@ var index = async () => {
         return this.eval('return ' + code, options);
       }
 
-      defineMember(defines, currentContext) {
+      defineMember(defines, currentContext,structName) {
         let offset = 0;
         const rootContext = this.context;
         for (const def of defines) {
           switch (def.type) {
             case "MemoryLabel":
               switch (def.varType.type) {
-                case "PrimitiveType":
                 case "Struct":
+
+                  console.log(structName,def.id.id);
+                  if(structName == def.varType.id){
+                    error(`error:struct loop detected.`,def);
+                  }
+
+                case "PrimitiveType":
 
                   if (def.id.id in currentContext) {
                     error(`error:struct member name '${def.id.id}' is already defined.`, def);
                   } else {
                     let c;
                     if (def.varType.type == "PrimitiveType") {
-                      c = currentContext[def.id.id] = Object.assign({}, def.varType, { offset: offset });
+                      c = currentContext[def.id.id] = {
+                        [$attributes]:Object.assign({}, def.varType, { offset: offset})
+                      };
                     } else {
                       if (!def.varType.id in rootContext) {
                         error(`error:Struct '${def.varType.id}' is not defined.`, def);
                       }
                       let structType = rootContext[def.varType.id];
-                      if (structType.type != 'StructDefinition') {
+                      if (structType[$attributes].type != 'StructDefinition') {
                         error(`error:Struct '${def.varType.id}' is not struct type.`, def);
                       }
-                      c = currentContext[def.id.id] = Object.assign({},structType,{offset:offset});
+                      c = currentContext[def.id.id] = Object.assign({},structType,{
+                        [$attributes]:Object.assign({},structType[$attributes],{offset:offset})
+                      });
                     }
                     let num;
                     if (def.id.numExpression) {
@@ -3793,10 +3806,12 @@ var index = async () => {
                     } else {
                       num = 1;
                     }
-                    offset += c.size * num;
-                    currentContext.size += c.size * num;
+                    c[$attributes].num = num;
+                    offset += c[$attributes].size * num;
+                    currentContext[$attributes].size += c[$attributes].size * num;
                     // 初期値の設定
                   }
+                  //console.log(currentContext);
                   break;
               }
               break;
@@ -3821,6 +3836,7 @@ var index = async () => {
     process.chdir(chdir);
 
     const preprocessedSourceText = context.preprocess(startInput);
+    await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.context.json',JSON.stringify(context.context,null,2),'utf-8');
     await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.wat', preprocessedSourceText, 'utf-8');
     process.chdir(backup);
 

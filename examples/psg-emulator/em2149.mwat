@@ -1,3 +1,6 @@
+{@struct CHANNEL
+  u32 vol[3];
+}
 {@struct PSG 
     (;; Volume Table ;;)
     u32 voltbl;
@@ -39,6 +42,7 @@
     u32 realstep;
     u32 psgtime;
     u32 psgstep;
+    CHANNEL ch_c;
 
     (;; I/O Ctrl ;;)
     u32 adr;
@@ -57,6 +61,9 @@
   (export "memory" (memory $memory))
   (export "test" (func $test))
   (func $test (result i32)
-    i32.const 1
+
+    i32.const 1;;{$.psg.realstep + $.psg.ch_c.vol[0]};
+    i32.const 2 
+    i32.add ;;$mem,{$.psg.ch}
   )
 )
