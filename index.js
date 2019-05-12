@@ -4526,6 +4526,22 @@ var index = async () => {
         for(const expression of expressions){
           switch(expression.type){
             case 'Property':
+              if(expression.child && expression.child.type == 'JSPropertyName'){
+                const jsprop = expression.child;
+                const propName = jsprop.name;
+                if(jsprop.child); else {
+                  switch(jsprop.prefix){
+                    case '&':
+                      break;
+                    case '#':
+                      break;
+                    default:
+ 
+                  }
+                }
+                
+              }
+              preprocessed.push(parsed);
               break;
             case 'WhiteSpace':
               !skip && preprocessed.push(' ');
@@ -4596,7 +4612,6 @@ var index = async () => {
                       if (isNaN(num)) {
                         error(`error:number suffix is illegal.`, def);
                       }
-                      currentContext[def.id.id] = new Array(num);
                     } else {
                       num = 1;
                     }

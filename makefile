@@ -3,7 +3,7 @@ VPATH = ./lib/:./:./bin
 
 # PARSERS = ./lib/mwasm-parser.js ./lib/preprocess-parser.js
 PARSERS = ./lib/preprocess-parser.js
-SRC_FILES = index.mjs
+SRC_FILES = ./lib/index.mjs
 
 TARGET = index.js
 TRACE = 
