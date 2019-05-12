@@ -2652,15 +2652,43 @@
   },
   {
     "type": "Identifier",
-    "name": "i32.const",
+    "name": "i32.load",
     "start": {
       "offset": 992,
       "line": 69,
       "column": 5
     },
     "end": {
-      "offset": 1001,
+      "offset": 1000,
       "line": 69,
+      "column": 13
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n    ",
+    "start": {
+      "offset": 1000,
+      "line": 69,
+      "column": 13
+    },
+    "end": {
+      "offset": 1005,
+      "line": 70,
+      "column": 5
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.const",
+    "start": {
+      "offset": 1005,
+      "line": 70,
+      "column": 5
+    },
+    "end": {
+      "offset": 1014,
+      "line": 70,
       "column": 14
     }
   },
@@ -2668,13 +2696,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1001,
-      "line": 69,
+      "offset": 1014,
+      "line": 70,
       "column": 14
     },
     "end": {
-      "offset": 1002,
-      "line": 69,
+      "offset": 1015,
+      "line": 70,
       "column": 15
     }
   },
@@ -2682,41 +2710,27 @@
     "type": "Identifier",
     "name": "1",
     "start": {
-      "offset": 1002,
-      "line": 69,
+      "offset": 1015,
+      "line": 70,
       "column": 15
     },
     "end": {
-      "offset": 1003,
-      "line": 69,
-      "column": 16
-    }
-  },
-  {
-    "type": "Comment",
-    "value": ";;&psg.ch_c.vol\n",
-    "start": {
-      "offset": 1003,
-      "line": 69,
-      "column": 16
-    },
-    "end": {
-      "offset": 1019,
+      "offset": 1016,
       "line": 70,
-      "column": 1
+      "column": 16
     }
   },
   {
     "type": "WhiteSpace",
-    "value": "    ",
+    "value": "\n    ",
     "start": {
-      "offset": 1019,
+      "offset": 1016,
       "line": 70,
-      "column": 1
+      "column": 16
     },
     "end": {
-      "offset": 1023,
-      "line": 70,
+      "offset": 1021,
+      "line": 71,
       "column": 5
     }
   },
@@ -2724,55 +2738,27 @@
     "type": "Identifier",
     "name": "i32.add",
     "start": {
-      "offset": 1023,
-      "line": 70,
+      "offset": 1021,
+      "line": 71,
       "column": 5
     },
     "end": {
-      "offset": 1030,
-      "line": 70,
+      "offset": 1028,
+      "line": 71,
       "column": 12
     }
   },
   {
     "type": "WhiteSpace",
-    "value": " ",
+    "value": " \n  ",
     "start": {
-      "offset": 1030,
-      "line": 70,
+      "offset": 1028,
+      "line": 71,
       "column": 12
     },
     "end": {
-      "offset": 1031,
-      "line": 70,
-      "column": 13
-    }
-  },
-  {
-    "type": "Comment",
-    "value": ";;$mem,{$.psg.ch}\n",
-    "start": {
-      "offset": 1031,
-      "line": 70,
-      "column": 13
-    },
-    "end": {
-      "offset": 1049,
-      "line": 71,
-      "column": 1
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": "  ",
-    "start": {
-      "offset": 1049,
-      "line": 71,
-      "column": 1
-    },
-    "end": {
-      "offset": 1051,
-      "line": 71,
+      "offset": 1032,
+      "line": 72,
       "column": 3
     }
   },
@@ -2780,13 +2766,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1051,
-      "line": 71,
+      "offset": 1032,
+      "line": 72,
       "column": 3
     },
     "end": {
-      "offset": 1052,
-      "line": 71,
+      "offset": 1033,
+      "line": 72,
       "column": 4
     }
   },
@@ -2794,41 +2780,41 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 1052,
-      "line": 71,
+      "offset": 1033,
+      "line": 72,
       "column": 4
     },
     "end": {
-      "offset": 1053,
-      "line": 72,
-      "column": 1
-    }
-  },
-  {
-    "type": "Parenthesis",
-    "kind": ")",
-    "start": {
-      "offset": 1053,
-      "line": 72,
-      "column": 1
-    },
-    "end": {
-      "offset": 1054,
-      "line": 72,
-      "column": 2
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": "\n",
-    "start": {
-      "offset": 1054,
-      "line": 72,
-      "column": 2
-    },
-    "end": {
-      "offset": 1055,
+      "offset": 1034,
       "line": 73,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 1034,
+      "line": 73,
+      "column": 1
+    },
+    "end": {
+      "offset": 1035,
+      "line": 73,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 1035,
+      "line": 73,
+      "column": 2
+    },
+    "end": {
+      "offset": 1036,
+      "line": 74,
       "column": 1
     }
   }

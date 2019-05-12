@@ -728,7 +728,7 @@
             "line": 5,
             "column": 6
           },
-          "offset": 0,
+          "offset": 300,
           "num": 3
         }
       }
@@ -1483,7 +1483,7 @@
             "line": 5,
             "column": 6
           },
-          "offset": 0,
+          "offset": 600,
           "num": 3
         }
       }

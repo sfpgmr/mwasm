@@ -4321,6 +4321,8 @@ var preprocessParser = {
   parse:       peg$parse
 };
 
+//
+
 const $attributes = '_attributes_';//Symbol('attributes');
 
 function error(message, token) {
@@ -4330,6 +4332,30 @@ function error(message, token) {
     throw new Error(message);
   }
 }
+
+// ディープコピーメソッド(clone)
+// https://qiita.com/ttatsf/items/68de3795ae3bf35c0228
+const mapForMap = f => a => 
+  new Map( [...a].map( ([key, value]) =>[key, f(value)] ) );  
+const mapForSet = f => a => new Set( [...a].map( f ) );
+const entriesMapIntoObj = f => xs => 
+  xs.reduce(
+    (acc, [key, value]) => ({ ...acc, [key]:f(value) })
+    , {} 
+  );
+const mapForObj = f => a =>
+  entriesMapIntoObj( f )( Object.entries( a ) );
+const getType = a => Object.prototype.toString.call(a);
+
+const clone = a => {
+  const type = getType( a );
+  return (type === "[object Array]")?  a.map( clone )
+        :(type === "[object Map]")?    mapForMap( clone )( a )
+        :(type === "[object Set]")?    mapForSet( clone )( a )
+        :(type === "[object Object]")? mapForObj( clone )( a )
+        :(type === "[object Date]")?   new Date( a )
+        : a;
+};
 
 var index = async () => {
 
@@ -4381,8 +4407,8 @@ var index = async () => {
     const wabt_ = wabt();
 
     class Context {
-      constructor(preprocessParser, mwasmParser) {
-        this.preprocessParser = preprocessParser;
+      constructor(preprocessParser$$1, mwasmParser) {
+        this.preprocessParser = preprocessParser$$1;
         this.mwasmParser = mwasmParser;
         this.includeFileTree = { parent: null, childs: {} };
         this.path = path;
@@ -4489,8 +4515,8 @@ var index = async () => {
               break;
             case 'PropertyExpression':
               preprocessed.push(
-                this.parsePropertyExpression(token.expression,baseName,skip)
-                );
+                this.parsePropertyExpression(token.expression, baseName, skip)
+              );
               break;
             case 'WhiteSpace':
               preprocessed.push(skip ? ' ' : token.value);
@@ -4502,20 +4528,20 @@ var index = async () => {
                 // 
                 let context = this.context[token.id] =
                   {
-                    [$attributes]:{
+                    [$attributes]: {
                       type: token.type,
                       size: 0
                     }
                   };
-                this.defineMember(token.defines,context,{structName:token.id});
+                this.defineMember(token.defines, context, { structName: token.id });
                 //console.info(context);
               }
               break;
 
             case 'MemoryMap':
               {
-                this.context[$attributes] = {type:token.type,size:0};
-                this.defineMember(token.defines,this.context);
+                this.context[$attributes] = { type: token.type, size: 0 };
+                this.defineMember(token.defines, this.context);
               }
               break;
             default:
@@ -4526,56 +4552,56 @@ var index = async () => {
       }
 
 
-      parsePropertyExpression(expressions,baseName,skip){
+      parsePropertyExpression(expressions, baseName, skip) {
         const parsed = [];
-        for(const expression of expressions){
-          switch(expression.type){
+        for (const expression of expressions) {
+          switch (expression.type) {
             case 'JSPropertyName':
-                let propName = expression.name;
-                let self = this;
-                let relativeOffsets = [];
-                function buildPropName(token){
-                  if(token.child){
-                    switch(token.child.type){
-                      case 'IndexExpression':
-                        let p = new Number(self.parsePropertyExpression(token.child.expression,baseName,skip));
-                        switch(expression.prefix){
-                          case '&':
+              let propName = expression.name;
+              let self = this;
+              let relativeOffsets = [];
+              function buildPropName(token) {
+                if (token.child) {
+                  switch (token.child.type) {
+                    case 'IndexExpression':
+                      let p = new Number(self.parsePropertyExpression(token.child.expression, baseName, skip));
+                      switch (expression.prefix) {
+                        case '&':
                           relativeOffsets.push(`$.${propName}[$attributes].size * ${p}`);
                           break;
-                          case '#':
-                          default:
-                            propName += "['" + p + "']";
-                        }
-                    
-                        // 
-                        break;
-                      case 'JSPropertyName':
-                        propName += '.' + token.child.name;
-                        return buildPropName(token.child);
-                      default:
-                        error('unknown token type',token.child);
-                        break;
-                    }
-                  } else {
-                    return;
+                        case '#':
+                        default:
+                          propName += "['" + p + "']";
+                      }
+
+                      // 
+                      break;
+                    case 'JSPropertyName':
+                      propName += '.' + token.child.name;
+                      return buildPropName(token.child);
+                    default:
+                      error('unknown token type', token.child);
+                      break;
                   }
+                } else {
+                  return;
                 }
-                buildPropName(expression);
-                switch(expression.prefix){
-                  case '&':
-                    propName = '$.' + propName + '[$attributes].offset';
-                    relativeOffsets.length && (propName += '+' + relativeOffsets.join('+'));
-                    break;
-                  case '#':
-                    propName = '$.' + propName + '[$attributes].size';
-                    break;
-                  default:
-                    propName = '$.' + propName; 
-                }
-                console.log(propName);
-                parsed.push(propName);
-              break;            
+              }
+              buildPropName(expression);
+              switch (expression.prefix) {
+                case '&':
+                  propName = '$.' + propName + '[$attributes].offset';
+                  relativeOffsets.length && (propName += '+' + relativeOffsets.join('+'));
+                  break;
+                case '#':
+                  propName = '$.' + propName + '[$attributes].size';
+                  break;
+                default:
+                  propName = '$.' + propName;
+              }
+              console.log(propName);
+              parsed.push(propName);
+              break;
             case 'WhiteSpace':
               !skip && parsed.push(' ');
               break;
@@ -4589,7 +4615,7 @@ var index = async () => {
               parsed.push(expression.name);
               break;
             default:
-              error("illegal Property Expression",expression);
+              error("illegal Property Expression", expression);
               break;
           }
         }
@@ -4601,15 +4627,15 @@ var index = async () => {
       }
 
       eval(code, options) {
-        let func = new Function('$','$attributes', 'options', code);
-        return func.bind(this)(this.context,$attributes, options);
+        let func = new Function('$', '$attributes', 'options', code);
+        return func.bind(this)(this.context, $attributes, options);
       }
 
       evalExpression(code, options) {
         return this.eval('return ' + code, options);
       }
 
-      defineMember(defines, currentContext,opts) {
+      defineMember(defines, currentContext, opts) {
         let offset = 0;
         const rootContext = this.context;
         for (const def of defines) {
@@ -4618,8 +4644,8 @@ var index = async () => {
               switch (def.varType.type) {
                 case "Struct":
 
-                  if(opts && opts.structName == def.varType.id){
-                    error(`error:struct loop detected.`,def);
+                  if (opts && opts.structName == def.varType.id) {
+                    error(`error:struct loop detected.`, def);
                   }
 
                 case "PrimitiveType":
@@ -4629,10 +4655,12 @@ var index = async () => {
                   } else {
                     let c;
                     if (def.varType.type == "PrimitiveType") {
+                      // Native Type
                       c = currentContext[def.id.id] = {
-                        [$attributes]:Object.assign({}, def.varType, { offset: offset})
+                        [$attributes]: Object.assign(clone(def.varType), { offset: offset })
                       };
                     } else {
+                      // Struct Type
                       if (!def.varType.id in rootContext) {
                         error(`error:Struct '${def.varType.id}' is not defined.`, def);
                       }
@@ -4640,9 +4668,28 @@ var index = async () => {
                       if (structType[$attributes].type != 'StructDefinition') {
                         error(`error:Struct '${def.varType.id}' is not struct type.`, def);
                       }
-                      c = currentContext[def.id.id] = Object.assign({},structType,{
-                        [$attributes]:Object.assign({},structType[$attributes],{offset:offset})
+                      c = currentContext[def.id.id] = Object.assign(clone(structType), {
+                        [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset })
                       });
+                      function calcStructMemberOffset(st,o){
+                        for(const m in st){
+                          if(m != $attributes){
+                            let att = st[m][$attributes];
+                            switch(att.type){
+                              case "PrimitiveType":
+                                console.log(att,m,att.offset,o);
+                                att.offset += o;
+                                break;
+                              case "StructDefinition":
+                                att.offset += o;
+                                console.log(att,m,att.offset,o);
+                                calcStructMemberOffset(st[m],att.offset);
+                                break;
+                            }
+                          }
+                        }
+                      }
+                      calcStructMemberOffset(c,offset);
                     }
                     let num;
                     if (def.id.numExpression) {
@@ -4656,6 +4703,7 @@ var index = async () => {
                     c[$attributes].num = num;
                     offset += c[$attributes].size * num;
                     currentContext[$attributes].size += c[$attributes].size * num;
+
                     // 初期値の設定
                   }
                   //console.log(currentContext);
@@ -4683,7 +4731,7 @@ var index = async () => {
     process.chdir(chdir);
 
     const preprocessedSourceText = context.preprocess(startInput);
-    await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.context.json',JSON.stringify(context.context,null,2),'utf-8');
+    await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.context.json', JSON.stringify(context.context, null, 2), 'utf-8');
     await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.wat', preprocessedSourceText, 'utf-8');
     process.chdir(backup);
 

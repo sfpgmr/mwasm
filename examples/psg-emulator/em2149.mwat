@@ -66,7 +66,8 @@
   (func $test (result i32)
 
     i32.const &psg.ch_c.vol[1]
-    i32.const 1;;&psg.ch_c.vol
-    i32.add ;;$mem,{$.psg.ch}
+    i32.load
+    i32.const 1
+    i32.add 
   )
 )
