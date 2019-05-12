@@ -1,1 +1,1 @@
-   (module (memory $memory 1 ) (export "memory" (memory $memory)) (export "test" (func $test)) (func $test (result i32) i32.const + i32.const 2 i32.add  ) ) 
+    (module (memory $memory 1 ) (export "memory" (memory $memory)) (export "test" (func $test)) (func $test (result i32) i32.const 4 i32.const 1 i32.add  ) ) 

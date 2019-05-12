@@ -251,19 +251,22 @@ function peg$parse(input, options) {
       peg$c99 = peg$literalExpectation("[", false),
       peg$c100 = "]",
       peg$c101 = peg$literalExpectation("]", false),
-      peg$c102 = function(head, ex) {return node("IndexExpression",{expression:ex});},
+      peg$c102 = function(head, ex) {return node("IndexExpression",{expression:ex.expression});},
       peg$c103 = function(head, tail) {
         let t = tail.reduce((r,c)=>{
-          head.child = c;
+          r.child = c;
           return c;
         },head);
-        return node("Property",{child:head});
+        head.top = true;
+        return head;
       },
       peg$c104 = /^[@]/,
       peg$c105 = peg$classExpectation(["@"], false, false),
       peg$c106 = /^[@&#]/,
       peg$c107 = peg$classExpectation(["@", "&", "#"], false, false),
-      peg$c108 = function(prop) {return node("ConstExpression",{expression:prop})},
+      peg$c108 = function(prop) {
+        return prop;
+      },
       peg$c109 = function(ex) {
         return node("PropertyExpression",{expression:ex} );
       },
@@ -4378,8 +4381,8 @@ var index = async () => {
     const wabt_ = wabt();
 
     class Context {
-      constructor(preprocessParser$$1, mwasmParser) {
-        this.preprocessParser = preprocessParser$$1;
+      constructor(preprocessParser, mwasmParser) {
+        this.preprocessParser = preprocessParser;
         this.mwasmParser = mwasmParser;
         this.includeFileTree = { parent: null, childs: {} };
         this.path = path;
@@ -4484,8 +4487,10 @@ var index = async () => {
               const includedSource = this.preprocess(src, token, skip);
               preprocessed.push(...includedSource);
               break;
-            case 'ConstExpression':
-              preprocessed.push(...this.parseConstExpression(token,skip));
+            case 'PropertyExpression':
+              preprocessed.push(
+                this.parsePropertyExpression(token.expression,baseName,skip)
+                );
               break;
             case 'WhiteSpace':
               preprocessed.push(skip ? ' ' : token.value);
@@ -4506,6 +4511,7 @@ var index = async () => {
                 //console.info(context);
               }
               break;
+
             case 'MemoryMap':
               {
                 this.context[$attributes] = {type:token.type,size:0};
@@ -4520,51 +4526,83 @@ var index = async () => {
       }
 
 
-      parseConstExpression(t,skip){
-        const preprocessed = [];
-        const expressions = t.expression.expression;
+      parsePropertyExpression(expressions,baseName,skip){
+        const parsed = [];
         for(const expression of expressions){
           switch(expression.type){
-            case 'Property':
-              if(expression.child && expression.child.type == 'JSPropertyName'){
-                const jsprop = expression.child;
-                const propName = jsprop.name;
-                if(jsprop.child); else {
-                  switch(jsprop.prefix){
-                    case '&':
-                      break;
-                    case '#':
-                      break;
-                    default:
- 
+            case 'JSPropertyName':
+                let propName = expression.name;
+                let self = this;
+                let relativeOffsets = [];
+                function buildPropName(token){
+                  if(token.child){
+                    switch(token.child.type){
+                      case 'IndexExpression':
+                        let p = new Number(self.parsePropertyExpression(token.child.expression,baseName,skip));
+                        switch(expression.prefix){
+                          case '&':
+                          relativeOffsets.push(`$.${propName}[$attributes].size * ${p}`);
+                          break;
+                          case '#':
+                          default:
+                            propName += "['" + p + "']";
+                        }
+                    
+                        // 
+                        break;
+                      case 'JSPropertyName':
+                        propName += '.' + token.child.name;
+                        return buildPropName(token.child);
+                      default:
+                        error('unknown token type',token.child);
+                        break;
+                    }
+                  } else {
+                    return;
                   }
                 }
-                
-              }
-              preprocessed.push(parsed);
-              break;
+                buildPropName(expression);
+                switch(expression.prefix){
+                  case '&':
+                    propName = '$.' + propName + '[$attributes].offset';
+                    relativeOffsets.length && (propName += '+' + relativeOffsets.join('+'));
+                    break;
+                  case '#':
+                    propName = '$.' + propName + '[$attributes].size';
+                    break;
+                  default:
+                    propName = '$.' + propName; 
+                }
+                console.log(propName);
+                parsed.push(propName);
+              break;            
             case 'WhiteSpace':
-              !skip && preprocessed.push(' ');
+              !skip && parsed.push(' ');
               break;
             case 'JSNumber':
-              preprocessed.push(expression.value);
+              parsed.push(expression.value);
+              break;
             case 'JSOperator':
-              preprocessed.push(expression.value);
+              parsed.push(expression.value);
               break;
             case 'Identifier':
-              preprocessed.push(expression.name);
+              parsed.push(expression.name);
               break;
             default:
-              error("illegal const expression",expression);
+              error("illegal Property Expression",expression);
               break;
           }
         }
-        return preprocessed;
+        let jsSource = parsed.join('');
+        console.info(jsSource);
+        let v = this.evalExpression(jsSource);
+        console.info(v);
+        return v;
       }
 
       eval(code, options) {
-        let func = new Function('$', 'options', code);
-        return func.bind(this)(this.context, options);
+        let func = new Function('$','$attributes', 'options', code);
+        return func.bind(this)(this.context,$attributes, options);
       }
 
       evalExpression(code, options) {

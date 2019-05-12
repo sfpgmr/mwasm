@@ -1,0 +1,1555 @@
+{
+  "X": 2,
+  "CHANNEL": {
+    "_attributes_": {
+      "type": "StructDefinition",
+      "size": 12
+    },
+    "vol": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 35,
+          "line": 5,
+          "column": 3
+        },
+        "end": {
+          "offset": 38,
+          "line": 5,
+          "column": 6
+        },
+        "offset": 0,
+        "num": 3
+      }
+    }
+  },
+  "PSG": {
+    "_attributes_": {
+      "type": "StructDefinition",
+      "size": 328
+    },
+    "voltbl": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 92,
+          "line": 9,
+          "column": 5
+        },
+        "end": {
+          "offset": 95,
+          "line": 9,
+          "column": 8
+        },
+        "offset": 0,
+        "num": 1
+      }
+    },
+    "reg": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 109,
+          "line": 11,
+          "column": 5
+        },
+        "end": {
+          "offset": 112,
+          "line": 11,
+          "column": 8
+        },
+        "offset": 4,
+        "num": 32
+      }
+    },
+    "out": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "i32",
+        "size": 4,
+        "integer": true,
+        "unsigned": false,
+        "start": {
+          "offset": 128,
+          "line": 12,
+          "column": 5
+        },
+        "end": {
+          "offset": 131,
+          "line": 12,
+          "column": 8
+        },
+        "offset": 132,
+        "num": 1
+      }
+    },
+    "clk": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 142,
+          "line": 14,
+          "column": 5
+        },
+        "end": {
+          "offset": 145,
+          "line": 14,
+          "column": 8
+        },
+        "offset": 136,
+        "num": 1
+      }
+    },
+    "rate": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 142,
+          "line": 14,
+          "column": 5
+        },
+        "end": {
+          "offset": 145,
+          "line": 14,
+          "column": 8
+        },
+        "offset": 140,
+        "num": 1
+      }
+    },
+    "base_incr": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 142,
+          "line": 14,
+          "column": 5
+        },
+        "end": {
+          "offset": 145,
+          "line": 14,
+          "column": 8
+        },
+        "offset": 144,
+        "num": 1
+      }
+    },
+    "quality": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 142,
+          "line": 14,
+          "column": 5
+        },
+        "end": {
+          "offset": 145,
+          "line": 14,
+          "column": 8
+        },
+        "offset": 148,
+        "num": 1
+      }
+    },
+    "count": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 182,
+          "line": 16,
+          "column": 5
+        },
+        "end": {
+          "offset": 185,
+          "line": 16,
+          "column": 8
+        },
+        "offset": 152,
+        "num": 3
+      }
+    },
+    "volume": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 200,
+          "line": 17,
+          "column": 5
+        },
+        "end": {
+          "offset": 203,
+          "line": 17,
+          "column": 8
+        },
+        "offset": 164,
+        "num": 3
+      }
+    },
+    "freq": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 219,
+          "line": 18,
+          "column": 5
+        },
+        "end": {
+          "offset": 222,
+          "line": 18,
+          "column": 8
+        },
+        "offset": 176,
+        "num": 3
+      }
+    },
+    "edge": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 236,
+          "line": 19,
+          "column": 5
+        },
+        "end": {
+          "offset": 239,
+          "line": 19,
+          "column": 8
+        },
+        "offset": 188,
+        "num": 3
+      }
+    },
+    "tmask": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 253,
+          "line": 20,
+          "column": 5
+        },
+        "end": {
+          "offset": 256,
+          "line": 20,
+          "column": 8
+        },
+        "offset": 200,
+        "num": 3
+      }
+    },
+    "nmask": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 271,
+          "line": 21,
+          "column": 5
+        },
+        "end": {
+          "offset": 274,
+          "line": 21,
+          "column": 8
+        },
+        "offset": 212,
+        "num": 3
+      }
+    },
+    "mask": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 289,
+          "line": 22,
+          "column": 5
+        },
+        "end": {
+          "offset": 292,
+          "line": 22,
+          "column": 8
+        },
+        "offset": 224,
+        "num": 1
+      }
+    },
+    "base_count": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 304,
+          "line": 24,
+          "column": 5
+        },
+        "end": {
+          "offset": 307,
+          "line": 24,
+          "column": 8
+        },
+        "offset": 228,
+        "num": 1
+      }
+    },
+    "env_volume": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 325,
+          "line": 26,
+          "column": 5
+        },
+        "end": {
+          "offset": 328,
+          "line": 26,
+          "column": 8
+        },
+        "offset": 232,
+        "num": 1
+      }
+    },
+    "env_ptr": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 345,
+          "line": 27,
+          "column": 5
+        },
+        "end": {
+          "offset": 348,
+          "line": 27,
+          "column": 8
+        },
+        "offset": 236,
+        "num": 1
+      }
+    },
+    "env_face": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 362,
+          "line": 28,
+          "column": 5
+        },
+        "end": {
+          "offset": 365,
+          "line": 28,
+          "column": 8
+        },
+        "offset": 240,
+        "num": 1
+      }
+    },
+    "env_continue": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 381,
+          "line": 30,
+          "column": 5
+        },
+        "end": {
+          "offset": 384,
+          "line": 30,
+          "column": 8
+        },
+        "offset": 244,
+        "num": 1
+      }
+    },
+    "env_attack": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 403,
+          "line": 31,
+          "column": 5
+        },
+        "end": {
+          "offset": 406,
+          "line": 31,
+          "column": 8
+        },
+        "offset": 248,
+        "num": 1
+      }
+    },
+    "env_alternate": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 423,
+          "line": 32,
+          "column": 5
+        },
+        "end": {
+          "offset": 426,
+          "line": 32,
+          "column": 8
+        },
+        "offset": 252,
+        "num": 1
+      }
+    },
+    "env_hold": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 446,
+          "line": 33,
+          "column": 5
+        },
+        "end": {
+          "offset": 449,
+          "line": 33,
+          "column": 8
+        },
+        "offset": 256,
+        "num": 1
+      }
+    },
+    "env_pause": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 464,
+          "line": 34,
+          "column": 5
+        },
+        "end": {
+          "offset": 467,
+          "line": 34,
+          "column": 8
+        },
+        "offset": 260,
+        "num": 1
+      }
+    },
+    "env_reset": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 483,
+          "line": 35,
+          "column": 5
+        },
+        "end": {
+          "offset": 486,
+          "line": 35,
+          "column": 8
+        },
+        "offset": 264,
+        "num": 1
+      }
+    },
+    "env_freq": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 503,
+          "line": 37,
+          "column": 5
+        },
+        "end": {
+          "offset": 506,
+          "line": 37,
+          "column": 8
+        },
+        "offset": 268,
+        "num": 1
+      }
+    },
+    "env_count": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 521,
+          "line": 38,
+          "column": 5
+        },
+        "end": {
+          "offset": 524,
+          "line": 38,
+          "column": 8
+        },
+        "offset": 272,
+        "num": 1
+      }
+    },
+    "noise_seed": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 541,
+          "line": 40,
+          "column": 5
+        },
+        "end": {
+          "offset": 544,
+          "line": 40,
+          "column": 8
+        },
+        "offset": 276,
+        "num": 1
+      }
+    },
+    "noise_count": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 561,
+          "line": 41,
+          "column": 5
+        },
+        "end": {
+          "offset": 564,
+          "line": 41,
+          "column": 8
+        },
+        "offset": 280,
+        "num": 1
+      }
+    },
+    "noise_freq": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 582,
+          "line": 42,
+          "column": 5
+        },
+        "end": {
+          "offset": 585,
+          "line": 42,
+          "column": 8
+        },
+        "offset": 284,
+        "num": 1
+      }
+    },
+    "realstep": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 630,
+          "line": 45,
+          "column": 5
+        },
+        "end": {
+          "offset": 633,
+          "line": 45,
+          "column": 8
+        },
+        "offset": 288,
+        "num": 1
+      }
+    },
+    "psgtime": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 648,
+          "line": 46,
+          "column": 5
+        },
+        "end": {
+          "offset": 651,
+          "line": 46,
+          "column": 8
+        },
+        "offset": 292,
+        "num": 1
+      }
+    },
+    "psgstep": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 665,
+          "line": 47,
+          "column": 5
+        },
+        "end": {
+          "offset": 668,
+          "line": 47,
+          "column": 8
+        },
+        "offset": 296,
+        "num": 1
+      }
+    },
+    "ch_c": {
+      "_attributes_": {
+        "type": "StructDefinition",
+        "size": 12,
+        "offset": 300,
+        "num": 1
+      },
+      "vol": {
+        "_attributes_": {
+          "type": "PrimitiveType",
+          "varType": "u32",
+          "size": 4,
+          "integer": true,
+          "unsigned": true,
+          "start": {
+            "offset": 35,
+            "line": 5,
+            "column": 3
+          },
+          "end": {
+            "offset": 38,
+            "line": 5,
+            "column": 6
+          },
+          "offset": 0,
+          "num": 3
+        }
+      }
+    },
+    "adr": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 722,
+          "line": 51,
+          "column": 5
+        },
+        "end": {
+          "offset": 725,
+          "line": 51,
+          "column": 8
+        },
+        "offset": 312,
+        "num": 1
+      }
+    },
+    "ch_out": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "i32",
+        "size": 4,
+        "integer": true,
+        "unsigned": false,
+        "start": {
+          "offset": 767,
+          "line": 54,
+          "column": 5
+        },
+        "end": {
+          "offset": 770,
+          "line": 54,
+          "column": 8
+        },
+        "offset": 316,
+        "num": 3
+      }
+    }
+  },
+  "_attributes_": {
+    "type": "MemoryMap",
+    "size": 4424
+  },
+  "psg": {
+    "_attributes_": {
+      "type": "StructDefinition",
+      "size": 328,
+      "offset": 0,
+      "num": 1
+    },
+    "voltbl": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 92,
+          "line": 9,
+          "column": 5
+        },
+        "end": {
+          "offset": 95,
+          "line": 9,
+          "column": 8
+        },
+        "offset": 0,
+        "num": 1
+      }
+    },
+    "reg": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 109,
+          "line": 11,
+          "column": 5
+        },
+        "end": {
+          "offset": 112,
+          "line": 11,
+          "column": 8
+        },
+        "offset": 4,
+        "num": 32
+      }
+    },
+    "out": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "i32",
+        "size": 4,
+        "integer": true,
+        "unsigned": false,
+        "start": {
+          "offset": 128,
+          "line": 12,
+          "column": 5
+        },
+        "end": {
+          "offset": 131,
+          "line": 12,
+          "column": 8
+        },
+        "offset": 132,
+        "num": 1
+      }
+    },
+    "clk": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 142,
+          "line": 14,
+          "column": 5
+        },
+        "end": {
+          "offset": 145,
+          "line": 14,
+          "column": 8
+        },
+        "offset": 136,
+        "num": 1
+      }
+    },
+    "rate": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 142,
+          "line": 14,
+          "column": 5
+        },
+        "end": {
+          "offset": 145,
+          "line": 14,
+          "column": 8
+        },
+        "offset": 140,
+        "num": 1
+      }
+    },
+    "base_incr": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 142,
+          "line": 14,
+          "column": 5
+        },
+        "end": {
+          "offset": 145,
+          "line": 14,
+          "column": 8
+        },
+        "offset": 144,
+        "num": 1
+      }
+    },
+    "quality": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 142,
+          "line": 14,
+          "column": 5
+        },
+        "end": {
+          "offset": 145,
+          "line": 14,
+          "column": 8
+        },
+        "offset": 148,
+        "num": 1
+      }
+    },
+    "count": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 182,
+          "line": 16,
+          "column": 5
+        },
+        "end": {
+          "offset": 185,
+          "line": 16,
+          "column": 8
+        },
+        "offset": 152,
+        "num": 3
+      }
+    },
+    "volume": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 200,
+          "line": 17,
+          "column": 5
+        },
+        "end": {
+          "offset": 203,
+          "line": 17,
+          "column": 8
+        },
+        "offset": 164,
+        "num": 3
+      }
+    },
+    "freq": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 219,
+          "line": 18,
+          "column": 5
+        },
+        "end": {
+          "offset": 222,
+          "line": 18,
+          "column": 8
+        },
+        "offset": 176,
+        "num": 3
+      }
+    },
+    "edge": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 236,
+          "line": 19,
+          "column": 5
+        },
+        "end": {
+          "offset": 239,
+          "line": 19,
+          "column": 8
+        },
+        "offset": 188,
+        "num": 3
+      }
+    },
+    "tmask": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 253,
+          "line": 20,
+          "column": 5
+        },
+        "end": {
+          "offset": 256,
+          "line": 20,
+          "column": 8
+        },
+        "offset": 200,
+        "num": 3
+      }
+    },
+    "nmask": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 271,
+          "line": 21,
+          "column": 5
+        },
+        "end": {
+          "offset": 274,
+          "line": 21,
+          "column": 8
+        },
+        "offset": 212,
+        "num": 3
+      }
+    },
+    "mask": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 289,
+          "line": 22,
+          "column": 5
+        },
+        "end": {
+          "offset": 292,
+          "line": 22,
+          "column": 8
+        },
+        "offset": 224,
+        "num": 1
+      }
+    },
+    "base_count": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 304,
+          "line": 24,
+          "column": 5
+        },
+        "end": {
+          "offset": 307,
+          "line": 24,
+          "column": 8
+        },
+        "offset": 228,
+        "num": 1
+      }
+    },
+    "env_volume": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 325,
+          "line": 26,
+          "column": 5
+        },
+        "end": {
+          "offset": 328,
+          "line": 26,
+          "column": 8
+        },
+        "offset": 232,
+        "num": 1
+      }
+    },
+    "env_ptr": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 345,
+          "line": 27,
+          "column": 5
+        },
+        "end": {
+          "offset": 348,
+          "line": 27,
+          "column": 8
+        },
+        "offset": 236,
+        "num": 1
+      }
+    },
+    "env_face": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 362,
+          "line": 28,
+          "column": 5
+        },
+        "end": {
+          "offset": 365,
+          "line": 28,
+          "column": 8
+        },
+        "offset": 240,
+        "num": 1
+      }
+    },
+    "env_continue": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 381,
+          "line": 30,
+          "column": 5
+        },
+        "end": {
+          "offset": 384,
+          "line": 30,
+          "column": 8
+        },
+        "offset": 244,
+        "num": 1
+      }
+    },
+    "env_attack": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 403,
+          "line": 31,
+          "column": 5
+        },
+        "end": {
+          "offset": 406,
+          "line": 31,
+          "column": 8
+        },
+        "offset": 248,
+        "num": 1
+      }
+    },
+    "env_alternate": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 423,
+          "line": 32,
+          "column": 5
+        },
+        "end": {
+          "offset": 426,
+          "line": 32,
+          "column": 8
+        },
+        "offset": 252,
+        "num": 1
+      }
+    },
+    "env_hold": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 446,
+          "line": 33,
+          "column": 5
+        },
+        "end": {
+          "offset": 449,
+          "line": 33,
+          "column": 8
+        },
+        "offset": 256,
+        "num": 1
+      }
+    },
+    "env_pause": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 464,
+          "line": 34,
+          "column": 5
+        },
+        "end": {
+          "offset": 467,
+          "line": 34,
+          "column": 8
+        },
+        "offset": 260,
+        "num": 1
+      }
+    },
+    "env_reset": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 483,
+          "line": 35,
+          "column": 5
+        },
+        "end": {
+          "offset": 486,
+          "line": 35,
+          "column": 8
+        },
+        "offset": 264,
+        "num": 1
+      }
+    },
+    "env_freq": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 503,
+          "line": 37,
+          "column": 5
+        },
+        "end": {
+          "offset": 506,
+          "line": 37,
+          "column": 8
+        },
+        "offset": 268,
+        "num": 1
+      }
+    },
+    "env_count": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 521,
+          "line": 38,
+          "column": 5
+        },
+        "end": {
+          "offset": 524,
+          "line": 38,
+          "column": 8
+        },
+        "offset": 272,
+        "num": 1
+      }
+    },
+    "noise_seed": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 541,
+          "line": 40,
+          "column": 5
+        },
+        "end": {
+          "offset": 544,
+          "line": 40,
+          "column": 8
+        },
+        "offset": 276,
+        "num": 1
+      }
+    },
+    "noise_count": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 561,
+          "line": 41,
+          "column": 5
+        },
+        "end": {
+          "offset": 564,
+          "line": 41,
+          "column": 8
+        },
+        "offset": 280,
+        "num": 1
+      }
+    },
+    "noise_freq": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 582,
+          "line": 42,
+          "column": 5
+        },
+        "end": {
+          "offset": 585,
+          "line": 42,
+          "column": 8
+        },
+        "offset": 284,
+        "num": 1
+      }
+    },
+    "realstep": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 630,
+          "line": 45,
+          "column": 5
+        },
+        "end": {
+          "offset": 633,
+          "line": 45,
+          "column": 8
+        },
+        "offset": 288,
+        "num": 1
+      }
+    },
+    "psgtime": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 648,
+          "line": 46,
+          "column": 5
+        },
+        "end": {
+          "offset": 651,
+          "line": 46,
+          "column": 8
+        },
+        "offset": 292,
+        "num": 1
+      }
+    },
+    "psgstep": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 665,
+          "line": 47,
+          "column": 5
+        },
+        "end": {
+          "offset": 668,
+          "line": 47,
+          "column": 8
+        },
+        "offset": 296,
+        "num": 1
+      }
+    },
+    "ch_c": {
+      "_attributes_": {
+        "type": "StructDefinition",
+        "size": 12,
+        "offset": 300,
+        "num": 1
+      },
+      "vol": {
+        "_attributes_": {
+          "type": "PrimitiveType",
+          "varType": "u32",
+          "size": 4,
+          "integer": true,
+          "unsigned": true,
+          "start": {
+            "offset": 35,
+            "line": 5,
+            "column": 3
+          },
+          "end": {
+            "offset": 38,
+            "line": 5,
+            "column": 6
+          },
+          "offset": 0,
+          "num": 3
+        }
+      }
+    },
+    "adr": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "u32",
+        "size": 4,
+        "integer": true,
+        "unsigned": true,
+        "start": {
+          "offset": 722,
+          "line": 51,
+          "column": 5
+        },
+        "end": {
+          "offset": 725,
+          "line": 51,
+          "column": 8
+        },
+        "offset": 312,
+        "num": 1
+      }
+    },
+    "ch_out": {
+      "_attributes_": {
+        "type": "PrimitiveType",
+        "varType": "i32",
+        "size": 4,
+        "integer": true,
+        "unsigned": false,
+        "start": {
+          "offset": 767,
+          "line": 54,
+          "column": 5
+        },
+        "end": {
+          "offset": 770,
+          "line": 54,
+          "column": 8
+        },
+        "offset": 316,
+        "num": 3
+      }
+    }
+  },
+  "OutputBuffer": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "i32",
+      "size": 4,
+      "integer": true,
+      "unsigned": false,
+      "start": {
+        "offset": 804,
+        "line": 59,
+        "column": 3
+      },
+      "end": {
+        "offset": 807,
+        "line": 59,
+        "column": 6
+      },
+      "offset": 328,
+      "num": 1024
+    }
+  }
+}

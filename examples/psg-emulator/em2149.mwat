@@ -1,3 +1,6 @@
+{@
+  $.X = 2;
+}
 {@struct CHANNEL
   u32 vol[3];
 }
@@ -62,8 +65,8 @@
   (export "test" (func $test))
   (func $test (result i32)
 
-    i32.const &psg.count[0] + #psg.realstep
-    i32.const 2 
+    i32.const &psg.ch_c.vol[1]
+    i32.const 1;;&psg.ch_c.vol
     i32.add ;;$mem,{$.psg.ch}
   )
 )
