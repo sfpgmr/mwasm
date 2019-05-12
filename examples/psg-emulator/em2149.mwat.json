@@ -2640,12 +2640,12 @@
     "type": "WhiteSpace",
     "value": "\n    ",
     "start": {
-      "offset": 987,
+      "offset": 988,
       "line": 68,
-      "column": 31
+      "column": 32
     },
     "end": {
-      "offset": 992,
+      "offset": 993,
       "line": 69,
       "column": 5
     }
@@ -2654,12 +2654,12 @@
     "type": "Identifier",
     "name": "i32.load",
     "start": {
-      "offset": 992,
+      "offset": 993,
       "line": 69,
       "column": 5
     },
     "end": {
-      "offset": 1000,
+      "offset": 1001,
       "line": 69,
       "column": 13
     }
@@ -2668,12 +2668,12 @@
     "type": "WhiteSpace",
     "value": "\n    ",
     "start": {
-      "offset": 1000,
+      "offset": 1001,
       "line": 69,
       "column": 13
     },
     "end": {
-      "offset": 1005,
+      "offset": 1006,
       "line": 70,
       "column": 5
     }
@@ -2682,12 +2682,12 @@
     "type": "Identifier",
     "name": "i32.const",
     "start": {
-      "offset": 1005,
+      "offset": 1006,
       "line": 70,
       "column": 5
     },
     "end": {
-      "offset": 1014,
+      "offset": 1015,
       "line": 70,
       "column": 14
     }
@@ -2696,12 +2696,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1014,
+      "offset": 1015,
       "line": 70,
       "column": 14
     },
     "end": {
-      "offset": 1015,
+      "offset": 1016,
       "line": 70,
       "column": 15
     }
@@ -2710,12 +2710,12 @@
     "type": "Identifier",
     "name": "1",
     "start": {
-      "offset": 1015,
+      "offset": 1016,
       "line": 70,
       "column": 15
     },
     "end": {
-      "offset": 1016,
+      "offset": 1017,
       "line": 70,
       "column": 16
     }
@@ -2724,12 +2724,12 @@
     "type": "WhiteSpace",
     "value": "\n    ",
     "start": {
-      "offset": 1016,
+      "offset": 1017,
       "line": 70,
       "column": 16
     },
     "end": {
-      "offset": 1021,
+      "offset": 1022,
       "line": 71,
       "column": 5
     }
@@ -2738,12 +2738,12 @@
     "type": "Identifier",
     "name": "i32.add",
     "start": {
-      "offset": 1021,
+      "offset": 1022,
       "line": 71,
       "column": 5
     },
     "end": {
-      "offset": 1028,
+      "offset": 1029,
       "line": 71,
       "column": 12
     }
@@ -2752,12 +2752,12 @@
     "type": "WhiteSpace",
     "value": " \n  ",
     "start": {
-      "offset": 1028,
+      "offset": 1029,
       "line": 71,
       "column": 12
     },
     "end": {
-      "offset": 1032,
+      "offset": 1033,
       "line": 72,
       "column": 3
     }
@@ -2766,12 +2766,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1032,
+      "offset": 1033,
       "line": 72,
       "column": 3
     },
     "end": {
-      "offset": 1033,
+      "offset": 1034,
       "line": 72,
       "column": 4
     }
@@ -2780,12 +2780,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 1033,
+      "offset": 1034,
       "line": 72,
       "column": 4
     },
     "end": {
-      "offset": 1034,
+      "offset": 1035,
       "line": 73,
       "column": 1
     }
@@ -2794,26 +2794,26 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1034,
+      "offset": 1035,
       "line": 73,
       "column": 1
-    },
-    "end": {
-      "offset": 1035,
-      "line": 73,
-      "column": 2
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": "\n",
-    "start": {
-      "offset": 1035,
-      "line": 73,
-      "column": 2
     },
     "end": {
       "offset": 1036,
+      "line": 73,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 1036,
+      "line": 73,
+      "column": 2
+    },
+    "end": {
+      "offset": 1037,
       "line": 74,
       "column": 1
     }

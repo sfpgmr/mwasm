@@ -2189,57 +2189,89 @@
     }
   },
   {
-    "type": "Code",
-    "code": "$.foo.s_label",
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 878,
+          "line": 63,
+          "column": 26
+        },
+        "end": {
+          "offset": 882,
+          "line": 63,
+          "column": 30
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "adr",
+          "prefix": null,
+          "start": {
+            "offset": 883,
+            "line": 63,
+            "column": 31
+          },
+          "end": {
+            "offset": 886,
+            "line": 63,
+            "column": 34
+          }
+        },
+        "top": true
+      }
+    ],
     "start": {
       "offset": 878,
       "line": 63,
       "column": 26
     },
     "end": {
-      "offset": 893,
+      "offset": 886,
       "line": 63,
-      "column": 41
+      "column": 34
     }
   },
   {
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 893,
+      "offset": 887,
       "line": 63,
-      "column": 41
+      "column": 35
     },
     "end": {
-      "offset": 894,
+      "offset": 888,
       "line": 63,
-      "column": 42
+      "column": 36
     }
   },
   {
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 894,
+      "offset": 888,
       "line": 63,
-      "column": 42
+      "column": 36
     },
     "end": {
-      "offset": 895,
+      "offset": 889,
       "line": 63,
-      "column": 43
+      "column": 37
     }
   },
   {
     "type": "WhiteSpace",
     "value": "\n    ",
     "start": {
-      "offset": 895,
+      "offset": 889,
       "line": 63,
-      "column": 43
+      "column": 37
     },
     "end": {
-      "offset": 900,
+      "offset": 894,
       "line": 64,
       "column": 5
     }
@@ -2248,12 +2280,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 900,
+      "offset": 894,
       "line": 64,
       "column": 5
     },
     "end": {
-      "offset": 901,
+      "offset": 895,
       "line": 64,
       "column": 6
     }
@@ -2262,12 +2294,12 @@
     "type": "Identifier",
     "name": "i32.const",
     "start": {
-      "offset": 901,
+      "offset": 895,
       "line": 64,
       "column": 6
     },
     "end": {
-      "offset": 910,
+      "offset": 904,
       "line": 64,
       "column": 15
     }
@@ -2276,12 +2308,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 910,
+      "offset": 904,
       "line": 64,
       "column": 15
     },
     "end": {
-      "offset": 911,
+      "offset": 905,
       "line": 64,
       "column": 16
     }
@@ -2290,12 +2322,12 @@
     "type": "Code",
     "code": "$.X",
     "start": {
-      "offset": 911,
+      "offset": 905,
       "line": 64,
       "column": 16
     },
     "end": {
-      "offset": 916,
+      "offset": 910,
       "line": 64,
       "column": 21
     }
@@ -2304,12 +2336,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 916,
+      "offset": 910,
       "line": 64,
       "column": 21
     },
     "end": {
-      "offset": 917,
+      "offset": 911,
       "line": 64,
       "column": 22
     }
@@ -2318,12 +2350,12 @@
     "type": "WhiteSpace",
     "value": "\n  ",
     "start": {
-      "offset": 917,
+      "offset": 911,
       "line": 64,
       "column": 22
     },
     "end": {
-      "offset": 920,
+      "offset": 914,
       "line": 65,
       "column": 3
     }
@@ -2332,12 +2364,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 920,
+      "offset": 914,
       "line": 65,
       "column": 3
     },
     "end": {
-      "offset": 921,
+      "offset": 915,
       "line": 65,
       "column": 4
     }
@@ -2346,12 +2378,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 921,
+      "offset": 915,
       "line": 65,
       "column": 4
     },
     "end": {
-      "offset": 922,
+      "offset": 916,
       "line": 66,
       "column": 1
     }
@@ -2360,12 +2392,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 922,
+      "offset": 916,
       "line": 66,
       "column": 1
     },
     "end": {
-      "offset": 923,
+      "offset": 917,
       "line": 66,
       "column": 2
     }
@@ -2374,12 +2406,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 923,
+      "offset": 917,
       "line": 66,
       "column": 2
     },
     "end": {
-      "offset": 924,
+      "offset": 918,
       "line": 67,
       "column": 1
     }

@@ -60,7 +60,7 @@ $.X = 1;
 (export "test" (func $test))
 (func $test (result i32)
   (i32.add 
-    (i32.load (i32.const {$.foo.s_label}))
+    (i32.load (i32.const &psg.adr;))
     (i32.const {$.X})
   )
 )
