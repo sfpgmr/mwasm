@@ -62,7 +62,7 @@
   (export "test" (func $test))
   (func $test (result i32)
 
-    i32.const #psg.realstep + psg.ch_c.vol[0];
+    i32.const &psg.count[0] + #psg.realstep
     i32.const 2 
     i32.add ;;$mem,{$.psg.ch}
   )

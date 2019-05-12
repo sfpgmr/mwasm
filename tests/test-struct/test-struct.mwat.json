@@ -2189,9 +2189,8 @@
     }
   },
   {
-    "type": "PropertyExpression",
-    "propertyName": "foo",
-    "code": ".s_label",
+    "type": "Code",
+    "code": "$.foo.s_label",
     "start": {
       "offset": 878,
       "line": 63,
@@ -2288,9 +2287,8 @@
     }
   },
   {
-    "type": "PropertyExpression",
-    "propertyName": "X",
-    "code": "",
+    "type": "Code",
+    "code": "$.X",
     "start": {
       "offset": 911,
       "line": 64,

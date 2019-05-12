@@ -4,27 +4,11 @@
       "type": "StructDefinition",
       "size": 12
     },
-    "vol": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 19,
-          "line": 2,
-          "column": 3
-        },
-        "end": {
-          "offset": 22,
-          "line": 2,
-          "column": 6
-        },
-        "offset": 0,
-        "num": 3
-      }
-    }
+    "vol": [
+      null,
+      null,
+      null
+    ]
   },
   "PSG": {
     "_attributes_": {
@@ -39,12 +23,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 76,
+          "offset": 81,
           "line": 6,
           "column": 5
         },
         "end": {
-          "offset": 79,
+          "offset": 84,
           "line": 6,
           "column": 8
         },
@@ -52,27 +36,40 @@
         "num": 1
       }
     },
-    "reg": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 93,
-          "line": 8,
-          "column": 5
-        },
-        "end": {
-          "offset": 96,
-          "line": 8,
-          "column": 8
-        },
-        "offset": 4,
-        "num": 32
-      }
-    },
+    "reg": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "out": {
       "_attributes_": {
         "type": "PrimitiveType",
@@ -81,12 +78,12 @@
         "integer": true,
         "unsigned": false,
         "start": {
-          "offset": 112,
+          "offset": 120,
           "line": 9,
           "column": 5
         },
         "end": {
-          "offset": 115,
+          "offset": 123,
           "line": 9,
           "column": 8
         },
@@ -102,12 +99,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 126,
+          "offset": 136,
           "line": 11,
           "column": 5
         },
         "end": {
-          "offset": 129,
+          "offset": 139,
           "line": 11,
           "column": 8
         },
@@ -123,12 +120,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 126,
+          "offset": 136,
           "line": 11,
           "column": 5
         },
         "end": {
-          "offset": 129,
+          "offset": 139,
           "line": 11,
           "column": 8
         },
@@ -144,12 +141,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 126,
+          "offset": 136,
           "line": 11,
           "column": 5
         },
         "end": {
-          "offset": 129,
+          "offset": 139,
           "line": 11,
           "column": 8
         },
@@ -165,12 +162,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 126,
+          "offset": 136,
           "line": 11,
           "column": 5
         },
         "end": {
-          "offset": 129,
+          "offset": 139,
           "line": 11,
           "column": 8
         },
@@ -178,132 +175,36 @@
         "num": 1
       }
     },
-    "count": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 166,
-          "line": 13,
-          "column": 5
-        },
-        "end": {
-          "offset": 169,
-          "line": 13,
-          "column": 8
-        },
-        "offset": 152,
-        "num": 3
-      }
-    },
-    "volume": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 184,
-          "line": 14,
-          "column": 5
-        },
-        "end": {
-          "offset": 187,
-          "line": 14,
-          "column": 8
-        },
-        "offset": 164,
-        "num": 3
-      }
-    },
-    "freq": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 203,
-          "line": 15,
-          "column": 5
-        },
-        "end": {
-          "offset": 206,
-          "line": 15,
-          "column": 8
-        },
-        "offset": 176,
-        "num": 3
-      }
-    },
-    "edge": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 220,
-          "line": 16,
-          "column": 5
-        },
-        "end": {
-          "offset": 223,
-          "line": 16,
-          "column": 8
-        },
-        "offset": 188,
-        "num": 3
-      }
-    },
-    "tmask": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 237,
-          "line": 17,
-          "column": 5
-        },
-        "end": {
-          "offset": 240,
-          "line": 17,
-          "column": 8
-        },
-        "offset": 200,
-        "num": 3
-      }
-    },
-    "nmask": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 255,
-          "line": 18,
-          "column": 5
-        },
-        "end": {
-          "offset": 258,
-          "line": 18,
-          "column": 8
-        },
-        "offset": 212,
-        "num": 3
-      }
-    },
+    "count": [
+      null,
+      null,
+      null
+    ],
+    "volume": [
+      null,
+      null,
+      null
+    ],
+    "freq": [
+      null,
+      null,
+      null
+    ],
+    "edge": [
+      null,
+      null,
+      null
+    ],
+    "tmask": [
+      null,
+      null,
+      null
+    ],
+    "nmask": [
+      null,
+      null,
+      null
+    ],
     "mask": {
       "_attributes_": {
         "type": "PrimitiveType",
@@ -312,12 +213,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 273,
+          "offset": 291,
           "line": 19,
           "column": 5
         },
         "end": {
-          "offset": 276,
+          "offset": 294,
           "line": 19,
           "column": 8
         },
@@ -333,12 +234,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 288,
+          "offset": 308,
           "line": 21,
           "column": 5
         },
         "end": {
-          "offset": 291,
+          "offset": 311,
           "line": 21,
           "column": 8
         },
@@ -354,12 +255,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 309,
+          "offset": 331,
           "line": 23,
           "column": 5
         },
         "end": {
-          "offset": 312,
+          "offset": 334,
           "line": 23,
           "column": 8
         },
@@ -375,12 +276,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 329,
+          "offset": 352,
           "line": 24,
           "column": 5
         },
         "end": {
-          "offset": 332,
+          "offset": 355,
           "line": 24,
           "column": 8
         },
@@ -396,12 +297,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 346,
+          "offset": 370,
           "line": 25,
           "column": 5
         },
         "end": {
-          "offset": 349,
+          "offset": 373,
           "line": 25,
           "column": 8
         },
@@ -417,12 +318,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 365,
+          "offset": 391,
           "line": 27,
           "column": 5
         },
         "end": {
-          "offset": 368,
+          "offset": 394,
           "line": 27,
           "column": 8
         },
@@ -438,12 +339,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 387,
+          "offset": 414,
           "line": 28,
           "column": 5
         },
         "end": {
-          "offset": 390,
+          "offset": 417,
           "line": 28,
           "column": 8
         },
@@ -459,12 +360,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 407,
+          "offset": 435,
           "line": 29,
           "column": 5
         },
         "end": {
-          "offset": 410,
+          "offset": 438,
           "line": 29,
           "column": 8
         },
@@ -480,12 +381,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 430,
+          "offset": 459,
           "line": 30,
           "column": 5
         },
         "end": {
-          "offset": 433,
+          "offset": 462,
           "line": 30,
           "column": 8
         },
@@ -501,12 +402,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 448,
+          "offset": 478,
           "line": 31,
           "column": 5
         },
         "end": {
-          "offset": 451,
+          "offset": 481,
           "line": 31,
           "column": 8
         },
@@ -522,12 +423,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 467,
+          "offset": 498,
           "line": 32,
           "column": 5
         },
         "end": {
-          "offset": 470,
+          "offset": 501,
           "line": 32,
           "column": 8
         },
@@ -543,12 +444,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 487,
+          "offset": 520,
           "line": 34,
           "column": 5
         },
         "end": {
-          "offset": 490,
+          "offset": 523,
           "line": 34,
           "column": 8
         },
@@ -564,12 +465,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 505,
+          "offset": 539,
           "line": 35,
           "column": 5
         },
         "end": {
-          "offset": 508,
+          "offset": 542,
           "line": 35,
           "column": 8
         },
@@ -585,12 +486,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 525,
+          "offset": 561,
           "line": 37,
           "column": 5
         },
         "end": {
-          "offset": 528,
+          "offset": 564,
           "line": 37,
           "column": 8
         },
@@ -606,12 +507,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 545,
+          "offset": 582,
           "line": 38,
           "column": 5
         },
         "end": {
-          "offset": 548,
+          "offset": 585,
           "line": 38,
           "column": 8
         },
@@ -627,12 +528,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 566,
+          "offset": 604,
           "line": 39,
           "column": 5
         },
         "end": {
-          "offset": 569,
+          "offset": 607,
           "line": 39,
           "column": 8
         },
@@ -648,12 +549,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 614,
+          "offset": 655,
           "line": 42,
           "column": 5
         },
         "end": {
-          "offset": 617,
+          "offset": 658,
           "line": 42,
           "column": 8
         },
@@ -669,12 +570,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 632,
+          "offset": 674,
           "line": 43,
           "column": 5
         },
         "end": {
-          "offset": 635,
+          "offset": 677,
           "line": 43,
           "column": 8
         },
@@ -690,12 +591,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 649,
+          "offset": 692,
           "line": 44,
           "column": 5
         },
         "end": {
-          "offset": 652,
+          "offset": 695,
           "line": 44,
           "column": 8
         },
@@ -710,27 +611,11 @@
         "offset": 300,
         "num": 1
       },
-      "vol": {
-        "_attributes_": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
-          "start": {
-            "offset": 19,
-            "line": 2,
-            "column": 3
-          },
-          "end": {
-            "offset": 22,
-            "line": 2,
-            "column": 6
-          },
-          "offset": 0,
-          "num": 3
-        }
-      }
+      "vol": [
+        null,
+        null,
+        null
+      ]
     },
     "adr": {
       "_attributes_": {
@@ -740,12 +625,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 706,
+          "offset": 753,
           "line": 48,
           "column": 5
         },
         "end": {
-          "offset": 709,
+          "offset": 756,
           "line": 48,
           "column": 8
         },
@@ -753,27 +638,11 @@
         "num": 1
       }
     },
-    "ch_out": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "i32",
-        "size": 4,
-        "integer": true,
-        "unsigned": false,
-        "start": {
-          "offset": 751,
-          "line": 51,
-          "column": 5
-        },
-        "end": {
-          "offset": 754,
-          "line": 51,
-          "column": 8
-        },
-        "offset": 316,
-        "num": 3
-      }
-    }
+    "ch_out": [
+      null,
+      null,
+      null
+    ]
   },
   "_attributes_": {
     "type": "MemoryMap",
@@ -794,12 +663,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 76,
+          "offset": 81,
           "line": 6,
           "column": 5
         },
         "end": {
-          "offset": 79,
+          "offset": 84,
           "line": 6,
           "column": 8
         },
@@ -807,27 +676,40 @@
         "num": 1
       }
     },
-    "reg": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 93,
-          "line": 8,
-          "column": 5
-        },
-        "end": {
-          "offset": 96,
-          "line": 8,
-          "column": 8
-        },
-        "offset": 4,
-        "num": 32
-      }
-    },
+    "reg": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "out": {
       "_attributes_": {
         "type": "PrimitiveType",
@@ -836,12 +718,12 @@
         "integer": true,
         "unsigned": false,
         "start": {
-          "offset": 112,
+          "offset": 120,
           "line": 9,
           "column": 5
         },
         "end": {
-          "offset": 115,
+          "offset": 123,
           "line": 9,
           "column": 8
         },
@@ -857,12 +739,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 126,
+          "offset": 136,
           "line": 11,
           "column": 5
         },
         "end": {
-          "offset": 129,
+          "offset": 139,
           "line": 11,
           "column": 8
         },
@@ -878,12 +760,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 126,
+          "offset": 136,
           "line": 11,
           "column": 5
         },
         "end": {
-          "offset": 129,
+          "offset": 139,
           "line": 11,
           "column": 8
         },
@@ -899,12 +781,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 126,
+          "offset": 136,
           "line": 11,
           "column": 5
         },
         "end": {
-          "offset": 129,
+          "offset": 139,
           "line": 11,
           "column": 8
         },
@@ -920,12 +802,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 126,
+          "offset": 136,
           "line": 11,
           "column": 5
         },
         "end": {
-          "offset": 129,
+          "offset": 139,
           "line": 11,
           "column": 8
         },
@@ -933,132 +815,36 @@
         "num": 1
       }
     },
-    "count": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 166,
-          "line": 13,
-          "column": 5
-        },
-        "end": {
-          "offset": 169,
-          "line": 13,
-          "column": 8
-        },
-        "offset": 152,
-        "num": 3
-      }
-    },
-    "volume": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 184,
-          "line": 14,
-          "column": 5
-        },
-        "end": {
-          "offset": 187,
-          "line": 14,
-          "column": 8
-        },
-        "offset": 164,
-        "num": 3
-      }
-    },
-    "freq": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 203,
-          "line": 15,
-          "column": 5
-        },
-        "end": {
-          "offset": 206,
-          "line": 15,
-          "column": 8
-        },
-        "offset": 176,
-        "num": 3
-      }
-    },
-    "edge": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 220,
-          "line": 16,
-          "column": 5
-        },
-        "end": {
-          "offset": 223,
-          "line": 16,
-          "column": 8
-        },
-        "offset": 188,
-        "num": 3
-      }
-    },
-    "tmask": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 237,
-          "line": 17,
-          "column": 5
-        },
-        "end": {
-          "offset": 240,
-          "line": 17,
-          "column": 8
-        },
-        "offset": 200,
-        "num": 3
-      }
-    },
-    "nmask": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "u32",
-        "size": 4,
-        "integer": true,
-        "unsigned": true,
-        "start": {
-          "offset": 255,
-          "line": 18,
-          "column": 5
-        },
-        "end": {
-          "offset": 258,
-          "line": 18,
-          "column": 8
-        },
-        "offset": 212,
-        "num": 3
-      }
-    },
+    "count": [
+      null,
+      null,
+      null
+    ],
+    "volume": [
+      null,
+      null,
+      null
+    ],
+    "freq": [
+      null,
+      null,
+      null
+    ],
+    "edge": [
+      null,
+      null,
+      null
+    ],
+    "tmask": [
+      null,
+      null,
+      null
+    ],
+    "nmask": [
+      null,
+      null,
+      null
+    ],
     "mask": {
       "_attributes_": {
         "type": "PrimitiveType",
@@ -1067,12 +853,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 273,
+          "offset": 291,
           "line": 19,
           "column": 5
         },
         "end": {
-          "offset": 276,
+          "offset": 294,
           "line": 19,
           "column": 8
         },
@@ -1088,12 +874,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 288,
+          "offset": 308,
           "line": 21,
           "column": 5
         },
         "end": {
-          "offset": 291,
+          "offset": 311,
           "line": 21,
           "column": 8
         },
@@ -1109,12 +895,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 309,
+          "offset": 331,
           "line": 23,
           "column": 5
         },
         "end": {
-          "offset": 312,
+          "offset": 334,
           "line": 23,
           "column": 8
         },
@@ -1130,12 +916,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 329,
+          "offset": 352,
           "line": 24,
           "column": 5
         },
         "end": {
-          "offset": 332,
+          "offset": 355,
           "line": 24,
           "column": 8
         },
@@ -1151,12 +937,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 346,
+          "offset": 370,
           "line": 25,
           "column": 5
         },
         "end": {
-          "offset": 349,
+          "offset": 373,
           "line": 25,
           "column": 8
         },
@@ -1172,12 +958,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 365,
+          "offset": 391,
           "line": 27,
           "column": 5
         },
         "end": {
-          "offset": 368,
+          "offset": 394,
           "line": 27,
           "column": 8
         },
@@ -1193,12 +979,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 387,
+          "offset": 414,
           "line": 28,
           "column": 5
         },
         "end": {
-          "offset": 390,
+          "offset": 417,
           "line": 28,
           "column": 8
         },
@@ -1214,12 +1000,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 407,
+          "offset": 435,
           "line": 29,
           "column": 5
         },
         "end": {
-          "offset": 410,
+          "offset": 438,
           "line": 29,
           "column": 8
         },
@@ -1235,12 +1021,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 430,
+          "offset": 459,
           "line": 30,
           "column": 5
         },
         "end": {
-          "offset": 433,
+          "offset": 462,
           "line": 30,
           "column": 8
         },
@@ -1256,12 +1042,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 448,
+          "offset": 478,
           "line": 31,
           "column": 5
         },
         "end": {
-          "offset": 451,
+          "offset": 481,
           "line": 31,
           "column": 8
         },
@@ -1277,12 +1063,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 467,
+          "offset": 498,
           "line": 32,
           "column": 5
         },
         "end": {
-          "offset": 470,
+          "offset": 501,
           "line": 32,
           "column": 8
         },
@@ -1298,12 +1084,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 487,
+          "offset": 520,
           "line": 34,
           "column": 5
         },
         "end": {
-          "offset": 490,
+          "offset": 523,
           "line": 34,
           "column": 8
         },
@@ -1319,12 +1105,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 505,
+          "offset": 539,
           "line": 35,
           "column": 5
         },
         "end": {
-          "offset": 508,
+          "offset": 542,
           "line": 35,
           "column": 8
         },
@@ -1340,12 +1126,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 525,
+          "offset": 561,
           "line": 37,
           "column": 5
         },
         "end": {
-          "offset": 528,
+          "offset": 564,
           "line": 37,
           "column": 8
         },
@@ -1361,12 +1147,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 545,
+          "offset": 582,
           "line": 38,
           "column": 5
         },
         "end": {
-          "offset": 548,
+          "offset": 585,
           "line": 38,
           "column": 8
         },
@@ -1382,12 +1168,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 566,
+          "offset": 604,
           "line": 39,
           "column": 5
         },
         "end": {
-          "offset": 569,
+          "offset": 607,
           "line": 39,
           "column": 8
         },
@@ -1403,12 +1189,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 614,
+          "offset": 655,
           "line": 42,
           "column": 5
         },
         "end": {
-          "offset": 617,
+          "offset": 658,
           "line": 42,
           "column": 8
         },
@@ -1424,12 +1210,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 632,
+          "offset": 674,
           "line": 43,
           "column": 5
         },
         "end": {
-          "offset": 635,
+          "offset": 677,
           "line": 43,
           "column": 8
         },
@@ -1445,12 +1231,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 649,
+          "offset": 692,
           "line": 44,
           "column": 5
         },
         "end": {
-          "offset": 652,
+          "offset": 695,
           "line": 44,
           "column": 8
         },
@@ -1465,27 +1251,11 @@
         "offset": 300,
         "num": 1
       },
-      "vol": {
-        "_attributes_": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
-          "start": {
-            "offset": 19,
-            "line": 2,
-            "column": 3
-          },
-          "end": {
-            "offset": 22,
-            "line": 2,
-            "column": 6
-          },
-          "offset": 0,
-          "num": 3
-        }
-      }
+      "vol": [
+        null,
+        null,
+        null
+      ]
     },
     "adr": {
       "_attributes_": {
@@ -1495,12 +1265,12 @@
         "integer": true,
         "unsigned": true,
         "start": {
-          "offset": 706,
+          "offset": 753,
           "line": 48,
           "column": 5
         },
         "end": {
-          "offset": 709,
+          "offset": 756,
           "line": 48,
           "column": 8
         },
@@ -1508,47 +1278,1036 @@
         "num": 1
       }
     },
-    "ch_out": {
-      "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "i32",
-        "size": 4,
-        "integer": true,
-        "unsigned": false,
-        "start": {
-          "offset": 751,
-          "line": 51,
-          "column": 5
-        },
-        "end": {
-          "offset": 754,
-          "line": 51,
-          "column": 8
-        },
-        "offset": 316,
-        "num": 3
-      }
-    }
+    "ch_out": [
+      null,
+      null,
+      null
+    ]
   },
-  "OutputBuffer": {
-    "_attributes_": {
-      "type": "PrimitiveType",
-      "varType": "i32",
-      "size": 4,
-      "integer": true,
-      "unsigned": false,
-      "start": {
-        "offset": 788,
-        "line": 56,
-        "column": 3
-      },
-      "end": {
-        "offset": 791,
-        "line": 56,
-        "column": 6
-      },
-      "offset": 328,
-      "num": 1024
-    }
-  }
+  "OutputBuffer": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ]
 }
