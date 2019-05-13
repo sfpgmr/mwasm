@@ -1539,13 +1539,13 @@
       "integer": true,
       "unsigned": false,
       "start": {
-        "offset": 1217,
-        "line": 66,
+        "offset": 1247,
+        "line": 69,
         "column": 3
       },
       "end": {
-        "offset": 1220,
-        "line": 66,
+        "offset": 1250,
+        "line": 69,
         "column": 6
       },
       "offset": 580,

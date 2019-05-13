@@ -61,13 +61,15 @@
     i32 ch_out[3];
 }
 
+
+(module
+  (memory $memory 1 
 {@map
   PSG psg;
   i32 OutputBuffer[1024];
 }
-
-(module
-  (memory $memory 1 )
+  
+  )
   (export "memory" (memory $memory))
   (export "test" (func $test))
   (func $test (result i32)
