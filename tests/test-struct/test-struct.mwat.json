@@ -2319,7 +2319,7 @@
     }
   },
   {
-    "type": "Code",
+    "type": "CodeExpression",
     "code": "$.X",
     "start": {
       "offset": 905,
