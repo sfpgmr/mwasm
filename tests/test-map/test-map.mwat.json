@@ -63,7 +63,7 @@
             "column": 6
           }
         },
-        "initExpression": {
+        "initData": {
           "type": "Code",
           "code": "return [1,2,3,4];",
           "start": {
@@ -122,7 +122,7 @@
             "column": 6
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 61,
           "line": 4,
@@ -168,7 +168,7 @@
             "column": 6
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 61,
           "line": 4,
@@ -214,7 +214,7 @@
             "column": 6
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 61,
           "line": 4,
@@ -260,7 +260,7 @@
             "column": 6
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 93,
           "line": 5,
@@ -306,7 +306,7 @@
             "column": 6
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 107,
           "line": 6,

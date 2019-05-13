@@ -37,7 +37,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 43,
           "line": 3,
@@ -83,7 +83,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 60,
           "line": 5,
@@ -129,7 +129,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 79,
           "line": 6,
@@ -175,7 +175,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 93,
           "line": 8,
@@ -221,7 +221,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 93,
           "line": 8,
@@ -267,7 +267,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 93,
           "line": 8,
@@ -313,7 +313,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 93,
           "line": 8,
@@ -359,7 +359,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 133,
           "line": 10,
@@ -405,7 +405,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 151,
           "line": 11,
@@ -451,7 +451,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 170,
           "line": 12,
@@ -497,7 +497,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 187,
           "line": 13,
@@ -543,7 +543,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 204,
           "line": 14,
@@ -589,7 +589,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 222,
           "line": 15,
@@ -635,7 +635,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 240,
           "line": 16,
@@ -681,7 +681,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 255,
           "line": 18,
@@ -727,7 +727,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 276,
           "line": 20,
@@ -773,7 +773,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 296,
           "line": 21,
@@ -819,7 +819,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 313,
           "line": 22,
@@ -865,7 +865,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 332,
           "line": 24,
@@ -911,7 +911,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 354,
           "line": 25,
@@ -957,7 +957,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 374,
           "line": 26,
@@ -1003,7 +1003,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 397,
           "line": 27,
@@ -1049,7 +1049,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 415,
           "line": 28,
@@ -1095,7 +1095,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 434,
           "line": 29,
@@ -1141,7 +1141,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 454,
           "line": 31,
@@ -1187,7 +1187,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 472,
           "line": 32,
@@ -1233,7 +1233,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 492,
           "line": 34,
@@ -1279,7 +1279,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 512,
           "line": 35,
@@ -1325,7 +1325,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 533,
           "line": 36,
@@ -1371,7 +1371,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 581,
           "line": 39,
@@ -1417,7 +1417,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 599,
           "line": 40,
@@ -1463,7 +1463,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 616,
           "line": 41,
@@ -1509,7 +1509,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 655,
           "line": 44,
@@ -1555,7 +1555,7 @@
             "column": 8
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 700,
           "line": 47,
@@ -1656,7 +1656,7 @@
             "column": 6
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 755,
           "line": 56,
@@ -1702,7 +1702,7 @@
             "column": 6
           }
         },
-        "initExpression": null,
+        "initData": null,
         "start": {
           "offset": 766,
           "line": 57,
