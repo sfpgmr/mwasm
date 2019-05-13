@@ -4836,7 +4836,7 @@ var index = async () => {
                     if (def.varType.type == "PrimitiveType") {
                       // Native Type
                       c = currentContext[def.id.id] = {
-                        [$attributes]: Object.assign(clone(def.varType), { offset: offset })
+                        [$attributes]: Object.assign(clone(def.varType), { offset: offset,initData:def.initData})
                       };
                     } else {
                       // Struct Type
@@ -4848,7 +4848,7 @@ var index = async () => {
                         error(`error:Struct '${def.varType.id}' is not struct type.`, def);
                       }
                       c = currentContext[def.id.id] = Object.assign(clone(structType), {
-                        [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset })
+                        [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset,initData:def.initData })
                       });
                       function calcStructMemberOffset(st,o){
                         for(const m in st){
