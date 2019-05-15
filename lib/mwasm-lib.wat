@@ -55,16 +55,13 @@
   )
 
   ;; JS文字列からi64値に変換する
-  (func $strToi (local $count i32) (local $offset i32) (local $char i32)
-    (local.set $count (i32.load (i32.const 0))
-    (local.set $offset (i32.const 4))
-    (block $exit 
+  (func $strToi64 (param $length i32) (local $count i32) (local $offset i32) (local $char i32)
+    (local $l i32)
+    (local.set $l (i32.shl (local.get $length) (i32.const 1 )))
+      (block $exit 
       (loop $loop
-        (br_if $loop (i32.eqz (local.get $count)))
-        (local.set $count (i32.sub (local.get $count) (i32.const 1))
-        (i32.and (i32.load16_u (local.get $offset)) (i32.const 0xf0))
-        (br_if $exit (i32.nez)))
-        (i32.and (i32.load_16_u (local.get $))
+        (br_if $loop (i32.le (local.get $offset) (local.get $l)))
+
 
 
         
