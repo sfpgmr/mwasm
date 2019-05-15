@@ -4,17 +4,21 @@ VPATH = ./lib/:./:./bin
 # PARSERS = ./lib/mwasm-parser.js ./lib/preprocess-parser.js
 PARSERS = ./lib/preprocess-parser.js
 SRC_FILES = ./lib/index.mjs
+MWASM_LIB = ./lib/mwasm-lib.wasm
 
 TARGET = index.js
 TRACE = 
 PEG = pegjs $(TRACE) -o $@ $<
 MWASM = mwasm $@ $<
 
-$(TARGET): $(PARSERS) $(SRC_FILES)
+$(TARGET): $(PARSERS) $(SRC_FILES) $(MWASM_LIB)
 	rollup -c
 
 $(PARSERS): %.js : %.pegjs
 	$(PEG)
+
+$(MWASM_LIB): %.wasm : %.wat
+	wat2wasm $< -o $@
 
 .PHONY: run
 run: $(TARGET)

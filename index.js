@@ -4504,6 +4504,13 @@ var preprocessParser = {
 
 const $attributes = '_attributes_';//Symbol('attributes');
 
+
+function getInstance(obj,imports = {}) {
+  const bin = new WebAssembly.Module(obj);
+  const inst = new WebAssembly.Instance(bin, imports);
+  return inst;
+}
+
 function error(message, token) {
   if (token) {
     throw new Error(`Error: line:${token.start.line} column:${token.start.column} :${message}:`)
@@ -4712,7 +4719,7 @@ var index = async () => {
                       size: 0
                     }
                   };
-                this.defineMember(token.defines, context, { structName: token.id });
+                this.defineMember(token.defines, context, { type:token.type,structName: token.id});
                 //console.info(context);
               }
               break;
@@ -4720,7 +4727,7 @@ var index = async () => {
             case 'MemoryMap':
               {
                 this.context[$attributes] = { type: token.type, size: 0 };
-                this.defineMember(token.defines, this.context);
+                this.defineMember(token.defines, this.context,{type:token.type,preprocessed:preprocessed});
               }
               break;
             default:
@@ -4817,6 +4824,7 @@ var index = async () => {
       defineMember(defines, currentContext, opts) {
         let offset = 0;
         const rootContext = this.context;
+        const structDefinition = opts.type == 'StructDefinition';
         for (const def of defines) {
           switch (def.type) {
             case "MemoryLabel":
@@ -4835,9 +4843,15 @@ var index = async () => {
                     let c;
                     if (def.varType.type == "PrimitiveType") {
                       // Native Type
+                      const initData = def.initData ? this.makeDataString(def) : null;
                       c = currentContext[def.id.id] = {
-                        [$attributes]: Object.assign(clone(def.varType), { offset: offset,initData:def.initData})
+                        [$attributes]: Object.assign(clone(def.varType), { offset: offset,initData:initData})
                       };
+                      
+                      if(!structDefinition && initData){
+                        opts.preprocessed(`(data (i32 const ${offset}) '${initData}')`);
+                      }
+
                     } else {
                       // Struct Type
                       if (!def.varType.id in rootContext) {
@@ -4847,9 +4861,11 @@ var index = async () => {
                       if (structType[$attributes].type != 'StructDefinition') {
                         error(`error:Struct '${def.varType.id}' is not struct type.`, def);
                       }
+                      const initData = def.initData ? this.makeDataString(def) : null;
                       c = currentContext[def.id.id] = Object.assign(clone(structType), {
-                        [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset,initData:def.initData })
+                        [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset,initData:initData })
                       });
+
                       function calcStructMemberOffset(st,o){
                         for(const m in st){
                           if(m != $attributes){
@@ -4899,7 +4915,26 @@ var index = async () => {
 
         }
       }
+      
+      makeDataString(def){
+        if(def.varType.type == 'PrimitiveType'){
+          switch(def.varType.varType){
+            case 'i32':
+            case 'i32':
+            case 'i32':
+            case 'i32':
+            case 'i32':
+          }
+          
+        }
+
+      }
     }
+
+    
+    const literalLib = getInstance(await fs.promises.readFile('./lib/mwasm-lib.wasm')).exports;
+
+
 
     const mwasmParser = null;
     const context = new Context(preprocessParser, mwasmParser);
