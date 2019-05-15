@@ -64,7 +64,6 @@
         (local.set $count (i32.sub (local.get $count) (i32.const 1))
         (i32.and (i32.load16_u (local.get $offset)) (i32.const 0xf0))
         (br_if $exit (i32.nez)))
-        (local.tee (i32.))
         (i32.and (i32.load_16_u (local.get $))
 
 
