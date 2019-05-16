@@ -54,23 +54,19 @@
     )
   )
 
-  ;; JS文字列からi64値に変換する
-  (func $strToi64 (param $length i32) (local $count i32) (local $offset i32) (local $char i32)
-    (local $l i32)
+  ;; JSの数字列からi64値に変換する
+  (func $strToi64 (param $length i32) (param $outoffset i32) (local $offset i32) (local $l i32) (local $temp i64)
     (local.set $l (i32.shl (local.get $length) (i32.const 1 )))
       (block $exit 
       (loop $loop
-        (br_if $loop (i32.le (local.get $offset) (local.get $l)))
-
-
-
-        
-
-
+        (br_if $loop (i32.le_u (local.get $offset) (local.get $l)))
+        (i64.mul (local.get $temp) (i64.const 10))
+        (i64.add (i64.load8_u (local.get $offset)))
+        (local.set $temp)
+        (local.set $offset (i32.add (local.get $offset) (i32.const 1)))
         (br $loop)
       )
     )
-
+    (i64.store (local.get $outoffset) (local.get $temp))
   )
-
 )
