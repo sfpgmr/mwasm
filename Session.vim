@@ -19,6 +19,10 @@ tabnew
 tabrewind
 edit lib/index.mjs
 set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
@@ -26,6 +30,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+exe '1resize ' . ((&lines * 20 + 22) / 44)
+exe '2resize ' . ((&lines * 20 + 22) / 44)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -36,13 +42,35 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 17 - ((16 * winheight(0) + 20) / 41)
+let s:l = 133 - ((15 * winheight(0) + 10) / 20)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
+133
+normal! 023|
+lcd ~/mwasm
+wincmd w
+argglobal
+if bufexists("~/mwasm/lib/index.mjs") | buffer ~/mwasm/lib/index.mjs | else | edit ~/mwasm/lib/index.mjs | endif
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 545 - ((10 * winheight(0) + 10) / 20)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+545
 normal! 0
 lcd ~/mwasm
+wincmd w
+exe '1resize ' . ((&lines * 20 + 22) / 44)
+exe '2resize ' . ((&lines * 20 + 22) / 44)
 tabnext
 edit ~/mwasm/examples/psg-emulator/em2149.mwat
 set splitbelow splitright
@@ -117,19 +145,20 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 68 - ((31 * winheight(0) + 20) / 41)
+let s:l = 5 - ((4 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-68
-normal! 0
+5
+normal! 012|
 lcd ~/mwasm
-tabnext 4
+tabnext 1
 set stal=1
 badd +1 ~/mwasm/lib/index.mjs
 badd +1 ~/mwasm/examples/psg-emulator/em2149.mwat
-badd +184 ~/mwasm/lib/preprocess-parser.pegjs
-badd +0 ~/mwasm/lib/mwasm-lib.wat
+badd +1 ~/mwasm/lib/preprocess-parser.pegjs
+badd +1 ~/mwasm/lib/mwasm-lib.wat
+badd +0 ~/mwasm/makefile
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

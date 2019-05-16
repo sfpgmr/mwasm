@@ -2,6 +2,7 @@
   (export "i32tof32" (func $i32tof32))
   (export "i64tof64" (func $i64tof64))
   (export "i64Neg" (func $i64Neg))
+  (export "uint8ArrayToi64" (func $uint8ArrayToi64))
   (memory $memory 1)
   (export "memory" (memory $memory))
   
@@ -55,11 +56,10 @@
   )
 
   ;; JSの数字列からi64値に変換する
-  (func $strToi64 (param $length i32) (param $outoffset i32) (local $offset i32) (local $l i32) (local $temp i64)
-    (local.set $l (i32.shl (local.get $length) (i32.const 1 )))
+  (func $uint8ArrayToi64 (param $length i32) (param $outoffset i32) (local $offset i32) (local $l i32) (local $temp i64)
       (block $exit 
       (loop $loop
-        (br_if $loop (i32.le_u (local.get $offset) (local.get $l)))
+        (br_if $exit (i32.le_u (local.get $length) (local.get $offset)))
         (i64.mul (local.get $temp) (i64.const 10))
         (i64.add (i64.load8_u (local.get $offset)))
         (local.set $temp)
