@@ -149,14 +149,14 @@
               "sign": "+",
               "value": "0",
               "start": {
-                "offset": 109,
+                "offset": 111,
                 "line": 9,
-                "column": 22
+                "column": 24
               },
               "end": {
-                "offset": 110,
+                "offset": 112,
                 "line": 9,
-                "column": 23
+                "column": 25
               }
             },
             {
@@ -164,44 +164,29 @@
               "sign": "+",
               "value": "01",
               "start": {
-                "offset": 113,
+                "offset": 115,
                 "line": 9,
-                "column": 26
+                "column": 28
               },
               "end": {
-                "offset": 117,
-                "line": 9,
-                "column": 30
-              }
-            },
-            {
-              "type": "HexLiteral",
-              "sign": "+",
-              "value": "01",
-              "start": {
                 "offset": 119,
                 "line": 9,
                 "column": 32
-              },
-              "end": {
-                "offset": 123,
-                "line": 9,
-                "column": 36
               }
             },
             {
               "type": "HexLiteral",
               "sign": "+",
-              "value": "02",
+              "value": "01",
               "start": {
+                "offset": 121,
+                "line": 9,
+                "column": 34
+              },
+              "end": {
                 "offset": 125,
                 "line": 9,
                 "column": 38
-              },
-              "end": {
-                "offset": 129,
-                "line": 9,
-                "column": 42
               }
             },
             {
@@ -209,29 +194,29 @@
               "sign": "+",
               "value": "02",
               "start": {
+                "offset": 127,
+                "line": 9,
+                "column": 40
+              },
+              "end": {
                 "offset": 131,
                 "line": 9,
                 "column": 44
-              },
-              "end": {
-                "offset": 135,
-                "line": 9,
-                "column": 48
               }
             },
             {
               "type": "HexLiteral",
               "sign": "+",
-              "value": "03",
+              "value": "02",
               "start": {
+                "offset": 133,
+                "line": 9,
+                "column": 46
+              },
+              "end": {
                 "offset": 137,
                 "line": 9,
                 "column": 50
-              },
-              "end": {
-                "offset": 141,
-                "line": 9,
-                "column": 54
               }
             },
             {
@@ -239,14 +224,29 @@
               "sign": "+",
               "value": "03",
               "start": {
+                "offset": 139,
+                "line": 9,
+                "column": 52
+              },
+              "end": {
                 "offset": 143,
                 "line": 9,
                 "column": 56
+              }
+            },
+            {
+              "type": "HexLiteral",
+              "sign": "+",
+              "value": "03",
+              "start": {
+                "offset": 145,
+                "line": 9,
+                "column": 58
               },
               "end": {
-                "offset": 147,
+                "offset": 149,
                 "line": 9,
-                "column": 60
+                "column": 62
               }
             },
             {
@@ -254,14 +254,14 @@
               "sign": "+",
               "value": "04",
               "start": {
-                "offset": 149,
+                "offset": 151,
                 "line": 9,
-                "column": 62
+                "column": 64
               },
               "end": {
-                "offset": 153,
+                "offset": 155,
                 "line": 9,
-                "column": 66
+                "column": 68
               }
             },
             {
@@ -269,14 +269,14 @@
               "sign": "+",
               "value": "05",
               "start": {
-                "offset": 155,
+                "offset": 157,
                 "line": 9,
-                "column": 68
+                "column": 70
               },
               "end": {
-                "offset": 159,
+                "offset": 161,
                 "line": 9,
-                "column": 72
+                "column": 74
               }
             },
             {
@@ -284,14 +284,14 @@
               "sign": "+",
               "value": "06",
               "start": {
-                "offset": 161,
+                "offset": 163,
                 "line": 9,
-                "column": 74
+                "column": 76
               },
               "end": {
-                "offset": 165,
+                "offset": 167,
                 "line": 9,
-                "column": 78
+                "column": 80
               }
             },
             {
@@ -299,14 +299,14 @@
               "sign": "+",
               "value": "07",
               "start": {
-                "offset": 167,
+                "offset": 169,
                 "line": 9,
-                "column": 80
+                "column": 82
               },
               "end": {
-                "offset": 171,
+                "offset": 173,
                 "line": 9,
-                "column": 84
+                "column": 86
               }
             },
             {
@@ -314,14 +314,14 @@
               "sign": "+",
               "value": "09",
               "start": {
-                "offset": 173,
+                "offset": 175,
                 "line": 9,
-                "column": 86
+                "column": 88
               },
               "end": {
-                "offset": 177,
+                "offset": 179,
                 "line": 9,
-                "column": 90
+                "column": 92
               }
             },
             {
@@ -329,12 +329,12 @@
               "sign": "+",
               "value": "0B",
               "start": {
-                "offset": 182,
+                "offset": 184,
                 "line": 10,
                 "column": 4
               },
               "end": {
-                "offset": 186,
+                "offset": 188,
                 "line": 10,
                 "column": 8
               }
@@ -344,12 +344,12 @@
               "sign": "+",
               "value": "0D",
               "start": {
-                "offset": 188,
+                "offset": 190,
                 "line": 10,
                 "column": 10
               },
               "end": {
-                "offset": 192,
+                "offset": 194,
                 "line": 10,
                 "column": 14
               }
@@ -359,12 +359,12 @@
               "sign": "+",
               "value": "0F",
               "start": {
-                "offset": 194,
+                "offset": 196,
                 "line": 10,
                 "column": 16
               },
               "end": {
-                "offset": 198,
+                "offset": 200,
                 "line": 10,
                 "column": 20
               }
@@ -374,12 +374,12 @@
               "sign": "+",
               "value": "12",
               "start": {
-                "offset": 200,
+                "offset": 202,
                 "line": 10,
                 "column": 22
               },
               "end": {
-                "offset": 204,
+                "offset": 206,
                 "line": 10,
                 "column": 26
               }
@@ -389,12 +389,12 @@
               "sign": "+",
               "value": "16",
               "start": {
-                "offset": 206,
+                "offset": 208,
                 "line": 10,
                 "column": 28
               },
               "end": {
-                "offset": 210,
+                "offset": 212,
                 "line": 10,
                 "column": 32
               }
@@ -404,12 +404,12 @@
               "sign": "+",
               "value": "1A",
               "start": {
-                "offset": 212,
+                "offset": 214,
                 "line": 10,
                 "column": 34
               },
               "end": {
-                "offset": 216,
+                "offset": 218,
                 "line": 10,
                 "column": 38
               }
@@ -419,12 +419,12 @@
               "sign": "+",
               "value": "1F",
               "start": {
-                "offset": 218,
+                "offset": 220,
                 "line": 10,
                 "column": 40
               },
               "end": {
-                "offset": 222,
+                "offset": 224,
                 "line": 10,
                 "column": 44
               }
@@ -434,12 +434,12 @@
               "sign": "+",
               "value": "25",
               "start": {
-                "offset": 224,
+                "offset": 226,
                 "line": 10,
                 "column": 46
               },
               "end": {
-                "offset": 228,
+                "offset": 230,
                 "line": 10,
                 "column": 50
               }
@@ -449,12 +449,12 @@
               "sign": "+",
               "value": "2D",
               "start": {
-                "offset": 230,
+                "offset": 232,
                 "line": 10,
                 "column": 52
               },
               "end": {
-                "offset": 234,
+                "offset": 236,
                 "line": 10,
                 "column": 56
               }
@@ -464,12 +464,12 @@
               "sign": "+",
               "value": "35",
               "start": {
-                "offset": 236,
+                "offset": 238,
                 "line": 10,
                 "column": 58
               },
               "end": {
-                "offset": 240,
+                "offset": 242,
                 "line": 10,
                 "column": 62
               }
@@ -479,12 +479,12 @@
               "sign": "+",
               "value": "3F",
               "start": {
-                "offset": 242,
+                "offset": 244,
                 "line": 10,
                 "column": 64
               },
               "end": {
-                "offset": 246,
+                "offset": 248,
                 "line": 10,
                 "column": 68
               }
@@ -494,12 +494,12 @@
               "sign": "+",
               "value": "4C",
               "start": {
-                "offset": 248,
+                "offset": 250,
                 "line": 10,
                 "column": 70
               },
               "end": {
-                "offset": 252,
+                "offset": 254,
                 "line": 10,
                 "column": 74
               }
@@ -509,12 +509,12 @@
               "sign": "+",
               "value": "5A",
               "start": {
-                "offset": 257,
+                "offset": 259,
                 "line": 11,
                 "column": 4
               },
               "end": {
-                "offset": 261,
+                "offset": 263,
                 "line": 11,
                 "column": 8
               }
@@ -524,12 +524,12 @@
               "sign": "+",
               "value": "6A",
               "start": {
-                "offset": 263,
+                "offset": 265,
                 "line": 11,
                 "column": 10
               },
               "end": {
-                "offset": 267,
+                "offset": 269,
                 "line": 11,
                 "column": 14
               }
@@ -539,12 +539,12 @@
               "sign": "+",
               "value": "7F",
               "start": {
-                "offset": 269,
+                "offset": 271,
                 "line": 11,
                 "column": 16
               },
               "end": {
-                "offset": 273,
+                "offset": 275,
                 "line": 11,
                 "column": 20
               }
@@ -554,12 +554,12 @@
               "sign": "+",
               "value": "97",
               "start": {
-                "offset": 275,
+                "offset": 277,
                 "line": 11,
                 "column": 22
               },
               "end": {
-                "offset": 279,
+                "offset": 281,
                 "line": 11,
                 "column": 26
               }
@@ -569,12 +569,12 @@
               "sign": "+",
               "value": "B4",
               "start": {
-                "offset": 281,
+                "offset": 283,
                 "line": 11,
                 "column": 28
               },
               "end": {
-                "offset": 285,
+                "offset": 287,
                 "line": 11,
                 "column": 32
               }
@@ -584,29 +584,14 @@
               "sign": "+",
               "value": "D6",
               "start": {
-                "offset": 287,
+                "offset": 289,
                 "line": 11,
                 "column": 34
               },
               "end": {
-                "offset": 291,
-                "line": 11,
-                "column": 38
-              }
-            },
-            {
-              "type": "HexLiteral",
-              "sign": "+",
-              "value": "FF",
-              "start": {
                 "offset": 293,
                 "line": 11,
-                "column": 40
-              },
-              "end": {
-                "offset": 297,
-                "line": 11,
-                "column": 44
+                "column": 38
               }
             },
             {
@@ -614,27 +599,42 @@
               "sign": "+",
               "value": "FF",
               "start": {
+                "offset": 295,
+                "line": 11,
+                "column": 40
+              },
+              "end": {
                 "offset": 299,
                 "line": 11,
-                "column": 46
-              },
-              "end": {
-                "offset": 303,
-                "line": 11,
-                "column": 50
+                "column": 44
               }
             },
             {
               "type": "HexLiteral",
               "sign": "+",
-              "value": "00",
+              "value": "FF",
               "start": {
+                "offset": 301,
+                "line": 11,
+                "column": 46
+              },
+              "end": {
                 "offset": 305,
                 "line": 11,
+                "column": 50
+              }
+            },
+            {
+              "type": "HexLiteral",
+              "sign": "+",
+              "value": "00",
+              "start": {
+                "offset": 307,
+                "line": 11,
                 "column": 52
               },
               "end": {
-                "offset": 309,
+                "offset": 311,
                 "line": 11,
                 "column": 56
               }
@@ -644,27 +644,27 @@
               "sign": "+",
               "value": "00",
               "start": {
-                "offset": 311,
+                "offset": 313,
                 "line": 11,
                 "column": 58
               },
               "end": {
-                "offset": 315,
-                "line": 11,
-                "column": 62
-              }
-            },
-            {
-              "type": "HexLiteral",
-              "sign": "+",
-              "value": "01",
-              "start": {
                 "offset": 317,
                 "line": 11,
+                "column": 62
+              }
+            },
+            {
+              "type": "HexLiteral",
+              "sign": "+",
+              "value": "01",
+              "start": {
+                "offset": 319,
+                "line": 11,
                 "column": 64
               },
               "end": {
-                "offset": 321,
+                "offset": 323,
                 "line": 11,
                 "column": 68
               }
@@ -674,12 +674,12 @@
               "sign": "+",
               "value": "01",
               "start": {
-                "offset": 323,
+                "offset": 325,
                 "line": 11,
                 "column": 70
               },
               "end": {
-                "offset": 327,
+                "offset": 329,
                 "line": 11,
                 "column": 74
               }
@@ -689,42 +689,42 @@
               "sign": "+",
               "value": "02",
               "start": {
-                "offset": 332,
+                "offset": 334,
                 "line": 12,
                 "column": 4
               },
               "end": {
-                "offset": 336,
-                "line": 12,
-                "column": 8
-              }
-            },
-            {
-              "type": "HexLiteral",
-              "sign": "+",
-              "value": "02",
-              "start": {
                 "offset": 338,
                 "line": 12,
-                "column": 10
-              },
-              "end": {
-                "offset": 342,
-                "line": 12,
-                "column": 14
+                "column": 8
               }
             },
             {
               "type": "HexLiteral",
               "sign": "+",
-              "value": "03",
+              "value": "02",
               "start": {
+                "offset": 340,
+                "line": 12,
+                "column": 10
+              },
+              "end": {
                 "offset": 344,
                 "line": 12,
+                "column": 14
+              }
+            },
+            {
+              "type": "HexLiteral",
+              "sign": "+",
+              "value": "03",
+              "start": {
+                "offset": 346,
+                "line": 12,
                 "column": 16
               },
               "end": {
-                "offset": 348,
+                "offset": 350,
                 "line": 12,
                 "column": 20
               }
@@ -734,27 +734,27 @@
               "sign": "+",
               "value": "03",
               "start": {
-                "offset": 350,
+                "offset": 352,
                 "line": 12,
                 "column": 22
               },
               "end": {
-                "offset": 354,
-                "line": 12,
-                "column": 26
-              }
-            },
-            {
-              "type": "HexLiteral",
-              "sign": "+",
-              "value": "05",
-              "start": {
                 "offset": 356,
                 "line": 12,
+                "column": 26
+              }
+            },
+            {
+              "type": "HexLiteral",
+              "sign": "+",
+              "value": "05",
+              "start": {
+                "offset": 358,
+                "line": 12,
                 "column": 28
               },
               "end": {
-                "offset": 360,
+                "offset": 362,
                 "line": 12,
                 "column": 32
               }
@@ -764,12 +764,12 @@
               "sign": "+",
               "value": "05",
               "start": {
-                "offset": 362,
+                "offset": 364,
                 "line": 12,
                 "column": 34
               },
               "end": {
-                "offset": 366,
+                "offset": 368,
                 "line": 12,
                 "column": 38
               }
@@ -779,12 +779,12 @@
               "sign": "+",
               "value": "07",
               "start": {
-                "offset": 368,
+                "offset": 370,
                 "line": 12,
                 "column": 40
               },
               "end": {
-                "offset": 372,
+                "offset": 374,
                 "line": 12,
                 "column": 44
               }
@@ -794,12 +794,12 @@
               "sign": "+",
               "value": "07",
               "start": {
-                "offset": 374,
+                "offset": 376,
                 "line": 12,
                 "column": 46
               },
               "end": {
-                "offset": 378,
+                "offset": 380,
                 "line": 12,
                 "column": 50
               }
@@ -809,12 +809,12 @@
               "sign": "+",
               "value": "0B",
               "start": {
-                "offset": 380,
+                "offset": 382,
                 "line": 12,
                 "column": 52
               },
               "end": {
-                "offset": 384,
+                "offset": 386,
                 "line": 12,
                 "column": 56
               }
@@ -824,12 +824,12 @@
               "sign": "+",
               "value": "0B",
               "start": {
-                "offset": 386,
+                "offset": 388,
                 "line": 12,
                 "column": 58
               },
               "end": {
-                "offset": 390,
+                "offset": 392,
                 "line": 12,
                 "column": 62
               }
@@ -839,12 +839,12 @@
               "sign": "+",
               "value": "0F",
               "start": {
-                "offset": 392,
+                "offset": 394,
                 "line": 12,
                 "column": 64
               },
               "end": {
-                "offset": 396,
+                "offset": 398,
                 "line": 12,
                 "column": 68
               }
@@ -854,12 +854,12 @@
               "sign": "+",
               "value": "0F",
               "start": {
-                "offset": 398,
+                "offset": 400,
                 "line": 12,
                 "column": 70
               },
               "end": {
-                "offset": 402,
+                "offset": 404,
                 "line": 12,
                 "column": 74
               }
@@ -869,12 +869,12 @@
               "sign": "+",
               "value": "16",
               "start": {
-                "offset": 407,
+                "offset": 409,
                 "line": 13,
                 "column": 4
               },
               "end": {
-                "offset": 411,
+                "offset": 413,
                 "line": 13,
                 "column": 8
               }
@@ -884,12 +884,12 @@
               "sign": "+",
               "value": "16",
               "start": {
-                "offset": 413,
+                "offset": 415,
                 "line": 13,
                 "column": 10
               },
               "end": {
-                "offset": 417,
+                "offset": 419,
                 "line": 13,
                 "column": 14
               }
@@ -899,12 +899,12 @@
               "sign": "+",
               "value": "1F",
               "start": {
-                "offset": 419,
+                "offset": 421,
                 "line": 13,
                 "column": 16
               },
               "end": {
-                "offset": 423,
+                "offset": 425,
                 "line": 13,
                 "column": 20
               }
@@ -914,12 +914,12 @@
               "sign": "+",
               "value": "1F",
               "start": {
-                "offset": 425,
+                "offset": 427,
                 "line": 13,
                 "column": 22
               },
               "end": {
-                "offset": 429,
+                "offset": 431,
                 "line": 13,
                 "column": 26
               }
@@ -929,12 +929,12 @@
               "sign": "+",
               "value": "2D",
               "start": {
-                "offset": 431,
+                "offset": 433,
                 "line": 13,
                 "column": 28
               },
               "end": {
-                "offset": 435,
+                "offset": 437,
                 "line": 13,
                 "column": 32
               }
@@ -944,12 +944,12 @@
               "sign": "+",
               "value": "2D",
               "start": {
-                "offset": 437,
+                "offset": 439,
                 "line": 13,
                 "column": 34
               },
               "end": {
-                "offset": 441,
+                "offset": 443,
                 "line": 13,
                 "column": 38
               }
@@ -959,12 +959,12 @@
               "sign": "+",
               "value": "3F",
               "start": {
-                "offset": 443,
+                "offset": 445,
                 "line": 13,
                 "column": 40
               },
               "end": {
-                "offset": 447,
+                "offset": 449,
                 "line": 13,
                 "column": 44
               }
@@ -974,12 +974,12 @@
               "sign": "+",
               "value": "3F",
               "start": {
-                "offset": 449,
+                "offset": 451,
                 "line": 13,
                 "column": 46
               },
               "end": {
-                "offset": 453,
+                "offset": 455,
                 "line": 13,
                 "column": 50
               }
@@ -989,12 +989,12 @@
               "sign": "+",
               "value": "5A",
               "start": {
-                "offset": 455,
+                "offset": 457,
                 "line": 13,
                 "column": 52
               },
               "end": {
-                "offset": 459,
+                "offset": 461,
                 "line": 13,
                 "column": 56
               }
@@ -1004,12 +1004,12 @@
               "sign": "+",
               "value": "5A",
               "start": {
-                "offset": 461,
+                "offset": 463,
                 "line": 13,
                 "column": 58
               },
               "end": {
-                "offset": 465,
+                "offset": 467,
                 "line": 13,
                 "column": 62
               }
@@ -1019,12 +1019,12 @@
               "sign": "+",
               "value": "7F",
               "start": {
-                "offset": 467,
+                "offset": 469,
                 "line": 13,
                 "column": 64
               },
               "end": {
-                "offset": 471,
+                "offset": 473,
                 "line": 13,
                 "column": 68
               }
@@ -1034,12 +1034,12 @@
               "sign": "+",
               "value": "7F",
               "start": {
-                "offset": 473,
+                "offset": 475,
                 "line": 13,
                 "column": 70
               },
               "end": {
-                "offset": 477,
+                "offset": 479,
                 "line": 13,
                 "column": 74
               }
@@ -1049,12 +1049,12 @@
               "sign": "+",
               "value": "B4",
               "start": {
-                "offset": 482,
+                "offset": 484,
                 "line": 14,
                 "column": 4
               },
               "end": {
-                "offset": 486,
+                "offset": 488,
                 "line": 14,
                 "column": 8
               }
@@ -1064,12 +1064,12 @@
               "sign": "+",
               "value": "B4",
               "start": {
-                "offset": 488,
+                "offset": 490,
                 "line": 14,
                 "column": 10
               },
               "end": {
-                "offset": 492,
+                "offset": 494,
                 "line": 14,
                 "column": 14
               }
@@ -1079,12 +1079,12 @@
               "sign": "+",
               "value": "FF",
               "start": {
-                "offset": 494,
+                "offset": 496,
                 "line": 14,
                 "column": 16
               },
               "end": {
-                "offset": 498,
+                "offset": 500,
                 "line": 14,
                 "column": 20
               }
@@ -1094,24 +1094,24 @@
               "sign": "+",
               "value": "FF",
               "start": {
-                "offset": 500,
+                "offset": 502,
                 "line": 14,
                 "column": 22
               },
               "end": {
-                "offset": 504,
+                "offset": 506,
                 "line": 14,
                 "column": 26
               }
             }
           ],
           "start": {
-            "offset": 107,
+            "offset": 109,
             "line": 9,
-            "column": 20
+            "column": 22
           },
           "end": {
-            "offset": 505,
+            "offset": 507,
             "line": 14,
             "column": 27
           }
@@ -1122,7 +1122,7 @@
           "column": 5
         },
         "end": {
-          "offset": 506,
+          "offset": 508,
           "line": 14,
           "column": 28
         }
@@ -1134,12 +1134,12 @@
           "id": "reg",
           "numExpression": "0x20",
           "start": {
-            "offset": 515,
+            "offset": 517,
             "line": 15,
             "column": 9
           },
           "end": {
-            "offset": 524,
+            "offset": 526,
             "line": 15,
             "column": 18
           }
@@ -1151,24 +1151,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 511,
+            "offset": 513,
             "line": 15,
             "column": 5
           },
           "end": {
-            "offset": 514,
+            "offset": 516,
             "line": 15,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 511,
+          "offset": 513,
           "line": 15,
           "column": 5
         },
         "end": {
-          "offset": 525,
+          "offset": 527,
           "line": 15,
           "column": 19
         }
@@ -1180,12 +1180,12 @@
           "id": "out",
           "numExpression": null,
           "start": {
-            "offset": 534,
+            "offset": 536,
             "line": 16,
             "column": 9
           },
           "end": {
-            "offset": 537,
+            "offset": 539,
             "line": 16,
             "column": 12
           }
@@ -1197,26 +1197,40 @@
           "integer": true,
           "unsigned": false,
           "start": {
-            "offset": 530,
+            "offset": 532,
             "line": 16,
             "column": 5
           },
           "end": {
-            "offset": 533,
+            "offset": 535,
             "line": 16,
             "column": 8
           }
         },
-        "initData": null,
+        "initData": {
+          "type": "IntegerLiteral",
+          "sign": "+",
+          "value": "2",
+          "start": {
+            "offset": 542,
+            "line": 16,
+            "column": 15
+          },
+          "end": {
+            "offset": 543,
+            "line": 16,
+            "column": 16
+          }
+        },
         "start": {
-          "offset": 530,
+          "offset": 532,
           "line": 16,
           "column": 5
         },
         "end": {
-          "offset": 538,
+          "offset": 544,
           "line": 16,
-          "column": 13
+          "column": 17
         }
       },
       {
@@ -1226,12 +1240,12 @@
           "id": "clk",
           "numExpression": null,
           "start": {
-            "offset": 548,
+            "offset": 554,
             "line": 18,
             "column": 9
           },
           "end": {
-            "offset": 551,
+            "offset": 557,
             "line": 18,
             "column": 12
           }
@@ -1243,24 +1257,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 544,
+            "offset": 550,
             "line": 18,
             "column": 5
           },
           "end": {
-            "offset": 547,
+            "offset": 553,
             "line": 18,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 544,
+          "offset": 550,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 578,
+          "offset": 584,
           "line": 18,
           "column": 39
         }
@@ -1272,12 +1286,12 @@
           "id": "rate",
           "numExpression": null,
           "start": {
-            "offset": 553,
+            "offset": 559,
             "line": 18,
             "column": 14
           },
           "end": {
-            "offset": 557,
+            "offset": 563,
             "line": 18,
             "column": 18
           }
@@ -1289,24 +1303,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 544,
+            "offset": 550,
             "line": 18,
             "column": 5
           },
           "end": {
-            "offset": 547,
+            "offset": 553,
             "line": 18,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 544,
+          "offset": 550,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 578,
+          "offset": 584,
           "line": 18,
           "column": 39
         }
@@ -1318,12 +1332,12 @@
           "id": "base_incr",
           "numExpression": null,
           "start": {
-            "offset": 559,
+            "offset": 565,
             "line": 18,
             "column": 20
           },
           "end": {
-            "offset": 568,
+            "offset": 574,
             "line": 18,
             "column": 29
           }
@@ -1335,24 +1349,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 544,
+            "offset": 550,
             "line": 18,
             "column": 5
           },
           "end": {
-            "offset": 547,
+            "offset": 553,
             "line": 18,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 544,
+          "offset": 550,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 578,
+          "offset": 584,
           "line": 18,
           "column": 39
         }
@@ -1364,12 +1378,12 @@
           "id": "quality",
           "numExpression": null,
           "start": {
-            "offset": 570,
+            "offset": 576,
             "line": 18,
             "column": 31
           },
           "end": {
-            "offset": 577,
+            "offset": 583,
             "line": 18,
             "column": 38
           }
@@ -1381,24 +1395,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 544,
+            "offset": 550,
             "line": 18,
             "column": 5
           },
           "end": {
-            "offset": 547,
+            "offset": 553,
             "line": 18,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 544,
+          "offset": 550,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 578,
+          "offset": 584,
           "line": 18,
           "column": 39
         }
@@ -1410,12 +1424,12 @@
           "id": "count",
           "numExpression": "3",
           "start": {
-            "offset": 588,
+            "offset": 594,
             "line": 20,
             "column": 9
           },
           "end": {
-            "offset": 596,
+            "offset": 602,
             "line": 20,
             "column": 17
           }
@@ -1427,24 +1441,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 584,
+            "offset": 590,
             "line": 20,
             "column": 5
           },
           "end": {
-            "offset": 587,
+            "offset": 593,
             "line": 20,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 584,
+          "offset": 590,
           "line": 20,
           "column": 5
         },
         "end": {
-          "offset": 597,
+          "offset": 603,
           "line": 20,
           "column": 18
         }
@@ -1456,12 +1470,12 @@
           "id": "volume",
           "numExpression": "3",
           "start": {
-            "offset": 606,
+            "offset": 612,
             "line": 21,
             "column": 9
           },
           "end": {
-            "offset": 615,
+            "offset": 621,
             "line": 21,
             "column": 18
           }
@@ -1473,24 +1487,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 602,
+            "offset": 608,
             "line": 21,
             "column": 5
           },
           "end": {
-            "offset": 605,
+            "offset": 611,
             "line": 21,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 602,
+          "offset": 608,
           "line": 21,
           "column": 5
         },
         "end": {
-          "offset": 616,
+          "offset": 622,
           "line": 21,
           "column": 19
         }
@@ -1502,12 +1516,12 @@
           "id": "freq",
           "numExpression": "3",
           "start": {
-            "offset": 625,
+            "offset": 631,
             "line": 22,
             "column": 9
           },
           "end": {
-            "offset": 632,
+            "offset": 638,
             "line": 22,
             "column": 16
           }
@@ -1519,24 +1533,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 621,
+            "offset": 627,
             "line": 22,
             "column": 5
           },
           "end": {
-            "offset": 624,
+            "offset": 630,
             "line": 22,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 621,
+          "offset": 627,
           "line": 22,
           "column": 5
         },
         "end": {
-          "offset": 633,
+          "offset": 639,
           "line": 22,
           "column": 17
         }
@@ -1548,12 +1562,12 @@
           "id": "edge",
           "numExpression": "3",
           "start": {
-            "offset": 642,
+            "offset": 648,
             "line": 23,
             "column": 9
           },
           "end": {
-            "offset": 649,
+            "offset": 655,
             "line": 23,
             "column": 16
           }
@@ -1565,24 +1579,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 638,
+            "offset": 644,
             "line": 23,
             "column": 5
           },
           "end": {
-            "offset": 641,
+            "offset": 647,
             "line": 23,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 638,
+          "offset": 644,
           "line": 23,
           "column": 5
         },
         "end": {
-          "offset": 650,
+          "offset": 656,
           "line": 23,
           "column": 17
         }
@@ -1594,12 +1608,12 @@
           "id": "tmask",
           "numExpression": "3",
           "start": {
-            "offset": 659,
+            "offset": 665,
             "line": 24,
             "column": 9
           },
           "end": {
-            "offset": 667,
+            "offset": 673,
             "line": 24,
             "column": 17
           }
@@ -1611,24 +1625,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 655,
+            "offset": 661,
             "line": 24,
             "column": 5
           },
           "end": {
-            "offset": 658,
+            "offset": 664,
             "line": 24,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 655,
+          "offset": 661,
           "line": 24,
           "column": 5
         },
         "end": {
-          "offset": 668,
+          "offset": 674,
           "line": 24,
           "column": 18
         }
@@ -1640,12 +1654,12 @@
           "id": "nmask",
           "numExpression": "3",
           "start": {
-            "offset": 677,
+            "offset": 683,
             "line": 25,
             "column": 9
           },
           "end": {
-            "offset": 685,
+            "offset": 691,
             "line": 25,
             "column": 17
           }
@@ -1657,24 +1671,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 673,
+            "offset": 679,
             "line": 25,
             "column": 5
           },
           "end": {
-            "offset": 676,
+            "offset": 682,
             "line": 25,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 673,
+          "offset": 679,
           "line": 25,
           "column": 5
         },
         "end": {
-          "offset": 686,
+          "offset": 692,
           "line": 25,
           "column": 18
         }
@@ -1686,12 +1700,12 @@
           "id": "mask",
           "numExpression": null,
           "start": {
-            "offset": 695,
+            "offset": 701,
             "line": 26,
             "column": 9
           },
           "end": {
-            "offset": 699,
+            "offset": 705,
             "line": 26,
             "column": 13
           }
@@ -1703,24 +1717,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 691,
+            "offset": 697,
             "line": 26,
             "column": 5
           },
           "end": {
-            "offset": 694,
+            "offset": 700,
             "line": 26,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 691,
+          "offset": 697,
           "line": 26,
           "column": 5
         },
         "end": {
-          "offset": 700,
+          "offset": 706,
           "line": 26,
           "column": 14
         }
@@ -1732,12 +1746,12 @@
           "id": "base_count",
           "numExpression": null,
           "start": {
-            "offset": 710,
+            "offset": 716,
             "line": 28,
             "column": 9
           },
           "end": {
-            "offset": 720,
+            "offset": 726,
             "line": 28,
             "column": 19
           }
@@ -1749,24 +1763,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 706,
+            "offset": 712,
             "line": 28,
             "column": 5
           },
           "end": {
-            "offset": 709,
+            "offset": 715,
             "line": 28,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 706,
+          "offset": 712,
           "line": 28,
           "column": 5
         },
         "end": {
-          "offset": 721,
+          "offset": 727,
           "line": 28,
           "column": 20
         }
@@ -1778,12 +1792,12 @@
           "id": "env_volume",
           "numExpression": null,
           "start": {
-            "offset": 731,
+            "offset": 737,
             "line": 30,
             "column": 9
           },
           "end": {
-            "offset": 741,
+            "offset": 747,
             "line": 30,
             "column": 19
           }
@@ -1795,24 +1809,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 727,
+            "offset": 733,
             "line": 30,
             "column": 5
           },
           "end": {
-            "offset": 730,
+            "offset": 736,
             "line": 30,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 727,
+          "offset": 733,
           "line": 30,
           "column": 5
         },
         "end": {
-          "offset": 742,
+          "offset": 748,
           "line": 30,
           "column": 20
         }
@@ -1824,12 +1838,12 @@
           "id": "env_ptr",
           "numExpression": null,
           "start": {
-            "offset": 751,
+            "offset": 757,
             "line": 31,
             "column": 9
           },
           "end": {
-            "offset": 758,
+            "offset": 764,
             "line": 31,
             "column": 16
           }
@@ -1841,24 +1855,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 747,
+            "offset": 753,
             "line": 31,
             "column": 5
           },
           "end": {
-            "offset": 750,
+            "offset": 756,
             "line": 31,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 747,
+          "offset": 753,
           "line": 31,
           "column": 5
         },
         "end": {
-          "offset": 759,
+          "offset": 765,
           "line": 31,
           "column": 17
         }
@@ -1870,12 +1884,12 @@
           "id": "env_face",
           "numExpression": null,
           "start": {
-            "offset": 768,
+            "offset": 774,
             "line": 32,
             "column": 9
           },
           "end": {
-            "offset": 776,
+            "offset": 782,
             "line": 32,
             "column": 17
           }
@@ -1887,24 +1901,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 764,
+            "offset": 770,
             "line": 32,
             "column": 5
           },
           "end": {
-            "offset": 767,
+            "offset": 773,
             "line": 32,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 764,
+          "offset": 770,
           "line": 32,
           "column": 5
         },
         "end": {
-          "offset": 777,
+          "offset": 783,
           "line": 32,
           "column": 18
         }
@@ -1916,12 +1930,12 @@
           "id": "env_continue",
           "numExpression": null,
           "start": {
-            "offset": 787,
+            "offset": 793,
             "line": 34,
             "column": 9
           },
           "end": {
-            "offset": 799,
+            "offset": 805,
             "line": 34,
             "column": 21
           }
@@ -1933,24 +1947,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 783,
+            "offset": 789,
             "line": 34,
             "column": 5
           },
           "end": {
-            "offset": 786,
+            "offset": 792,
             "line": 34,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 783,
+          "offset": 789,
           "line": 34,
           "column": 5
         },
         "end": {
-          "offset": 800,
+          "offset": 806,
           "line": 34,
           "column": 22
         }
@@ -1962,12 +1976,12 @@
           "id": "env_attack",
           "numExpression": null,
           "start": {
-            "offset": 809,
+            "offset": 815,
             "line": 35,
             "column": 9
           },
           "end": {
-            "offset": 819,
+            "offset": 825,
             "line": 35,
             "column": 19
           }
@@ -1979,24 +1993,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 805,
+            "offset": 811,
             "line": 35,
             "column": 5
           },
           "end": {
-            "offset": 808,
+            "offset": 814,
             "line": 35,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 805,
+          "offset": 811,
           "line": 35,
           "column": 5
         },
         "end": {
-          "offset": 820,
+          "offset": 826,
           "line": 35,
           "column": 20
         }
@@ -2008,12 +2022,12 @@
           "id": "env_alternate",
           "numExpression": null,
           "start": {
-            "offset": 829,
+            "offset": 835,
             "line": 36,
             "column": 9
           },
           "end": {
-            "offset": 842,
+            "offset": 848,
             "line": 36,
             "column": 22
           }
@@ -2025,24 +2039,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 825,
+            "offset": 831,
             "line": 36,
             "column": 5
           },
           "end": {
-            "offset": 828,
+            "offset": 834,
             "line": 36,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 825,
+          "offset": 831,
           "line": 36,
           "column": 5
         },
         "end": {
-          "offset": 843,
+          "offset": 849,
           "line": 36,
           "column": 23
         }
@@ -2054,12 +2068,12 @@
           "id": "env_hold",
           "numExpression": null,
           "start": {
-            "offset": 852,
+            "offset": 858,
             "line": 37,
             "column": 9
           },
           "end": {
-            "offset": 860,
+            "offset": 866,
             "line": 37,
             "column": 17
           }
@@ -2071,24 +2085,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 848,
+            "offset": 854,
             "line": 37,
             "column": 5
           },
           "end": {
-            "offset": 851,
+            "offset": 857,
             "line": 37,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 848,
+          "offset": 854,
           "line": 37,
           "column": 5
         },
         "end": {
-          "offset": 861,
+          "offset": 867,
           "line": 37,
           "column": 18
         }
@@ -2100,12 +2114,12 @@
           "id": "env_pause",
           "numExpression": null,
           "start": {
-            "offset": 870,
+            "offset": 876,
             "line": 38,
             "column": 9
           },
           "end": {
-            "offset": 879,
+            "offset": 885,
             "line": 38,
             "column": 18
           }
@@ -2117,24 +2131,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 866,
+            "offset": 872,
             "line": 38,
             "column": 5
           },
           "end": {
-            "offset": 869,
+            "offset": 875,
             "line": 38,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 866,
+          "offset": 872,
           "line": 38,
           "column": 5
         },
         "end": {
-          "offset": 880,
+          "offset": 886,
           "line": 38,
           "column": 19
         }
@@ -2146,12 +2160,12 @@
           "id": "env_reset",
           "numExpression": null,
           "start": {
-            "offset": 889,
+            "offset": 895,
             "line": 39,
             "column": 9
           },
           "end": {
-            "offset": 898,
+            "offset": 904,
             "line": 39,
             "column": 18
           }
@@ -2163,24 +2177,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 885,
+            "offset": 891,
             "line": 39,
             "column": 5
           },
           "end": {
-            "offset": 888,
+            "offset": 894,
             "line": 39,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 885,
+          "offset": 891,
           "line": 39,
           "column": 5
         },
         "end": {
-          "offset": 899,
+          "offset": 905,
           "line": 39,
           "column": 19
         }
@@ -2192,12 +2206,12 @@
           "id": "env_freq",
           "numExpression": null,
           "start": {
-            "offset": 909,
+            "offset": 915,
             "line": 41,
             "column": 9
           },
           "end": {
-            "offset": 917,
+            "offset": 923,
             "line": 41,
             "column": 17
           }
@@ -2209,24 +2223,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 905,
+            "offset": 911,
             "line": 41,
             "column": 5
           },
           "end": {
-            "offset": 908,
+            "offset": 914,
             "line": 41,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 905,
+          "offset": 911,
           "line": 41,
           "column": 5
         },
         "end": {
-          "offset": 918,
+          "offset": 924,
           "line": 41,
           "column": 18
         }
@@ -2238,12 +2252,12 @@
           "id": "env_count",
           "numExpression": null,
           "start": {
-            "offset": 927,
+            "offset": 933,
             "line": 42,
             "column": 9
           },
           "end": {
-            "offset": 936,
+            "offset": 942,
             "line": 42,
             "column": 18
           }
@@ -2255,24 +2269,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 923,
+            "offset": 929,
             "line": 42,
             "column": 5
           },
           "end": {
-            "offset": 926,
+            "offset": 932,
             "line": 42,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 923,
+          "offset": 929,
           "line": 42,
           "column": 5
         },
         "end": {
-          "offset": 937,
+          "offset": 943,
           "line": 42,
           "column": 19
         }
@@ -2284,12 +2298,12 @@
           "id": "noise_seed",
           "numExpression": null,
           "start": {
-            "offset": 947,
+            "offset": 953,
             "line": 44,
             "column": 9
           },
           "end": {
-            "offset": 957,
+            "offset": 963,
             "line": 44,
             "column": 19
           }
@@ -2301,24 +2315,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 943,
+            "offset": 949,
             "line": 44,
             "column": 5
           },
           "end": {
-            "offset": 946,
+            "offset": 952,
             "line": 44,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 943,
+          "offset": 949,
           "line": 44,
           "column": 5
         },
         "end": {
-          "offset": 958,
+          "offset": 964,
           "line": 44,
           "column": 20
         }
@@ -2330,12 +2344,12 @@
           "id": "noise_count",
           "numExpression": null,
           "start": {
-            "offset": 967,
+            "offset": 973,
             "line": 45,
             "column": 9
           },
           "end": {
-            "offset": 978,
+            "offset": 984,
             "line": 45,
             "column": 20
           }
@@ -2347,24 +2361,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 963,
+            "offset": 969,
             "line": 45,
             "column": 5
           },
           "end": {
-            "offset": 966,
+            "offset": 972,
             "line": 45,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 963,
+          "offset": 969,
           "line": 45,
           "column": 5
         },
         "end": {
-          "offset": 979,
+          "offset": 985,
           "line": 45,
           "column": 21
         }
@@ -2376,12 +2390,12 @@
           "id": "noise_freq",
           "numExpression": null,
           "start": {
-            "offset": 988,
+            "offset": 994,
             "line": 46,
             "column": 9
           },
           "end": {
-            "offset": 998,
+            "offset": 1004,
             "line": 46,
             "column": 19
           }
@@ -2393,24 +2407,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 984,
+            "offset": 990,
             "line": 46,
             "column": 5
           },
           "end": {
-            "offset": 987,
+            "offset": 993,
             "line": 46,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 984,
+          "offset": 990,
           "line": 46,
           "column": 5
         },
         "end": {
-          "offset": 999,
+          "offset": 1005,
           "line": 46,
           "column": 20
         }
@@ -2422,12 +2436,12 @@
           "id": "realstep",
           "numExpression": null,
           "start": {
-            "offset": 1036,
+            "offset": 1042,
             "line": 49,
             "column": 9
           },
           "end": {
-            "offset": 1044,
+            "offset": 1050,
             "line": 49,
             "column": 17
           }
@@ -2439,24 +2453,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 1032,
+            "offset": 1038,
             "line": 49,
             "column": 5
           },
           "end": {
-            "offset": 1035,
+            "offset": 1041,
             "line": 49,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 1032,
+          "offset": 1038,
           "line": 49,
           "column": 5
         },
         "end": {
-          "offset": 1045,
+          "offset": 1051,
           "line": 49,
           "column": 18
         }
@@ -2468,12 +2482,12 @@
           "id": "psgtime",
           "numExpression": null,
           "start": {
-            "offset": 1054,
+            "offset": 1060,
             "line": 50,
             "column": 9
           },
           "end": {
-            "offset": 1061,
+            "offset": 1067,
             "line": 50,
             "column": 16
           }
@@ -2485,24 +2499,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 1050,
+            "offset": 1056,
             "line": 50,
             "column": 5
           },
           "end": {
-            "offset": 1053,
+            "offset": 1059,
             "line": 50,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 1050,
+          "offset": 1056,
           "line": 50,
           "column": 5
         },
         "end": {
-          "offset": 1062,
+          "offset": 1068,
           "line": 50,
           "column": 17
         }
@@ -2514,12 +2528,12 @@
           "id": "psgstep",
           "numExpression": null,
           "start": {
-            "offset": 1071,
+            "offset": 1077,
             "line": 51,
             "column": 9
           },
           "end": {
-            "offset": 1078,
+            "offset": 1084,
             "line": 51,
             "column": 16
           }
@@ -2531,24 +2545,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 1067,
+            "offset": 1073,
             "line": 51,
             "column": 5
           },
           "end": {
-            "offset": 1070,
+            "offset": 1076,
             "line": 51,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 1067,
+          "offset": 1073,
           "line": 51,
           "column": 5
         },
         "end": {
-          "offset": 1079,
+          "offset": 1085,
           "line": 51,
           "column": 17
         }
@@ -2560,12 +2574,12 @@
           "id": "ch_c",
           "numExpression": null,
           "start": {
-            "offset": 1092,
+            "offset": 1098,
             "line": 52,
             "column": 13
           },
           "end": {
-            "offset": 1096,
+            "offset": 1102,
             "line": 52,
             "column": 17
           }
@@ -2575,24 +2589,24 @@
           "varType": "Struct",
           "id": "CHANNEL",
           "start": {
-            "offset": 1084,
+            "offset": 1090,
             "line": 52,
             "column": 5
           },
           "end": {
-            "offset": 1091,
+            "offset": 1097,
             "line": 52,
             "column": 12
           }
         },
         "initData": null,
         "start": {
-          "offset": 1084,
+          "offset": 1090,
           "line": 52,
           "column": 5
         },
         "end": {
-          "offset": 1097,
+          "offset": 1103,
           "line": 52,
           "column": 18
         }
@@ -2604,12 +2618,12 @@
           "id": "adr",
           "numExpression": null,
           "start": {
-            "offset": 1128,
+            "offset": 1134,
             "line": 55,
             "column": 9
           },
           "end": {
-            "offset": 1131,
+            "offset": 1137,
             "line": 55,
             "column": 12
           }
@@ -2621,24 +2635,24 @@
           "integer": true,
           "unsigned": true,
           "start": {
-            "offset": 1124,
+            "offset": 1130,
             "line": 55,
             "column": 5
           },
           "end": {
-            "offset": 1127,
+            "offset": 1133,
             "line": 55,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 1124,
+          "offset": 1130,
           "line": 55,
           "column": 5
         },
         "end": {
-          "offset": 1132,
+          "offset": 1138,
           "line": 55,
           "column": 13
         }
@@ -2650,12 +2664,12 @@
           "id": "ch_out",
           "numExpression": "3",
           "start": {
-            "offset": 1173,
+            "offset": 1179,
             "line": 58,
             "column": 9
           },
           "end": {
-            "offset": 1182,
+            "offset": 1188,
             "line": 58,
             "column": 18
           }
@@ -2667,24 +2681,24 @@
           "integer": true,
           "unsigned": false,
           "start": {
-            "offset": 1169,
+            "offset": 1175,
             "line": 58,
             "column": 5
           },
           "end": {
-            "offset": 1172,
+            "offset": 1178,
             "line": 58,
             "column": 8
           }
         },
         "initData": null,
         "start": {
-          "offset": 1169,
+          "offset": 1175,
           "line": 58,
           "column": 5
         },
         "end": {
-          "offset": 1183,
+          "offset": 1189,
           "line": 58,
           "column": 19
         }
@@ -2696,7 +2710,7 @@
       "column": 1
     },
     "end": {
-      "offset": 1185,
+      "offset": 1191,
       "line": 59,
       "column": 2
     }
@@ -2705,12 +2719,12 @@
     "type": "WhiteSpace",
     "value": "\n\n\n",
     "start": {
-      "offset": 1185,
+      "offset": 1191,
       "line": 59,
       "column": 2
     },
     "end": {
-      "offset": 1188,
+      "offset": 1194,
       "line": 62,
       "column": 1
     }
@@ -2719,12 +2733,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 1188,
+      "offset": 1194,
       "line": 62,
       "column": 1
     },
     "end": {
-      "offset": 1189,
+      "offset": 1195,
       "line": 62,
       "column": 2
     }
@@ -2733,12 +2747,12 @@
     "type": "Identifier",
     "name": "module",
     "start": {
-      "offset": 1189,
+      "offset": 1195,
       "line": 62,
       "column": 2
     },
     "end": {
-      "offset": 1195,
+      "offset": 1201,
       "line": 62,
       "column": 8
     }
@@ -2747,12 +2761,12 @@
     "type": "WhiteSpace",
     "value": "\n  ",
     "start": {
-      "offset": 1195,
+      "offset": 1201,
       "line": 62,
       "column": 8
     },
     "end": {
-      "offset": 1198,
+      "offset": 1204,
       "line": 63,
       "column": 3
     }
@@ -2761,12 +2775,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 1198,
+      "offset": 1204,
       "line": 63,
       "column": 3
     },
     "end": {
-      "offset": 1199,
+      "offset": 1205,
       "line": 63,
       "column": 4
     }
@@ -2775,12 +2789,12 @@
     "type": "Identifier",
     "name": "memory",
     "start": {
-      "offset": 1199,
+      "offset": 1205,
       "line": 63,
       "column": 4
     },
     "end": {
-      "offset": 1205,
+      "offset": 1211,
       "line": 63,
       "column": 10
     }
@@ -2789,12 +2803,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1205,
+      "offset": 1211,
       "line": 63,
       "column": 10
     },
     "end": {
-      "offset": 1206,
+      "offset": 1212,
       "line": 63,
       "column": 11
     }
@@ -2803,12 +2817,12 @@
     "type": "Identifier",
     "name": "$memory",
     "start": {
-      "offset": 1206,
+      "offset": 1212,
       "line": 63,
       "column": 11
     },
     "end": {
-      "offset": 1213,
+      "offset": 1219,
       "line": 63,
       "column": 18
     }
@@ -2817,12 +2831,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1213,
+      "offset": 1219,
       "line": 63,
       "column": 18
     },
     "end": {
-      "offset": 1214,
+      "offset": 1220,
       "line": 63,
       "column": 19
     }
@@ -2831,12 +2845,12 @@
     "type": "Identifier",
     "name": "1",
     "start": {
-      "offset": 1214,
+      "offset": 1220,
       "line": 63,
       "column": 19
     },
     "end": {
-      "offset": 1215,
+      "offset": 1221,
       "line": 63,
       "column": 20
     }
@@ -2845,12 +2859,12 @@
     "type": "WhiteSpace",
     "value": " \n",
     "start": {
-      "offset": 1215,
+      "offset": 1221,
       "line": 63,
       "column": 20
     },
     "end": {
-      "offset": 1217,
+      "offset": 1223,
       "line": 64,
       "column": 1
     }
@@ -2865,12 +2879,12 @@
           "id": "psg",
           "numExpression": null,
           "start": {
-            "offset": 1229,
+            "offset": 1235,
             "line": 65,
             "column": 7
           },
           "end": {
-            "offset": 1232,
+            "offset": 1238,
             "line": 65,
             "column": 10
           }
@@ -2880,24 +2894,24 @@
           "varType": "Struct",
           "id": "PSG",
           "start": {
-            "offset": 1225,
+            "offset": 1231,
             "line": 65,
             "column": 3
           },
           "end": {
-            "offset": 1228,
+            "offset": 1234,
             "line": 65,
             "column": 6
           }
         },
         "initData": null,
         "start": {
-          "offset": 1225,
+          "offset": 1231,
           "line": 65,
           "column": 3
         },
         "end": {
-          "offset": 1233,
+          "offset": 1239,
           "line": 65,
           "column": 11
         }
@@ -2909,12 +2923,12 @@
           "id": "OutputBuffer",
           "numExpression": "1024",
           "start": {
-            "offset": 1240,
+            "offset": 1246,
             "line": 66,
             "column": 7
           },
           "end": {
-            "offset": 1258,
+            "offset": 1264,
             "line": 66,
             "column": 25
           }
@@ -2926,36 +2940,36 @@
           "integer": true,
           "unsigned": false,
           "start": {
-            "offset": 1236,
+            "offset": 1242,
             "line": 66,
             "column": 3
           },
           "end": {
-            "offset": 1239,
+            "offset": 1245,
             "line": 66,
             "column": 6
           }
         },
         "initData": null,
         "start": {
-          "offset": 1236,
+          "offset": 1242,
           "line": 66,
           "column": 3
         },
         "end": {
-          "offset": 1259,
+          "offset": 1265,
           "line": 66,
           "column": 26
         }
       }
     ],
     "start": {
-      "offset": 1217,
+      "offset": 1223,
       "line": 64,
       "column": 1
     },
     "end": {
-      "offset": 1261,
+      "offset": 1267,
       "line": 67,
       "column": 2
     }
@@ -2964,12 +2978,12 @@
     "type": "WhiteSpace",
     "value": "\n  \n  ",
     "start": {
-      "offset": 1261,
+      "offset": 1267,
       "line": 67,
       "column": 2
     },
     "end": {
-      "offset": 1267,
+      "offset": 1273,
       "line": 69,
       "column": 3
     }
@@ -2978,12 +2992,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1267,
+      "offset": 1273,
       "line": 69,
       "column": 3
     },
     "end": {
-      "offset": 1268,
+      "offset": 1274,
       "line": 69,
       "column": 4
     }
@@ -2992,12 +3006,12 @@
     "type": "WhiteSpace",
     "value": "\n  ",
     "start": {
-      "offset": 1268,
+      "offset": 1274,
       "line": 69,
       "column": 4
     },
     "end": {
-      "offset": 1271,
+      "offset": 1277,
       "line": 70,
       "column": 3
     }
@@ -3006,12 +3020,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 1271,
+      "offset": 1277,
       "line": 70,
       "column": 3
     },
     "end": {
-      "offset": 1272,
+      "offset": 1278,
       "line": 70,
       "column": 4
     }
@@ -3020,12 +3034,12 @@
     "type": "Identifier",
     "name": "export",
     "start": {
-      "offset": 1272,
+      "offset": 1278,
       "line": 70,
       "column": 4
     },
     "end": {
-      "offset": 1278,
+      "offset": 1284,
       "line": 70,
       "column": 10
     }
@@ -3034,12 +3048,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1278,
+      "offset": 1284,
       "line": 70,
       "column": 10
     },
     "end": {
-      "offset": 1279,
+      "offset": 1285,
       "line": 70,
       "column": 11
     }
@@ -3048,12 +3062,12 @@
     "type": "StringLiteral",
     "value": "\"memory\"",
     "start": {
-      "offset": 1279,
+      "offset": 1285,
       "line": 70,
       "column": 11
     },
     "end": {
-      "offset": 1287,
+      "offset": 1293,
       "line": 70,
       "column": 19
     }
@@ -3062,12 +3076,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1287,
+      "offset": 1293,
       "line": 70,
       "column": 19
     },
     "end": {
-      "offset": 1288,
+      "offset": 1294,
       "line": 70,
       "column": 20
     }
@@ -3076,12 +3090,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 1288,
+      "offset": 1294,
       "line": 70,
       "column": 20
     },
     "end": {
-      "offset": 1289,
+      "offset": 1295,
       "line": 70,
       "column": 21
     }
@@ -3090,12 +3104,12 @@
     "type": "Identifier",
     "name": "memory",
     "start": {
-      "offset": 1289,
+      "offset": 1295,
       "line": 70,
       "column": 21
     },
     "end": {
-      "offset": 1295,
+      "offset": 1301,
       "line": 70,
       "column": 27
     }
@@ -3104,12 +3118,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1295,
+      "offset": 1301,
       "line": 70,
       "column": 27
     },
     "end": {
-      "offset": 1296,
+      "offset": 1302,
       "line": 70,
       "column": 28
     }
@@ -3118,12 +3132,12 @@
     "type": "Identifier",
     "name": "$memory",
     "start": {
-      "offset": 1296,
+      "offset": 1302,
       "line": 70,
       "column": 28
     },
     "end": {
-      "offset": 1303,
+      "offset": 1309,
       "line": 70,
       "column": 35
     }
@@ -3132,12 +3146,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1303,
+      "offset": 1309,
       "line": 70,
       "column": 35
     },
     "end": {
-      "offset": 1304,
+      "offset": 1310,
       "line": 70,
       "column": 36
     }
@@ -3146,12 +3160,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1304,
+      "offset": 1310,
       "line": 70,
       "column": 36
     },
     "end": {
-      "offset": 1305,
+      "offset": 1311,
       "line": 70,
       "column": 37
     }
@@ -3160,12 +3174,12 @@
     "type": "WhiteSpace",
     "value": "\n  ",
     "start": {
-      "offset": 1305,
+      "offset": 1311,
       "line": 70,
       "column": 37
     },
     "end": {
-      "offset": 1308,
+      "offset": 1314,
       "line": 71,
       "column": 3
     }
@@ -3174,12 +3188,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 1308,
+      "offset": 1314,
       "line": 71,
       "column": 3
     },
     "end": {
-      "offset": 1309,
+      "offset": 1315,
       "line": 71,
       "column": 4
     }
@@ -3188,12 +3202,12 @@
     "type": "Identifier",
     "name": "export",
     "start": {
-      "offset": 1309,
+      "offset": 1315,
       "line": 71,
       "column": 4
     },
     "end": {
-      "offset": 1315,
+      "offset": 1321,
       "line": 71,
       "column": 10
     }
@@ -3202,12 +3216,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1315,
+      "offset": 1321,
       "line": 71,
       "column": 10
     },
     "end": {
-      "offset": 1316,
+      "offset": 1322,
       "line": 71,
       "column": 11
     }
@@ -3216,12 +3230,12 @@
     "type": "StringLiteral",
     "value": "\"test\"",
     "start": {
-      "offset": 1316,
+      "offset": 1322,
       "line": 71,
       "column": 11
     },
     "end": {
-      "offset": 1322,
+      "offset": 1328,
       "line": 71,
       "column": 17
     }
@@ -3230,12 +3244,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1322,
+      "offset": 1328,
       "line": 71,
       "column": 17
     },
     "end": {
-      "offset": 1323,
+      "offset": 1329,
       "line": 71,
       "column": 18
     }
@@ -3244,12 +3258,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 1323,
+      "offset": 1329,
       "line": 71,
       "column": 18
     },
     "end": {
-      "offset": 1324,
+      "offset": 1330,
       "line": 71,
       "column": 19
     }
@@ -3258,12 +3272,12 @@
     "type": "Identifier",
     "name": "func",
     "start": {
-      "offset": 1324,
+      "offset": 1330,
       "line": 71,
       "column": 19
     },
     "end": {
-      "offset": 1328,
+      "offset": 1334,
       "line": 71,
       "column": 23
     }
@@ -3272,12 +3286,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1328,
+      "offset": 1334,
       "line": 71,
       "column": 23
     },
     "end": {
-      "offset": 1329,
+      "offset": 1335,
       "line": 71,
       "column": 24
     }
@@ -3286,12 +3300,12 @@
     "type": "Identifier",
     "name": "$test",
     "start": {
-      "offset": 1329,
+      "offset": 1335,
       "line": 71,
       "column": 24
     },
     "end": {
-      "offset": 1334,
+      "offset": 1340,
       "line": 71,
       "column": 29
     }
@@ -3300,12 +3314,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1334,
+      "offset": 1340,
       "line": 71,
       "column": 29
     },
     "end": {
-      "offset": 1335,
+      "offset": 1341,
       "line": 71,
       "column": 30
     }
@@ -3314,12 +3328,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1335,
+      "offset": 1341,
       "line": 71,
       "column": 30
     },
     "end": {
-      "offset": 1336,
+      "offset": 1342,
       "line": 71,
       "column": 31
     }
@@ -3328,12 +3342,12 @@
     "type": "WhiteSpace",
     "value": "\n  ",
     "start": {
-      "offset": 1336,
+      "offset": 1342,
       "line": 71,
       "column": 31
     },
     "end": {
-      "offset": 1339,
+      "offset": 1345,
       "line": 72,
       "column": 3
     }
@@ -3342,12 +3356,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 1339,
+      "offset": 1345,
       "line": 72,
       "column": 3
     },
     "end": {
-      "offset": 1340,
+      "offset": 1346,
       "line": 72,
       "column": 4
     }
@@ -3356,12 +3370,12 @@
     "type": "Identifier",
     "name": "func",
     "start": {
-      "offset": 1340,
+      "offset": 1346,
       "line": 72,
       "column": 4
     },
     "end": {
-      "offset": 1344,
+      "offset": 1350,
       "line": 72,
       "column": 8
     }
@@ -3370,12 +3384,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1344,
+      "offset": 1350,
       "line": 72,
       "column": 8
     },
     "end": {
-      "offset": 1345,
+      "offset": 1351,
       "line": 72,
       "column": 9
     }
@@ -3384,12 +3398,12 @@
     "type": "Identifier",
     "name": "$test",
     "start": {
-      "offset": 1345,
+      "offset": 1351,
       "line": 72,
       "column": 9
     },
     "end": {
-      "offset": 1350,
+      "offset": 1356,
       "line": 72,
       "column": 14
     }
@@ -3398,12 +3412,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1350,
+      "offset": 1356,
       "line": 72,
       "column": 14
     },
     "end": {
-      "offset": 1351,
+      "offset": 1357,
       "line": 72,
       "column": 15
     }
@@ -3412,12 +3426,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 1351,
+      "offset": 1357,
       "line": 72,
       "column": 15
     },
     "end": {
-      "offset": 1352,
+      "offset": 1358,
       "line": 72,
       "column": 16
     }
@@ -3426,12 +3440,12 @@
     "type": "Identifier",
     "name": "result",
     "start": {
-      "offset": 1352,
+      "offset": 1358,
       "line": 72,
       "column": 16
     },
     "end": {
-      "offset": 1358,
+      "offset": 1364,
       "line": 72,
       "column": 22
     }
@@ -3440,12 +3454,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1358,
+      "offset": 1364,
       "line": 72,
       "column": 22
     },
     "end": {
-      "offset": 1359,
+      "offset": 1365,
       "line": 72,
       "column": 23
     }
@@ -3454,12 +3468,12 @@
     "type": "Identifier",
     "name": "i32",
     "start": {
-      "offset": 1359,
+      "offset": 1365,
       "line": 72,
       "column": 23
     },
     "end": {
-      "offset": 1362,
+      "offset": 1368,
       "line": 72,
       "column": 26
     }
@@ -3468,12 +3482,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1362,
+      "offset": 1368,
       "line": 72,
       "column": 26
     },
     "end": {
-      "offset": 1363,
+      "offset": 1369,
       "line": 72,
       "column": 27
     }
@@ -3482,12 +3496,12 @@
     "type": "WhiteSpace",
     "value": "\n    ",
     "start": {
-      "offset": 1363,
+      "offset": 1369,
       "line": 72,
       "column": 27
     },
     "end": {
-      "offset": 1368,
+      "offset": 1374,
       "line": 73,
       "column": 5
     }
@@ -3496,12 +3510,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 1368,
+      "offset": 1374,
       "line": 73,
       "column": 5
     },
     "end": {
-      "offset": 1369,
+      "offset": 1375,
       "line": 73,
       "column": 6
     }
@@ -3510,12 +3524,12 @@
     "type": "Identifier",
     "name": "i32.load",
     "start": {
-      "offset": 1369,
+      "offset": 1375,
       "line": 73,
       "column": 6
     },
     "end": {
-      "offset": 1377,
+      "offset": 1383,
       "line": 73,
       "column": 14
     }
@@ -3524,12 +3538,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1377,
+      "offset": 1383,
       "line": 73,
       "column": 14
     },
     "end": {
-      "offset": 1378,
+      "offset": 1384,
       "line": 73,
       "column": 15
     }
@@ -3538,12 +3552,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 1378,
+      "offset": 1384,
       "line": 73,
       "column": 15
     },
     "end": {
-      "offset": 1379,
+      "offset": 1385,
       "line": 73,
       "column": 16
     }
@@ -3552,12 +3566,12 @@
     "type": "Identifier",
     "name": "i32.const",
     "start": {
-      "offset": 1379,
+      "offset": 1385,
       "line": 73,
       "column": 16
     },
     "end": {
-      "offset": 1388,
+      "offset": 1394,
       "line": 73,
       "column": 25
     }
@@ -3566,12 +3580,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1388,
+      "offset": 1394,
       "line": 73,
       "column": 25
     },
     "end": {
-      "offset": 1389,
+      "offset": 1395,
       "line": 73,
       "column": 26
     }
@@ -3584,12 +3598,12 @@
         "name": "psg",
         "prefix": "&",
         "start": {
-          "offset": 1389,
+          "offset": 1395,
           "line": 73,
           "column": 26
         },
         "end": {
-          "offset": 1393,
+          "offset": 1399,
           "line": 73,
           "column": 30
         },
@@ -3598,12 +3612,12 @@
           "name": "ch_c",
           "prefix": null,
           "start": {
-            "offset": 1394,
+            "offset": 1400,
             "line": 73,
             "column": 31
           },
           "end": {
-            "offset": 1398,
+            "offset": 1404,
             "line": 73,
             "column": 35
           },
@@ -3612,12 +3626,12 @@
             "name": "vol",
             "prefix": null,
             "start": {
-              "offset": 1399,
+              "offset": 1405,
               "line": 73,
               "column": 36
             },
             "end": {
-              "offset": 1402,
+              "offset": 1408,
               "line": 73,
               "column": 39
             },
@@ -3628,24 +3642,24 @@
                   "type": "JSNumber",
                   "value": "1",
                   "start": {
-                    "offset": 1403,
+                    "offset": 1409,
                     "line": 73,
                     "column": 40
                   },
                   "end": {
-                    "offset": 1404,
+                    "offset": 1410,
                     "line": 73,
                     "column": 41
                   }
                 }
               ],
               "start": {
-                "offset": 1402,
+                "offset": 1408,
                 "line": 73,
                 "column": 39
               },
               "end": {
-                "offset": 1405,
+                "offset": 1411,
                 "line": 73,
                 "column": 42
               }
@@ -3658,12 +3672,12 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 1405,
+          "offset": 1411,
           "line": 73,
           "column": 42
         },
         "end": {
-          "offset": 1406,
+          "offset": 1412,
           "line": 73,
           "column": 43
         }
@@ -3672,12 +3686,12 @@
         "type": "JSOperator",
         "value": "+",
         "start": {
-          "offset": 1406,
+          "offset": 1412,
           "line": 73,
           "column": 43
         },
         "end": {
-          "offset": 1407,
+          "offset": 1413,
           "line": 73,
           "column": 44
         }
@@ -3686,12 +3700,12 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 1407,
+          "offset": 1413,
           "line": 73,
           "column": 44
         },
         "end": {
-          "offset": 1408,
+          "offset": 1414,
           "line": 73,
           "column": 45
         }
@@ -3701,12 +3715,12 @@
         "name": "X",
         "prefix": null,
         "start": {
-          "offset": 1408,
+          "offset": 1414,
           "line": 73,
           "column": 45
         },
         "end": {
-          "offset": 1409,
+          "offset": 1415,
           "line": 73,
           "column": 46
         },
@@ -3716,12 +3730,12 @@
         "type": "JSOperator",
         "value": "*",
         "start": {
-          "offset": 1409,
+          "offset": 1415,
           "line": 73,
           "column": 46
         },
         "end": {
-          "offset": 1410,
+          "offset": 1416,
           "line": 73,
           "column": 47
         }
@@ -3730,24 +3744,24 @@
         "type": "JSNumber",
         "value": "4",
         "start": {
-          "offset": 1410,
+          "offset": 1416,
           "line": 73,
           "column": 47
         },
         "end": {
-          "offset": 1411,
+          "offset": 1417,
           "line": 73,
           "column": 48
         }
       }
     ],
     "start": {
-      "offset": 1389,
+      "offset": 1395,
       "line": 73,
       "column": 26
     },
     "end": {
-      "offset": 1411,
+      "offset": 1417,
       "line": 73,
       "column": 48
     }
@@ -3756,12 +3770,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1412,
+      "offset": 1418,
       "line": 73,
       "column": 49
     },
     "end": {
-      "offset": 1413,
+      "offset": 1419,
       "line": 73,
       "column": 50
     }
@@ -3770,12 +3784,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1413,
+      "offset": 1419,
       "line": 73,
       "column": 50
     },
     "end": {
-      "offset": 1414,
+      "offset": 1420,
       "line": 73,
       "column": 51
     }
@@ -3784,12 +3798,12 @@
     "type": "WhiteSpace",
     "value": "\n    ",
     "start": {
-      "offset": 1414,
+      "offset": 1420,
       "line": 73,
       "column": 51
     },
     "end": {
-      "offset": 1419,
+      "offset": 1425,
       "line": 74,
       "column": 5
     }
@@ -3798,12 +3812,12 @@
     "type": "Identifier",
     "name": "i32.const",
     "start": {
-      "offset": 1419,
+      "offset": 1425,
       "line": 74,
       "column": 5
     },
     "end": {
-      "offset": 1428,
+      "offset": 1434,
       "line": 74,
       "column": 14
     }
@@ -3812,12 +3826,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 1428,
+      "offset": 1434,
       "line": 74,
       "column": 14
     },
     "end": {
-      "offset": 1429,
+      "offset": 1435,
       "line": 74,
       "column": 15
     }
@@ -3826,12 +3840,12 @@
     "type": "Identifier",
     "name": "1",
     "start": {
-      "offset": 1429,
+      "offset": 1435,
       "line": 74,
       "column": 15
     },
     "end": {
-      "offset": 1430,
+      "offset": 1436,
       "line": 74,
       "column": 16
     }
@@ -3840,12 +3854,12 @@
     "type": "WhiteSpace",
     "value": "\n    ",
     "start": {
-      "offset": 1430,
+      "offset": 1436,
       "line": 74,
       "column": 16
     },
     "end": {
-      "offset": 1435,
+      "offset": 1441,
       "line": 75,
       "column": 5
     }
@@ -3854,12 +3868,12 @@
     "type": "Identifier",
     "name": "i32.add",
     "start": {
-      "offset": 1435,
+      "offset": 1441,
       "line": 75,
       "column": 5
     },
     "end": {
-      "offset": 1442,
+      "offset": 1448,
       "line": 75,
       "column": 12
     }
@@ -3868,12 +3882,12 @@
     "type": "WhiteSpace",
     "value": " \n  ",
     "start": {
-      "offset": 1442,
+      "offset": 1448,
       "line": 75,
       "column": 12
     },
     "end": {
-      "offset": 1446,
+      "offset": 1452,
       "line": 76,
       "column": 3
     }
@@ -3882,12 +3896,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1446,
+      "offset": 1452,
       "line": 76,
       "column": 3
     },
     "end": {
-      "offset": 1447,
+      "offset": 1453,
       "line": 76,
       "column": 4
     }
@@ -3896,12 +3910,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 1447,
+      "offset": 1453,
       "line": 76,
       "column": 4
     },
     "end": {
-      "offset": 1448,
+      "offset": 1454,
       "line": 77,
       "column": 1
     }
@@ -3910,12 +3924,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 1448,
+      "offset": 1454,
       "line": 77,
       "column": 1
     },
     "end": {
-      "offset": 1449,
+      "offset": 1455,
       "line": 77,
       "column": 2
     }
@@ -3924,12 +3938,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 1449,
+      "offset": 1455,
       "line": 77,
       "column": 2
     },
     "end": {
-      "offset": 1450,
+      "offset": 1456,
       "line": 78,
       "column": 1
     }
