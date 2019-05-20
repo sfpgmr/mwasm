@@ -3,6 +3,8 @@
   (export "i64tof64" (func $i64tof64))
   (export "i64Neg" (func $i64Neg))
   (export "uint8ArrayToi64" (func $uint8ArrayToi64))
+  (export "decimalArrayToi64" (func $decimalArrayToi64))
+  (export "hexArrayToi64" (func $hexArrayToi64))
   (memory $memory 1)
   (export "memory" (memory $memory))
   
@@ -68,5 +70,45 @@
       )
     )
     (i64.store (local.get $outoffset) (local.get $temp))
+  )
+  ;; JSの数字列からi64値に変換する
+  (func $decimalArrayToi64 (param $length i32) (param $outoffset i32) (result i32) (local $offset i32) (local $l i32) (local $temp i64)
+    (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
+    (block $exit 
+      (loop $loop
+        (br_if $exit (i32.le_u (local.get $l) (local.get $offset)))
+        (i64.mul (local.get $temp) (i64.const 10))
+        (i64.add (i64.sub(i64.load16_u (local.get $offset)) (i64.const 0x30)))
+        (local.set $temp)
+        (local.set $offset (i32.add (local.get $offset) (i32.const 2)))
+        (br $loop)
+      )
+    )
+    (i64.store (local.get $outoffset) (local.get $temp))
+    (i32.const 0)
+  )
+  ;; JSの１６数字列からi64値に変換する
+  (func $hexArrayToi64 (param $length i32) (param $outoffset i32) (result i32) (local $offset i32) (local $l i32) (local $temp i64)
+    (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
+    (block $exit 
+      (loop $loop
+        (br_if $exit (i32.le_u (local.get $l) (local.get $offset)))
+        (i64.shl (local.get $temp) (i64.const 4)) ;; shift 4bit (=x16)
+        (if (i64.le_u ((i64.load16_u (local.get $offset)) (i64.const 0x39)))
+          (then
+            (i64.sub(i64.load16_u (local.get $offset)) (i64.const 0x30))
+          )
+          (else
+           (if (i32.and (i64.gt_u (i64.load16_u (lcoal.get $offset) (i64.const 0x41))) ())
+          )
+        )
+        i64.add
+        (local.set $temp)
+        (local.set $offset (i32.add (local.get $offset) (i32.const 2)))
+        (br $loop)
+      )
+    )
+    (i64.store (local.get $outoffset) (local.get $temp))
+    (i32.const 0)
   )
 )

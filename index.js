@@ -5602,7 +5602,7 @@ var preprocessParser = {
 const $attributes = '_attributes_';//Symbol('attributes');
 
 
-function getInstance(obj,imports = {}) {
+function getInstance(obj, imports = {}) {
   const bin = new WebAssembly.Module(obj);
   const inst = new WebAssembly.Instance(bin, imports);
   return inst;
@@ -5618,26 +5618,26 @@ function error(message, token) {
 
 // ディープコピーメソッド(clone)
 // https://qiita.com/ttatsf/items/68de3795ae3bf35c0228
-const mapForMap = f => a => 
-  new Map( [...a].map( ([key, value]) =>[key, f(value)] ) );  
-const mapForSet = f => a => new Set( [...a].map( f ) );
-const entriesMapIntoObj = f => xs => 
+const mapForMap = f => a =>
+  new Map([...a].map(([key, value]) => [key, f(value)]));
+const mapForSet = f => a => new Set([...a].map(f));
+const entriesMapIntoObj = f => xs =>
   xs.reduce(
-    (acc, [key, value]) => ({ ...acc, [key]:f(value) })
-    , {} 
+    (acc, [key, value]) => ({ ...acc, [key]: f(value) })
+    , {}
   );
 const mapForObj = f => a =>
-  entriesMapIntoObj( f )( Object.entries( a ) );
+  entriesMapIntoObj(f)(Object.entries(a));
 const getType = a => Object.prototype.toString.call(a);
 
 const clone = a => {
-  const type = getType( a );
-  return (type === "[object Array]")?  a.map( clone )
-        :(type === "[object Map]")?    mapForMap( clone )( a )
-        :(type === "[object Set]")?    mapForSet( clone )( a )
-        :(type === "[object Object]")? mapForObj( clone )( a )
-        :(type === "[object Date]")?   new Date( a )
-        : a;
+  const type = getType(a);
+  return (type === "[object Array]") ? a.map(clone)
+    : (type === "[object Map]") ? mapForMap(clone)(a)
+      : (type === "[object Set]") ? mapForSet(clone)(a)
+        : (type === "[object Object]") ? mapForObj(clone)(a)
+          : (type === "[object Date]") ? new Date(a)
+            : a;
 };
 
 var index = async () => {
@@ -5816,7 +5816,7 @@ var index = async () => {
                       size: 0
                     }
                   };
-                this.defineMember(token.defines, context, { type:token.type,structName: token.id});
+                this.defineMember(token.defines, context, { type: token.type, structName: token.id });
                 //console.info(context);
               }
               break;
@@ -5824,7 +5824,7 @@ var index = async () => {
             case 'MemoryMap':
               {
                 this.context[$attributes] = { type: token.type, size: 0 };
-                this.defineMember(token.defines, this.context,{type:token.type,preprocessed:preprocessed});
+                this.defineMember(token.defines, this.context, { type: token.type, preprocessed: preprocessed });
               }
               break;
             default:
@@ -5938,14 +5938,23 @@ var index = async () => {
                     error(`error:struct member name '${def.id.id}' is already defined.`, def);
                   } else {
                     let c;
+                    let num;
+                    if (def.id.numExpression) {
+                      num = this.evalExpression(def.id.numExpression);
+                      if (isNaN(num)) {
+                        error(`error:number suffix is illegal.`, def);
+                      }
+                    } else {
+                      num = 1;
+                    }
                     if (def.varType.type == "PrimitiveType") {
                       // Native Type
-                      const initData = def.initData ? this.makeDataString(def) : null;
+                      const initData = def.initData ? this.makeDataString(def,num) : null;
                       c = currentContext[def.id.id] = {
-                        [$attributes]: Object.assign(clone(def.varType), { offset: offset,initData:initData})
+                        [$attributes]: Object.assign(clone(def.varType), { offset: offset, initData: initData })
                       };
-                      
-                      if(!structDefinition && initData){
+
+                      if (!structDefinition && initData) {
                         opts.preprocessed(`(data (i32 const ${offset}) '${initData}')`);
                       }
 
@@ -5960,14 +5969,14 @@ var index = async () => {
                       }
                       const initData = def.initData ? this.makeDataString(def) : null;
                       c = currentContext[def.id.id] = Object.assign(clone(structType), {
-                        [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset,initData:initData })
+                        [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset, initData: initData })
                       });
 
-                      function calcStructMemberOffset(st,o){
-                        for(const m in st){
-                          if(m != $attributes){
+                      function calcStructMemberOffset(st, o) {
+                        for (const m in st) {
+                          if (m != $attributes) {
                             let att = st[m][$attributes];
-                            switch(att.type){
+                            switch (att.type) {
                               case "PrimitiveType":
                                 // console.log(att,m,att.offset,o);
                                 att.offset += o;
@@ -5975,23 +5984,15 @@ var index = async () => {
                               case "Struct":
                                 att.offset += o;
                                 // console.log(att,m,att.offset,o);
-                                calcStructMemberOffset(st[m],att.offset);
+                                calcStructMemberOffset(st[m], att.offset);
                                 break;
                             }
                           }
                         }
                       }
-                      calcStructMemberOffset(c,offset);
+                      calcStructMemberOffset(c, offset);
                     }
-                    let num;
-                    if (def.id.numExpression) {
-                      num = this.evalExpression(def.id.numExpression);
-                      if (isNaN(num)) {
-                        error(`error:number suffix is illegal.`, def);
-                      }
-                    } else {
-                      num = 1;
-                    }
+
                     c[$attributes].num = num;
                     offset += c[$attributes].size * num;
                     currentContext[$attributes].size += c[$attributes].size * num;
@@ -6012,27 +6013,50 @@ var index = async () => {
 
         }
       }
-      
-      makeDataString(def){
-        if(def.varType.type == 'PrimitiveType'){
-          switch(def.varType.varType){
+
+      makeDataString(def,num) {
+        if (def.varType.type == 'PrimitiveType') {
+          if(num > 1){
+            if(def.initData instanceof Array){              return initData.map(d=>{
+              }).join('');
+
+
+            }
+
+          }
+          switch (def.varType.varType) {
             case 'i32':
+
+              
             case 'i32':
             case 'i32':
             case 'i32':
             case 'i32':
           }
-          
+
         }
 
       }
     }
 
-    
+
     const literalLib = getInstance(await fs.promises.readFile('./lib/mwasm-lib.wasm')).exports;
     console.info(literalLib);
+    
+
+
     const view = new DataView(literalLib.memory.buffer);
 
+    let a = '123456789';
+
+    // 文字列から ArrayBuffer への変換
+    for(let i = 0, e = a.length;i < e;++i){
+      view.setUint16(i*2,a.charCodeAt(i),true);
+    }
+
+    literalLib.utf16ArrayToi64(a.length,a.length * 2);
+    a = view.getUint32(a.length * 2,true);
+    console.log('data is ',a);
 
 
     const mwasmParser = null;
