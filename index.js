@@ -6045,16 +6045,16 @@ var index = async () => {
 
     const view = new DataView(literalLib.memory.buffer);
 
-    let a = 'ffff';
+    let a = '0070';
 
     // 文字列から ArrayBuffer への変換
     for(let i = 0, e = a.length;i < e;++i){
       view.setUint16(i*2,a.charCodeAt(i),true);
     }
 
-    console.log(!!literalLib.hexArrayToi64(a.length,a.length * 2,0));
+    console.log(!!literalLib.octalArrayToi64(a.length,a.length * 2,0));
     a = view.getUint32(a.length * 2,true);
-    console.log('data is ',a.toString(16));
+    console.log('data is ',a.toString(10));
 
 
     const mwasmParser = null;
