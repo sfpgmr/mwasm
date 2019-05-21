@@ -72,43 +72,115 @@
     (i64.store (local.get $outoffset) (local.get $temp))
   )
   ;; JSの数字列からi64値に変換する
-  (func $decimalArrayToi64 (param $length i32) (param $outoffset i32) (result i32) (local $offset i32) (local $l i32) (local $temp i64)
+  (func $decimalArrayToi64 (param $length i32) (param $outoffset i32) (param $sign i32) (result i32) (local $offset i32) (local $l i32) (local $temp i64)
     (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
     (block $exit 
       (loop $loop
         (br_if $exit (i32.le_u (local.get $l) (local.get $offset)))
         (i64.mul (local.get $temp) (i64.const 10))
-        (i64.add (i64.sub(i64.load16_u (local.get $offset)) (i64.const 0x30)))
+        (if (result i64)
+          (i32.and 
+            (i64.gt_u (i64.load16_u (local.get $offset)) (i64.const 0x30))
+            (i64.le_u (i64.load16_u (local.get $offset)) (i64.const 0x39))
+          )
+          (then
+            (i64.sub(i64.load16_u (local.get $offset)) (i64.const 0x30))
+          )
+          (else
+            ;; 0x30-0x39 以外の文字列が含まれている場合はエラーで終了
+            (i32.const 0)
+            return
+          )
+        )
+        (i64.add)
         (local.set $temp)
         (local.set $offset (i32.add (local.get $offset) (i32.const 2)))
         (br $loop)
       )
     )
-    (i64.store (local.get $outoffset) (local.get $temp))
-    (i32.const 0)
+    (if
+      (i32.eqz (local.get $sign))
+      (then
+        ;; ＋の場合
+        (i64.store (local.get $outoffset) (local.get $temp))
+      )
+      (else
+        ;; -の場合
+        (i64.store (local.get $outoffset) (i64.sub (i64.const 0) (local.get $temp)))
+      )
+    )
+    (i32.const 1)
   )
-  ;; JSの１６数字列からi64値に変換する
-  (func $hexArrayToi64 (param $length i32) (param $outoffset i32) (result i32) (local $offset i32) (local $l i32) (local $temp i64)
+  ;; JSの16進数字列からi64値に変換する
+  (func $hexArrayToi64 
+    ;; 引数
+    (param $length i32)(param $outoffset i32)(param $sign i32)
+    ;; 戻り値
+    (result i32) 
+    ;; ローカル変数
+    (local $offset i32) (local $l i32) (local $temp i64)
+
     (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
     (block $exit 
       (loop $loop
         (br_if $exit (i32.le_u (local.get $l) (local.get $offset)))
         (i64.shl (local.get $temp) (i64.const 4)) ;; shift 4bit (=x16)
-        (if (i64.le_u ((i64.load16_u (local.get $offset)) (i64.const 0x39)))
+        (if (result i64) 
+          ;; 0-9(0x30-0x39)
+          (i32.and 
+            (i64.gt_u (i64.load16_u (local.get $offset)) (i64.const 0x30))
+            (i64.le_u (i64.load16_u (local.get $offset)) (i64.const 0x39))
+          )
           (then
             (i64.sub(i64.load16_u (local.get $offset)) (i64.const 0x30))
           )
           (else
-           (if (i32.and (i64.gt_u (i64.load16_u (lcoal.get $offset) (i64.const 0x41))) ())
+           (if (result i64)
+            ;; A-F (0x41-0x46)
+            (i32.and 
+              (i64.gt_u (i64.load16_u (local.get $offset)) (i64.const 0x41))
+              (i64.le_u (i64.load16_u (local.get $offset)) (i64.const 0x46))
+            )
+            (then
+              (i64.sub(i64.load16_u (local.get $offset)) (i64.const 35))
+            )
+            (else 
+              (if (result i64)
+                ;; a-f (0x61-0x66)
+                (i32.and
+                  (i64.gt_u (i64.load16_u (local.get $offset)) (i64.const 0x61))
+                  (i64.le_u (i64.load16_u (local.get $offset)) (i64.const 0x66))
+                )
+                (then
+                  (i64.sub(i64.load16_u (local.get $offset)) (i64.const 87))
+                )
+                (else
+                  ;; 16進数文字以外が含まれている場合エラーを返して終了。
+                  i32.const 0
+                  return
+                )
+              )
+            )
+           )
           )
-        )
-        i64.add
+        ) 
+        (i64.add)
         (local.set $temp)
         (local.set $offset (i32.add (local.get $offset) (i32.const 2)))
         (br $loop)
       )
     )
-    (i64.store (local.get $outoffset) (local.get $temp))
-    (i32.const 0)
+    (if 
+      (i32.eqz (local.get $sign))
+      (then
+        ;; ＋の場合
+        (i64.store (local.get $outoffset) (local.get $temp))
+      )
+      (else
+        ;; -の場合
+        (i64.store (local.get $outoffset) (i64.sub (i64.const 0) (local.get $temp)))
+      )
+    )   
+    (i32.const 1)
   )
 )

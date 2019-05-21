@@ -6042,21 +6042,19 @@ var index = async () => {
 
     const literalLib = getInstance(await fs.promises.readFile('./lib/mwasm-lib.wasm')).exports;
     console.info(literalLib);
-    
-
 
     const view = new DataView(literalLib.memory.buffer);
 
-    let a = '123456789';
+    let a = 'ffff';
 
     // 文字列から ArrayBuffer への変換
     for(let i = 0, e = a.length;i < e;++i){
       view.setUint16(i*2,a.charCodeAt(i),true);
     }
 
-    literalLib.utf16ArrayToi64(a.length,a.length * 2);
+    console.log(!!literalLib.hexArrayToi64(a.length,a.length * 2,0));
     a = view.getUint32(a.length * 2,true);
-    console.log('data is ',a);
+    console.log('data is ',a.toString(16));
 
 
     const mwasmParser = null;
