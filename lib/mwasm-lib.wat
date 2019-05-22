@@ -63,22 +63,23 @@
     )
   )
 
-  ;; JSの数字列からi64値に変換する
-  (func $uint8ArrayToi64 (param $length i32) (param $outoffset i32) (local $offset i32) (local $l i32) (local $temp i64)
-      (block $exit 
-      (loop $loop
-        (br_if $exit (i32.le_u (local.get $length) (local.get $offset)))
-        (i64.mul (local.get $temp) (i64.const 10))
-        (i64.add (i64.load8_u (local.get $offset)))
-        (local.set $temp)
-        (local.set $offset (i32.add (local.get $offset) (i32.const 1)))
-        (br $loop)
-      )
-    )
-    (i64.store (local.get $outoffset) (local.get $temp))
-  )
-  ;; JSの数字列からi64値に変換する
-  (func $decimalArrayToi64 (param $length i32) (param $outoffset i32) (param $sign i32) (result i32) (local $offset i32) (local $l i32) (local $temp i64)
+
+  ;; utf16 10進整数文字配列からi64値に変換
+  (func $decimalArrayToi64 
+    ;; 数字列はリニアメモリの先頭に格納
+    ;; 文字数
+    (param $length i32) 
+    ;; 返還後の数値をどのメモリに保存するか
+    (param $outoffset i32)
+    ;; 符号 正 ... 0 負 ... それ以外
+    (param $sign i32)
+    ;; 戻り値 正常終了 ... 0 エラー ... 0以外
+    (result i32) 
+    ;;ローカル変数
+    (local $offset i32)
+    (local $l i32)
+    (local $temp i64)
+
     (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
     (block $exit 
       (loop $loop
@@ -94,7 +95,7 @@
           )
           (else
             ;; 0x30-0x39 以外の文字列が含まれている場合はエラーで終了
-            (i32.const 0)
+            (i32.const 1)
             return
           )
         )
@@ -115,10 +116,25 @@
         (i64.store (local.get $outoffset) (i64.sub (i64.const 0) (local.get $temp)))
       )
     )
-    (i32.const 1)
+    (i32.const 0)
   )
-  ;; JSの数字列からi64値に変換する
-  (func $binaryArrayToi64 (param $length i32) (param $outoffset i32) (param $sign i32) (result i32) (local $offset i32) (local $l i32) (local $temp i64)
+
+  ;; utf16 2進整数文字配列からi64値に変換
+  (func $binaryArrayToi64 
+    ;; 数字列はリニアメモリの先頭に格納
+    ;; 文字数
+    (param $length i32) 
+    ;; 返還後の数値をどのメモリに保存するか
+    (param $outoffset i32)
+    ;; 符号 正 ... 0 負 ... それ以外
+    (param $sign i32)
+    ;; 戻り値 正常終了 ... 0 エラー ... 0以外
+    (result i32) 
+    ;;ローカル変数
+    (local $offset i32)
+    (local $l i32)
+    (local $temp i64)
+
     (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
     (block $exit 
       (loop $loop
@@ -134,7 +150,7 @@
           )
           (else
             ;; 0x30-0x31 以外の文字列が含まれている場合はエラーで終了
-            (i32.const 0)
+            (i32.const 1)
             return
           )
         )
@@ -155,9 +171,9 @@
         (i64.store (local.get $outoffset) (i64.sub (i64.const 0) (local.get $temp)))
       )
     )
-    (i32.const 1)
+    (i32.const 0)
   )
-   ;; JSの数字列からi64値に変換する
+   ;; utf-16 8進整数文字配列からi64値に変換する
   (func $octalArrayToi64 (param $length i32) (param $outoffset i32) (param $sign i32) (result i32) (local $offset i32) (local $l i32) (local $temp i64)
     (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
     (block $exit 
@@ -174,7 +190,7 @@
           )
           (else
             ;; 0x30-0x31 以外の文字列が含まれている場合はエラーで終了
-            (i32.const 0)
+            (i32.const 1)
             return
           )
         )
@@ -195,18 +211,14 @@
         (i64.store (local.get $outoffset) (i64.sub (i64.const 0) (local.get $temp)))
       )
     )
-    (i32.const 1)
+    (i32.const 0)
   )
  
-  ;; JSの16進数字列からi64値に変換する
+  ;; utf-16 16進整数文字配列からi64値に変換する
   (func $hexArrayToi64 
-    ;; 引数
     (param $length i32)(param $outoffset i32)(param $sign i32)
-    ;; 戻り値
     (result i32) 
-    ;; ローカル変数
     (local $offset i32) (local $l i32) (local $temp i64)
-
     (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
     (block $exit 
       (loop $loop
@@ -243,7 +255,7 @@
                 )
                 (else
                   ;; 16進数文字以外が含まれている場合エラーを返して終了。
-                  i32.const 0
+                  i32.const 1
                   return
                 )
               )
@@ -268,9 +280,11 @@
         (i64.store (local.get $outoffset) (i64.sub (i64.const 0) (local.get $temp)))
       )
     )   
-    (i32.const 1)
+    (i32.const 0)
   )
-  ;; JSの数字列からu64値に変換する
+
+
+  ;; utf-16 10進整数文字配列からu64値に変換する
   (func $decimalArrayTou64 (param $length i32) (param $outoffset i32) (param $sign i32) (result i32) (local $offset i32) (local $l i32) (local $temp u64)
     (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
     (block $exit 
@@ -287,7 +301,7 @@
           )
           (else
             ;; 0x30-0x39 以外の文字列が含まれている場合はエラーで終了
-            (i32.const 0)
+            (i32.const 1)
             return
           )
         )
@@ -297,20 +311,11 @@
         (br $loop)
       )
     )
-    (if
-      (i32.eqz (local.get $sign))
-      (then
-        ;; ＋の場合
-        (u64.store (local.get $outoffset) (local.get $temp))
-      )
-      (else
-        ;; -の場合
-        (u64.store (local.get $outoffset) (u64.sub (u64.const 0) (local.get $temp)))
-      )
-    )
-    (i32.const 1)
+    (u64.store (local.get $outoffset) (local.get $temp))
+    (i32.const 0)
   )
-  ;; JSの数字列からu64値に変換する
+
+  ;; utf-16 2進整数文字配列からu64値に変換する
   (func $binaryArrayTou64 (param $length i32) (param $outoffset i32) (param $sign i32) (result i32) (local $offset i32) (local $l i32) (local $temp u64)
     (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
     (block $exit 
@@ -327,7 +332,7 @@
           )
           (else
             ;; 0x30-0x31 以外の文字列が含まれている場合はエラーで終了
-            (i32.const 0)
+            (i32.const 1)
             return
           )
         )
@@ -337,20 +342,11 @@
         (br $loop)
       )
     )
-    (if
-      (i32.eqz (local.get $sign))
-      (then
-        ;; ＋の場合
-        (u64.store (local.get $outoffset) (local.get $temp))
-      )
-      (else
-        ;; -の場合
-        (u64.store (local.get $outoffset) (u64.sub (u64.const 0) (local.get $temp)))
-      )
-    )
-    (i32.const 1)
+    (u64.store (local.get $outoffset) (local.get $temp))
+    (i32.const 0)
   )
-   ;; JSの数字列からu64値に変換する
+  
+  ;; utf-16 8進整数文字配列からu64値に変換する
   (func $octalArrayTou64 (param $length i32) (param $outoffset i32) (param $sign i32) (result i32) (local $offset i32) (local $l i32) (local $temp u64)
     (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
     (block $exit 
@@ -367,7 +363,7 @@
           )
           (else
             ;; 0x30-0x31 以外の文字列が含まれている場合はエラーで終了
-            (i32.const 0)
+            (i32.const 1)
             return
           )
         )
@@ -377,27 +373,14 @@
         (br $loop)
       )
     )
-    (if
-      (i32.eqz (local.get $sign))
-      (then
-        ;; ＋の場合
-        (u64.store (local.get $outoffset) (local.get $temp))
-      )
-      (else
-        ;; -の場合
-        (u64.store (local.get $outoffset) (u64.sub (u64.const 0) (local.get $temp)))
-      )
-    )
-    (i32.const 1)
+    (u64.store (local.get $outoffset) (local.get $temp))
+    (i32.const 0)
   )
  
-  ;; JSの16進数字列からu64値に変換する
+  ;; utf-16 16進整数文字配列からu64値に変換する
   (func $hexArrayTou64 
-    ;; 引数
-    (param $length i32)(param $outoffset i32)(param $sign i32)
-    ;; 戻り値
+    (param $length i32)(param $outoffset i32)
     (result i32) 
-    ;; ローカル変数
     (local $offset i32) (local $l i32) (local $temp u64)
 
     (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
@@ -436,7 +419,7 @@
                 )
                 (else
                   ;; 16進数文字以外が含まれている場合エラーを返して終了。
-                  i32.const 0
+                  i32.const 1
                   return
                 )
               )
@@ -450,18 +433,7 @@
         (br $loop)
       )
     )
-    (if 
-      (i32.eqz (local.get $sign))
-      (then
-        ;; ＋の場合
-        (u64.store (local.get $outoffset) (local.get $temp))
-      )
-      (else
-        ;; -の場合
-        (u64.store (local.get $outoffset) (u64.sub (u64.const 0) (local.get $temp)))
-
-      )
-    )   
-    (i32.const 1)
+    (u64.store (local.get $outoffset) (local.get $temp))
+    (i32.const 0)
   )
 )
