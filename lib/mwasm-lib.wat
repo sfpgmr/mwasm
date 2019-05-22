@@ -6,7 +6,11 @@
   (export "decimalArrayToi64" (func $decimalArrayToi64))
   (export "binaryArrayToi64" (func $binaryArrayToi64))
   (export "octalArrayToi64" (func $octalArrayToi64))
-  (export "hexArrayToi64" (func $hexArrayToi64))
+  (export "hexArrayToi64" (func $hexArrayTou64))
+  (export "decimalArrayTou64" (func $decimalArrayTou64))
+  (export "binaryArrayTou64" (func $binaryArrayTou64))
+  (export "octalArrayTou64" (func $octalArrayTou64))
+  (export "hexArrayTou64" (func $hexArrayTou64))
   (memory $memory 1)
   (export "memory" (memory $memory))
   
