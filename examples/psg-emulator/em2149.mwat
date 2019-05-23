@@ -2,57 +2,57 @@
   $.X = 2;
 }
 {@struct CHANNEL
-  u32 vol[3];
+  i32 vol[3];
 }
 {@struct PSG 
     (;; Volume Table ;;)
-    u32 voltbl[64] = [ 0 , 0x01, 0x01, 0x02, 0x02, 0x03, 0x03, 0x04, 0x05, 0x06, 0x07, 0x09,
+    i32 voltbl[64] = [ 0 , 0b0000_0001, 0x01, 0x02, 0x02, 0x03, 0x03, 0x04, 0x05, 0x06, 0x07, 0x09,
    0x0B, 0x0D, 0x0F, 0x12, 0x16, 0x1A, 0x1F, 0x25, 0x2D, 0x35, 0x3F, 0x4C,
    0x5A, 0x6A, 0x7F, 0x97, 0xB4, 0xD6, 0xFF, 0xFF, 0x00, 0x00, 0x01, 0x01,
    0x02, 0x02, 0x03, 0x03, 0x05, 0x05, 0x07, 0x07, 0x0B, 0x0B, 0x0F, 0x0F,
    0x16, 0x16, 0x1F, 0x1F, 0x2D, 0x2D, 0x3F, 0x3F, 0x5A, 0x5A, 0x7F, 0x7F,
    0xB4, 0xB4, 0xFF, 0xFF];
-    u32 reg[0x20];
+    i32 reg[0x20];
     i32 out = 2;
 
-    u32 clk, rate, base_incr, quality;
+    i32 clk, rate, base_incr, quality;
 
-    u32 count[3];
-    u32 volume[3];
-    u32 freq[3];
-    u32 edge[3];
-    u32 tmask[3];
-    u32 nmask[3];
-    u32 mask;
+    i32 count[3];
+    i32 volume[3];
+    i32 freq[3];
+    i32 edge[3];
+    i32 tmask[3];
+    i32 nmask[3];
+    i32 mask;
 
-    u32 base_count;
+    i32 base_count;
 
-    u32 env_volume;
-    u32 env_ptr;
-    u32 env_face;
+    i32 env_volume;
+    i32 env_ptr;
+    i32 env_face;
 
-    u32 env_continue;
-    u32 env_attack;
-    u32 env_alternate;
-    u32 env_hold;
-    u32 env_pause;
-    u32 env_reset;
+    i32 env_continue;
+    i32 env_attack;
+    i32 env_alternate;
+    i32 env_hold;
+    i32 env_pause;
+    i32 env_reset;
 
-    u32 env_freq;
-    u32 env_count;
+    i32 env_freq;
+    i32 env_count;
 
-    u32 noise_seed;
-    u32 noise_count;
-    u32 noise_freq;
+    i32 noise_seed;
+    i32 noise_count;
+    i32 noise_freq;
 
     (;; rate converter ;;)
-    u32 realstep;
-    u32 psgtime;
-    u32 psgstep;
+    i32 realstep;
+    i32 psgtime;
+    i32 psgstep;
     CHANNEL ch_c;
 
     (;; I/O Ctrl ;;)
-    u32 adr;
+    i32 adr;
 
     (;; output of channels ;;)
     i32 ch_out[3];

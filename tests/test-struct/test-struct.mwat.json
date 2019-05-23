@@ -21,11 +21,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 43,
             "line": 3,
@@ -67,11 +65,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 60,
             "line": 5,
@@ -159,11 +155,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 93,
             "line": 8,
@@ -205,11 +199,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 93,
             "line": 8,
@@ -251,11 +243,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 93,
             "line": 8,
@@ -297,11 +287,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 93,
             "line": 8,
@@ -343,11 +331,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 133,
             "line": 10,
@@ -389,11 +375,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 151,
             "line": 11,
@@ -435,11 +419,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 170,
             "line": 12,
@@ -481,11 +463,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 187,
             "line": 13,
@@ -527,11 +507,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 204,
             "line": 14,
@@ -573,11 +551,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 222,
             "line": 15,
@@ -619,11 +595,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 240,
             "line": 16,
@@ -665,11 +639,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 255,
             "line": 18,
@@ -711,11 +683,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 276,
             "line": 20,
@@ -757,11 +727,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 296,
             "line": 21,
@@ -803,11 +771,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 313,
             "line": 22,
@@ -849,11 +815,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 332,
             "line": 24,
@@ -895,11 +859,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 354,
             "line": 25,
@@ -941,11 +903,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 374,
             "line": 26,
@@ -987,11 +947,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 397,
             "line": 27,
@@ -1033,11 +991,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 415,
             "line": 28,
@@ -1079,11 +1035,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 434,
             "line": 29,
@@ -1125,11 +1079,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 454,
             "line": 31,
@@ -1171,11 +1123,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 472,
             "line": 32,
@@ -1217,11 +1167,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 492,
             "line": 34,
@@ -1263,11 +1211,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 512,
             "line": 35,
@@ -1309,11 +1255,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 533,
             "line": 36,
@@ -1355,11 +1299,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 581,
             "line": 39,
@@ -1401,11 +1343,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 599,
             "line": 40,
@@ -1447,11 +1387,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 616,
             "line": 41,
@@ -1493,11 +1431,9 @@
           }
         },
         "varType": {
-          "type": "PrimitiveType",
-          "varType": "u32",
-          "size": 4,
-          "integer": true,
-          "unsigned": true,
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "u32",
           "start": {
             "offset": 655,
             "line": 44,

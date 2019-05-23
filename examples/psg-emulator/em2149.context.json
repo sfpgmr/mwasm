@@ -8,10 +8,10 @@
     "vol": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
           "offset": 35,
           "line": 5,
@@ -36,10 +36,10 @@
     "voltbl": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
           "offset": 92,
           "line": 9,
@@ -51,23 +51,24 @@
           "column": 8
         },
         "offset": 0,
+        "initData": "\\00\\00\\00\\00\\00\\00\\00\\00\\01\\00\\00\\00\\02\\00\\00\\00\\02\\00\\00\\00\\03\\00\\00\\00\\03\\00\\00\\00\\04\\00\\00\\00\\05\\00\\00\\00\\06\\00\\00\\00\\07\\00\\00\\00\\09\\00\\00\\00\\1f\\00\\00\\00\\21\\00\\00\\00\\23\\00\\00\\00\\12\\00\\00\\00\\16\\00\\00\\00\\2e\\00\\00\\00\\33\\00\\00\\00\\25\\00\\00\\00\\41\\00\\00\\00\\35\\00\\00\\00\\53\\00\\00\\00\\60\\00\\00\\00\\6e\\00\\00\\00\\7e\\00\\00\\00\\93\\00\\00\\00\\97\\00\\00\\00\\f4\\01\\00\\00\\16\\02\\00\\00\\53\\02\\00\\00\\53\\02\\00\\00\\00\\00\\00\\00\\00\\00\\00\\00\\01\\00\\00\\00\\01\\00\\00\\00\\02\\00\\00\\00\\02\\00\\00\\00\\03\\00\\00\\00\\03\\00\\00\\00\\05\\00\\00\\00\\05\\00\\00\\00\\07\\00\\00\\00\\07\\00\\00\\00\\1f\\00\\00\\00\\1f\\00\\00\\00\\23\\00\\00\\00\\23\\00\\00\\00\\16\\00\\00\\00\\16\\00\\00\\00\\33\\00\\00\\00\\33\\00\\00\\00\\41\\00\\00\\00\\41\\00\\00\\00\\53\\00\\00\\00\\53\\00\\00\\00\\6e\\00\\00\\00\\6e\\00\\00\\00\\93\\00\\00\\00\\93\\00\\00\\00\\f4\\01\\00\\00\\f4\\01\\00\\00\\53\\02\\00\\00\\53\\02\\00\\00",
         "num": 64
       }
     },
     "reg": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 513,
+          "offset": 520,
           "line": 15,
           "column": 5
         },
         "end": {
-          "offset": 516,
+          "offset": 523,
           "line": 15,
           "column": 8
         },
@@ -84,33 +85,34 @@
         "integer": true,
         "unsigned": false,
         "start": {
-          "offset": 532,
+          "offset": 539,
           "line": 16,
           "column": 5
         },
         "end": {
-          "offset": 535,
+          "offset": 542,
           "line": 16,
           "column": 8
         },
         "offset": 384,
+        "initData": "\\02\\00\\00\\00",
         "num": 1
       }
     },
     "clk": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 550,
+          "offset": 557,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 553,
+          "offset": 560,
           "line": 18,
           "column": 8
         },
@@ -122,17 +124,17 @@
     "rate": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 550,
+          "offset": 557,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 553,
+          "offset": 560,
           "line": 18,
           "column": 8
         },
@@ -144,17 +146,17 @@
     "base_incr": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 550,
+          "offset": 557,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 553,
+          "offset": 560,
           "line": 18,
           "column": 8
         },
@@ -166,17 +168,17 @@
     "quality": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 550,
+          "offset": 557,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 553,
+          "offset": 560,
           "line": 18,
           "column": 8
         },
@@ -188,17 +190,17 @@
     "count": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 590,
+          "offset": 597,
           "line": 20,
           "column": 5
         },
         "end": {
-          "offset": 593,
+          "offset": 600,
           "line": 20,
           "column": 8
         },
@@ -210,17 +212,17 @@
     "volume": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 608,
+          "offset": 615,
           "line": 21,
           "column": 5
         },
         "end": {
-          "offset": 611,
+          "offset": 618,
           "line": 21,
           "column": 8
         },
@@ -232,17 +234,17 @@
     "freq": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 627,
+          "offset": 634,
           "line": 22,
           "column": 5
         },
         "end": {
-          "offset": 630,
+          "offset": 637,
           "line": 22,
           "column": 8
         },
@@ -254,17 +256,17 @@
     "edge": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 644,
+          "offset": 651,
           "line": 23,
           "column": 5
         },
         "end": {
-          "offset": 647,
+          "offset": 654,
           "line": 23,
           "column": 8
         },
@@ -276,17 +278,17 @@
     "tmask": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 661,
+          "offset": 668,
           "line": 24,
           "column": 5
         },
         "end": {
-          "offset": 664,
+          "offset": 671,
           "line": 24,
           "column": 8
         },
@@ -298,17 +300,17 @@
     "nmask": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 679,
+          "offset": 686,
           "line": 25,
           "column": 5
         },
         "end": {
-          "offset": 682,
+          "offset": 689,
           "line": 25,
           "column": 8
         },
@@ -320,17 +322,17 @@
     "mask": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 697,
+          "offset": 704,
           "line": 26,
           "column": 5
         },
         "end": {
-          "offset": 700,
+          "offset": 707,
           "line": 26,
           "column": 8
         },
@@ -342,17 +344,17 @@
     "base_count": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 712,
+          "offset": 719,
           "line": 28,
           "column": 5
         },
         "end": {
-          "offset": 715,
+          "offset": 722,
           "line": 28,
           "column": 8
         },
@@ -364,17 +366,17 @@
     "env_volume": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 733,
+          "offset": 740,
           "line": 30,
           "column": 5
         },
         "end": {
-          "offset": 736,
+          "offset": 743,
           "line": 30,
           "column": 8
         },
@@ -386,17 +388,17 @@
     "env_ptr": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 753,
+          "offset": 760,
           "line": 31,
           "column": 5
         },
         "end": {
-          "offset": 756,
+          "offset": 763,
           "line": 31,
           "column": 8
         },
@@ -408,17 +410,17 @@
     "env_face": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 770,
+          "offset": 777,
           "line": 32,
           "column": 5
         },
         "end": {
-          "offset": 773,
+          "offset": 780,
           "line": 32,
           "column": 8
         },
@@ -430,17 +432,17 @@
     "env_continue": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 789,
+          "offset": 796,
           "line": 34,
           "column": 5
         },
         "end": {
-          "offset": 792,
+          "offset": 799,
           "line": 34,
           "column": 8
         },
@@ -452,17 +454,17 @@
     "env_attack": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 811,
+          "offset": 818,
           "line": 35,
           "column": 5
         },
         "end": {
-          "offset": 814,
+          "offset": 821,
           "line": 35,
           "column": 8
         },
@@ -474,17 +476,17 @@
     "env_alternate": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 831,
+          "offset": 838,
           "line": 36,
           "column": 5
         },
         "end": {
-          "offset": 834,
+          "offset": 841,
           "line": 36,
           "column": 8
         },
@@ -496,17 +498,17 @@
     "env_hold": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 854,
+          "offset": 861,
           "line": 37,
           "column": 5
         },
         "end": {
-          "offset": 857,
+          "offset": 864,
           "line": 37,
           "column": 8
         },
@@ -518,17 +520,17 @@
     "env_pause": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 872,
+          "offset": 879,
           "line": 38,
           "column": 5
         },
         "end": {
-          "offset": 875,
+          "offset": 882,
           "line": 38,
           "column": 8
         },
@@ -540,17 +542,17 @@
     "env_reset": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 891,
+          "offset": 898,
           "line": 39,
           "column": 5
         },
         "end": {
-          "offset": 894,
+          "offset": 901,
           "line": 39,
           "column": 8
         },
@@ -562,17 +564,17 @@
     "env_freq": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 911,
+          "offset": 918,
           "line": 41,
           "column": 5
         },
         "end": {
-          "offset": 914,
+          "offset": 921,
           "line": 41,
           "column": 8
         },
@@ -584,17 +586,17 @@
     "env_count": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 929,
+          "offset": 936,
           "line": 42,
           "column": 5
         },
         "end": {
-          "offset": 932,
+          "offset": 939,
           "line": 42,
           "column": 8
         },
@@ -606,17 +608,17 @@
     "noise_seed": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 949,
+          "offset": 956,
           "line": 44,
           "column": 5
         },
         "end": {
-          "offset": 952,
+          "offset": 959,
           "line": 44,
           "column": 8
         },
@@ -628,17 +630,17 @@
     "noise_count": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 969,
+          "offset": 976,
           "line": 45,
           "column": 5
         },
         "end": {
-          "offset": 972,
+          "offset": 979,
           "line": 45,
           "column": 8
         },
@@ -650,17 +652,17 @@
     "noise_freq": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 990,
+          "offset": 997,
           "line": 46,
           "column": 5
         },
         "end": {
-          "offset": 993,
+          "offset": 1000,
           "line": 46,
           "column": 8
         },
@@ -672,17 +674,17 @@
     "realstep": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 1038,
+          "offset": 1045,
           "line": 49,
           "column": 5
         },
         "end": {
-          "offset": 1041,
+          "offset": 1048,
           "line": 49,
           "column": 8
         },
@@ -694,17 +696,17 @@
     "psgtime": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 1056,
+          "offset": 1063,
           "line": 50,
           "column": 5
         },
         "end": {
-          "offset": 1059,
+          "offset": 1066,
           "line": 50,
           "column": 8
         },
@@ -716,17 +718,17 @@
     "psgstep": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 1073,
+          "offset": 1080,
           "line": 51,
           "column": 5
         },
         "end": {
-          "offset": 1076,
+          "offset": 1083,
           "line": 51,
           "column": 8
         },
@@ -746,10 +748,10 @@
       "vol": {
         "_attributes_": {
           "type": "PrimitiveType",
-          "varType": "u32",
+          "varType": "i32",
           "size": 4,
           "integer": true,
-          "unsigned": true,
+          "unsigned": false,
           "start": {
             "offset": 35,
             "line": 5,
@@ -769,17 +771,17 @@
     "adr": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 1130,
+          "offset": 1137,
           "line": 55,
           "column": 5
         },
         "end": {
-          "offset": 1133,
+          "offset": 1140,
           "line": 55,
           "column": 8
         },
@@ -796,12 +798,12 @@
         "integer": true,
         "unsigned": false,
         "start": {
-          "offset": 1175,
+          "offset": 1182,
           "line": 58,
           "column": 5
         },
         "end": {
-          "offset": 1178,
+          "offset": 1185,
           "line": 58,
           "column": 8
         },
@@ -826,10 +828,10 @@
     "voltbl": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
           "offset": 92,
           "line": 9,
@@ -841,23 +843,24 @@
           "column": 8
         },
         "offset": 0,
+        "initData": "\\00\\00\\00\\00\\00\\00\\00\\00\\01\\00\\00\\00\\02\\00\\00\\00\\02\\00\\00\\00\\03\\00\\00\\00\\03\\00\\00\\00\\04\\00\\00\\00\\05\\00\\00\\00\\06\\00\\00\\00\\07\\00\\00\\00\\09\\00\\00\\00\\1f\\00\\00\\00\\21\\00\\00\\00\\23\\00\\00\\00\\12\\00\\00\\00\\16\\00\\00\\00\\2e\\00\\00\\00\\33\\00\\00\\00\\25\\00\\00\\00\\41\\00\\00\\00\\35\\00\\00\\00\\53\\00\\00\\00\\60\\00\\00\\00\\6e\\00\\00\\00\\7e\\00\\00\\00\\93\\00\\00\\00\\97\\00\\00\\00\\f4\\01\\00\\00\\16\\02\\00\\00\\53\\02\\00\\00\\53\\02\\00\\00\\00\\00\\00\\00\\00\\00\\00\\00\\01\\00\\00\\00\\01\\00\\00\\00\\02\\00\\00\\00\\02\\00\\00\\00\\03\\00\\00\\00\\03\\00\\00\\00\\05\\00\\00\\00\\05\\00\\00\\00\\07\\00\\00\\00\\07\\00\\00\\00\\1f\\00\\00\\00\\1f\\00\\00\\00\\23\\00\\00\\00\\23\\00\\00\\00\\16\\00\\00\\00\\16\\00\\00\\00\\33\\00\\00\\00\\33\\00\\00\\00\\41\\00\\00\\00\\41\\00\\00\\00\\53\\00\\00\\00\\53\\00\\00\\00\\6e\\00\\00\\00\\6e\\00\\00\\00\\93\\00\\00\\00\\93\\00\\00\\00\\f4\\01\\00\\00\\f4\\01\\00\\00\\53\\02\\00\\00\\53\\02\\00\\00",
         "num": 64
       }
     },
     "reg": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 513,
+          "offset": 520,
           "line": 15,
           "column": 5
         },
         "end": {
-          "offset": 516,
+          "offset": 523,
           "line": 15,
           "column": 8
         },
@@ -874,33 +877,34 @@
         "integer": true,
         "unsigned": false,
         "start": {
-          "offset": 532,
+          "offset": 539,
           "line": 16,
           "column": 5
         },
         "end": {
-          "offset": 535,
+          "offset": 542,
           "line": 16,
           "column": 8
         },
         "offset": 384,
+        "initData": "\\02\\00\\00\\00",
         "num": 1
       }
     },
     "clk": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 550,
+          "offset": 557,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 553,
+          "offset": 560,
           "line": 18,
           "column": 8
         },
@@ -912,17 +916,17 @@
     "rate": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 550,
+          "offset": 557,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 553,
+          "offset": 560,
           "line": 18,
           "column": 8
         },
@@ -934,17 +938,17 @@
     "base_incr": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 550,
+          "offset": 557,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 553,
+          "offset": 560,
           "line": 18,
           "column": 8
         },
@@ -956,17 +960,17 @@
     "quality": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 550,
+          "offset": 557,
           "line": 18,
           "column": 5
         },
         "end": {
-          "offset": 553,
+          "offset": 560,
           "line": 18,
           "column": 8
         },
@@ -978,17 +982,17 @@
     "count": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 590,
+          "offset": 597,
           "line": 20,
           "column": 5
         },
         "end": {
-          "offset": 593,
+          "offset": 600,
           "line": 20,
           "column": 8
         },
@@ -1000,17 +1004,17 @@
     "volume": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 608,
+          "offset": 615,
           "line": 21,
           "column": 5
         },
         "end": {
-          "offset": 611,
+          "offset": 618,
           "line": 21,
           "column": 8
         },
@@ -1022,17 +1026,17 @@
     "freq": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 627,
+          "offset": 634,
           "line": 22,
           "column": 5
         },
         "end": {
-          "offset": 630,
+          "offset": 637,
           "line": 22,
           "column": 8
         },
@@ -1044,17 +1048,17 @@
     "edge": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 644,
+          "offset": 651,
           "line": 23,
           "column": 5
         },
         "end": {
-          "offset": 647,
+          "offset": 654,
           "line": 23,
           "column": 8
         },
@@ -1066,17 +1070,17 @@
     "tmask": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 661,
+          "offset": 668,
           "line": 24,
           "column": 5
         },
         "end": {
-          "offset": 664,
+          "offset": 671,
           "line": 24,
           "column": 8
         },
@@ -1088,17 +1092,17 @@
     "nmask": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 679,
+          "offset": 686,
           "line": 25,
           "column": 5
         },
         "end": {
-          "offset": 682,
+          "offset": 689,
           "line": 25,
           "column": 8
         },
@@ -1110,17 +1114,17 @@
     "mask": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 697,
+          "offset": 704,
           "line": 26,
           "column": 5
         },
         "end": {
-          "offset": 700,
+          "offset": 707,
           "line": 26,
           "column": 8
         },
@@ -1132,17 +1136,17 @@
     "base_count": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 712,
+          "offset": 719,
           "line": 28,
           "column": 5
         },
         "end": {
-          "offset": 715,
+          "offset": 722,
           "line": 28,
           "column": 8
         },
@@ -1154,17 +1158,17 @@
     "env_volume": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 733,
+          "offset": 740,
           "line": 30,
           "column": 5
         },
         "end": {
-          "offset": 736,
+          "offset": 743,
           "line": 30,
           "column": 8
         },
@@ -1176,17 +1180,17 @@
     "env_ptr": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 753,
+          "offset": 760,
           "line": 31,
           "column": 5
         },
         "end": {
-          "offset": 756,
+          "offset": 763,
           "line": 31,
           "column": 8
         },
@@ -1198,17 +1202,17 @@
     "env_face": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 770,
+          "offset": 777,
           "line": 32,
           "column": 5
         },
         "end": {
-          "offset": 773,
+          "offset": 780,
           "line": 32,
           "column": 8
         },
@@ -1220,17 +1224,17 @@
     "env_continue": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 789,
+          "offset": 796,
           "line": 34,
           "column": 5
         },
         "end": {
-          "offset": 792,
+          "offset": 799,
           "line": 34,
           "column": 8
         },
@@ -1242,17 +1246,17 @@
     "env_attack": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 811,
+          "offset": 818,
           "line": 35,
           "column": 5
         },
         "end": {
-          "offset": 814,
+          "offset": 821,
           "line": 35,
           "column": 8
         },
@@ -1264,17 +1268,17 @@
     "env_alternate": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 831,
+          "offset": 838,
           "line": 36,
           "column": 5
         },
         "end": {
-          "offset": 834,
+          "offset": 841,
           "line": 36,
           "column": 8
         },
@@ -1286,17 +1290,17 @@
     "env_hold": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 854,
+          "offset": 861,
           "line": 37,
           "column": 5
         },
         "end": {
-          "offset": 857,
+          "offset": 864,
           "line": 37,
           "column": 8
         },
@@ -1308,17 +1312,17 @@
     "env_pause": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 872,
+          "offset": 879,
           "line": 38,
           "column": 5
         },
         "end": {
-          "offset": 875,
+          "offset": 882,
           "line": 38,
           "column": 8
         },
@@ -1330,17 +1334,17 @@
     "env_reset": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 891,
+          "offset": 898,
           "line": 39,
           "column": 5
         },
         "end": {
-          "offset": 894,
+          "offset": 901,
           "line": 39,
           "column": 8
         },
@@ -1352,17 +1356,17 @@
     "env_freq": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 911,
+          "offset": 918,
           "line": 41,
           "column": 5
         },
         "end": {
-          "offset": 914,
+          "offset": 921,
           "line": 41,
           "column": 8
         },
@@ -1374,17 +1378,17 @@
     "env_count": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 929,
+          "offset": 936,
           "line": 42,
           "column": 5
         },
         "end": {
-          "offset": 932,
+          "offset": 939,
           "line": 42,
           "column": 8
         },
@@ -1396,17 +1400,17 @@
     "noise_seed": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 949,
+          "offset": 956,
           "line": 44,
           "column": 5
         },
         "end": {
-          "offset": 952,
+          "offset": 959,
           "line": 44,
           "column": 8
         },
@@ -1418,17 +1422,17 @@
     "noise_count": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 969,
+          "offset": 976,
           "line": 45,
           "column": 5
         },
         "end": {
-          "offset": 972,
+          "offset": 979,
           "line": 45,
           "column": 8
         },
@@ -1440,17 +1444,17 @@
     "noise_freq": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 990,
+          "offset": 997,
           "line": 46,
           "column": 5
         },
         "end": {
-          "offset": 993,
+          "offset": 1000,
           "line": 46,
           "column": 8
         },
@@ -1462,17 +1466,17 @@
     "realstep": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 1038,
+          "offset": 1045,
           "line": 49,
           "column": 5
         },
         "end": {
-          "offset": 1041,
+          "offset": 1048,
           "line": 49,
           "column": 8
         },
@@ -1484,17 +1488,17 @@
     "psgtime": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 1056,
+          "offset": 1063,
           "line": 50,
           "column": 5
         },
         "end": {
-          "offset": 1059,
+          "offset": 1066,
           "line": 50,
           "column": 8
         },
@@ -1506,17 +1510,17 @@
     "psgstep": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 1073,
+          "offset": 1080,
           "line": 51,
           "column": 5
         },
         "end": {
-          "offset": 1076,
+          "offset": 1083,
           "line": 51,
           "column": 8
         },
@@ -1536,10 +1540,10 @@
       "vol": {
         "_attributes_": {
           "type": "PrimitiveType",
-          "varType": "u32",
+          "varType": "i32",
           "size": 4,
           "integer": true,
-          "unsigned": true,
+          "unsigned": false,
           "start": {
             "offset": 35,
             "line": 5,
@@ -1559,17 +1563,17 @@
     "adr": {
       "_attributes_": {
         "type": "PrimitiveType",
-        "varType": "u32",
+        "varType": "i32",
         "size": 4,
         "integer": true,
-        "unsigned": true,
+        "unsigned": false,
         "start": {
-          "offset": 1130,
+          "offset": 1137,
           "line": 55,
           "column": 5
         },
         "end": {
-          "offset": 1133,
+          "offset": 1140,
           "line": 55,
           "column": 8
         },
@@ -1586,12 +1590,12 @@
         "integer": true,
         "unsigned": false,
         "start": {
-          "offset": 1175,
+          "offset": 1182,
           "line": 58,
           "column": 5
         },
         "end": {
-          "offset": 1178,
+          "offset": 1185,
           "line": 58,
           "column": 8
         },
@@ -1609,12 +1613,12 @@
       "integer": true,
       "unsigned": false,
       "start": {
-        "offset": 1242,
+        "offset": 1249,
         "line": 66,
         "column": 3
       },
       "end": {
-        "offset": 1245,
+        "offset": 1252,
         "line": 66,
         "column": 6
       },

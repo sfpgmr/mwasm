@@ -6,6 +6,11 @@
   (export "binaryArrayToi64" (func $binaryArrayToi64))
   (export "octalArrayToi64" (func $octalArrayToi64))
   (export "hexArrayToi64" (func $hexArrayToi64))
+  (export "decimalArrayToi32" (func $decimalArrayToi32))
+  (export "binaryArrayToi32" (func $binaryArrayToi32))
+  (export "octalArrayToi32" (func $octalArrayToi32))
+  (export "hexArrayToi32" (func $hexArrayToi32))
+
   (memory $memory 1)
   (export "memory" (memory $memory))
   
@@ -58,6 +63,224 @@
     )
   )
 
+ ;; utf16 10進整数文字配列からi32値に変換
+  (func $decimalArrayToi32 
+    ;; 数字列はリニアメモリの先頭に格納
+    ;; 文字数
+    (param $length i32) 
+    ;; 返還後の数値をどのメモリに保存するか
+    (param $outoffset i32)
+    ;; 符号 正 ... 0 負 ... それ以外
+    (param $sign i32)
+    ;; 戻り値 正常終了 ... 0 エラー ... 0以外
+    (result i32) 
+    ;;ローカル変数
+    (local $offset i32)
+    (local $l i32)
+    (local $temp i32)
+
+    (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
+    (block $exit 
+      (loop $loop
+        (br_if $exit (i32.le_u (local.get $l) (local.get $offset)))
+        (i32.mul (local.get $temp) (i32.const 10))
+        (if (result i32)
+          (i32.and 
+            (i32.ge_u (i32.load16_u (local.get $offset)) (i32.const 0x30))
+            (i32.le_u (i32.load16_u (local.get $offset)) (i32.const 0x39))
+          )
+          (then
+            (i32.sub(i32.load16_u (local.get $offset)) (i32.const 0x30))
+          )
+          (else
+            ;; 0x30-0x39 以外の文字列が含まれている場合はエラーで終了
+            (i32.const 1)
+            return
+          )
+        )
+        (i32.add)
+        (local.set $temp)
+        (local.set $offset (i32.add (local.get $offset) (i32.const 2)))
+        (br $loop)
+      )
+    )
+    (if
+      (i32.eqz (local.get $sign))
+      (then
+        ;; ＋の場合
+        (i32.store (local.get $outoffset) (local.get $temp))
+      )
+      (else
+        ;; -の場合
+        (i32.store (local.get $outoffset) (i32.sub (i32.const 0) (local.get $temp)))
+      )
+    )
+    (i32.const 0)
+  )
+
+  ;; utf16 2進整数文字配列からi32値に変換
+  (func $binaryArrayToi32 
+    ;; 数字列はリニアメモリの先頭に格納
+    ;; 文字数
+    (param $length i32) 
+    ;; 返還後の数値をどのメモリに保存するか
+    (param $outoffset i32)
+    ;; 符号 正 ... 0 負 ... それ以外
+    (param $sign i32)
+    ;; 戻り値 正常終了 ... 0 エラー ... 0以外
+    (result i32) 
+    ;;ローカル変数
+    (local $offset i32)
+    (local $l i32)
+    (local $temp i32)
+
+    (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
+    (block $exit 
+      (loop $loop
+        (br_if $exit (i32.le_u (local.get $l) (local.get $offset)))
+        (i32.shl (local.get $temp) (i32.const 1));; *2
+        (if (result i32)
+          (i32.and 
+            (i32.ge_u (i32.load16_u (local.get $offset)) (i32.const 0x30))
+            (i32.le_u (i32.load16_u (local.get $offset)) (i32.const 0x31))
+          )
+          (then
+            (i32.sub(i32.load16_u (local.get $offset)) (i32.const 0x30))
+          )
+          (else
+            ;; 0x30-0x31 以外の文字列が含まれている場合はエラーで終了
+            (i32.const 1)
+            return
+          )
+        )
+        (i32.add)
+        (local.set $temp)
+        (local.set $offset (i32.add (local.get $offset) (i32.const 2)))
+        (br $loop)
+      )
+    )
+    (if
+      (i32.eqz (local.get $sign))
+      (then
+        ;; ＋の場合
+        (i32.store (local.get $outoffset) (local.get $temp))
+      )
+      (else
+        ;; -の場合
+        (i32.store (local.get $outoffset) (i32.sub (i32.const 0) (local.get $temp)))
+      )
+    )
+    (i32.const 0)
+  )
+   ;; utf-16 8進整数文字配列からi32値に変換する
+  (func $octalArrayToi32 (param $length i32) (param $outoffset i32) (param $sign i32) (result i32) (local $offset i32) (local $l i32) (local $temp i32)
+    (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
+    (block $exit 
+      (loop $loop
+        (br_if $exit (i32.le_u (local.get $l) (local.get $offset)))
+        (i32.shl (local.get $temp) (i32.const 3));; *8
+        (if (result i32)
+          (i32.and 
+            (i32.ge_u (i32.load16_u (local.get $offset)) (i32.const 0x30))
+            (i32.le_u (i32.load16_u (local.get $offset)) (i32.const 0x37))
+          )
+          (then
+            (i32.sub(i32.load16_u (local.get $offset)) (i32.const 0x30))
+          )
+          (else
+            ;; 0x30-0x31 以外の文字列が含まれている場合はエラーで終了
+            (i32.const 1)
+            return
+          )
+        )
+        (i32.add)
+        (local.set $temp)
+        (local.set $offset (i32.add (local.get $offset) (i32.const 2)))
+        (br $loop)
+      )
+    )
+    (if
+      (i32.eqz (local.get $sign))
+      (then
+        ;; ＋の場合
+        (i32.store (local.get $outoffset) (local.get $temp))
+      )
+      (else
+        ;; -の場合
+        (i32.store (local.get $outoffset) (i32.sub (i32.const 0) (local.get $temp)))
+      )
+    )
+    (i32.const 0)
+  )
+ 
+  ;; utf-16 16進整数文字配列からi32値に変換する
+  (func $hexArrayToi32 
+    (param $length i32)(param $outoffset i32)(param $sign i32)
+    (result i32) 
+    (local $offset i32) (local $l i32) (local $temp i32)
+    (local.set $l (i32.shl (local.get $length) (i32.const 1)))  
+    (block $exit 
+      (loop $loop
+        (br_if $exit (i32.le_u (local.get $l) (local.get $offset)))
+        (i32.shl (local.get $temp) (i32.const 4)) ;; shift 4bit (=x16)
+        (if (result i32) 
+          ;; 0-9(0x30-0x39)
+          (i32.and 
+            (i32.ge_u (i32.load16_u (local.get $offset)) (i32.const 0x30))
+            (i32.le_u (i32.load16_u (local.get $offset)) (i32.const 0x39))
+          )
+          (then
+            (i32.sub(i32.load16_u (local.get $offset)) (i32.const 0x30))
+          )
+          (else
+           (if (result i32)
+            ;; A-F (0x41-0x46)
+            (i32.and 
+              (i32.ge_u (i32.load16_u (local.get $offset)) (i32.const 0x41))
+              (i32.le_u (i32.load16_u (local.get $offset)) (i32.const 0x46))
+            )
+            (then
+              (i32.sub(i32.load16_u (local.get $offset)) (i32.const 35))
+            )
+            (else 
+              (if (result i32)
+                ;; a-f (0x61-0x66)
+                (i32.and
+                  (i32.ge_u (i32.load16_u (local.get $offset)) (i32.const 0x61))
+                  (i32.le_u (i32.load16_u (local.get $offset)) (i32.const 0x66))
+                )
+                (then
+                  (i32.sub(i32.load16_u (local.get $offset)) (i32.const 87))
+                )
+                (else
+                  ;; 16進数文字以外が含まれている場合エラーを返して終了。
+                  i32.const 1
+                  return
+                )
+              )
+            )
+           )
+          )
+        ) 
+        (i32.add)
+        (local.set $temp)
+        (local.set $offset (i32.add (local.get $offset) (i32.const 2)))
+        (br $loop)
+      )
+    )
+    (if 
+      (i32.eqz (local.get $sign))
+      (then
+        ;; ＋の場合
+        (i32.store (local.get $outoffset) (local.get $temp))
+      )
+      (else
+        ;; -の場合
+        (i32.store (local.get $outoffset) (i32.sub (i32.const 0) (local.get $temp)))
+      )
+    )   
+    (i32.const 0)
+  )
 
   ;; utf16 10進整数文字配列からi64値に変換
   (func $decimalArrayToi64 
