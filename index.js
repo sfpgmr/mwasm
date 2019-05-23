@@ -6014,7 +6014,7 @@ var index = async () => {
                       };
 
                       if (!structDefinition && initData) {
-                        opts.preprocessed(`(data (i32 const ${offset}) '${initData}')`);
+                        opts.preprocessed.push(`(data (i32.const ${offset}) "${initData}")`);
                       }
 
                     } else {
@@ -6038,7 +6038,11 @@ var index = async () => {
                             switch (att.type) {
                               case "PrimitiveType":
                                 // console.log(att,m,att.offset,o);
+
                                 att.offset += o;
+                                if(att.initData){
+                                  opts.preprocessed.push(`(data (i32.const ${att.offset}) "${att.initData}")`);
+                                }
                                 break;
                               case "Struct":
                                 att.offset += o;
