@@ -5857,7 +5857,7 @@ var index = async () => {
               break;
             case 'PropertyExpression':
               preprocessed.push(
-                this.parsePropertyExpression(token.expression, baseName, skip)
+                `i32.const ${this.parsePropertyExpression(token.expression, baseName, skip)}`
               );
               break;
             case 'WhiteSpace':
