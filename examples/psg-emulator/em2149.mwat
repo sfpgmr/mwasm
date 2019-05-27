@@ -3,6 +3,8 @@
   $.EMU2149_VOL_YM2149 = 0;
   $.EMU2149_VOL_AY_3_8910 = 1;
   $.EMU2149_VOL_DEFAULT  =  $.EMU2149_VOL_AY_3_8910;
+  $.SHIFT_BITS = 1 << $.GETA_BITS;
+  $.SHIFT_BITS_MASK = 1 << $.GETA_BITS - 1;
 }
 {@struct CHANNEL
   i32 vol[3];
@@ -76,6 +78,7 @@ i32 regmsk[16] = [
   i32 OutputBuffer[1024];
   PSG psg;
 }
+(data $dt (i32.const 6400) )
 
   (func $internal_refresh
     (if
@@ -104,7 +107,8 @@ i32 regmsk[16] = [
           (&psg.realstep;)
           (i32.div_u 
             (i32.const {$ 1 << 31})
-            (i32.load (&psg.rate;))
+            ;;(i32.load (&psg.rate;))
+            (i32.load (local.get $dt))
           ) 
         )
         (i32.store
@@ -255,12 +259,63 @@ i32 regmsk[16] = [
     )
   )
 
-  (func $update_output 
+  (func $update_output (local $incr i32)
     (i32.store (&psg.base_count;) 
       (i32.add 
         (i32.load (&psg.base_count;))
         (i32.load (&psg.base_incr;))
       )
     )
+    (local.set $incr (i32.shr_u (i32.load (&psg.base_count;)) (i32.const {$.GETA_BITS})))
+    (i32.store 
+      (&psg.base_count;)
+      (i32.and 
+        (i32.load(&psg.base_count;))
+        (i32.const {$.SHIFT_BITS_MASK})
+      )
+    )
+
+    ;; Envelope
+    (i32.store 
+      (&psg.env_count;)
+      (i32.add 
+        (i32.load (&psg.env_count;)) 
+        (local.get $incr)
+      )
+    )
+    
+    (block $exit_envelope
+      (loop $loop_envelope
+        (br_if $loop_envelope
+          (i32.or 
+            (i32.lt_u (i32.load (&psg.env_count;)) (i32.const 0x10000))
+            (i32.eqz (i32.load (&psg.env_freq;) )
+          )
+        )
+        (if (i32.eqz (i32.load (&psg.env_pause;)))
+          (then
+            (if (i32.gt_u (i32.load (&psg.env_face;)) (i32.const 0) )
+              (then
+                (i32.store 
+                  (&psg.env_ptr;)
+                  (i32.and 
+                    (i32.add
+                      (i32.load (&psg.env_ptr;))
+                      (i32.const 1)
+                    )
+                    (i32.const 0x3f)
+                  )
+                )
+              )
+              (else
+              
+              )
+            )
+          )
+        ) 
+        (br $exit_envelope)
+      )
+    )
   )
+  
 )

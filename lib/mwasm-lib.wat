@@ -487,6 +487,7 @@
         (br $loop)
       )
     )
+    
     (if 
       (i32.eqz (local.get $sign))
       (then
