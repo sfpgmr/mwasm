@@ -427,6 +427,7 @@ i32 regmsk[16] = [
         )
       )
     )
+    
     (local.set $noise
       (i32.and 
         (i32.load (&psg.noise_seed;))
@@ -447,7 +448,9 @@ i32 regmsk[16] = [
               (i32.const 2)
             )
           )
-          ;; 
+
+          ;;
+          (i32.const 0)
         )
       
         (br $tone_loop)
