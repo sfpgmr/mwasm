@@ -25476,15 +25476,2903 @@
   },
   {
     "type": "WhiteSpace",
-    "value": " \r\n  ",
+    "value": "\r\n\r\n    ",
     "start": {
       "offset": 7300,
       "line": 276,
       "column": 6
     },
     "end": {
-      "offset": 7305,
-      "line": 277,
+      "offset": 7308,
+      "line": 278,
+      "column": 5
+    }
+  },
+  {
+    "type": "Comment",
+    "value": ";; Envelope\r\n",
+    "start": {
+      "offset": 7308,
+      "line": 278,
+      "column": 5
+    },
+    "end": {
+      "offset": 7321,
+      "line": 279,
+      "column": 1
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "    ",
+    "start": {
+      "offset": 7321,
+      "line": 279,
+      "column": 1
+    },
+    "end": {
+      "offset": 7325,
+      "line": 279,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7325,
+      "line": 279,
+      "column": 5
+    },
+    "end": {
+      "offset": 7326,
+      "line": 279,
+      "column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.store",
+    "start": {
+      "offset": 7326,
+      "line": 279,
+      "column": 6
+    },
+    "end": {
+      "offset": 7335,
+      "line": 279,
+      "column": 15
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " \r\n      ",
+    "start": {
+      "offset": 7335,
+      "line": 279,
+      "column": 15
+    },
+    "end": {
+      "offset": 7344,
+      "line": 280,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7344,
+      "line": 280,
+      "column": 7
+    },
+    "end": {
+      "offset": 7345,
+      "line": 280,
+      "column": 8
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 7345,
+          "line": 280,
+          "column": 8
+        },
+        "end": {
+          "offset": 7349,
+          "line": 280,
+          "column": 12
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "env_count",
+          "prefix": null,
+          "start": {
+            "offset": 7350,
+            "line": 280,
+            "column": 13
+          },
+          "end": {
+            "offset": 7359,
+            "line": 280,
+            "column": 22
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 7345,
+      "line": 280,
+      "column": 8
+    },
+    "end": {
+      "offset": 7359,
+      "line": 280,
+      "column": 22
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7360,
+      "line": 280,
+      "column": 23
+    },
+    "end": {
+      "offset": 7361,
+      "line": 280,
+      "column": 24
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n      ",
+    "start": {
+      "offset": 7361,
+      "line": 280,
+      "column": 24
+    },
+    "end": {
+      "offset": 7369,
+      "line": 281,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7369,
+      "line": 281,
+      "column": 7
+    },
+    "end": {
+      "offset": 7370,
+      "line": 281,
+      "column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.add",
+    "start": {
+      "offset": 7370,
+      "line": 281,
+      "column": 8
+    },
+    "end": {
+      "offset": 7377,
+      "line": 281,
+      "column": 15
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " \r\n        ",
+    "start": {
+      "offset": 7377,
+      "line": 281,
+      "column": 15
+    },
+    "end": {
+      "offset": 7388,
+      "line": 282,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7388,
+      "line": 282,
+      "column": 9
+    },
+    "end": {
+      "offset": 7389,
+      "line": 282,
+      "column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 7389,
+      "line": 282,
+      "column": 10
+    },
+    "end": {
+      "offset": 7397,
+      "line": 282,
+      "column": 18
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7397,
+      "line": 282,
+      "column": 18
+    },
+    "end": {
+      "offset": 7398,
+      "line": 282,
+      "column": 19
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7398,
+      "line": 282,
+      "column": 19
+    },
+    "end": {
+      "offset": 7399,
+      "line": 282,
+      "column": 20
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 7399,
+          "line": 282,
+          "column": 20
+        },
+        "end": {
+          "offset": 7403,
+          "line": 282,
+          "column": 24
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "env_count",
+          "prefix": null,
+          "start": {
+            "offset": 7404,
+            "line": 282,
+            "column": 25
+          },
+          "end": {
+            "offset": 7413,
+            "line": 282,
+            "column": 34
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 7399,
+      "line": 282,
+      "column": 20
+    },
+    "end": {
+      "offset": 7413,
+      "line": 282,
+      "column": 34
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7414,
+      "line": 282,
+      "column": 35
+    },
+    "end": {
+      "offset": 7415,
+      "line": 282,
+      "column": 36
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7415,
+      "line": 282,
+      "column": 36
+    },
+    "end": {
+      "offset": 7416,
+      "line": 282,
+      "column": 37
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " \r\n        ",
+    "start": {
+      "offset": 7416,
+      "line": 282,
+      "column": 37
+    },
+    "end": {
+      "offset": 7427,
+      "line": 283,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7427,
+      "line": 283,
+      "column": 9
+    },
+    "end": {
+      "offset": 7428,
+      "line": 283,
+      "column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "local.get",
+    "start": {
+      "offset": 7428,
+      "line": 283,
+      "column": 10
+    },
+    "end": {
+      "offset": 7437,
+      "line": 283,
+      "column": 19
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7437,
+      "line": 283,
+      "column": 19
+    },
+    "end": {
+      "offset": 7438,
+      "line": 283,
+      "column": 20
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$incr",
+    "start": {
+      "offset": 7438,
+      "line": 283,
+      "column": 20
+    },
+    "end": {
+      "offset": 7443,
+      "line": 283,
+      "column": 25
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7443,
+      "line": 283,
+      "column": 25
+    },
+    "end": {
+      "offset": 7444,
+      "line": 283,
+      "column": 26
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n      ",
+    "start": {
+      "offset": 7444,
+      "line": 283,
+      "column": 26
+    },
+    "end": {
+      "offset": 7452,
+      "line": 284,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7452,
+      "line": 284,
+      "column": 7
+    },
+    "end": {
+      "offset": 7453,
+      "line": 284,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n    ",
+    "start": {
+      "offset": 7453,
+      "line": 284,
+      "column": 8
+    },
+    "end": {
+      "offset": 7459,
+      "line": 285,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7459,
+      "line": 285,
+      "column": 5
+    },
+    "end": {
+      "offset": 7460,
+      "line": 285,
+      "column": 6
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n    \r\n    ",
+    "start": {
+      "offset": 7460,
+      "line": 285,
+      "column": 6
+    },
+    "end": {
+      "offset": 7472,
+      "line": 287,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7472,
+      "line": 287,
+      "column": 5
+    },
+    "end": {
+      "offset": 7473,
+      "line": 287,
+      "column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "block",
+    "start": {
+      "offset": 7473,
+      "line": 287,
+      "column": 6
+    },
+    "end": {
+      "offset": 7478,
+      "line": 287,
+      "column": 11
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7478,
+      "line": 287,
+      "column": 11
+    },
+    "end": {
+      "offset": 7479,
+      "line": 287,
+      "column": 12
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$exit_envelope",
+    "start": {
+      "offset": 7479,
+      "line": 287,
+      "column": 12
+    },
+    "end": {
+      "offset": 7493,
+      "line": 287,
+      "column": 26
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n      ",
+    "start": {
+      "offset": 7493,
+      "line": 287,
+      "column": 26
+    },
+    "end": {
+      "offset": 7501,
+      "line": 288,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7501,
+      "line": 288,
+      "column": 7
+    },
+    "end": {
+      "offset": 7502,
+      "line": 288,
+      "column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "loop",
+    "start": {
+      "offset": 7502,
+      "line": 288,
+      "column": 8
+    },
+    "end": {
+      "offset": 7506,
+      "line": 288,
+      "column": 12
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7506,
+      "line": 288,
+      "column": 12
+    },
+    "end": {
+      "offset": 7507,
+      "line": 288,
+      "column": 13
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$loop_envelope",
+    "start": {
+      "offset": 7507,
+      "line": 288,
+      "column": 13
+    },
+    "end": {
+      "offset": 7521,
+      "line": 288,
+      "column": 27
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n        ",
+    "start": {
+      "offset": 7521,
+      "line": 288,
+      "column": 27
+    },
+    "end": {
+      "offset": 7531,
+      "line": 289,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7531,
+      "line": 289,
+      "column": 9
+    },
+    "end": {
+      "offset": 7532,
+      "line": 289,
+      "column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "br_if",
+    "start": {
+      "offset": 7532,
+      "line": 289,
+      "column": 10
+    },
+    "end": {
+      "offset": 7537,
+      "line": 289,
+      "column": 15
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7537,
+      "line": 289,
+      "column": 15
+    },
+    "end": {
+      "offset": 7538,
+      "line": 289,
+      "column": 16
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$loop_envelope",
+    "start": {
+      "offset": 7538,
+      "line": 289,
+      "column": 16
+    },
+    "end": {
+      "offset": 7552,
+      "line": 289,
+      "column": 30
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n          ",
+    "start": {
+      "offset": 7552,
+      "line": 289,
+      "column": 30
+    },
+    "end": {
+      "offset": 7564,
+      "line": 290,
+      "column": 11
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7564,
+      "line": 290,
+      "column": 11
+    },
+    "end": {
+      "offset": 7565,
+      "line": 290,
+      "column": 12
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.or",
+    "start": {
+      "offset": 7565,
+      "line": 290,
+      "column": 12
+    },
+    "end": {
+      "offset": 7571,
+      "line": 290,
+      "column": 18
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " \r\n            ",
+    "start": {
+      "offset": 7571,
+      "line": 290,
+      "column": 18
+    },
+    "end": {
+      "offset": 7586,
+      "line": 291,
+      "column": 13
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7586,
+      "line": 291,
+      "column": 13
+    },
+    "end": {
+      "offset": 7587,
+      "line": 291,
+      "column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.lt_u",
+    "start": {
+      "offset": 7587,
+      "line": 291,
+      "column": 14
+    },
+    "end": {
+      "offset": 7595,
+      "line": 291,
+      "column": 22
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7595,
+      "line": 291,
+      "column": 22
+    },
+    "end": {
+      "offset": 7596,
+      "line": 291,
+      "column": 23
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7596,
+      "line": 291,
+      "column": 23
+    },
+    "end": {
+      "offset": 7597,
+      "line": 291,
+      "column": 24
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 7597,
+      "line": 291,
+      "column": 24
+    },
+    "end": {
+      "offset": 7605,
+      "line": 291,
+      "column": 32
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7605,
+      "line": 291,
+      "column": 32
+    },
+    "end": {
+      "offset": 7606,
+      "line": 291,
+      "column": 33
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7606,
+      "line": 291,
+      "column": 33
+    },
+    "end": {
+      "offset": 7607,
+      "line": 291,
+      "column": 34
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 7607,
+          "line": 291,
+          "column": 34
+        },
+        "end": {
+          "offset": 7611,
+          "line": 291,
+          "column": 38
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "env_count",
+          "prefix": null,
+          "start": {
+            "offset": 7612,
+            "line": 291,
+            "column": 39
+          },
+          "end": {
+            "offset": 7621,
+            "line": 291,
+            "column": 48
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 7607,
+      "line": 291,
+      "column": 34
+    },
+    "end": {
+      "offset": 7621,
+      "line": 291,
+      "column": 48
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7622,
+      "line": 291,
+      "column": 49
+    },
+    "end": {
+      "offset": 7623,
+      "line": 291,
+      "column": 50
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7623,
+      "line": 291,
+      "column": 50
+    },
+    "end": {
+      "offset": 7624,
+      "line": 291,
+      "column": 51
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7624,
+      "line": 291,
+      "column": 51
+    },
+    "end": {
+      "offset": 7625,
+      "line": 291,
+      "column": 52
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7625,
+      "line": 291,
+      "column": 52
+    },
+    "end": {
+      "offset": 7626,
+      "line": 291,
+      "column": 53
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.const",
+    "start": {
+      "offset": 7626,
+      "line": 291,
+      "column": 53
+    },
+    "end": {
+      "offset": 7635,
+      "line": 291,
+      "column": 62
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7635,
+      "line": 291,
+      "column": 62
+    },
+    "end": {
+      "offset": 7636,
+      "line": 291,
+      "column": 63
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "0x10000",
+    "start": {
+      "offset": 7636,
+      "line": 291,
+      "column": 63
+    },
+    "end": {
+      "offset": 7643,
+      "line": 291,
+      "column": 70
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7643,
+      "line": 291,
+      "column": 70
+    },
+    "end": {
+      "offset": 7644,
+      "line": 291,
+      "column": 71
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7644,
+      "line": 291,
+      "column": 71
+    },
+    "end": {
+      "offset": 7645,
+      "line": 291,
+      "column": 72
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n            ",
+    "start": {
+      "offset": 7645,
+      "line": 291,
+      "column": 72
+    },
+    "end": {
+      "offset": 7659,
+      "line": 292,
+      "column": 13
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7659,
+      "line": 292,
+      "column": 13
+    },
+    "end": {
+      "offset": 7660,
+      "line": 292,
+      "column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.eqz",
+    "start": {
+      "offset": 7660,
+      "line": 292,
+      "column": 14
+    },
+    "end": {
+      "offset": 7667,
+      "line": 292,
+      "column": 21
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7667,
+      "line": 292,
+      "column": 21
+    },
+    "end": {
+      "offset": 7668,
+      "line": 292,
+      "column": 22
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7668,
+      "line": 292,
+      "column": 22
+    },
+    "end": {
+      "offset": 7669,
+      "line": 292,
+      "column": 23
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 7669,
+      "line": 292,
+      "column": 23
+    },
+    "end": {
+      "offset": 7677,
+      "line": 292,
+      "column": 31
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7677,
+      "line": 292,
+      "column": 31
+    },
+    "end": {
+      "offset": 7678,
+      "line": 292,
+      "column": 32
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7678,
+      "line": 292,
+      "column": 32
+    },
+    "end": {
+      "offset": 7679,
+      "line": 292,
+      "column": 33
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 7679,
+          "line": 292,
+          "column": 33
+        },
+        "end": {
+          "offset": 7683,
+          "line": 292,
+          "column": 37
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "env_freq",
+          "prefix": null,
+          "start": {
+            "offset": 7684,
+            "line": 292,
+            "column": 38
+          },
+          "end": {
+            "offset": 7692,
+            "line": 292,
+            "column": 46
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 7679,
+      "line": 292,
+      "column": 33
+    },
+    "end": {
+      "offset": 7692,
+      "line": 292,
+      "column": 46
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7693,
+      "line": 292,
+      "column": 47
+    },
+    "end": {
+      "offset": 7694,
+      "line": 292,
+      "column": 48
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7694,
+      "line": 292,
+      "column": 48
+    },
+    "end": {
+      "offset": 7695,
+      "line": 292,
+      "column": 49
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7695,
+      "line": 292,
+      "column": 49
+    },
+    "end": {
+      "offset": 7696,
+      "line": 292,
+      "column": 50
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7696,
+      "line": 292,
+      "column": 50
+    },
+    "end": {
+      "offset": 7697,
+      "line": 292,
+      "column": 51
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n          ",
+    "start": {
+      "offset": 7697,
+      "line": 292,
+      "column": 51
+    },
+    "end": {
+      "offset": 7709,
+      "line": 293,
+      "column": 11
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7709,
+      "line": 293,
+      "column": 11
+    },
+    "end": {
+      "offset": 7710,
+      "line": 293,
+      "column": 12
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n        ",
+    "start": {
+      "offset": 7710,
+      "line": 293,
+      "column": 12
+    },
+    "end": {
+      "offset": 7720,
+      "line": 294,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7720,
+      "line": 294,
+      "column": 9
+    },
+    "end": {
+      "offset": 7721,
+      "line": 294,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n        ",
+    "start": {
+      "offset": 7721,
+      "line": 294,
+      "column": 10
+    },
+    "end": {
+      "offset": 7731,
+      "line": 295,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7731,
+      "line": 295,
+      "column": 9
+    },
+    "end": {
+      "offset": 7732,
+      "line": 295,
+      "column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "if",
+    "start": {
+      "offset": 7732,
+      "line": 295,
+      "column": 10
+    },
+    "end": {
+      "offset": 7734,
+      "line": 295,
+      "column": 12
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7734,
+      "line": 295,
+      "column": 12
+    },
+    "end": {
+      "offset": 7735,
+      "line": 295,
+      "column": 13
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7735,
+      "line": 295,
+      "column": 13
+    },
+    "end": {
+      "offset": 7736,
+      "line": 295,
+      "column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.eqz",
+    "start": {
+      "offset": 7736,
+      "line": 295,
+      "column": 14
+    },
+    "end": {
+      "offset": 7743,
+      "line": 295,
+      "column": 21
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7743,
+      "line": 295,
+      "column": 21
+    },
+    "end": {
+      "offset": 7744,
+      "line": 295,
+      "column": 22
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7744,
+      "line": 295,
+      "column": 22
+    },
+    "end": {
+      "offset": 7745,
+      "line": 295,
+      "column": 23
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 7745,
+      "line": 295,
+      "column": 23
+    },
+    "end": {
+      "offset": 7753,
+      "line": 295,
+      "column": 31
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7753,
+      "line": 295,
+      "column": 31
+    },
+    "end": {
+      "offset": 7754,
+      "line": 295,
+      "column": 32
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7754,
+      "line": 295,
+      "column": 32
+    },
+    "end": {
+      "offset": 7755,
+      "line": 295,
+      "column": 33
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 7755,
+          "line": 295,
+          "column": 33
+        },
+        "end": {
+          "offset": 7759,
+          "line": 295,
+          "column": 37
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "env_pause",
+          "prefix": null,
+          "start": {
+            "offset": 7760,
+            "line": 295,
+            "column": 38
+          },
+          "end": {
+            "offset": 7769,
+            "line": 295,
+            "column": 47
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 7755,
+      "line": 295,
+      "column": 33
+    },
+    "end": {
+      "offset": 7769,
+      "line": 295,
+      "column": 47
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7770,
+      "line": 295,
+      "column": 48
+    },
+    "end": {
+      "offset": 7771,
+      "line": 295,
+      "column": 49
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7771,
+      "line": 295,
+      "column": 49
+    },
+    "end": {
+      "offset": 7772,
+      "line": 295,
+      "column": 50
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7772,
+      "line": 295,
+      "column": 50
+    },
+    "end": {
+      "offset": 7773,
+      "line": 295,
+      "column": 51
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n          ",
+    "start": {
+      "offset": 7773,
+      "line": 295,
+      "column": 51
+    },
+    "end": {
+      "offset": 7785,
+      "line": 296,
+      "column": 11
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7785,
+      "line": 296,
+      "column": 11
+    },
+    "end": {
+      "offset": 7786,
+      "line": 296,
+      "column": 12
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "then",
+    "start": {
+      "offset": 7786,
+      "line": 296,
+      "column": 12
+    },
+    "end": {
+      "offset": 7790,
+      "line": 296,
+      "column": 16
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n            ",
+    "start": {
+      "offset": 7790,
+      "line": 296,
+      "column": 16
+    },
+    "end": {
+      "offset": 7804,
+      "line": 297,
+      "column": 13
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7804,
+      "line": 297,
+      "column": 13
+    },
+    "end": {
+      "offset": 7805,
+      "line": 297,
+      "column": 14
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "if",
+    "start": {
+      "offset": 7805,
+      "line": 297,
+      "column": 14
+    },
+    "end": {
+      "offset": 7807,
+      "line": 297,
+      "column": 16
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7807,
+      "line": 297,
+      "column": 16
+    },
+    "end": {
+      "offset": 7808,
+      "line": 297,
+      "column": 17
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7808,
+      "line": 297,
+      "column": 17
+    },
+    "end": {
+      "offset": 7809,
+      "line": 297,
+      "column": 18
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.gt_u",
+    "start": {
+      "offset": 7809,
+      "line": 297,
+      "column": 18
+    },
+    "end": {
+      "offset": 7817,
+      "line": 297,
+      "column": 26
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7817,
+      "line": 297,
+      "column": 26
+    },
+    "end": {
+      "offset": 7818,
+      "line": 297,
+      "column": 27
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7818,
+      "line": 297,
+      "column": 27
+    },
+    "end": {
+      "offset": 7819,
+      "line": 297,
+      "column": 28
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 7819,
+      "line": 297,
+      "column": 28
+    },
+    "end": {
+      "offset": 7827,
+      "line": 297,
+      "column": 36
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7827,
+      "line": 297,
+      "column": 36
+    },
+    "end": {
+      "offset": 7828,
+      "line": 297,
+      "column": 37
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7828,
+      "line": 297,
+      "column": 37
+    },
+    "end": {
+      "offset": 7829,
+      "line": 297,
+      "column": 38
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 7829,
+          "line": 297,
+          "column": 38
+        },
+        "end": {
+          "offset": 7833,
+          "line": 297,
+          "column": 42
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "env_face",
+          "prefix": null,
+          "start": {
+            "offset": 7834,
+            "line": 297,
+            "column": 43
+          },
+          "end": {
+            "offset": 7842,
+            "line": 297,
+            "column": 51
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 7829,
+      "line": 297,
+      "column": 38
+    },
+    "end": {
+      "offset": 7842,
+      "line": 297,
+      "column": 51
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7843,
+      "line": 297,
+      "column": 52
+    },
+    "end": {
+      "offset": 7844,
+      "line": 297,
+      "column": 53
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7844,
+      "line": 297,
+      "column": 53
+    },
+    "end": {
+      "offset": 7845,
+      "line": 297,
+      "column": 54
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7845,
+      "line": 297,
+      "column": 54
+    },
+    "end": {
+      "offset": 7846,
+      "line": 297,
+      "column": 55
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7846,
+      "line": 297,
+      "column": 55
+    },
+    "end": {
+      "offset": 7847,
+      "line": 297,
+      "column": 56
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.const",
+    "start": {
+      "offset": 7847,
+      "line": 297,
+      "column": 56
+    },
+    "end": {
+      "offset": 7856,
+      "line": 297,
+      "column": 65
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7856,
+      "line": 297,
+      "column": 65
+    },
+    "end": {
+      "offset": 7857,
+      "line": 297,
+      "column": 66
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "0",
+    "start": {
+      "offset": 7857,
+      "line": 297,
+      "column": 66
+    },
+    "end": {
+      "offset": 7858,
+      "line": 297,
+      "column": 67
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7858,
+      "line": 297,
+      "column": 67
+    },
+    "end": {
+      "offset": 7859,
+      "line": 297,
+      "column": 68
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 7859,
+      "line": 297,
+      "column": 68
+    },
+    "end": {
+      "offset": 7860,
+      "line": 297,
+      "column": 69
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7860,
+      "line": 297,
+      "column": 69
+    },
+    "end": {
+      "offset": 7861,
+      "line": 297,
+      "column": 70
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n              ",
+    "start": {
+      "offset": 7861,
+      "line": 297,
+      "column": 70
+    },
+    "end": {
+      "offset": 7877,
+      "line": 298,
+      "column": 15
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7877,
+      "line": 298,
+      "column": 15
+    },
+    "end": {
+      "offset": 7878,
+      "line": 298,
+      "column": 16
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "then",
+    "start": {
+      "offset": 7878,
+      "line": 298,
+      "column": 16
+    },
+    "end": {
+      "offset": 7882,
+      "line": 298,
+      "column": 20
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n                ",
+    "start": {
+      "offset": 7882,
+      "line": 298,
+      "column": 20
+    },
+    "end": {
+      "offset": 7900,
+      "line": 299,
+      "column": 17
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7900,
+      "line": 299,
+      "column": 17
+    },
+    "end": {
+      "offset": 7901,
+      "line": 299,
+      "column": 18
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.store",
+    "start": {
+      "offset": 7901,
+      "line": 299,
+      "column": 18
+    },
+    "end": {
+      "offset": 7910,
+      "line": 299,
+      "column": 27
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " \r\n                  ",
+    "start": {
+      "offset": 7910,
+      "line": 299,
+      "column": 27
+    },
+    "end": {
+      "offset": 7931,
+      "line": 300,
+      "column": 19
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7931,
+      "line": 300,
+      "column": 19
+    },
+    "end": {
+      "offset": 7932,
+      "line": 300,
+      "column": 20
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 7932,
+          "line": 300,
+          "column": 20
+        },
+        "end": {
+          "offset": 7936,
+          "line": 300,
+          "column": 24
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "env_ptr",
+          "prefix": null,
+          "start": {
+            "offset": 7937,
+            "line": 300,
+            "column": 25
+          },
+          "end": {
+            "offset": 7944,
+            "line": 300,
+            "column": 32
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 7932,
+      "line": 300,
+      "column": 20
+    },
+    "end": {
+      "offset": 7944,
+      "line": 300,
+      "column": 32
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 7945,
+      "line": 300,
+      "column": 33
+    },
+    "end": {
+      "offset": 7946,
+      "line": 300,
+      "column": 34
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n                  ",
+    "start": {
+      "offset": 7946,
+      "line": 300,
+      "column": 34
+    },
+    "end": {
+      "offset": 7966,
+      "line": 301,
+      "column": 19
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7966,
+      "line": 301,
+      "column": 19
+    },
+    "end": {
+      "offset": 7967,
+      "line": 301,
+      "column": 20
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.and",
+    "start": {
+      "offset": 7967,
+      "line": 301,
+      "column": 20
+    },
+    "end": {
+      "offset": 7974,
+      "line": 301,
+      "column": 27
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " \r\n                    ",
+    "start": {
+      "offset": 7974,
+      "line": 301,
+      "column": 27
+    },
+    "end": {
+      "offset": 7997,
+      "line": 302,
+      "column": 21
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 7997,
+      "line": 302,
+      "column": 21
+    },
+    "end": {
+      "offset": 7998,
+      "line": 302,
+      "column": 22
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.add",
+    "start": {
+      "offset": 7998,
+      "line": 302,
+      "column": 22
+    },
+    "end": {
+      "offset": 8005,
+      "line": 302,
+      "column": 29
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n                      ",
+    "start": {
+      "offset": 8005,
+      "line": 302,
+      "column": 29
+    },
+    "end": {
+      "offset": 8029,
+      "line": 303,
+      "column": 23
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 8029,
+      "line": 303,
+      "column": 23
+    },
+    "end": {
+      "offset": 8030,
+      "line": 303,
+      "column": 24
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 8030,
+      "line": 303,
+      "column": 24
+    },
+    "end": {
+      "offset": 8038,
+      "line": 303,
+      "column": 32
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 8038,
+      "line": 303,
+      "column": 32
+    },
+    "end": {
+      "offset": 8039,
+      "line": 303,
+      "column": 33
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 8039,
+      "line": 303,
+      "column": 33
+    },
+    "end": {
+      "offset": 8040,
+      "line": 303,
+      "column": 34
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 8040,
+          "line": 303,
+          "column": 34
+        },
+        "end": {
+          "offset": 8044,
+          "line": 303,
+          "column": 38
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "env_ptr",
+          "prefix": null,
+          "start": {
+            "offset": 8045,
+            "line": 303,
+            "column": 39
+          },
+          "end": {
+            "offset": 8052,
+            "line": 303,
+            "column": 46
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 8040,
+      "line": 303,
+      "column": 34
+    },
+    "end": {
+      "offset": 8052,
+      "line": 303,
+      "column": 46
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8053,
+      "line": 303,
+      "column": 47
+    },
+    "end": {
+      "offset": 8054,
+      "line": 303,
+      "column": 48
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8054,
+      "line": 303,
+      "column": 48
+    },
+    "end": {
+      "offset": 8055,
+      "line": 303,
+      "column": 49
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n                      ",
+    "start": {
+      "offset": 8055,
+      "line": 303,
+      "column": 49
+    },
+    "end": {
+      "offset": 8079,
+      "line": 304,
+      "column": 23
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 8079,
+      "line": 304,
+      "column": 23
+    },
+    "end": {
+      "offset": 8080,
+      "line": 304,
+      "column": 24
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.const",
+    "start": {
+      "offset": 8080,
+      "line": 304,
+      "column": 24
+    },
+    "end": {
+      "offset": 8089,
+      "line": 304,
+      "column": 33
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 8089,
+      "line": 304,
+      "column": 33
+    },
+    "end": {
+      "offset": 8090,
+      "line": 304,
+      "column": 34
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "1",
+    "start": {
+      "offset": 8090,
+      "line": 304,
+      "column": 34
+    },
+    "end": {
+      "offset": 8091,
+      "line": 304,
+      "column": 35
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8091,
+      "line": 304,
+      "column": 35
+    },
+    "end": {
+      "offset": 8092,
+      "line": 304,
+      "column": 36
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n                    ",
+    "start": {
+      "offset": 8092,
+      "line": 304,
+      "column": 36
+    },
+    "end": {
+      "offset": 8114,
+      "line": 305,
+      "column": 21
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8114,
+      "line": 305,
+      "column": 21
+    },
+    "end": {
+      "offset": 8115,
+      "line": 305,
+      "column": 22
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n                    ",
+    "start": {
+      "offset": 8115,
+      "line": 305,
+      "column": 22
+    },
+    "end": {
+      "offset": 8137,
+      "line": 306,
+      "column": 21
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 8137,
+      "line": 306,
+      "column": 21
+    },
+    "end": {
+      "offset": 8138,
+      "line": 306,
+      "column": 22
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.const",
+    "start": {
+      "offset": 8138,
+      "line": 306,
+      "column": 22
+    },
+    "end": {
+      "offset": 8147,
+      "line": 306,
+      "column": 31
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 8147,
+      "line": 306,
+      "column": 31
+    },
+    "end": {
+      "offset": 8148,
+      "line": 306,
+      "column": 32
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "0x3f",
+    "start": {
+      "offset": 8148,
+      "line": 306,
+      "column": 32
+    },
+    "end": {
+      "offset": 8152,
+      "line": 306,
+      "column": 36
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8152,
+      "line": 306,
+      "column": 36
+    },
+    "end": {
+      "offset": 8153,
+      "line": 306,
+      "column": 37
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n                  ",
+    "start": {
+      "offset": 8153,
+      "line": 306,
+      "column": 37
+    },
+    "end": {
+      "offset": 8173,
+      "line": 307,
+      "column": 19
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8173,
+      "line": 307,
+      "column": 19
+    },
+    "end": {
+      "offset": 8174,
+      "line": 307,
+      "column": 20
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n                ",
+    "start": {
+      "offset": 8174,
+      "line": 307,
+      "column": 20
+    },
+    "end": {
+      "offset": 8192,
+      "line": 308,
+      "column": 17
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8192,
+      "line": 308,
+      "column": 17
+    },
+    "end": {
+      "offset": 8193,
+      "line": 308,
+      "column": 18
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n              ",
+    "start": {
+      "offset": 8193,
+      "line": 308,
+      "column": 18
+    },
+    "end": {
+      "offset": 8209,
+      "line": 309,
+      "column": 15
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8209,
+      "line": 309,
+      "column": 15
+    },
+    "end": {
+      "offset": 8210,
+      "line": 309,
+      "column": 16
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n              ",
+    "start": {
+      "offset": 8210,
+      "line": 309,
+      "column": 16
+    },
+    "end": {
+      "offset": 8226,
+      "line": 310,
+      "column": 15
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 8226,
+      "line": 310,
+      "column": 15
+    },
+    "end": {
+      "offset": 8227,
+      "line": 310,
+      "column": 16
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "else",
+    "start": {
+      "offset": 8227,
+      "line": 310,
+      "column": 16
+    },
+    "end": {
+      "offset": 8231,
+      "line": 310,
+      "column": 20
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n              \r\n              ",
+    "start": {
+      "offset": 8231,
+      "line": 310,
+      "column": 20
+    },
+    "end": {
+      "offset": 8263,
+      "line": 312,
+      "column": 15
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8263,
+      "line": 312,
+      "column": 15
+    },
+    "end": {
+      "offset": 8264,
+      "line": 312,
+      "column": 16
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n            ",
+    "start": {
+      "offset": 8264,
+      "line": 312,
+      "column": 16
+    },
+    "end": {
+      "offset": 8278,
+      "line": 313,
+      "column": 13
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8278,
+      "line": 313,
+      "column": 13
+    },
+    "end": {
+      "offset": 8279,
+      "line": 313,
+      "column": 14
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n          ",
+    "start": {
+      "offset": 8279,
+      "line": 313,
+      "column": 14
+    },
+    "end": {
+      "offset": 8291,
+      "line": 314,
+      "column": 11
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8291,
+      "line": 314,
+      "column": 11
+    },
+    "end": {
+      "offset": 8292,
+      "line": 314,
+      "column": 12
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n        ",
+    "start": {
+      "offset": 8292,
+      "line": 314,
+      "column": 12
+    },
+    "end": {
+      "offset": 8302,
+      "line": 315,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8302,
+      "line": 315,
+      "column": 9
+    },
+    "end": {
+      "offset": 8303,
+      "line": 315,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " \r\n        ",
+    "start": {
+      "offset": 8303,
+      "line": 315,
+      "column": 10
+    },
+    "end": {
+      "offset": 8314,
+      "line": 316,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 8314,
+      "line": 316,
+      "column": 9
+    },
+    "end": {
+      "offset": 8315,
+      "line": 316,
+      "column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "br",
+    "start": {
+      "offset": 8315,
+      "line": 316,
+      "column": 10
+    },
+    "end": {
+      "offset": 8317,
+      "line": 316,
+      "column": 12
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 8317,
+      "line": 316,
+      "column": 12
+    },
+    "end": {
+      "offset": 8318,
+      "line": 316,
+      "column": 13
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$exit_envelope",
+    "start": {
+      "offset": 8318,
+      "line": 316,
+      "column": 13
+    },
+    "end": {
+      "offset": 8332,
+      "line": 316,
+      "column": 27
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8332,
+      "line": 316,
+      "column": 27
+    },
+    "end": {
+      "offset": 8333,
+      "line": 316,
+      "column": 28
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n      ",
+    "start": {
+      "offset": 8333,
+      "line": 316,
+      "column": 28
+    },
+    "end": {
+      "offset": 8341,
+      "line": 317,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8341,
+      "line": 317,
+      "column": 7
+    },
+    "end": {
+      "offset": 8342,
+      "line": 317,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n    ",
+    "start": {
+      "offset": 8342,
+      "line": 317,
+      "column": 8
+    },
+    "end": {
+      "offset": 8348,
+      "line": 318,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 8348,
+      "line": 318,
+      "column": 5
+    },
+    "end": {
+      "offset": 8349,
+      "line": 318,
+      "column": 6
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n  ",
+    "start": {
+      "offset": 8349,
+      "line": 318,
+      "column": 6
+    },
+    "end": {
+      "offset": 8353,
+      "line": 319,
       "column": 3
     }
   },
@@ -25492,13 +28380,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 7305,
-      "line": 277,
+      "offset": 8353,
+      "line": 319,
       "column": 3
     },
     "end": {
-      "offset": 7306,
-      "line": 277,
+      "offset": 8354,
+      "line": 319,
       "column": 4
     }
   },
@@ -25506,13 +28394,13 @@
     "type": "WhiteSpace",
     "value": "\r\n  \r\n",
     "start": {
-      "offset": 7306,
-      "line": 277,
+      "offset": 8354,
+      "line": 319,
       "column": 4
     },
     "end": {
-      "offset": 7312,
-      "line": 279,
+      "offset": 8360,
+      "line": 321,
       "column": 1
     }
   },
@@ -25520,13 +28408,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 7312,
-      "line": 279,
+      "offset": 8360,
+      "line": 321,
       "column": 1
     },
     "end": {
-      "offset": 7313,
-      "line": 279,
+      "offset": 8361,
+      "line": 321,
       "column": 2
     }
   },
@@ -25534,13 +28422,13 @@
     "type": "WhiteSpace",
     "value": "\r\n",
     "start": {
-      "offset": 7313,
-      "line": 279,
+      "offset": 8361,
+      "line": 321,
       "column": 2
     },
     "end": {
-      "offset": 7315,
-      "line": 280,
+      "offset": 8363,
+      "line": 322,
       "column": 1
     }
   }

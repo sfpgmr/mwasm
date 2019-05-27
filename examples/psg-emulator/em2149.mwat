@@ -289,7 +289,7 @@ i32 regmsk[16] = [
         (br_if $loop_envelope
           (i32.or 
             (i32.lt_u (i32.load (&psg.env_count;)) (i32.const 0x10000))
-            (i32.eqz (i32.load (&psg.env_freq;) )
+            (i32.eqz (i32.load (&psg.env_freq;) ))
           )
         )
         (if (i32.eqz (i32.load (&psg.env_pause;)))
@@ -308,6 +308,16 @@ i32 regmsk[16] = [
                 )
               )
               (else
+                (i32.store 
+                  (&psg.env_ptr;)
+                  (i32.and 
+                    (i32.add
+                      (i32.load (&psg.env_ptr;))
+                      (i32.const 0x3f)
+                    )
+                    (i32.const 0x3f)
+                  )
+                )
               
               )
             )
