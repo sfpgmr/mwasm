@@ -8,7 +8,8 @@
   "CHANNEL": {
     "_attributes_": {
       "type": "StructDefinition",
-      "size": 12
+      "size": 12,
+      "log2": 3
     },
     "vol": {
       "_attributes_": {
@@ -36,7 +37,8 @@
   "PSG": {
     "_attributes_": {
       "type": "StructDefinition",
-      "size": 648
+      "size": 648,
+      "log2": 9
     },
     "regmsk": {
       "_attributes_": {
@@ -790,6 +792,7 @@
       "_attributes_": {
         "type": "StructDefinition",
         "size": 12,
+        "log2": 3,
         "offset": 620,
         "initData": null,
         "num": 1
@@ -864,7 +867,8 @@
   },
   "_attributes_": {
     "type": "MemoryMap",
-    "size": 4744
+    "size": 4744,
+    "log2": 12
   },
   "OutputBuffer": {
     "_attributes_": {
@@ -892,6 +896,7 @@
     "_attributes_": {
       "type": "StructDefinition",
       "size": 648,
+      "log2": 9,
       "offset": 4096,
       "initData": null,
       "num": 1
@@ -1648,6 +1653,7 @@
       "_attributes_": {
         "type": "StructDefinition",
         "size": 12,
+        "log2": 3,
         "offset": 620,
         "initData": null,
         "num": 1

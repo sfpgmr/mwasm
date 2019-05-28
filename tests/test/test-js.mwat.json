@@ -1,28 +1,28 @@
 [
   {
     "type": "CodeWithoutReturnValue",
-    "code": "$.X = 1;\r\n  $.Y = 2;\r\n",
+    "code": "$.X = 1;\n  $.Y = 2;\n",
     "start": {
       "offset": 0,
       "line": 1,
       "column": 1
     },
     "end": {
-      "offset": 29,
+      "offset": 26,
       "line": 4,
       "column": 2
     }
   },
   {
     "type": "WhiteSpace",
-    "value": "\r\n",
+    "value": "\n",
     "start": {
-      "offset": 29,
+      "offset": 26,
       "line": 4,
       "column": 2
     },
     "end": {
-      "offset": 31,
+      "offset": 27,
       "line": 5,
       "column": 1
     }
@@ -31,12 +31,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 31,
+      "offset": 27,
       "line": 5,
       "column": 1
     },
     "end": {
-      "offset": 32,
+      "offset": 28,
       "line": 5,
       "column": 2
     }
@@ -45,26 +45,26 @@
     "type": "Identifier",
     "name": "module",
     "start": {
-      "offset": 32,
+      "offset": 28,
       "line": 5,
       "column": 2
     },
     "end": {
-      "offset": 38,
+      "offset": 34,
       "line": 5,
       "column": 8
     }
   },
   {
     "type": "WhiteSpace",
-    "value": "\r\n  ",
+    "value": "\n  ",
     "start": {
-      "offset": 38,
+      "offset": 34,
       "line": 5,
       "column": 8
     },
     "end": {
-      "offset": 42,
+      "offset": 37,
       "line": 6,
       "column": 3
     }
@@ -73,12 +73,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 42,
+      "offset": 37,
       "line": 6,
       "column": 3
     },
     "end": {
-      "offset": 43,
+      "offset": 38,
       "line": 6,
       "column": 4
     }
@@ -87,12 +87,12 @@
     "type": "Identifier",
     "name": "func",
     "start": {
-      "offset": 43,
+      "offset": 38,
       "line": 6,
       "column": 4
     },
     "end": {
-      "offset": 47,
+      "offset": 42,
       "line": 6,
       "column": 8
     }
@@ -101,12 +101,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 47,
+      "offset": 42,
       "line": 6,
       "column": 8
     },
     "end": {
-      "offset": 48,
+      "offset": 43,
       "line": 6,
       "column": 9
     }
@@ -115,12 +115,12 @@
     "type": "Identifier",
     "name": "$test2",
     "start": {
-      "offset": 48,
+      "offset": 43,
       "line": 6,
       "column": 9
     },
     "end": {
-      "offset": 54,
+      "offset": 49,
       "line": 6,
       "column": 15
     }
@@ -129,12 +129,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 54,
+      "offset": 49,
       "line": 6,
       "column": 15
     },
     "end": {
-      "offset": 55,
+      "offset": 50,
       "line": 6,
       "column": 16
     }
@@ -143,12 +143,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 55,
+      "offset": 50,
       "line": 6,
       "column": 16
     },
     "end": {
-      "offset": 56,
+      "offset": 51,
       "line": 6,
       "column": 17
     }
@@ -157,12 +157,12 @@
     "type": "Identifier",
     "name": "result",
     "start": {
-      "offset": 56,
+      "offset": 51,
       "line": 6,
       "column": 17
     },
     "end": {
-      "offset": 62,
+      "offset": 57,
       "line": 6,
       "column": 23
     }
@@ -171,12 +171,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 62,
+      "offset": 57,
       "line": 6,
       "column": 23
     },
     "end": {
-      "offset": 63,
+      "offset": 58,
       "line": 6,
       "column": 24
     }
@@ -185,12 +185,12 @@
     "type": "Identifier",
     "name": "i32",
     "start": {
-      "offset": 63,
+      "offset": 58,
       "line": 6,
       "column": 24
     },
     "end": {
-      "offset": 66,
+      "offset": 61,
       "line": 6,
       "column": 27
     }
@@ -199,26 +199,26 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 66,
+      "offset": 61,
       "line": 6,
       "column": 27
     },
     "end": {
-      "offset": 67,
+      "offset": 62,
       "line": 6,
       "column": 28
     }
   },
   {
     "type": "WhiteSpace",
-    "value": "\r\n    ",
+    "value": "\n    ",
     "start": {
-      "offset": 67,
+      "offset": 62,
       "line": 6,
       "column": 28
     },
     "end": {
-      "offset": 73,
+      "offset": 67,
       "line": 7,
       "column": 5
     }
@@ -227,12 +227,12 @@
     "type": "Identifier",
     "name": "i32.const",
     "start": {
-      "offset": 73,
+      "offset": 67,
       "line": 7,
       "column": 5
     },
     "end": {
-      "offset": 82,
+      "offset": 76,
       "line": 7,
       "column": 14
     }
@@ -241,12 +241,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 82,
+      "offset": 76,
       "line": 7,
       "column": 14
     },
     "end": {
-      "offset": 83,
+      "offset": 77,
       "line": 7,
       "column": 15
     }
@@ -255,12 +255,12 @@
     "type": "CodeExpression",
     "code": "$.X",
     "start": {
-      "offset": 83,
+      "offset": 77,
       "line": 7,
       "column": 15
     },
     "end": {
-      "offset": 88,
+      "offset": 82,
       "line": 7,
       "column": 20
     }
@@ -269,26 +269,26 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 88,
+      "offset": 82,
       "line": 7,
       "column": 20
     },
     "end": {
-      "offset": 89,
+      "offset": 83,
       "line": 7,
       "column": 21
     }
   },
   {
     "type": "Comment",
-    "value": ";; comment\r\n",
+    "value": ";; comment\n",
     "start": {
-      "offset": 89,
+      "offset": 83,
       "line": 7,
       "column": 21
     },
     "end": {
-      "offset": 101,
+      "offset": 94,
       "line": 8,
       "column": 1
     }
@@ -297,12 +297,12 @@
     "type": "WhiteSpace",
     "value": "    ",
     "start": {
-      "offset": 101,
+      "offset": 94,
       "line": 8,
       "column": 1
     },
     "end": {
-      "offset": 105,
+      "offset": 98,
       "line": 8,
       "column": 5
     }
@@ -311,12 +311,12 @@
     "type": "Identifier",
     "name": "i32.const",
     "start": {
-      "offset": 105,
+      "offset": 98,
       "line": 8,
       "column": 5
     },
     "end": {
-      "offset": 114,
+      "offset": 107,
       "line": 8,
       "column": 14
     }
@@ -325,12 +325,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 114,
+      "offset": 107,
       "line": 8,
       "column": 14
     },
     "end": {
-      "offset": 115,
+      "offset": 108,
       "line": 8,
       "column": 15
     }
@@ -339,26 +339,26 @@
     "type": "CodeExpression",
     "code": "$.X + $.Y ",
     "start": {
-      "offset": 115,
+      "offset": 108,
       "line": 8,
       "column": 15
     },
     "end": {
-      "offset": 129,
+      "offset": 122,
       "line": 8,
       "column": 29
     }
   },
   {
     "type": "WhiteSpace",
-    "value": "\r\n    ",
+    "value": "\n    ",
     "start": {
-      "offset": 129,
+      "offset": 122,
       "line": 8,
       "column": 29
     },
     "end": {
-      "offset": 135,
+      "offset": 127,
       "line": 9,
       "column": 5
     }
@@ -367,54 +367,54 @@
     "type": "Identifier",
     "name": "i32.add",
     "start": {
-      "offset": 135,
+      "offset": 127,
       "line": 9,
       "column": 5
     },
     "end": {
-      "offset": 142,
+      "offset": 134,
       "line": 9,
       "column": 12
     }
   },
   {
     "type": "WhiteSpace",
-    "value": "\r\n    ",
+    "value": "\n    ",
     "start": {
-      "offset": 142,
+      "offset": 134,
       "line": 9,
       "column": 12
     },
     "end": {
-      "offset": 148,
+      "offset": 139,
       "line": 10,
       "column": 5
     }
   },
   {
     "type": "Code",
-    "code": "\r\n      // JSによるWASMソースコード生成\r\n      let instructions = '';\r\n      for(let i = 0;i < 4; ++ i ){\r\n        ++$.X; \r\n        instructions += `\r\n  i32.const ${$.X + $.Y}\r\n  i32.add`;\r\n      }\r\n      return instructions;\r\n    ",
+    "code": "\n      // JSによるWASMソースコード生成\n      let instructions = '';\n      for(let i = 0;i < 4; ++ i ){\n        ++$.X; \n        instructions += `\n  i32.const ${$.X + $.Y}\n  i32.add`;\n      }\n      return instructions;\n    ",
     "start": {
-      "offset": 148,
+      "offset": 139,
       "line": 10,
       "column": 5
     },
     "end": {
-      "offset": 370,
+      "offset": 351,
       "line": 20,
       "column": 6
     }
   },
   {
     "type": "WhiteSpace",
-    "value": "\r\n  ",
+    "value": "\n  ",
     "start": {
-      "offset": 370,
+      "offset": 351,
       "line": 20,
       "column": 6
     },
     "end": {
-      "offset": 374,
+      "offset": 354,
       "line": 21,
       "column": 3
     }
@@ -423,26 +423,26 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 374,
+      "offset": 354,
       "line": 21,
       "column": 3
     },
     "end": {
-      "offset": 375,
+      "offset": 355,
       "line": 21,
       "column": 4
     }
   },
   {
     "type": "WhiteSpace",
-    "value": "\r\n",
+    "value": "\n",
     "start": {
-      "offset": 375,
+      "offset": 355,
       "line": 21,
       "column": 4
     },
     "end": {
-      "offset": 377,
+      "offset": 356,
       "line": 22,
       "column": 1
     }
@@ -451,12 +451,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 377,
+      "offset": 356,
       "line": 22,
       "column": 1
     },
     "end": {
-      "offset": 378,
+      "offset": 357,
       "line": 22,
       "column": 2
     }

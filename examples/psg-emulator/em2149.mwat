@@ -667,7 +667,7 @@ i32 regmsk[16] = [
   )
 
   (func $calc (result i32)
-    (if (i32.eqz (i32.load (&psg.quality)))
+    (if (i32.eqz (i32.load (&psg.quality;)))
       (then
         call $update_output
         call $mix_output
@@ -676,7 +676,7 @@ i32 regmsk[16] = [
     )
     (block $rate_loop_exit
       (loop $rate_loop
-        (br_if (i32.le (i32.load(&psg.realstep;) (i32.load(&psg.psgtime)))))
+        (br_if $rate_loop_exit (i32.le_u (i32.load(&psg.realstep;) (i32.load(&psg.psgtime;)))))
         (i32.store
           (&psg.psgtime;)
           (i32.add
@@ -698,8 +698,8 @@ i32 regmsk[16] = [
     call $mix_output
   )
 
-  (func $writereg (param $reg i32) (param $val i32) (local $c i32) (local $reg_offset i32)
-    (if (i32.gt (local.get $reg) (i32.const 15))
+  (func $writereg (param $reg i32) (param $val i32) (local $c i32) (local $reg_offset i32) (local $w i32)
+    (if (i32.gt_u (local.get $reg) (i32.const 15))
       (then
         return
       )
@@ -730,7 +730,7 @@ i32 regmsk[16] = [
 
     
     (block $default
-      (br_if $default (i32.gt (local.get $reg) (i32.const 13))) 
+      (br_if $default (i32.gt_u (local.get $reg) (i32.const 13))) 
       (block $reg0_5
         (block $reg6
           (block $reg7
@@ -853,6 +853,30 @@ i32 regmsk[16] = [
         return
       ) 
       ;; reg 0-5
+      (local.set $c 
+        (i32.shr_u
+          (local.get $c)
+          (i32.const 1)
+        )
+      )
+
+      (i32.store
+        (i32.add
+          (&psg.freq;)
+          (i32.shl (local.get $c) (@psg.freq;))
+        )
+        (i32.add
+          (i32.load
+            (i32.add 
+              (&psg.reg;)
+              (i32.shl
+                (i32.add
+                  (i32.shl
+                    (local.get $c)
+                    (i32.const 1)
+                  )
+
+      )
       
       return
     )
