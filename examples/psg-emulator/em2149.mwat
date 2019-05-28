@@ -532,21 +532,64 @@ i32 regmsk[16] = [
               )
             )
           )
-          (if
+        )
+        (if
+          (i32.and
+            (i32.load (&psg.mask;))
+            (i32.shl (i32.const 1) (local.get $i))
+          )
+          (then
+            (local.set $i
+              (i32.sub
+                (i32.local $i)
+                (i32.const 1)
+              )
+            )
+            (br $tone_loop)
+          )
+        )
+        (if
+          (i32.and
+            (i32.or
+              (i32.load (i32.add (&psg.tmask;) (local.get $offset)))
+              (i32.load (i32.add (&psg.edge;) (local.get $offset)))
+            )
+            (i32.or
+              (i32.load (i32.add (&psg.nmask;) (local.get $offset)))
+              (local.get $noise)
+            )
+          )
+          (then
+            (if
+              (i32.xor 
                 (i32.and
-                  (i32.load (&psg.mask;))
-                  (i32.shl (i32.const 1) (local.get $i))
-                )
-                (then
-                  (local.set $i
-                    (i32.sub
-                      (i32.local $i)
-                      (i32.const 1)
+                  (i32.load
+                    (i32.add 
+                      (&psg.volume;)
+                      (local.get $offset)
                     )
                   )
-                  (br $tone_loop)
+                  (i32.const 32)
                 )
+                (i32.const 0xffff_ffff)
               )
+              (then
+                (i32.store
+                  (i32.add
+                    (&psg.ch_out;)
+                    (local.get $offset)
+                  )
+                  (i32.add
+                  )
+                )  
+              )
+              (else
+              )
+            )
+          )
+
+        )
+        
         (br $tone_loop)
       )
     )
