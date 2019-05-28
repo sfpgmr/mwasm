@@ -48996,15 +48996,985 @@
   },
   {
     "type": "WhiteSpace",
-    "value": "\r\n",
+    "value": "\r\n  ",
     "start": {
       "offset": 17339,
       "line": 654,
       "column": 4
     },
     "end": {
-      "offset": 17341,
+      "offset": 17343,
       "line": 655,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17343,
+      "line": 655,
+      "column": 3
+    },
+    "end": {
+      "offset": 17344,
+      "line": 655,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 17344,
+      "line": 655,
+      "column": 4
+    },
+    "end": {
+      "offset": 17348,
+      "line": 655,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 17348,
+      "line": 655,
+      "column": 8
+    },
+    "end": {
+      "offset": 17349,
+      "line": 655,
+      "column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$mix_output",
+    "start": {
+      "offset": 17349,
+      "line": 655,
+      "column": 9
+    },
+    "end": {
+      "offset": 17360,
+      "line": 655,
+      "column": 20
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 17360,
+      "line": 655,
+      "column": 20
+    },
+    "end": {
+      "offset": 17361,
+      "line": 655,
+      "column": 21
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17361,
+      "line": 655,
+      "column": 21
+    },
+    "end": {
+      "offset": 17362,
+      "line": 655,
+      "column": 22
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "result",
+    "start": {
+      "offset": 17362,
+      "line": 655,
+      "column": 22
+    },
+    "end": {
+      "offset": 17368,
+      "line": 655,
+      "column": 28
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 17368,
+      "line": 655,
+      "column": 28
+    },
+    "end": {
+      "offset": 17369,
+      "line": 655,
+      "column": 29
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32",
+    "start": {
+      "offset": 17369,
+      "line": 655,
+      "column": 29
+    },
+    "end": {
+      "offset": 17372,
+      "line": 655,
+      "column": 32
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17372,
+      "line": 655,
+      "column": 32
+    },
+    "end": {
+      "offset": 17373,
+      "line": 655,
+      "column": 33
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n    ",
+    "start": {
+      "offset": 17373,
+      "line": 655,
+      "column": 33
+    },
+    "end": {
+      "offset": 17379,
+      "line": 656,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17379,
+      "line": 656,
+      "column": 5
+    },
+    "end": {
+      "offset": 17380,
+      "line": 656,
+      "column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.store",
+    "start": {
+      "offset": 17380,
+      "line": 656,
+      "column": 6
+    },
+    "end": {
+      "offset": 17389,
+      "line": 656,
+      "column": 15
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n      ",
+    "start": {
+      "offset": 17389,
+      "line": 656,
+      "column": 15
+    },
+    "end": {
+      "offset": 17397,
+      "line": 657,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17397,
+      "line": 657,
+      "column": 7
+    },
+    "end": {
+      "offset": 17398,
+      "line": 657,
+      "column": 8
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 17398,
+          "line": 657,
+          "column": 8
+        },
+        "end": {
+          "offset": 17402,
+          "line": 657,
+          "column": 12
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "out",
+          "prefix": null,
+          "start": {
+            "offset": 17403,
+            "line": 657,
+            "column": 13
+          },
+          "end": {
+            "offset": 17406,
+            "line": 657,
+            "column": 16
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 17398,
+      "line": 657,
+      "column": 8
+    },
+    "end": {
+      "offset": 17406,
+      "line": 657,
+      "column": 16
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17407,
+      "line": 657,
+      "column": 17
+    },
+    "end": {
+      "offset": 17408,
+      "line": 657,
+      "column": 18
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n      ",
+    "start": {
+      "offset": 17408,
+      "line": 657,
+      "column": 18
+    },
+    "end": {
+      "offset": 17416,
+      "line": 658,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17416,
+      "line": 658,
+      "column": 7
+    },
+    "end": {
+      "offset": 17417,
+      "line": 658,
+      "column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.add",
+    "start": {
+      "offset": 17417,
+      "line": 658,
+      "column": 8
+    },
+    "end": {
+      "offset": 17424,
+      "line": 658,
+      "column": 15
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n        ",
+    "start": {
+      "offset": 17424,
+      "line": 658,
+      "column": 15
+    },
+    "end": {
+      "offset": 17434,
+      "line": 659,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17434,
+      "line": 659,
+      "column": 9
+    },
+    "end": {
+      "offset": 17435,
+      "line": 659,
+      "column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 17435,
+      "line": 659,
+      "column": 10
+    },
+    "end": {
+      "offset": 17443,
+      "line": 659,
+      "column": 18
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 17443,
+      "line": 659,
+      "column": 18
+    },
+    "end": {
+      "offset": 17444,
+      "line": 659,
+      "column": 19
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17444,
+      "line": 659,
+      "column": 19
+    },
+    "end": {
+      "offset": 17445,
+      "line": 659,
+      "column": 20
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 17445,
+          "line": 659,
+          "column": 20
+        },
+        "end": {
+          "offset": 17449,
+          "line": 659,
+          "column": 24
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "ch_out",
+          "prefix": null,
+          "start": {
+            "offset": 17450,
+            "line": 659,
+            "column": 25
+          },
+          "end": {
+            "offset": 17456,
+            "line": 659,
+            "column": 31
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 17445,
+      "line": 659,
+      "column": 20
+    },
+    "end": {
+      "offset": 17456,
+      "line": 659,
+      "column": 31
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17457,
+      "line": 659,
+      "column": 32
+    },
+    "end": {
+      "offset": 17458,
+      "line": 659,
+      "column": 33
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17458,
+      "line": 659,
+      "column": 33
+    },
+    "end": {
+      "offset": 17459,
+      "line": 659,
+      "column": 34
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n        ",
+    "start": {
+      "offset": 17459,
+      "line": 659,
+      "column": 34
+    },
+    "end": {
+      "offset": 17469,
+      "line": 660,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17469,
+      "line": 660,
+      "column": 9
+    },
+    "end": {
+      "offset": 17470,
+      "line": 660,
+      "column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.add",
+    "start": {
+      "offset": 17470,
+      "line": 660,
+      "column": 10
+    },
+    "end": {
+      "offset": 17477,
+      "line": 660,
+      "column": 17
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n          ",
+    "start": {
+      "offset": 17477,
+      "line": 660,
+      "column": 17
+    },
+    "end": {
+      "offset": 17489,
+      "line": 661,
+      "column": 11
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17489,
+      "line": 661,
+      "column": 11
+    },
+    "end": {
+      "offset": 17490,
+      "line": 661,
+      "column": 12
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 17490,
+      "line": 661,
+      "column": 12
+    },
+    "end": {
+      "offset": 17498,
+      "line": 661,
+      "column": 20
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 17498,
+      "line": 661,
+      "column": 20
+    },
+    "end": {
+      "offset": 17499,
+      "line": 661,
+      "column": 21
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17499,
+      "line": 661,
+      "column": 21
+    },
+    "end": {
+      "offset": 17500,
+      "line": 661,
+      "column": 22
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 17500,
+          "line": 661,
+          "column": 22
+        },
+        "end": {
+          "offset": 17504,
+          "line": 661,
+          "column": 26
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "ch_out",
+          "prefix": null,
+          "start": {
+            "offset": 17505,
+            "line": 661,
+            "column": 27
+          },
+          "end": {
+            "offset": 17511,
+            "line": 661,
+            "column": 33
+          },
+          "child": {
+            "type": "IndexExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "1",
+                "start": {
+                  "offset": 17512,
+                  "line": 661,
+                  "column": 34
+                },
+                "end": {
+                  "offset": 17513,
+                  "line": 661,
+                  "column": 35
+                }
+              }
+            ],
+            "start": {
+              "offset": 17511,
+              "line": 661,
+              "column": 33
+            },
+            "end": {
+              "offset": 17514,
+              "line": 661,
+              "column": 36
+            }
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 17500,
+      "line": 661,
+      "column": 22
+    },
+    "end": {
+      "offset": 17514,
+      "line": 661,
+      "column": 36
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17515,
+      "line": 661,
+      "column": 37
+    },
+    "end": {
+      "offset": 17516,
+      "line": 661,
+      "column": 38
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17516,
+      "line": 661,
+      "column": 38
+    },
+    "end": {
+      "offset": 17517,
+      "line": 661,
+      "column": 39
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n          ",
+    "start": {
+      "offset": 17517,
+      "line": 661,
+      "column": 39
+    },
+    "end": {
+      "offset": 17529,
+      "line": 662,
+      "column": 11
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17529,
+      "line": 662,
+      "column": 11
+    },
+    "end": {
+      "offset": 17530,
+      "line": 662,
+      "column": 12
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 17530,
+      "line": 662,
+      "column": 12
+    },
+    "end": {
+      "offset": 17538,
+      "line": 662,
+      "column": 20
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 17538,
+      "line": 662,
+      "column": 20
+    },
+    "end": {
+      "offset": 17539,
+      "line": 662,
+      "column": 21
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 17539,
+      "line": 662,
+      "column": 21
+    },
+    "end": {
+      "offset": 17540,
+      "line": 662,
+      "column": 22
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "psg",
+        "prefix": "&",
+        "start": {
+          "offset": 17540,
+          "line": 662,
+          "column": 22
+        },
+        "end": {
+          "offset": 17544,
+          "line": 662,
+          "column": 26
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "ch_out",
+          "prefix": null,
+          "start": {
+            "offset": 17545,
+            "line": 662,
+            "column": 27
+          },
+          "end": {
+            "offset": 17551,
+            "line": 662,
+            "column": 33
+          },
+          "child": {
+            "type": "IndexExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "2",
+                "start": {
+                  "offset": 17552,
+                  "line": 662,
+                  "column": 34
+                },
+                "end": {
+                  "offset": 17553,
+                  "line": 662,
+                  "column": 35
+                }
+              }
+            ],
+            "start": {
+              "offset": 17551,
+              "line": 662,
+              "column": 33
+            },
+            "end": {
+              "offset": 17554,
+              "line": 662,
+              "column": 36
+            }
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 17540,
+      "line": 662,
+      "column": 22
+    },
+    "end": {
+      "offset": 17554,
+      "line": 662,
+      "column": 36
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17555,
+      "line": 662,
+      "column": 37
+    },
+    "end": {
+      "offset": 17556,
+      "line": 662,
+      "column": 38
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17556,
+      "line": 662,
+      "column": 38
+    },
+    "end": {
+      "offset": 17557,
+      "line": 662,
+      "column": 39
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n        ",
+    "start": {
+      "offset": 17557,
+      "line": 662,
+      "column": 39
+    },
+    "end": {
+      "offset": 17567,
+      "line": 663,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17567,
+      "line": 663,
+      "column": 9
+    },
+    "end": {
+      "offset": 17568,
+      "line": 663,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n      ",
+    "start": {
+      "offset": 17568,
+      "line": 663,
+      "column": 10
+    },
+    "end": {
+      "offset": 17576,
+      "line": 664,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17576,
+      "line": 664,
+      "column": 7
+    },
+    "end": {
+      "offset": 17577,
+      "line": 664,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n    ",
+    "start": {
+      "offset": 17577,
+      "line": 664,
+      "column": 8
+    },
+    "end": {
+      "offset": 17583,
+      "line": 665,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17583,
+      "line": 665,
+      "column": 5
+    },
+    "end": {
+      "offset": 17584,
+      "line": 665,
+      "column": 6
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n  ",
+    "start": {
+      "offset": 17584,
+      "line": 665,
+      "column": 6
+    },
+    "end": {
+      "offset": 17588,
+      "line": 666,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17588,
+      "line": 666,
+      "column": 3
+    },
+    "end": {
+      "offset": 17589,
+      "line": 666,
+      "column": 4
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\r\n",
+    "start": {
+      "offset": 17589,
+      "line": 666,
+      "column": 4
+    },
+    "end": {
+      "offset": 17591,
+      "line": 667,
       "column": 1
     }
   },
@@ -49012,13 +49982,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 17341,
-      "line": 655,
+      "offset": 17591,
+      "line": 667,
       "column": 1
     },
     "end": {
-      "offset": 17342,
-      "line": 655,
+      "offset": 17592,
+      "line": 667,
       "column": 2
     }
   },
@@ -49026,13 +49996,13 @@
     "type": "WhiteSpace",
     "value": "\r\n",
     "start": {
-      "offset": 17342,
-      "line": 655,
+      "offset": 17592,
+      "line": 667,
       "column": 2
     },
     "end": {
-      "offset": 17344,
-      "line": 656,
+      "offset": 17594,
+      "line": 668,
       "column": 1
     }
   }
