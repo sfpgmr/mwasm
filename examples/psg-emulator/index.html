@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galaxy Fight Game</title>
+  <meta name="keywords" content="WebGL,HTML5,three.js" />
+  <meta name="description" content="WebGL,HTML5,three.js" />
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <script type="module" >
+  window.addEventListener('load',async ()=>{
+    let psg = await WebAssembly.instantiateStreaming(fetch('./em2149.wasm'));
+    psg.init();
+  });
+  </script>
+</body>
+</html>

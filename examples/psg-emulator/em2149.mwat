@@ -6,9 +6,7 @@
   $.SHIFT_BITS = 1 << $.GETA_BITS;
   $.SHIFT_BITS_MASK = 1 << $.GETA_BITS - 1;
 }
-{@struct CHANNEL
-  i32 vol[3];
-}
+
 {@struct PSG
 i32 regmsk[16] = [
     0xff, 0x0f, 0xff, 0x0f, 0xff, 0x0f, 0x1f, 0x3f,
@@ -59,7 +57,6 @@ i32 regmsk[16] = [
     i32 realstep;
     i32 psgtime;
     i32 psgstep;
-    CHANNEL ch_c;
 
     (;; I/O Ctrl ;;)
     i32 adr;
@@ -72,14 +69,28 @@ i32 regmsk[16] = [
 
 
 (module
-  (memory $memory 1 )
+  (;;
+  (export "setQuality" (func $quality))
+  (export "setRate" (func $set_rate))
+  (export "init" (func $init))
+  (export "setVolumeMode" (func $set_volume_mode))
+  (export "setMask" (func $set_mask))
+  (export "toggleMask" (func $toggle_mask))
+  (export "readIo" (func $read_io))
+  (export "readReg" (func $read_reg))
+  (export "writeIo" (func $write_io))
+  (export "updateOutput" (func $update_output))
+  (export "mixOutput" (func $mix_output))
+  (export "calc" (func $calc))
+  (export "reset" (func $reset))
+  (export "writereg" (func $writereg))
   (export "memory" (memory $memory))
+  ;;)
+  (memory $memory 1 )
 {@map
   i32 OutputBuffer[1024];
   PSG psg;
 }
-(data $dt (i32.const 6400) )
-
   (func $internal_refresh
     (if
       ;; condition
@@ -107,8 +118,7 @@ i32 regmsk[16] = [
           (&psg.realstep;)
           (i32.div_u 
             (i32.const {$ 1 << 31})
-            ;;(i32.load (&psg.rate;))
-            (i32.load (local.get $dt))
+            (i32.load (&psg.rate;))
           ) 
         )
         (i32.store
@@ -212,7 +222,7 @@ i32 regmsk[16] = [
         (local.tee $c (i32.sub (local.get $c) (i32.const 1)))
         (i32.store (local.get $work) (i32.const 0))
         (local.set $work (i32.add (local.get $work) (&psg.mask;)) )
-        (br $loop)
+        (br $loop_reg)
       )
     )
 
@@ -698,7 +708,7 @@ i32 regmsk[16] = [
     call $mix_output
   )
 
-  (func $writereg (param $reg i32) (param $val i32) (local $c i32) (local $reg_offset i32) (local $w i32)
+  (func $write_reg (param $reg i32) (param $val i32) (local $c i32) (local $reg_offset i32) (local $w i32)
     (if (i32.gt_u (local.get $reg) (i32.const 15))
       (then
         return
