@@ -866,18 +866,41 @@ i32 regmsk[16] = [
           (i32.shl (local.get $c) (@psg.freq;))
         )
         (i32.add
+          (i32.shl 
+            (i32.and 
+              (i32.load
+                (i32.add 
+                  (&psg.reg;)
+                  (i32.shl
+                    (i32.add
+                      (i32.shl
+                        (local.get $c)
+                        (i32.const 1)
+                      )
+                      (i32.const 1)
+                    )
+                    (@psg.reg;)
+                  )
+                )
+              )
+              (i32.const 15)
+            )
+            (i32.const 8)
+          )
           (i32.load
-            (i32.add 
+            (i32.add
               (&psg.reg;)
               (i32.shl
-                (i32.add
-                  (i32.shl
-                    (local.get $c)
-                    (i32.const 1)
-                  )
-
+                (i32.shl 
+                  (local.get $c)
+                  (i32.const 1)
+                )
+                (@psg.reg;)
+              )
+            )
+          )
+        )
       )
-      
       return
     )
   )
