@@ -8,7 +8,7 @@ export default [{
     commonjs()
   ],
   external: [
-    'wabt'
+    'wabt','binaryen'
   ],
   output: {
     file: './index.js',

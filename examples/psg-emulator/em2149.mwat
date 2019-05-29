@@ -69,8 +69,7 @@ i32 regmsk[16] = [
 
 
 (module
-  (;;
-  (export "setQuality" (func $quality))
+  (export "setQuality" (func $set_quality))
   (export "setRate" (func $set_rate))
   (export "init" (func $init))
   (export "setVolumeMode" (func $set_volume_mode))
@@ -83,9 +82,8 @@ i32 regmsk[16] = [
   (export "mixOutput" (func $mix_output))
   (export "calc" (func $calc))
   (export "reset" (func $reset))
-  (export "writereg" (func $writereg))
+  (export "writereg" (func $write_reg))
   (export "memory" (memory $memory))
-  ;;)
   (memory $memory 1 )
 {@map
   i32 OutputBuffer[1024];
@@ -106,7 +104,7 @@ i32 regmsk[16] = [
               )
               (i64.shl
                 (i64.extend_i32_u (i32.load (&psg.rate;)))
-                (i32.const 4)
+                (i64.const 4)
               )
             )
           )
@@ -191,12 +189,12 @@ i32 regmsk[16] = [
     (local.set $ch_out (&psg.ch_out;))
 
     (i32.store (&psg.base_count;) (i32.const 0))
-    (local.tee $c (i32.const 3))
+    (local.set $c (i32.const 3))
 
     (block $exit
       (loop $loop
-        (br_if $exit (i32.eqz))
-        (local.tee $c (i32.sub (local.get $c) (i32.const 1)))
+        (br_if $exit (i32.eqz (local.get $c)))
+        (local.set $c (i32.sub (local.get $c) (i32.const 1)))
         (i32.store (local.get $count) (i32.const 0x1000))
         (i32.store (local.get $freq) (i32.const 0))
         (i32.store (local.get $edge) (i32.const 0))
@@ -214,12 +212,12 @@ i32 regmsk[16] = [
     (i32.store (&psg.mask;) (i32.const 0))
 
     ;; レジスタの初期化
-    (local.tee $c (i32.const 16))
+    (local.set $c (i32.const 16))
     (local.set $work (&psg.reg;))
     (block $exit_reg
       (loop $loop_reg
-        (br_if $exit_reg (i32.eqz ))
-        (local.tee $c (i32.sub (local.get $c) (i32.const 1)))
+        (br_if $exit_reg (i32.eqz(local.get $c) ))
+        (local.set $c (i32.sub (local.get $c) (i32.const 1)))
         (i32.store (local.get $work) (i32.const 0))
         (local.set $work (i32.add (local.get $work) (&psg.mask;)) )
         (br $loop_reg)
@@ -674,6 +672,7 @@ i32 regmsk[16] = [
         )
       )
     )
+    (i32.load (&psg.out;))
   )
 
   (func $calc (result i32)

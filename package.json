@@ -30,6 +30,7 @@
     "rollup-plugin-node-resolve": "^4.2.3"
   },
   "dependencies": {
+    "binaryen": "^84.0.0",
     "wabt": "^1.0.10"
   },
   "ava": {
