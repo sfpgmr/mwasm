@@ -5955,7 +5955,7 @@ var index = async () => {
           }
         }
         let jsSource = parsed.join('');
-        // console.info(jsSource);
+         console.info(jsSource);
         let v = this.evalExpression(jsSource);
         // console.info(v);
         return v;
@@ -6051,12 +6051,12 @@ var index = async () => {
                     c[$attributes].num = num;
                     offset += c[$attributes].size * num;
                     currentContext[$attributes].size += c[$attributes].size * num;
+                    c[$attributes].log2 = Math.log2(c[$attributes].size) | 0;
 
 
                     // 初期値の設定
                   }
                   //console.log(currentContext);
-                  currentContext[$attributes].log2 = Math.log2(currentContext[$attributes].size) | 0;
                   break;
               }
               break;
