@@ -144,12 +144,12 @@ i32 regmsk[16] = [
 
   (func $init (param $c i32) (param $r i32)
     (call $set_volume_mode (i32.const {$.EMU2149_VOL_DEFAULT}))
-    (i32.store (&psg.clk;) (i32.const 0))
+    (i32.store (&psg.clk;) (local.get $c))
     (i32.store 
       (&psg.rate;)
       (select
-        (local.get $r)
         (i32.const 44100)
+        (local.get $r)
         (i32.eqz (local.get $r))
       )
     )
