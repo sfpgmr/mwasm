@@ -86,8 +86,8 @@ i32 regmsk[16] = [
   (export "memory" (memory $memory))
   (memory $memory 1 )
 {@map
-  i32 OutputBuffer[1024];
   PSG psg;
+  float OutputBuffer[1024];
 }
   (func $internal_refresh
     (if
@@ -219,7 +219,7 @@ i32 regmsk[16] = [
         (br_if $exit_reg (i32.eqz(local.get $c) ))
         (local.set $c (i32.sub (local.get $c) (i32.const 1)))
         (i32.store (local.get $work) (i32.const 0))
-        (local.set $work (i32.add (local.get $work) (&psg.mask;)) )
+        (local.set $work (i32.add (local.get $work) (#psg.reg;)) )
         (br $loop_reg)
       )
     )
@@ -641,6 +641,7 @@ i32 regmsk[16] = [
           )
 
         )
+
         (i32.store 
           (i32.add
             (&psg.ch_out;)
@@ -656,6 +657,11 @@ i32 regmsk[16] = [
             (i32.const 1)
           )
         )
+
+        (local.set $i
+          (i32.sub (local.get $i) (i32.const 1))
+        )
+
         (br $tone_loop)
       )
     )

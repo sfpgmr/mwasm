@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Galaxy Fight Game</title>
-  <meta name="keywords" content="WebGL,HTML5,three.js" />
-  <meta name="description" content="WebGL,HTML5,three.js" />
+  <title>PSG TEST</title>
   <meta charset="UTF-8">
 </head>
 <body>
+  <button id="start" >play</button>
 
   <script type="module" >
   window.addEventListener('load',async ()=>{
-    let psg = await WebAssembly.instantiateStreaming(fetch('./em2149.wasm'));
-    psg.instance.exports.init(20000,44100);
+    //let psgBin = (await WebAssembly.instantiateStreaming(fetch('./em2149.wasm'))).instance.exports;
+    let psgBin = await (await fetch('./em2149.wasm')).arrayBuffer();
+    
+    // psg.init(3580000,44100);
+    // psg.setRate(44100);
+    // psg.setQuality(1);
+    // psg.setVolumeMode(1);
+    // let a = psg.setMask(0xff);
+    // console.log(a);
+    // let b = psg.toggleMask(0);
+    // console.log(a == b);
+    // psg.reset();
+    // console.log(psg.readIo());
+    // //console.log(psg.writeIO);
+    // //console.log(psg.writeIO);
+    // debugger;
+    // console.log(psg.updateOutput());
+    // console.log(psg.mixOutput());
+    // console.log(psg.calc());
+
+    document.getElementById('start').addEventListener('click',async ()=>{
+      var audioctx = new AudioContext();
+      await audioctx.audioWorklet.addModule("./psg.js");
+      var psg = new AudioWorkletNode(audioctx,"PSG");
+      
+      psg.port.postMessage(psgBin);
+
+      var vol = new GainNode(audioctx,{gain:0.5});
+      psg.connect(vol).connect(audioctx.destination);
+    });
+
+
+
   });
   </script>
 </body>
