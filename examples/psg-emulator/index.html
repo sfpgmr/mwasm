@@ -1,48 +1,124 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>PSG TEST</title>
   <meta charset="UTF-8">
 </head>
+
 <body>
-  <button id="start" >play</button>
+  <button id="start" disabled >play</button>
 
-  <script type="module" >
-  window.addEventListener('load',async ()=>{
-    //let psgBin = (await WebAssembly.instantiateStreaming(fetch('./em2149.wasm'))).instance.exports;
-    let psgBin = await (await fetch('./em2149.wasm')).arrayBuffer();
-    
-    // psg.init(3580000,44100);
-    // psg.setRate(44100);
-    // psg.setQuality(1);
-    // psg.setVolumeMode(1);
-    // let a = psg.setMask(0xff);
-    // console.log(a);
-    // let b = psg.toggleMask(0);
-    // console.log(a == b);
-    // psg.reset();
-    // console.log(psg.readIo());
-    // //console.log(psg.writeIO);
-    // //console.log(psg.writeIO);
-    // debugger;
-    // console.log(psg.updateOutput());
-    // console.log(psg.mixOutput());
-    // console.log(psg.calc());
+  <script type="module">
+    window.addEventListener('load', async () => {
+      let psgBin = await (await fetch('./em2149.wasm')).arrayBuffer();
 
-    document.getElementById('start').addEventListener('click',async ()=>{
-      var audioctx = new AudioContext();
-      await audioctx.audioWorklet.addModule("./psg.js");
-      var psg = new AudioWorkletNode(audioctx,"PSG");
-      
-      psg.port.postMessage(psgBin);
+      {
+        let psg = (await WebAssembly.instantiateStreaming(fetch('./em2149.wasm'))).instance.exports;
+        psg.init(3580000, 44100);
+        psg.setRate(44100);
+        psg.setQuality(1);
+        psg.setVolumeMode(1);
+        let a = psg.setMask(0xff);
+        console.log(a);
+        let b = psg.toggleMask(0);
+        console.log(a == b);
+        psg.reset();
+        console.log(psg.readIo());
+        //console.log(psg.writeIO);
+        //console.log(psg.writeIO);
+        for (let i = 0; i < 16; ++i) {
+          psg.writeReg(i, i);
+          console.log(i, psg.readReg(i), i == psg.readReg(i));
+        }
+        debugger;
+        psg.writeReg(8, 31);
+        psg.writeReg(0, 0x5d);
+        psg.writeReg(1, 0xd);
+        psg.writeReg(2, 0x5d);
+        psg.writeReg(3, 0x1);
+        psg.writeReg(4, 0x5d);
+        psg.writeReg(5, 0x2);
+        psg.writeReg(7, 0x3e);
+        for(let i = 0;i < 256;++i){
+          console.log(psg.calc());
+        }
+      }
 
-      var vol = new GainNode(audioctx,{gain:0.5});
-      psg.connect(vol).connect(audioctx.destination);
+      let psg;
+      let play = false;
+      const startButton = document.getElementById('start');
+
+      startButton.addEventListener('click', async () => {
+        if (!psg) {
+          var audioctx = new AudioContext();
+          await audioctx.audioWorklet.addModule("./psg.js");
+          psg = new AudioWorkletNode(audioctx, "PSG", {
+            processorOptions: {
+              wasmBinary: psgBin,
+              sampleRate: audioctx.sampleRate,
+              clock: 3580000
+            }
+          });
+
+          psg.port.onmessage = function (e) {
+            console.log(e.data);
+          };
+
+          psg.port.postMessage({
+            message: 'writeReg', reg: 8, value: 31
+          });
+
+          psg.port.postMessage({
+            message: 'writeReg', reg: 9, value: 31
+          });
+
+          psg.port.postMessage({
+            message: 'writeReg', reg: 0, value: 0x32
+          });
+
+          psg.port.postMessage({
+            message: 'writeReg', reg: 1, value: 0x01
+          });
+
+          psg.port.postMessage({
+            message: 'writeReg', reg: 2, value: 0x5d
+          });
+
+          psg.port.postMessage({
+            message: 'writeReg', reg: 3, value: 0x1
+          });
+
+          psg.port.postMessage({
+            message: 'writeReg', reg: 4, value: 0x5d
+          });
+
+          psg.port.postMessage({
+            message: 'writeReg', reg: 5, value: 0x3
+          });
+
+          var vol = new GainNode(audioctx, { gain: 0.5 });
+          psg.connect(vol).connect(audioctx.destination);
+        }
+        if(!play) {
+          play = true;
+          psg.port.postMessage({
+            message: 'writeReg', reg: 7, value: 0x3f
+          });
+          startButton.innerText = 'stop';
+        } else {
+          play = false;
+          psg.port.postMessage({
+            message: 'writeReg', reg: 7, value: 0x38
+          });
+          startButton.innerText = 'play';
+        }
+      });
+
+
+      startButton.removeAttribute('disabled');
     });
-
-
-
-  });
   </script>
 </body>
+
 </html>

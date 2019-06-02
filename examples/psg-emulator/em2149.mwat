@@ -19,7 +19,7 @@ i32 regmsk[16] = [
    0x02, 0x02, 0x03, 0x03, 0x05, 0x05, 0x07, 0x07, 0x0B, 0x0B, 0x0F, 0x0F,
    0x16, 0x16, 0x1F, 0x1F, 0x2D, 0x2D, 0x3F, 0x3F, 0x5A, 0x5A, 0x7F, 0x7F,
    0xB4, 0xB4, 0xFF, 0xFF];
-    i32 reg[0x20];
+    i32 reg[0x10];
     i32 voltbl;
     i32 out;
 
@@ -82,35 +82,18 @@ i32 regmsk[16] = [
   (export "mixOutput" (func $mix_output))
   (export "calc" (func $calc))
   (export "reset" (func $reset))
-  (export "writereg" (func $write_reg))
+  (export "writeReg" (func $write_reg))
   (export "memory" (memory $memory))
   (memory $memory 1 )
 {@map
   PSG psg;
-  float OutputBuffer[1024];
+  i32 OutputBuffer[1024];
 }
   (func $internal_refresh
     (if
       ;; condition
-      (i32.eqz (i32.load (&psg.quality;)))
-      (then
-        (i32.store
-          (&psg.base_incr;)
-          (i32.wrap_i64 
-            (i64.div_u 
-              (i64.mul 
-                (i64.extend_i32_u (i32.load (&psg.clk;)))
-                (i64.const {$ 1 << $.GETA_BITS})
-              )
-              (i64.shl
-                (i64.extend_i32_u (i32.load (&psg.rate;)))
-                (i64.const 4)
-              )
-            )
-          )
-        )
-      )
-      (else 
+      (i32.load (&psg.quality;))
+      (then 
         (i32.store (&psg.base_incr;) (i32.const {$ 1 << $.GETA_BITS}))
         (i32.store 
           (&psg.realstep;)
@@ -128,17 +111,40 @@ i32 regmsk[16] = [
         )
         (i32.store (&psg.psgtime;) (i32.const 0))
       )
+      (else
+        (i32.store
+          (&psg.base_incr;)
+          (i32.trunc_f64_u 
+            (f64.div 
+              (f64.mul 
+                (f64.convert_i32_u (i32.load (&psg.clk;)))
+                (f64.const {$ 1 << $.GETA_BITS})
+              )
+              (f64.mul
+                (f64.convert_i32_u (i32.load (&psg.rate;)))
+                (f64.const 16)
+              )
+            )
+          )
+        )
+      )
+
     )
   )
 
   (func $set_rate (param $r i32) 
-    (i32.store (&psg.rate;) (local.get $r))
+    (i32.store (&psg.rate;) 
+     (select (local.get $r) (i32.const 44100) (local.get $r))
+    )
     (call $internal_refresh)
   )
 
   
   (func $set_quality (param $q i32)
-    (i32.store (&psg.quality;) (local.get $q))
+    (i32.store 
+      (&psg.quality;)
+      (local.get $q)
+    )
     (call $internal_refresh)
   )
 
@@ -250,7 +256,7 @@ i32 regmsk[16] = [
     (i32.load
       (i32.add 
         (&psg.reg;)
-        (i32.shl (local.get $reg) (i32.const {$ Math.log2($.psg.adr[$attributes].size) | 0 }))      
+        (i32.shl (local.get $reg) (@psg.reg;))      
       )
     )
   )
@@ -307,7 +313,7 @@ i32 regmsk[16] = [
         )
         (if (i32.eqz (i32.load (&psg.env_pause;)))
           (then
-            (if (i32.gt_u (i32.load (&psg.env_face;)) (i32.const 0) )
+            (if (i32.load (&psg.env_face;))
               (then
                 (i32.store 
                   (&psg.env_ptr;)
@@ -341,7 +347,7 @@ i32 regmsk[16] = [
           (i32.and (i32.load (&psg.env_ptr;)) (i32.const 0x20))
           (then
             (if 
-              (i32.or (i32.load (&psg.env_continue;)) (i32.const 0))
+              (i32.load (&psg.env_continue;))
               (then
                 (if
                   (i32.xor 
@@ -358,7 +364,7 @@ i32 regmsk[16] = [
                   )
                 )
                 (if
-                  (i32.or (i32.load (&psg.env_hold;)) (i32.const 0))
+                  (i32.load (&psg.env_hold;))
                   (then
                     (i32.store (&psg.env_pause;) (i32.const 1))
                   )
@@ -368,7 +374,7 @@ i32 regmsk[16] = [
                   (select
                     (i32.const 0)
                     (i32.const 0x1f)
-                    (i32.or (i32.load (&psg.env_face;)) (i32.const 0))
+                    (i32.load (&psg.env_face;))
                   )
                 )
               )
@@ -419,7 +425,7 @@ i32 regmsk[16] = [
         (i32.store 
             (&psg.noise_seed;)
             (i32.shr_u 
-              (&psg.noise_seed;)
+              (i32.load (&psg.noise_seed;))
               (i32.const 1)
             )
         )
@@ -430,7 +436,7 @@ i32 regmsk[16] = [
             (select 
               (i32.load (&psg.noise_freq;))
               (i32.const 2)
-              (i32.or (i32.load (&psg.noise_freq;)) (i32.const 0))
+              (i32.load (&psg.noise_freq;))
             )
           )
         )
@@ -445,10 +451,14 @@ i32 regmsk[16] = [
     )
 
     ;; Tone
-    (local.set $i (i32.const 2))
+    (local.set $i (i32.const 3))
     (block $tone_exit
       (loop $tone_loop
         (br_if $tone_exit (i32.eqz (local.get $i)))
+        (local.set $i
+          (i32.sub (local.get $i) (i32.const 1))
+        )
+
         (local.set $offset
             (i32.shl
               (local.get $i)
@@ -494,7 +504,7 @@ i32 regmsk[16] = [
               (then
                 (i32.store
                   (i32.add 
-                    (&psg.freq;)
+                    (&psg.edge;)
                     (local.get $offset)
                   )
                   (i32.xor
@@ -504,7 +514,7 @@ i32 regmsk[16] = [
                         (local.get $offset)
                       )
                     )
-                    (i32.const 0xffff_ffff )
+                    (i32.const 0xff )
                   )
                 )
                 (i32.store
@@ -541,35 +551,24 @@ i32 regmsk[16] = [
             )
           )
         )
+
+
+        
+       
         (if
-          (i32.and
-            (i32.load (&psg.mask;))
-            (i32.shl (i32.const 1) (local.get $i))
-          )
-          (then
-            (local.set $i
-              (i32.sub
-                (local.get $i)
-                (i32.const 1)
-              )
-            )
-            (br $tone_loop)
-          )
-        )
-        (if
-          (i32.and
+          (i32.or
             (i32.or
-              (i32.load (i32.add (&psg.tmask;) (local.get $offset)))
+              (i32.eqz (i32.load (i32.add (&psg.tmask;) (local.get $offset))))
               (i32.load (i32.add (&psg.edge;) (local.get $offset)))
             )
             (i32.or
-              (i32.load (i32.add (&psg.nmask;) (local.get $offset)))
+              (i32.eqz (i32.load (i32.add (&psg.nmask;) (local.get $offset))))
               (local.get $noise)
             )
           )
           (then
             (if
-              (i32.xor 
+              (i32.eqz 
                 (i32.and
                   (i32.load
                     (i32.add 
@@ -579,7 +578,6 @@ i32 regmsk[16] = [
                   )
                   (i32.const 32)
                 )
-                (i32.const 0xffff_ffff)
               )
               (then
                 (i32.store
@@ -588,22 +586,27 @@ i32 regmsk[16] = [
                     (local.get $offset)
                   )
                   (i32.add
-                    (i32.add
-                      (&psg.ch_out;)
-                      (local.get $offset)
+                    (i32.load 
+                      (i32.add
+                        (&psg.ch_out;)
+                        (local.get $offset)
+                      )
                     )
                     (i32.shl
                       (i32.load
                         (i32.add
                           (i32.load (&psg.voltbl;))
-                          (i32.and 
-                            (i32.load
-                              (i32.add
-                                (&psg.volume;)
-                                (local.get $offset)
+                          (i32.shl
+                            (i32.and 
+                              (i32.load
+                                (i32.add
+                                  (&psg.volume;)
+                                  (local.get $offset)
+                                )
                               )
+                              (i32.const 31)
                             )
-                            (i32.const 31)
+                            (@psg.voltbl;)
                           )
                         )
                       )
@@ -629,7 +632,10 @@ i32 regmsk[16] = [
                       (i32.load
                         (i32.add 
                           (i32.load (&psg.voltbl;))
-                          (i32.load (&psg.env_ptr;))
+                          (i32.shl 
+                            (i32.load (&psg.env_ptr;))
+                            (@psg.voltbl_;)
+                          )
                         )
                       )
                       (i32.const 4)
@@ -657,11 +663,6 @@ i32 regmsk[16] = [
             (i32.const 1)
           )
         )
-
-        (local.set $i
-          (i32.sub (local.get $i) (i32.const 1))
-        )
-
         (br $tone_loop)
       )
     )
@@ -691,7 +692,9 @@ i32 regmsk[16] = [
     )
     (block $rate_loop_exit
       (loop $rate_loop
-        (br_if $rate_loop_exit (i32.le_u (i32.load(&psg.realstep;) (i32.load(&psg.psgtime;)))))
+        (br_if $rate_loop_exit 
+          (i32.le_u (i32.load(&psg.realstep;)) (i32.load(&psg.psgtime;)))
+        )
         (i32.store
           (&psg.psgtime;)
           (i32.add
@@ -700,6 +703,7 @@ i32 regmsk[16] = [
           )
         )
         call $update_output
+        (br $rate_loop)
       )
     )
     (i32.store
@@ -721,10 +725,10 @@ i32 regmsk[16] = [
     )
     (local.set $reg_offset
       (i32.add 
-        (&psg.regmsk;) 
+        (&psg.regmsk;)
         (i32.shl 
           (local.get $reg)
-          (i32.const {$ Math.log2($.psg.regmsk[$attributes].size) | 0 })
+          (@psg.regmsk;)
         )
       )
     )
@@ -736,7 +740,13 @@ i32 regmsk[16] = [
     )
 
     (i32.store
-      (local.get $reg_offset)
+      (i32.add 
+        (&psg.reg;)
+        (i32.shl 
+          (local.get $reg)
+          (@psg.reg;)
+        )
+      )
       (i32.and
         (local.get $val)
         (i32.const 0xff)
@@ -844,6 +854,7 @@ i32 regmsk[16] = [
             return
           )
           ;; reg 7
+          ;;(local.set $val (i32.xor (i32.const 0xff) (local.get $val)))
           (i32.store (&psg.tmask[0];) (i32.and (local.get $val) (i32.const 1)))
           (i32.store (&psg.tmask[1];) (i32.and (local.get $val) (i32.const 2)))
           (i32.store (&psg.tmask[2];) (i32.and (local.get $val) (i32.const 4)))
@@ -870,7 +881,7 @@ i32 regmsk[16] = [
       ;; reg 0-5
       (local.set $c 
         (i32.shr_u
-          (local.get $c)
+          (local.get $reg)
           (i32.const 1)
         )
       )

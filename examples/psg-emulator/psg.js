@@ -1,7 +1,41 @@
 class PSG extends AudioWorkletProcessor {
-  constructor(){
+  constructor(options){
     super();
+    this.options = options;
+    if(options.processorOptions){
+      const userOptions = options.processorOptions;
+      
+      (!userOptions.clock) && (userOptions.clock = 3580000);
+      (!userOptions.sampleRate) && (userOptions.sampleRate = 44100);
+
+      if(userOptions.wasmBinary){
+        const module = new WebAssembly.Module(userOptions.wasmBinary);
+        const instance = new WebAssembly.Instance(module, {});
+        this.module = instance.exports;
+        this.module.init(userOptions.clock,userOptions.sampleRate);
+        this.enable = true;
+
+        this.port.onmessage = (event)=>{
+          if(this.enable){
+            const message = event.data;
+            switch(message.message){
+              case 'writeReg':
+                this.module.writeReg(message.reg,message.value);
+                this.port.postMessage({
+                  check:this.module.readReg(message.reg) == message.value,
+                  value:message.value,
+                  read:this.module.readReg(message.reg),
+                  reg:message.reg
+                });
+                break;
+            }
+          }
+        }        
+      }
+    }
+  
   }
+
 
 /*  static get parameterDescriptors () {
       return [{
@@ -12,28 +46,23 @@ class PSG extends AudioWorkletProcessor {
           automationRate: "k-rate"
       }];
   }*/
-  
-  onmessage(event){
-    const module = new WebAssembly.Module(event.data);
-    const instance = new WebAssembly.Instance(module, {});
-    this.module = instance.exports;
-  }
+
+
+
+
   process (inputs, outputs, parameters) {
       if(this.enable){
+        let input = inputs[0];
+        let output = outputs[0];
+        for (let i = 0,e = output[0].length; i < e; ++i) {
 
+          const out = this.module.calc() / 8192.0;
+
+          for (let channel = 0; channel < output.length; ++channel) {
+              output[channel][i] = out;
+          }
+        }
       }
-      // let input = inputs[0];
-      // let output = outputs[0];
-      // let drv = Math.pow(0.05,Math.abs(parameters.drive[0]));
-      // for (let channel = 0; channel < output.length; ++channel) {
-      //     for (let i = 0; i < output[channel].length; ++i) {
-      //         var d=input[channel][i];
-      //         if(d<0)
-      //             output[channel][i]=-Math.pow(-d,drv);
-      //         else
-      //             output[channel][i]=Math.pow(d,drv);
-      //     }
-      // }
       return true;
   }
 }
