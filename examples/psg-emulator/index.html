@@ -39,7 +39,7 @@
         psg.writeReg(3, 0x1);
         psg.writeReg(4, 0x5d);
         psg.writeReg(5, 0x2);
-        psg.writeReg(7, 0x3e);
+        psg.writeReg(7, 0x38);
         for(let i = 0;i < 256;++i){
           console.log(psg.calc());
         }
@@ -103,13 +103,13 @@
         if(!play) {
           play = true;
           psg.port.postMessage({
-            message: 'writeReg', reg: 7, value: 0x3f
+            message: 'writeReg', reg: 7, value: 0x38
           });
           startButton.innerText = 'stop';
         } else {
           play = false;
           psg.port.postMessage({
-            message: 'writeReg', reg: 7, value: 0x38
+            message: 'writeReg', reg: 7, value: 0x3f
           });
           startButton.innerText = 'play';
         }

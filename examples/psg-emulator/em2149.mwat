@@ -717,25 +717,24 @@ i32 regmsk[16] = [
     call $mix_output
   )
 
-  (func $write_reg (param $reg i32) (param $val i32) (local $c i32) (local $reg_offset i32) (local $w i32)
+  (func $write_reg (param $reg i32) (param $val i32) (local $c i32) (local $w i32)
     (if (i32.gt_u (local.get $reg) (i32.const 15))
       (then
         return
       )
     )
-    (local.set $reg_offset
-      (i32.add 
-        (&psg.regmsk;)
-        (i32.shl 
-          (local.get $reg)
-          (@psg.regmsk;)
-        )
-      )
-    )
     (local.set $val
       (i32.and
         (local.get $val)
-        (i32.load (local.get $reg_offset))
+        (i32.load 
+          (i32.add 
+            (&psg.regmsk;)
+            (i32.shl 
+              (local.get $reg)
+              (@psg.regmsk;)
+            )
+          )
+        )
       ) 
     )
 
@@ -747,12 +746,8 @@ i32 regmsk[16] = [
           (@psg.reg;)
         )
       )
-      (i32.and
-        (local.get $val)
-        (i32.const 0xff)
-      )
+      (local.get $val)
     )
-
     
     (block $default
       (br_if $default (i32.gt_u (local.get $reg) (i32.const 13))) 

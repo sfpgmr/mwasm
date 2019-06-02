@@ -56,7 +56,7 @@ class PSG extends AudioWorkletProcessor {
         let output = outputs[0];
         for (let i = 0,e = output[0].length; i < e; ++i) {
 
-          const out = this.module.calc() / 8192.0;
+          const out = this.module.calc() / 16384;
 
           for (let channel = 0; channel < output.length; ++channel) {
               output[channel][i] = out;
