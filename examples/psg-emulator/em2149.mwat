@@ -556,14 +556,18 @@ i32 regmsk[16] = [
         
        
         (if
-          (i32.or
-            (i32.or
-              (i32.eqz (i32.load (i32.add (&psg.tmask;) (local.get $offset))))
-              (i32.load (i32.add (&psg.edge;) (local.get $offset)))
+          (i32.and
+            (select (i32.const 1) (i32.const 0) 
+              (i32.or
+                (i32.load (i32.add (&psg.tmask;) (local.get $offset)))
+                (i32.load (i32.add (&psg.edge;) (local.get $offset)))
+              )
             )
-            (i32.or
-              (i32.eqz (i32.load (i32.add (&psg.nmask;) (local.get $offset))))
-              (local.get $noise)
+            (select (i32.const 1) (i32.const 0)
+              (i32.or
+                (i32.load (i32.add (&psg.nmask;) (local.get $offset)))
+                (local.get $noise)
+              )
             )
           )
           (then
