@@ -799,7 +799,7 @@ i32 regmsk[16] = [
                 )
                 (i32.store
                   (&psg.env_face;) 
-                  (i32.load (&psg.env_face;)) 
+                  (i32.load (&psg.env_attack;)) 
                 )
                 (i32.store
                   (&psg.env_pause;) 
