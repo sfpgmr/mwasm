@@ -231,6 +231,7 @@ i32 regmsk[16] = [
     )
 
     (i32.store (&psg.adr;) (i32.const 0))
+    (i32.store (&psg.noise_seed;) (i32.const 0xffff))
     (i32.store (&psg.noise_count;) (i32.const 0x40))
     (i32.store (&psg.noise_freq;) (i32.const 0))
 
@@ -432,7 +433,7 @@ i32 regmsk[16] = [
         (i32.store
           (&psg.noise_count;)
           (i32.sub 
-            (&psg.noise_count;)
+            (i32.load (&psg.noise_count;))
             (select 
               (i32.load (&psg.noise_freq;))
               (i32.const 2)
@@ -514,7 +515,7 @@ i32 regmsk[16] = [
                         (local.get $offset)
                       )
                     )
-                    (i32.const 0xff )
+                    (i32.const 0xffff_ffff )
                   )
                 )
                 (i32.store

@@ -16,6 +16,7 @@
       {
         let psg = (await WebAssembly.instantiateStreaming(fetch('./em2149.wasm'))).instance.exports;
         psg.init(3580000, 44100);
+        psg.reset();
         psg.setRate(44100);
         psg.setQuality(1);
         psg.setVolumeMode(1);
@@ -39,7 +40,8 @@
         psg.writeReg(3, 0x1);
         psg.writeReg(4, 0x5d);
         psg.writeReg(5, 0x2);
-        psg.writeReg(7, 0x38);
+        psg.writeReg(7, 0b110111);
+        psg.writeReg(6, 0x10);
         for(let i = 0;i < 256;++i){
           console.log(psg.calc());
         }
@@ -57,7 +59,7 @@
             processorOptions: {
               wasmBinary: psgBin,
               sampleRate: audioctx.sampleRate,
-              clock: 3580000
+              clock: 17900000
             }
           });
 
@@ -97,13 +99,26 @@
             message: 'writeReg', reg: 5, value: 0x3
           });
 
+          psg.port.postMessage({
+            message: 'writeReg', reg: 6, value: 0x1f
+          });
+
           var vol = new GainNode(audioctx, { gain: 0.5 });
           psg.connect(vol).connect(audioctx.destination);
         }
         if(!play) {
           play = true;
           psg.port.postMessage({
-            message: 'writeReg', reg: 7, value: 0x38
+            message: 'writeReg', reg: 7, value: 0b00110110
+          });
+          psg.port.postMessage({
+            message: 'writeReg', reg: 8, value: 0b0010000
+          });
+          psg.port.postMessage({
+            message: 'writeReg', reg: 12, value: 10
+          });
+          psg.port.postMessage({
+            message: 'writeReg', reg: 13, value: 0b0011
           });
           startButton.innerText = 'stop';
         } else {

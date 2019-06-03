@@ -13,6 +13,7 @@ class PSG extends AudioWorkletProcessor {
         const instance = new WebAssembly.Instance(module, {});
         this.module = instance.exports;
         this.module.init(userOptions.clock,userOptions.sampleRate);
+        this.module.reset();
         this.enable = true;
 
         this.port.onmessage = (event)=>{
