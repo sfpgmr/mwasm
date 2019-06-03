@@ -15,6 +15,8 @@ set stal=2
 tabnew
 tabnew
 tabnew
+tabnew
+tabnew
 tabrewind
 edit examples/psg-emulator/em2149.mwat
 set splitbelow splitright
@@ -35,11 +37,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 85 - ((42 * winheight(0) + 29) / 59)
+let s:l = 121 - ((57 * winheight(0) + 29) / 59)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-85
+121
 normal! 034|
 lcd ~/mwasm
 tabnext
@@ -89,11 +91,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+let s:l = 374 - ((58 * winheight(0) + 29) / 59)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+374
 normal! 0
 lcd ~/mwasm
 tabnext
@@ -116,19 +118,76 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+let s:l = 623 - ((25 * winheight(0) + 29) / 59)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+623
+normal! 075|
+lcd ~/mwasm
+tabnext
+edit ~/mwasm/examples/psg-emulator/test.mjs
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 19 - ((18 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+19
+normal! 032|
+lcd ~/mwasm
+tabnext
+edit ~/mwasm/examples/psg-emulator/index.html
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 36 - ((35 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+36
 normal! 0
 lcd ~/mwasm
-tabnext 1
+tabnext 5
 set stal=1
-badd +1 ~/mwasm/examples/psg-emulator/em2149.mwat
+badd +0 ~/mwasm/examples/psg-emulator/em2149.mwat
 badd +1 ~/emu2149/emu2149.h
-badd +0 ~/emu2149/emu2149.c
-badd +0 ~/mwasm/lib/index.mjs
+badd +1 ~/emu2149/emu2149.c
+badd +1 ~/mwasm/lib/index.mjs
+badd +10 ~/mwasm/examples/psg-emulator/test.js
+badd +0 ~/mwasm/examples/psg-emulator/test.mjs
+badd +0 ~/mwasm/examples/psg-emulator/index.html
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -140,6 +199,7 @@ if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
