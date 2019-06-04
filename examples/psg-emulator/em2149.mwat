@@ -521,7 +521,7 @@ i32 regmsk[16] = [
                         (local.get $offset)
                       )
                     )
-                    (i32.const 0xffff_ffff )
+                    (i32.const 0x1 )
                   )
                 )
                 (i32.store

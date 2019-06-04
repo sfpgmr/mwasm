@@ -10,7 +10,6 @@ function getInstance(obj, imports = {}) {
   const psg = getInstance(await fs.promises.readFile('./em2149.wasm')).exports;
   psg.init(1790000, 22050);
   psg.reset();
-  psg.setRate(44100);
   psg.setQuality(1);
   psg.setVolumeMode(1);
 
@@ -22,7 +21,7 @@ function getInstance(obj, imports = {}) {
   psg.writeReg(5, 0x2);
   psg.writeReg(7, 0b111110);
   psg.writeReg(6, 0x10);
-  psg.writeReg(13, 0b0001);
+  psg.writeReg(13, 0b1001);
   psg.writeReg(11, 100);
   psg.writeReg(8, 0b01000);
 
