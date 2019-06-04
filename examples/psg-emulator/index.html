@@ -33,15 +33,17 @@
           console.log(i, psg.readReg(i), i == psg.readReg(i));
         }
         debugger;
-        psg.writeReg(8, 31);
         psg.writeReg(0, 0x5d);
         psg.writeReg(1, 0xd);
         psg.writeReg(2, 0x5d);
         psg.writeReg(3, 0x1);
         psg.writeReg(4, 0x5d);
         psg.writeReg(5, 0x2);
-        psg.writeReg(7, 0b110111);
         psg.writeReg(6, 0x10);
+        psg.writeReg(12, 10);
+        psg.writeReg(13, 0b1001);
+        psg.writeReg(8, 0b10000);
+        psg.writeReg(7, 0b111110);
         for(let i = 0;i < 256;++i){
           console.log(psg.calc());
         }
@@ -109,16 +111,16 @@
         if(!play) {
           play = true;
           psg.port.postMessage({
-            message: 'writeReg', reg: 7, value: 0b00110110
-          });
-          psg.port.postMessage({
             message: 'writeReg', reg: 8, value: 0b0010000
           });
           psg.port.postMessage({
-            message: 'writeReg', reg: 12, value: 10
+            message: 'writeReg', reg: 11, value: 0b1011
           });
           psg.port.postMessage({
-            message: 'writeReg', reg: 13, value: 0b0011
+            message: 'writeReg', reg: 13, value: 0b0001
+          });
+          psg.port.postMessage({
+            message: 'writeReg', reg: 7, value: 0b00110110
           });
           startButton.innerText = 'stop';
         } else {

@@ -163,7 +163,13 @@ i32 regmsk[16] = [
   )
   
   (func $set_volume_mode (param $type i32)
-    (i32.store (&psg.voltbl;) (i32.add (&psg.voltbl_;) (i32.shl (local.get $type) (i32.const 5))))
+    (i32.store 
+      (&psg.voltbl;) 
+      (i32.add 
+        (&psg.voltbl_;) 
+        (i32.shl (local.get $type) (@psg.voltbl + 5;))
+      )
+    )
   )
 
   (func $set_mask (param $mask i32) (result i32)
@@ -843,7 +849,7 @@ i32 regmsk[16] = [
                 (&psg.volume;)
                 (i32.shl 
                   (i32.sub (local.get $reg) (i32.const 8)) 
-                  (i32.const {$ Math.log2($.psg.volume[$attributes].size) | 0 })
+                  (@psg.volume;)
                 )
               )
               (i32.shl
