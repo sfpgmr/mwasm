@@ -21,9 +21,9 @@ function getInstance(obj, imports = {}) {
   psg.writeReg(5, 0x2);
   psg.writeReg(7, 0b111110);
   psg.writeReg(6, 0x10);
-  psg.writeReg(13, 0b0001);
+  psg.writeReg(13, 0b1001);
   psg.writeReg(11,150);
-  psg.writeReg(12,1);
+  psg.writeReg(12,0);
   psg.writeReg(8, 0b010000);
 
   for (let i = 0; i < 65536; ++i) {
