@@ -40,7 +40,7 @@
         psg.writeReg(4, 0x5d);
         psg.writeReg(5, 0x2);
         psg.writeReg(6, 0x10);
-        psg.writeReg(12, 10);
+        psg.writeReg(12, 2);
         psg.writeReg(13, 0b1001);
         psg.writeReg(8, 0b10000);
         psg.writeReg(7, 0b111110);
@@ -111,16 +111,19 @@
         if(!play) {
           play = true;
           psg.port.postMessage({
-            message: 'writeReg', reg: 8, value: 0b0010000
+            message: 'writeReg', reg: 8, value: 0b10000
           });
           psg.port.postMessage({
             message: 'writeReg', reg: 11, value: 0b1011
           });
           psg.port.postMessage({
-            message: 'writeReg', reg: 13, value: 0b0001
+            message: 'writeReg', reg: 12, value: 2
           });
           psg.port.postMessage({
-            message: 'writeReg', reg: 7, value: 0b00110110
+            message: 'writeReg', reg: 13, value: 0b1001
+          });
+          psg.port.postMessage({
+            message: 'writeReg', reg: 7, value: 0b00111110
           });
           startButton.innerText = 'stop';
         } else {

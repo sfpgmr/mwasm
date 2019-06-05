@@ -240,7 +240,7 @@
               (i32.le_u (i32.load16_u (local.get $offset)) (i32.const 0x46))
             )
             (then
-              (i32.sub(i32.load16_u (local.get $offset)) (i32.const 35))
+              (i32.sub(i32.load16_u (local.get $offset)) (i32.const 55))
             )
             (else 
               (if (result i32)

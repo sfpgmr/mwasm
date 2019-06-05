@@ -6120,6 +6120,7 @@ var index = async () => {
     process.chdir(chdir);
 
     const preprocessedSourceText = context.preprocess(startInput);
+
     await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.context.json', JSON.stringify(context.context, null, 2), 'utf-8');
     await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.wat', preprocessedSourceText, 'utf-8');
     process.chdir(backup);
