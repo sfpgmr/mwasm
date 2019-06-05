@@ -23,11 +23,16 @@ function getInstance(obj, imports = {}) {
   psg.writeReg(6, 0x10);
   psg.writeReg(13, 0b1001);
   psg.writeReg(11,150);
-  psg.writeReg(12,0);
+  psg.writeReg(12,2);
   psg.writeReg(8, 0b010000);
 
-  for (let i = 0; i < 65536; ++i) {
-    console.log(psg.calc());
+  const v = new DataView(psg.memory.buffer);
+  function p(o,l='',r=16){
+    return l+(v.getUint32(o,true)).toString(r);
+  }
+  for (let i = 0; i < 4096; ++i) {
+    console.log(p(484,'b:',),psg.calc(),p(492,'ptr:'),p(496,'face:'),p(500,'continue:'),p(504,'attack:'),p(508,'alt:'),p(512,'hold:'),p(516,'pause::'),p(520,'reset:'),p(524,'freq:'),p(528,'count:'));
+    
   }
 })();
 
