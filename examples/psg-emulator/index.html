@@ -114,16 +114,16 @@
             message: 'writeReg', reg: 8, value: 0b10000
           });
           psg.port.postMessage({
-            message: 'writeReg', reg: 11, value: 0b1011
+            message: 'writeReg', reg: 11, value: 0xff
           });
           psg.port.postMessage({
-            message: 'writeReg', reg: 12, value: 2
+            message: 'writeReg', reg: 12, value: 0xee
           });
           psg.port.postMessage({
             message: 'writeReg', reg: 13, value: 0b1001
           });
           psg.port.postMessage({
-            message: 'writeReg', reg: 7, value: 0b00111110
+            message: 'writeReg', reg: 7, value: 0b00110110
           });
           startButton.innerText = 'stop';
         } else {

@@ -10,8 +10,8 @@ function getInstance(obj, imports = {}) {
   const psg = getInstance(await fs.promises.readFile('./em2149.wasm')).exports;
   psg.init(1790000, 4000);
   psg.reset();
-  psg.setQuality(1);
-  psg.setVolumeMode(1);
+  psg.setQuality(0);
+  psg.setVolumeMode(0);
 
   psg.writeReg(0, 0x5d);
   psg.writeReg(1, 0xd);
@@ -30,8 +30,8 @@ function getInstance(obj, imports = {}) {
   function p(o,l='',r=16){
     return l+(v.getUint32(o,true)).toString(r);
   }
-  for (let i = 0; i < 4096; ++i) {
-    console.log(p(560,"ch_out"),p(400,'base_incr:'),p(484,'b:',),psg.calc(),p(492,'ptr:'),p(496,'face:'),p(500,'continue:'),p(504,'attack:'),p(508,'alt:'),p(512,'hold:'),p(516,'pause::'),p(520,'reset:'),p(524,'freq:'),p(528,'count:'));
+  for (let i = 0; i < 65536; ++i) {
+    console.log(p(560,"ch_out:"),p(400,'ba:'),p(484,'bc:',),psg.calc(),p(492,'ptr:'),p(496,'face:'),p(500,'continue:'),p(504,'attack:'),p(508,'alt:'),p(512,'hold:'),p(516,'pause::'),p(520,'reset:'),p(524,'freq:'),p(528,'env_count:'),p(488,'volume:'));
     
   }
 })();
