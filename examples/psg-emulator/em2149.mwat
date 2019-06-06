@@ -4,7 +4,7 @@
   $.EMU2149_VOL_AY_3_8910 = 1;
   $.EMU2149_VOL_DEFAULT  =  $.EMU2149_VOL_AY_3_8910;
   $.SHIFT_BITS = 1 << $.GETA_BITS;
-  $.SHIFT_BITS_MASK = 1 << $.GETA_BITS - 1;
+  $.SHIFT_BITS_MASK = (1 << $.GETA_BITS) - 1;
 }
 
 {@struct PSG

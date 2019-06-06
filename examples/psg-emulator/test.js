@@ -31,7 +31,7 @@ function getInstance(obj, imports = {}) {
     return l+(v.getUint32(o,true)).toString(r);
   }
   for (let i = 0; i < 4096; ++i) {
-    console.log(p(484,'b:',),psg.calc(),p(492,'ptr:'),p(496,'face:'),p(500,'continue:'),p(504,'attack:'),p(508,'alt:'),p(512,'hold:'),p(516,'pause::'),p(520,'reset:'),p(524,'freq:'),p(528,'count:'));
+    console.log(p(560,"ch_out"),p(400,'base_incr:'),p(484,'b:',),psg.calc(),p(492,'ptr:'),p(496,'face:'),p(500,'continue:'),p(504,'attack:'),p(508,'alt:'),p(512,'hold:'),p(516,'pause::'),p(520,'reset:'),p(524,'freq:'),p(528,'count:'));
     
   }
 })();
