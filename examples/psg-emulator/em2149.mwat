@@ -87,7 +87,7 @@ i32 regmsk[16] = [
   (memory $memory 1 )
 {@map
   PSG psg;
-  i32 OutputBuffer[1024];
+  f32 OutputBuffer[128];
 }
   (func $internal_refresh
     (if
@@ -696,6 +696,45 @@ i32 regmsk[16] = [
   (func $calc (result i32)
     (if (i32.eqz (i32.load (&psg.quality;)))
       (then
+        call $update_output
+        call $mix_output
+        return
+      )
+    )
+    (block $rate_loop_exit
+      (loop $rate_loop
+        (br_if $rate_loop_exit 
+          (i32.le_u (i32.load(&psg.realstep;)) (i32.load(&psg.psgtime;)))
+        )
+        (i32.store
+          (&psg.psgtime;)
+          (i32.add
+            (i32.load(&psg.psgtime;))
+            (i32.load(&psg.psgstep;))
+          )
+        )
+        call $update_output
+        (br $rate_loop)
+      )
+    )
+    (i32.store
+      (&psg.psgtime;)
+      (i32.sub
+        (i32.load(&psg.psgtime;))
+        (i32.load(&psg.realstep;))
+      )
+    )
+
+    call $mix_output
+  )
+
+  (func $calc2 (param $numOfSamples i32)(result i32)
+    (if (i32.eqz (i32.load (&psg.quality;)))
+      (then
+        (block $loop-normal-exit
+          (loop $loop-normal
+          )
+            
         call $update_output
         call $mix_output
         return

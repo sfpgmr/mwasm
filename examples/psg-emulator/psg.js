@@ -6,7 +6,7 @@ class PSG extends AudioWorkletProcessor {
       const userOptions = options.processorOptions;
       
       (!userOptions.clock) && (userOptions.clock = 3580000);
-      (!userOptions.sampleRate) && (userOptions.sampleRate = 44100);
+      (!userOptions.sampleRate) && (userOptions.sampleRate = sampleRate);
 
       if(userOptions.wasmBinary){
         const module = new WebAssembly.Module(userOptions.wasmBinary);
@@ -38,22 +38,29 @@ class PSG extends AudioWorkletProcessor {
   }
 
 
-/*  static get parameterDescriptors () {
+  static get parameterDescriptors () {
       return [{
-          name: 'drive',
+          name: 'register',
           defaultValue: 0,
           minValue: 0,
-          maxValue: 1,
-          automationRate: "k-rate"
-      }];
-  }*/
+          maxValue: 15,
+          automationRate: "a-rate"
+      },
+      {
+        name: 'value',
+        defaultValue: 0,
+        minValue: 0,
+        maxValue: 15,
+        automationRate: "a-rate"
+      }
+    ];
+  }
 
 
 
 
   process (inputs, outputs, parameters) {
       if(this.enable){
-        let input = inputs[0];
         let output = outputs[0];
         for (let i = 0,e = output[0].length; i < e; ++i) {
 
