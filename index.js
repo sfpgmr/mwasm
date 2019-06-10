@@ -6107,8 +6107,8 @@ var index = async () => {
       }
     }
 
-
-    const lib = getInstance(await fs.promises.readFile('./lib/mwasm-lib.wasm')).exports;
+    const lib = getInstance(await fs.promises.readFile(__dirname + '/lib/mwasm-lib.wasm')).exports;
+    
     literalUtil = new LiteralUtil(lib);
 
     const mwasmParser = null;

@@ -841,7 +841,7 @@
   },
   "_attributes_": {
     "type": "MemoryMap",
-    "size": 4668
+    "size": 1084
   },
   "psg": {
     "_attributes_": {
@@ -1684,9 +1684,9 @@
   "OutputBuffer": {
     "_attributes_": {
       "type": "PrimitiveType",
-      "varType": "i32",
+      "varType": "f32",
       "size": 4,
-      "integer": true,
+      "integer": false,
       "unsigned": false,
       "start": {
         "offset": 2210,
@@ -1700,7 +1700,7 @@
       },
       "offset": 572,
       "initData": null,
-      "num": 1024,
+      "num": 128,
       "log2": 2
     }
   }
