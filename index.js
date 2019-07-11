@@ -2237,7 +2237,7 @@ function peg$parse(input, options) {
           s4 = peg$parseNumber();
           if (s4 !== peg$FAILED) {
             peg$savedPos = s2;
-            s3 = peg$c110(s1, s4);
+            s3 = peg$c110();
             s2 = s3;
           } else {
             peg$currPos = s2;
@@ -2391,7 +2391,7 @@ function peg$parse(input, options) {
             s5 = peg$parseHexNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c110(s1, s5);
+              s4 = peg$c110();
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -2549,7 +2549,7 @@ function peg$parse(input, options) {
             s5 = peg$parseBinaryNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c110(s1, s5);
+              s4 = peg$c110();
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -5738,14 +5738,15 @@ var index = async () => {
     const wabt_ = wabt();
 
     class Context {
-      constructor(preprocessParser$$1, mwasmParser) {
-        this.preprocessParser = preprocessParser$$1;
+      constructor(preprocessParser, mwasmParser) {
+        this.preprocessParser = preprocessParser;
         this.mwasmParser = mwasmParser;
         this.includeFileTree = { parent: null, childs: {} };
         this.path = path;
         this.require = require;
         this.pathStack = [];
         this.context = {};
+        this.startOffset = 0;
       }
 
       readSourceFile(srcPath) {
@@ -6002,11 +6003,11 @@ var index = async () => {
                       // Native Type
                       const initData = def.initData ? this.makeDataString(def, num) : null;
                       c = currentContext[def.id.id] = {
-                        [$attributes]: Object.assign(clone(def.varType), { offset: offset, initData: initData })
+                        [$attributes]: Object.assign(clone(def.varType), { offset: offset + this.startOffset, initData: initData })
                       };
 
                       if (!structDefinition && initData) {
-                        opts.preprocessed.push(`(data (i32.const ${offset}) "${initData}")`);
+                        opts.preprocessed.push(`(data (i32.const ${offset + this.startOffset}) "${initData}")`);
                       }
 
                     } else {
@@ -6020,8 +6021,13 @@ var index = async () => {
                       }
                       const initData = def.initData ? this.makeDataString(def) : null;
                       c = currentContext[def.id.id] = Object.assign(clone(structType), {
-                        [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset, initData: initData })
+                        [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset + this.startOffset, initData: initData })
                       });
+
+                      if (!structDefinition && initData) {
+
+
+                      }
 
                       function calcStructMemberOffset(st, o) {
                         for (const m in st) {
@@ -6044,11 +6050,11 @@ var index = async () => {
                           }
                         }
                       }
-                      calcStructMemberOffset(c, offset);
+                      calcStructMemberOffset(c, offset + this.startOffset);
                     }
 
                     c[$attributes].num = num;
-                    offset += c[$attributes].size * num;
+                    offset += c[$attributes].size * num ;
                     currentContext[$attributes].size += c[$attributes].size * num;
                     c[$attributes].log2 = Math.log2(c[$attributes].size) | 0;
 
@@ -6062,6 +6068,9 @@ var index = async () => {
             case "WhiteSpace":
             case "Comment":
               // skip
+              break;
+            case "Offset":
+                this.startOffset = def.offset;
               break;
             default:
               error(`error: '${def.type}' is unrecogniezed.`);
@@ -6125,7 +6134,7 @@ var index = async () => {
     await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.wat', preprocessedSourceText, 'utf-8');
     process.chdir(backup);
 
-    let wasmModule = wabt_.parseWat(args.input, preprocessedSourceText);
+    let wasmModule = wabt_.parseWat(path.basename(args.input, '.mwat') + '.wat', preprocessedSourceText);
     wasmModule.resolveNames();
     wasmModule.validate();
     //let wasmModule = binaryen.parseText(preprocessedSourceText);
