@@ -2237,7 +2237,7 @@ function peg$parse(input, options) {
           s4 = peg$parseNumber();
           if (s4 !== peg$FAILED) {
             peg$savedPos = s2;
-            s3 = peg$c110();
+            s3 = peg$c110(s1, s4);
             s2 = s3;
           } else {
             peg$currPos = s2;
@@ -2391,7 +2391,7 @@ function peg$parse(input, options) {
             s5 = peg$parseHexNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c110();
+              s4 = peg$c110(s1, s5);
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -2549,7 +2549,7 @@ function peg$parse(input, options) {
             s5 = peg$parseBinaryNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c110();
+              s4 = peg$c110(s1, s5);
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -5738,8 +5738,8 @@ var index = async () => {
     const wabt_ = wabt();
 
     class Context {
-      constructor(preprocessParser, mwasmParser) {
-        this.preprocessParser = preprocessParser;
+      constructor(preprocessParser$$1, mwasmParser) {
+        this.preprocessParser = preprocessParser$$1;
         this.mwasmParser = mwasmParser;
         this.includeFileTree = { parent: null, childs: {} };
         this.path = path;
@@ -6024,11 +6024,6 @@ var index = async () => {
                         [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset + this.startOffset, initData: initData })
                       });
 
-                      if (!structDefinition && initData) {
-
-
-                      }
-
                       function calcStructMemberOffset(st, o) {
                         for (const m in st) {
                           if (m != $attributes) {
@@ -6070,7 +6065,8 @@ var index = async () => {
               // skip
               break;
             case "Offset":
-                this.startOffset = def.offset;
+                console.log(def.type,def.offset);
+                this.startOffset = this.eval(def.offset);
               break;
             default:
               error(`error: '${def.type}' is unrecogniezed.`);

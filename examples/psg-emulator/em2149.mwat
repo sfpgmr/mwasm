@@ -85,7 +85,7 @@ i32 regmsk[16] = [
   (export "writeReg" (func $write_reg))
   (export "memory" (memory $memory))
   (memory $memory 1 )
-{@map
+{@map offset {0x1000;};
   PSG psg;
   f32 OutputBuffer[128];
 }

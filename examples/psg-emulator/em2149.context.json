@@ -847,7 +847,7 @@
     "_attributes_": {
       "type": "StructDefinition",
       "size": 572,
-      "offset": 0,
+      "offset": "0[object Object]",
       "initData": null,
       "num": 1,
       "log2": 9
@@ -869,7 +869,7 @@
           "line": 11,
           "column": 4
         },
-        "offset": 0,
+        "offset": "00[object Object]",
         "initData": "\\ff\\00\\00\\00\\0f\\00\\00\\00\\ff\\00\\00\\00\\0f\\00\\00\\00\\ff\\00\\00\\00\\0f\\00\\00\\00\\1f\\00\\00\\00\\3f\\00\\00\\00\\1f\\00\\00\\00\\1f\\00\\00\\00\\1f\\00\\00\\00\\ff\\00\\00\\00\\ff\\00\\00\\00\\0f\\00\\00\\00\\ff\\00\\00\\00\\ff\\00\\00\\00",
         "num": 16,
         "log2": 2
@@ -892,7 +892,7 @@
           "line": 16,
           "column": 8
         },
-        "offset": 64,
+        "offset": "640[object Object]",
         "initData": "\\00\\00\\00\\00\\01\\00\\00\\00\\01\\00\\00\\00\\02\\00\\00\\00\\02\\00\\00\\00\\03\\00\\00\\00\\03\\00\\00\\00\\04\\00\\00\\00\\05\\00\\00\\00\\06\\00\\00\\00\\07\\00\\00\\00\\09\\00\\00\\00\\0b\\00\\00\\00\\0d\\00\\00\\00\\0f\\00\\00\\00\\12\\00\\00\\00\\16\\00\\00\\00\\1a\\00\\00\\00\\1f\\00\\00\\00\\25\\00\\00\\00\\2d\\00\\00\\00\\35\\00\\00\\00\\3f\\00\\00\\00\\4c\\00\\00\\00\\5a\\00\\00\\00\\6a\\00\\00\\00\\7f\\00\\00\\00\\97\\00\\00\\00\\b4\\00\\00\\00\\d6\\00\\00\\00\\ff\\00\\00\\00\\ff\\00\\00\\00\\00\\00\\00\\00\\00\\00\\00\\00\\01\\00\\00\\00\\01\\00\\00\\00\\02\\00\\00\\00\\02\\00\\00\\00\\03\\00\\00\\00\\03\\00\\00\\00\\05\\00\\00\\00\\05\\00\\00\\00\\07\\00\\00\\00\\07\\00\\00\\00\\0b\\00\\00\\00\\0b\\00\\00\\00\\0f\\00\\00\\00\\0f\\00\\00\\00\\16\\00\\00\\00\\16\\00\\00\\00\\1f\\00\\00\\00\\1f\\00\\00\\00\\2d\\00\\00\\00\\2d\\00\\00\\00\\3f\\00\\00\\00\\3f\\00\\00\\00\\5a\\00\\00\\00\\5a\\00\\00\\00\\7f\\00\\00\\00\\7f\\00\\00\\00\\b4\\00\\00\\00\\b4\\00\\00\\00\\ff\\00\\00\\00\\ff\\00\\00\\00",
         "num": 64,
         "log2": 2
@@ -915,7 +915,7 @@
           "line": 22,
           "column": 8
         },
-        "offset": 320,
+        "offset": "3200[object Object]",
         "initData": null,
         "num": 16,
         "log2": 2
@@ -938,7 +938,7 @@
           "line": 23,
           "column": 8
         },
-        "offset": 384,
+        "offset": "3840[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -961,7 +961,7 @@
           "line": 24,
           "column": 8
         },
-        "offset": 388,
+        "offset": "3880[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -984,7 +984,7 @@
           "line": 26,
           "column": 8
         },
-        "offset": 392,
+        "offset": "3920[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1007,7 +1007,7 @@
           "line": 26,
           "column": 8
         },
-        "offset": 396,
+        "offset": "3960[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1030,7 +1030,7 @@
           "line": 26,
           "column": 8
         },
-        "offset": 400,
+        "offset": "4000[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1053,7 +1053,7 @@
           "line": 26,
           "column": 8
         },
-        "offset": 404,
+        "offset": "4040[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1076,7 +1076,7 @@
           "line": 28,
           "column": 8
         },
-        "offset": 408,
+        "offset": "4080[object Object]",
         "initData": null,
         "num": 3,
         "log2": 2
@@ -1099,7 +1099,7 @@
           "line": 29,
           "column": 8
         },
-        "offset": 420,
+        "offset": "4200[object Object]",
         "initData": null,
         "num": 3,
         "log2": 2
@@ -1122,7 +1122,7 @@
           "line": 30,
           "column": 8
         },
-        "offset": 432,
+        "offset": "4320[object Object]",
         "initData": null,
         "num": 3,
         "log2": 2
@@ -1145,7 +1145,7 @@
           "line": 31,
           "column": 8
         },
-        "offset": 444,
+        "offset": "4440[object Object]",
         "initData": null,
         "num": 3,
         "log2": 2
@@ -1168,7 +1168,7 @@
           "line": 32,
           "column": 8
         },
-        "offset": 456,
+        "offset": "4560[object Object]",
         "initData": null,
         "num": 3,
         "log2": 2
@@ -1191,7 +1191,7 @@
           "line": 33,
           "column": 8
         },
-        "offset": 468,
+        "offset": "4680[object Object]",
         "initData": null,
         "num": 3,
         "log2": 2
@@ -1214,7 +1214,7 @@
           "line": 34,
           "column": 8
         },
-        "offset": 480,
+        "offset": "4800[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1237,7 +1237,7 @@
           "line": 36,
           "column": 8
         },
-        "offset": 484,
+        "offset": "4840[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1260,7 +1260,7 @@
           "line": 38,
           "column": 8
         },
-        "offset": 488,
+        "offset": "4880[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1283,7 +1283,7 @@
           "line": 39,
           "column": 8
         },
-        "offset": 492,
+        "offset": "4920[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1306,7 +1306,7 @@
           "line": 40,
           "column": 8
         },
-        "offset": 496,
+        "offset": "4960[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1329,7 +1329,7 @@
           "line": 42,
           "column": 8
         },
-        "offset": 500,
+        "offset": "5000[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1352,7 +1352,7 @@
           "line": 43,
           "column": 8
         },
-        "offset": 504,
+        "offset": "5040[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1375,7 +1375,7 @@
           "line": 44,
           "column": 8
         },
-        "offset": 508,
+        "offset": "5080[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1398,7 +1398,7 @@
           "line": 45,
           "column": 8
         },
-        "offset": 512,
+        "offset": "5120[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1421,7 +1421,7 @@
           "line": 46,
           "column": 8
         },
-        "offset": 516,
+        "offset": "5160[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1444,7 +1444,7 @@
           "line": 47,
           "column": 8
         },
-        "offset": 520,
+        "offset": "5200[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1467,7 +1467,7 @@
           "line": 49,
           "column": 8
         },
-        "offset": 524,
+        "offset": "5240[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1490,7 +1490,7 @@
           "line": 50,
           "column": 8
         },
-        "offset": 528,
+        "offset": "5280[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1513,7 +1513,7 @@
           "line": 52,
           "column": 8
         },
-        "offset": 532,
+        "offset": "5320[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1536,7 +1536,7 @@
           "line": 53,
           "column": 8
         },
-        "offset": 536,
+        "offset": "5360[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1559,7 +1559,7 @@
           "line": 54,
           "column": 8
         },
-        "offset": 540,
+        "offset": "5400[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1582,7 +1582,7 @@
           "line": 57,
           "column": 8
         },
-        "offset": 544,
+        "offset": "5440[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1605,7 +1605,7 @@
           "line": 58,
           "column": 8
         },
-        "offset": 548,
+        "offset": "5480[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1628,7 +1628,7 @@
           "line": 59,
           "column": 8
         },
-        "offset": 552,
+        "offset": "5520[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1651,7 +1651,7 @@
           "line": 62,
           "column": 8
         },
-        "offset": 556,
+        "offset": "5560[object Object]",
         "initData": null,
         "num": 1,
         "log2": 2
@@ -1674,7 +1674,7 @@
           "line": 65,
           "column": 8
         },
-        "offset": 560,
+        "offset": "5600[object Object]",
         "initData": null,
         "num": 3,
         "log2": 2
@@ -1689,16 +1689,16 @@
       "integer": false,
       "unsigned": false,
       "start": {
-        "offset": 2210,
+        "offset": 2229,
         "line": 90,
         "column": 3
       },
       "end": {
-        "offset": 2213,
+        "offset": 2232,
         "line": 90,
         "column": 6
       },
-      "offset": 572,
+      "offset": "572[object Object]",
       "initData": null,
       "num": 128,
       "log2": 2
