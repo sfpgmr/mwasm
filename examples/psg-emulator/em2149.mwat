@@ -85,11 +85,12 @@ i32 regmsk[16] = [
   (export "writeReg" (func $write_reg))
   (export "memory" (memory $memory))
   (memory $memory 1 )
-{@map offset {0x1000;};
+{@map offset 0x1000;
   PSG psg;
   f32 OutputBuffer[128];
 }
   (func $internal_refresh
+    (i32.store (&PSG.quality;) (i32.const 1))
     (if
       ;; condition
       (i32.load (&psg.quality;))
