@@ -6007,7 +6007,6 @@ var index = async () => {
                       c = currentContext[def.id.id] = {
                         [$attributes]: Object.assign(clone(def.varType), { offset: offset + this.startOffset, initData: initData })
                       };
-
                       if (!structDefinition && initData) {
                         opts.preprocessed.push(`(data (i32.const ${offset + this.startOffset}) "${initData}")`);
                       }
@@ -6158,7 +6157,16 @@ var index = async () => {
 
     const preprocessedSourceText = context.preprocess(startInput);
 
-    await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.context.json', JSON.stringify(context.context, null, 2), 'utf-8');
+    const contextJson =  JSON.stringify(context.context,
+       (k,v)=>{
+         if(k === $attributes){
+          delete v.start;
+          delete v.end;
+         } 
+         return v;
+      }
+    , 2);
+    await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.context.json', contextJson, 'utf-8');
     await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.wat', preprocessedSourceText, 'utf-8');
     process.chdir(backup);
 
