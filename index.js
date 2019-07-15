@@ -4310,9 +4310,12 @@ function peg$parse(input, options) {
         if (s4 === peg$FAILED) {
           s4 = peg$parseMemoryLabel();
           if (s4 === peg$FAILED) {
-            s4 = peg$parseComment();
+            s4 = peg$parseJSCodes();
             if (s4 === peg$FAILED) {
-              s4 = peg$parse__$();
+              s4 = peg$parseComment();
+              if (s4 === peg$FAILED) {
+                s4 = peg$parse__$();
+              }
             }
           }
         }
@@ -4323,9 +4326,12 @@ function peg$parse(input, options) {
             if (s4 === peg$FAILED) {
               s4 = peg$parseMemoryLabel();
               if (s4 === peg$FAILED) {
-                s4 = peg$parseComment();
+                s4 = peg$parseJSCodes();
                 if (s4 === peg$FAILED) {
-                  s4 = peg$parse__$();
+                  s4 = peg$parseComment();
+                  if (s4 === peg$FAILED) {
+                    s4 = peg$parse__$();
+                  }
                 }
               }
             }
@@ -5951,7 +5957,7 @@ var index = async () => {
           }
         }
         let jsSource = parsed.join('');
-         console.info(jsSource);
+         //console.info(jsSource);
         let v = this.evalExpression(jsSource);
         // console.info(v);
         return v;
@@ -6020,11 +6026,6 @@ var index = async () => {
                         [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset + this.startOffset, initData: initData })
                       });
 
-                      if (!structDefinition && initData) {
-
-
-                      }
-
                       function calcStructMemberOffset(st, o) {
                         for (const m in st) {
                           if (m != $attributes) {
@@ -6068,6 +6069,21 @@ var index = async () => {
             case "Offset":
 //                console.log(def.type,def.offset);
                 this.startOffset = this.parseOffset(def.offset);
+              break;
+            case 'CodeExpression':
+              {
+                const result = this.this.evalExpression(def.code);
+                result && opts.preprocessed.push(result);
+              }
+              return ;
+            case 'CodeWithoutReturnValue':
+              this.evalExpression(def.code);
+              break;
+            case 'Code':
+              {
+                const result = this.eval(def.code);
+                result && opts.preprocessed.push(result);
+              }
               break;
             default:
               error(`error: '${def.type}' is unrecogniezed.`);

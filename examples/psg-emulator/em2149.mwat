@@ -90,8 +90,8 @@ i32 regmsk[16] = [
   f32 OutputBuffer[128];
 }
   (func $internal_refresh
-    (i32.store (&PSG.quality;) (i32.const 1))
-    (if
+     (i32.store (i32.const 0 ) (i32.load (&PSG.clk;)))
+     (if
       ;; condition
       (i32.load (&psg.quality;))
       (then 
