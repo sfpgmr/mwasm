@@ -5690,12 +5690,14 @@ class LiteralUtil {
 
 let literalUtil;
 
+const features = {};
 var index = async () => {
 
   try {
 
     const argv = process.argv.slice(2);
     const args = {};
+
 
     // パラメータの解析
     while (argv.length > 0) {
@@ -5714,6 +5716,20 @@ var index = async () => {
           } else {
             throw new Error('出力pathが指定されていません。');
           }
+          break;
+        case '--enable-exceptions':
+        case '--enable-sign-extension':
+        case '--enable-simd':
+        case '--enable-threads':
+        case '--enable-saturating-float-to-int':
+        case '--enable-multi-value':
+        case '--enable-tail-call':
+        case '--enable-bulk-memory':
+        case '--enable-reference-types':
+        case '--enable-annotations':
+          let feature = v.replace(/\-\-enable\-/,'').replace(/\-/g,'_');
+          console.log(feature);
+          features[feature] = true;
           break;
         default:
           {
@@ -6170,9 +6186,9 @@ var index = async () => {
     await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.wat', preprocessedSourceText, 'utf-8');
     process.chdir(backup);
 
-    let wasmModule = wabt_.parseWat(path.basename(args.input, '.mwat') + '.wat', preprocessedSourceText);
+    let wasmModule = wabt_.parseWat(path.basename(args.input, '.mwat') + '.wat', preprocessedSourceText,features);
     wasmModule.resolveNames();
-    wasmModule.validate();
+    wasmModule.validate(features);
     //let wasmModule = binaryen.parseText(preprocessedSourceText);
     if (args.output) {
       let bin = wasmModule.toBinary({log:true,write_debug_names:true});
