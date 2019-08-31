@@ -5883,8 +5883,7 @@ var index = async () => {
                       size: 0
                     }
                   };
-                this.defineMember(token.defines, context, { type: token.type, structName: token.id });
-                //console.info(context);
+                  this.defineMember(token.defines, context, { type: token.type, structName: token.id });
               }
               break;
 
@@ -6029,10 +6028,10 @@ var index = async () => {
 
                     } else {
                       // Struct Type
-                      if (!def.varType.id in rootContext) {
+                      let structType = rootContext[def.varType.id];
+                      if (!structType) {
                         error(`error:Struct '${def.varType.id}' is not defined.`, def);
                       }
-                      let structType = rootContext[def.varType.id];
                       if (structType[$attributes].type != 'StructDefinition') {
                         error(`error:Struct '${def.varType.id}' is not struct type.`, def);
                       }
