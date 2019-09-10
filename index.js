@@ -2236,7 +2236,7 @@ function peg$parse(input, options) {
           s4 = peg$parseNumber();
           if (s4 !== peg$FAILED) {
             peg$savedPos = s2;
-            s3 = peg$c110();
+            s3 = peg$c110(s1, s4);
             s2 = s3;
           } else {
             peg$currPos = s2;
@@ -2390,7 +2390,7 @@ function peg$parse(input, options) {
             s5 = peg$parseHexNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c110();
+              s4 = peg$c110(s1, s5);
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -2548,7 +2548,7 @@ function peg$parse(input, options) {
             s5 = peg$parseBinaryNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c110();
+              s4 = peg$c110(s1, s5);
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -5756,8 +5756,8 @@ var index = async () => {
     const wabt_ = wabt();
 
     class Context {
-      constructor(preprocessParser, mwasmParser) {
-        this.preprocessParser = preprocessParser;
+      constructor(preprocessParser$$1, mwasmParser) {
+        this.preprocessParser = preprocessParser$$1;
         this.mwasmParser = mwasmParser;
         this.includeFileTree = { parent: null, childs: {} };
         this.path = path;
@@ -5925,7 +5925,8 @@ var index = async () => {
                       }
 
                       // 
-                      break;
+                      //break;
+                      return buildPropName(token.child);
                     case 'JSPropertyName':
                       propName += '.' + token.child.name;
                       return buildPropName(token.child);
@@ -5942,6 +5943,7 @@ var index = async () => {
                 case '&':
                   propName = '$.' + propName + '[$attributes].offset';
                   relativeOffsets.length && (propName += '+' + relativeOffsets.join('+'));
+                  console.log(propName);
                   break;
                 case '#':
                   propName = '$.' + propName + '[$attributes].size';
@@ -6045,18 +6047,19 @@ var index = async () => {
                         for (const m in st) {
                           if (m != $attributes) {
                             let att = st[m][$attributes];
+                            console.log(att.type);
                             switch (att.type) {
                               case "PrimitiveType":
-                                // console.log(att,m,att.offset,o);
                                 att.offset += o;
+                                //console.log(att,m,att.offset,o);
                                 if(att.initData){
                                   opts.preprocessed.push(`(data (i32.const ${att.offset}) "${att.initData}")`);
                                 }
                                 break;
-                              case "Struct":
+                              case "StructDefinition":
                                 att.offset += o;
-                                // console.log(att,m,att.offset,o);
-                                calcStructMemberOffset(st[m], att.offset);
+                                //console.log(att,m,att.offset,o);
+                                calcStructMemberOffset(st[m], o);
                                 break;
                             }
                           }

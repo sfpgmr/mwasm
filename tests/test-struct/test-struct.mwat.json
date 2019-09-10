@@ -1,111 +1,23 @@
 [
   {
     "type": "StructDefinition",
-    "id": "PSG",
+    "id": "A",
     "defines": [
       {
         "type": "MemoryLabel",
         "id": {
           "type": "MemoryLabelId",
-          "id": "voltbl",
+          "id": "a",
           "numExpression": null,
           "start": {
-            "offset": 47,
-            "line": 3,
-            "column": 9
+            "offset": 18,
+            "line": 2,
+            "column": 7
           },
           "end": {
-            "offset": 53,
-            "line": 3,
-            "column": 15
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 43,
-            "line": 3,
-            "column": 5
-          },
-          "end": {
-            "offset": 46,
-            "line": 3,
+            "offset": 19,
+            "line": 2,
             "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 43,
-          "line": 3,
-          "column": 5
-        },
-        "end": {
-          "offset": 54,
-          "line": 3,
-          "column": 16
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "reg",
-          "numExpression": "0x20",
-          "start": {
-            "offset": 64,
-            "line": 5,
-            "column": 9
-          },
-          "end": {
-            "offset": 73,
-            "line": 5,
-            "column": 18
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 60,
-            "line": 5,
-            "column": 5
-          },
-          "end": {
-            "offset": 63,
-            "line": 5,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 60,
-          "line": 5,
-          "column": 5
-        },
-        "end": {
-          "offset": 74,
-          "line": 5,
-          "column": 19
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "out",
-          "numExpression": null,
-          "start": {
-            "offset": 83,
-            "line": 6,
-            "column": 9
-          },
-          "end": {
-            "offset": 86,
-            "line": 6,
-            "column": 12
           }
         },
         "varType": {
@@ -115,1392 +27,26 @@
           "integer": true,
           "unsigned": false,
           "start": {
-            "offset": 79,
-            "line": 6,
-            "column": 5
+            "offset": 14,
+            "line": 2,
+            "column": 3
           },
           "end": {
-            "offset": 82,
-            "line": 6,
-            "column": 8
+            "offset": 17,
+            "line": 2,
+            "column": 6
           }
         },
         "initData": null,
         "start": {
-          "offset": 79,
-          "line": 6,
-          "column": 5
+          "offset": 14,
+          "line": 2,
+          "column": 3
         },
         "end": {
-          "offset": 87,
-          "line": 6,
-          "column": 13
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "clk",
-          "numExpression": null,
-          "start": {
-            "offset": 97,
-            "line": 8,
-            "column": 9
-          },
-          "end": {
-            "offset": 100,
-            "line": 8,
-            "column": 12
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 93,
-            "line": 8,
-            "column": 5
-          },
-          "end": {
-            "offset": 96,
-            "line": 8,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 93,
-          "line": 8,
-          "column": 5
-        },
-        "end": {
-          "offset": 127,
-          "line": 8,
-          "column": 39
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "rate",
-          "numExpression": null,
-          "start": {
-            "offset": 102,
-            "line": 8,
-            "column": 14
-          },
-          "end": {
-            "offset": 106,
-            "line": 8,
-            "column": 18
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 93,
-            "line": 8,
-            "column": 5
-          },
-          "end": {
-            "offset": 96,
-            "line": 8,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 93,
-          "line": 8,
-          "column": 5
-        },
-        "end": {
-          "offset": 127,
-          "line": 8,
-          "column": 39
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "base_incr",
-          "numExpression": null,
-          "start": {
-            "offset": 108,
-            "line": 8,
-            "column": 20
-          },
-          "end": {
-            "offset": 117,
-            "line": 8,
-            "column": 29
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 93,
-            "line": 8,
-            "column": 5
-          },
-          "end": {
-            "offset": 96,
-            "line": 8,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 93,
-          "line": 8,
-          "column": 5
-        },
-        "end": {
-          "offset": 127,
-          "line": 8,
-          "column": 39
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "quality",
-          "numExpression": null,
-          "start": {
-            "offset": 119,
-            "line": 8,
-            "column": 31
-          },
-          "end": {
-            "offset": 126,
-            "line": 8,
-            "column": 38
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 93,
-            "line": 8,
-            "column": 5
-          },
-          "end": {
-            "offset": 96,
-            "line": 8,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 93,
-          "line": 8,
-          "column": 5
-        },
-        "end": {
-          "offset": 127,
-          "line": 8,
-          "column": 39
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "count",
-          "numExpression": "3",
-          "start": {
-            "offset": 137,
-            "line": 10,
-            "column": 9
-          },
-          "end": {
-            "offset": 145,
-            "line": 10,
-            "column": 17
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 133,
-            "line": 10,
-            "column": 5
-          },
-          "end": {
-            "offset": 136,
-            "line": 10,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 133,
-          "line": 10,
-          "column": 5
-        },
-        "end": {
-          "offset": 146,
-          "line": 10,
-          "column": 18
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "volume",
-          "numExpression": "3",
-          "start": {
-            "offset": 155,
-            "line": 11,
-            "column": 9
-          },
-          "end": {
-            "offset": 164,
-            "line": 11,
-            "column": 18
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 151,
-            "line": 11,
-            "column": 5
-          },
-          "end": {
-            "offset": 154,
-            "line": 11,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 151,
-          "line": 11,
-          "column": 5
-        },
-        "end": {
-          "offset": 165,
-          "line": 11,
-          "column": 19
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "freq",
-          "numExpression": "3",
-          "start": {
-            "offset": 174,
-            "line": 12,
-            "column": 9
-          },
-          "end": {
-            "offset": 181,
-            "line": 12,
-            "column": 16
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 170,
-            "line": 12,
-            "column": 5
-          },
-          "end": {
-            "offset": 173,
-            "line": 12,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 170,
-          "line": 12,
-          "column": 5
-        },
-        "end": {
-          "offset": 182,
-          "line": 12,
-          "column": 17
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "edge",
-          "numExpression": "3",
-          "start": {
-            "offset": 191,
-            "line": 13,
-            "column": 9
-          },
-          "end": {
-            "offset": 198,
-            "line": 13,
-            "column": 16
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 187,
-            "line": 13,
-            "column": 5
-          },
-          "end": {
-            "offset": 190,
-            "line": 13,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 187,
-          "line": 13,
-          "column": 5
-        },
-        "end": {
-          "offset": 199,
-          "line": 13,
-          "column": 17
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "tmask",
-          "numExpression": "3",
-          "start": {
-            "offset": 208,
-            "line": 14,
-            "column": 9
-          },
-          "end": {
-            "offset": 216,
-            "line": 14,
-            "column": 17
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 204,
-            "line": 14,
-            "column": 5
-          },
-          "end": {
-            "offset": 207,
-            "line": 14,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 204,
-          "line": 14,
-          "column": 5
-        },
-        "end": {
-          "offset": 217,
-          "line": 14,
-          "column": 18
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "nmask",
-          "numExpression": "3",
-          "start": {
-            "offset": 226,
-            "line": 15,
-            "column": 9
-          },
-          "end": {
-            "offset": 234,
-            "line": 15,
-            "column": 17
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 222,
-            "line": 15,
-            "column": 5
-          },
-          "end": {
-            "offset": 225,
-            "line": 15,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 222,
-          "line": 15,
-          "column": 5
-        },
-        "end": {
-          "offset": 235,
-          "line": 15,
-          "column": 18
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "mask",
-          "numExpression": null,
-          "start": {
-            "offset": 244,
-            "line": 16,
-            "column": 9
-          },
-          "end": {
-            "offset": 248,
-            "line": 16,
-            "column": 13
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 240,
-            "line": 16,
-            "column": 5
-          },
-          "end": {
-            "offset": 243,
-            "line": 16,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 240,
-          "line": 16,
-          "column": 5
-        },
-        "end": {
-          "offset": 249,
-          "line": 16,
-          "column": 14
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "base_count",
-          "numExpression": null,
-          "start": {
-            "offset": 259,
-            "line": 18,
-            "column": 9
-          },
-          "end": {
-            "offset": 269,
-            "line": 18,
-            "column": 19
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 255,
-            "line": 18,
-            "column": 5
-          },
-          "end": {
-            "offset": 258,
-            "line": 18,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 255,
-          "line": 18,
-          "column": 5
-        },
-        "end": {
-          "offset": 270,
-          "line": 18,
-          "column": 20
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "env_volume",
-          "numExpression": null,
-          "start": {
-            "offset": 280,
-            "line": 20,
-            "column": 9
-          },
-          "end": {
-            "offset": 290,
-            "line": 20,
-            "column": 19
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 276,
-            "line": 20,
-            "column": 5
-          },
-          "end": {
-            "offset": 279,
-            "line": 20,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 276,
-          "line": 20,
-          "column": 5
-        },
-        "end": {
-          "offset": 291,
-          "line": 20,
-          "column": 20
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "env_ptr",
-          "numExpression": null,
-          "start": {
-            "offset": 300,
-            "line": 21,
-            "column": 9
-          },
-          "end": {
-            "offset": 307,
-            "line": 21,
-            "column": 16
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 296,
-            "line": 21,
-            "column": 5
-          },
-          "end": {
-            "offset": 299,
-            "line": 21,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 296,
-          "line": 21,
-          "column": 5
-        },
-        "end": {
-          "offset": 308,
-          "line": 21,
-          "column": 17
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "env_face",
-          "numExpression": null,
-          "start": {
-            "offset": 317,
-            "line": 22,
-            "column": 9
-          },
-          "end": {
-            "offset": 325,
-            "line": 22,
-            "column": 17
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 313,
-            "line": 22,
-            "column": 5
-          },
-          "end": {
-            "offset": 316,
-            "line": 22,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 313,
-          "line": 22,
-          "column": 5
-        },
-        "end": {
-          "offset": 326,
-          "line": 22,
-          "column": 18
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "env_continue",
-          "numExpression": null,
-          "start": {
-            "offset": 336,
-            "line": 24,
-            "column": 9
-          },
-          "end": {
-            "offset": 348,
-            "line": 24,
-            "column": 21
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 332,
-            "line": 24,
-            "column": 5
-          },
-          "end": {
-            "offset": 335,
-            "line": 24,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 332,
-          "line": 24,
-          "column": 5
-        },
-        "end": {
-          "offset": 349,
-          "line": 24,
-          "column": 22
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "env_attack",
-          "numExpression": null,
-          "start": {
-            "offset": 358,
-            "line": 25,
-            "column": 9
-          },
-          "end": {
-            "offset": 368,
-            "line": 25,
-            "column": 19
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 354,
-            "line": 25,
-            "column": 5
-          },
-          "end": {
-            "offset": 357,
-            "line": 25,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 354,
-          "line": 25,
-          "column": 5
-        },
-        "end": {
-          "offset": 369,
-          "line": 25,
-          "column": 20
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "env_alternate",
-          "numExpression": null,
-          "start": {
-            "offset": 378,
-            "line": 26,
-            "column": 9
-          },
-          "end": {
-            "offset": 391,
-            "line": 26,
-            "column": 22
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 374,
-            "line": 26,
-            "column": 5
-          },
-          "end": {
-            "offset": 377,
-            "line": 26,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 374,
-          "line": 26,
-          "column": 5
-        },
-        "end": {
-          "offset": 392,
-          "line": 26,
-          "column": 23
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "env_hold",
-          "numExpression": null,
-          "start": {
-            "offset": 401,
-            "line": 27,
-            "column": 9
-          },
-          "end": {
-            "offset": 409,
-            "line": 27,
-            "column": 17
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 397,
-            "line": 27,
-            "column": 5
-          },
-          "end": {
-            "offset": 400,
-            "line": 27,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 397,
-          "line": 27,
-          "column": 5
-        },
-        "end": {
-          "offset": 410,
-          "line": 27,
-          "column": 18
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "env_pause",
-          "numExpression": null,
-          "start": {
-            "offset": 419,
-            "line": 28,
-            "column": 9
-          },
-          "end": {
-            "offset": 428,
-            "line": 28,
-            "column": 18
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 415,
-            "line": 28,
-            "column": 5
-          },
-          "end": {
-            "offset": 418,
-            "line": 28,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 415,
-          "line": 28,
-          "column": 5
-        },
-        "end": {
-          "offset": 429,
-          "line": 28,
-          "column": 19
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "env_reset",
-          "numExpression": null,
-          "start": {
-            "offset": 438,
-            "line": 29,
-            "column": 9
-          },
-          "end": {
-            "offset": 447,
-            "line": 29,
-            "column": 18
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 434,
-            "line": 29,
-            "column": 5
-          },
-          "end": {
-            "offset": 437,
-            "line": 29,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 434,
-          "line": 29,
-          "column": 5
-        },
-        "end": {
-          "offset": 448,
-          "line": 29,
-          "column": 19
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "env_freq",
-          "numExpression": null,
-          "start": {
-            "offset": 458,
-            "line": 31,
-            "column": 9
-          },
-          "end": {
-            "offset": 466,
-            "line": 31,
-            "column": 17
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 454,
-            "line": 31,
-            "column": 5
-          },
-          "end": {
-            "offset": 457,
-            "line": 31,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 454,
-          "line": 31,
-          "column": 5
-        },
-        "end": {
-          "offset": 467,
-          "line": 31,
-          "column": 18
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "env_count",
-          "numExpression": null,
-          "start": {
-            "offset": 476,
-            "line": 32,
-            "column": 9
-          },
-          "end": {
-            "offset": 485,
-            "line": 32,
-            "column": 18
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 472,
-            "line": 32,
-            "column": 5
-          },
-          "end": {
-            "offset": 475,
-            "line": 32,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 472,
-          "line": 32,
-          "column": 5
-        },
-        "end": {
-          "offset": 486,
-          "line": 32,
-          "column": 19
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "noise_seed",
-          "numExpression": null,
-          "start": {
-            "offset": 496,
-            "line": 34,
-            "column": 9
-          },
-          "end": {
-            "offset": 506,
-            "line": 34,
-            "column": 19
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 492,
-            "line": 34,
-            "column": 5
-          },
-          "end": {
-            "offset": 495,
-            "line": 34,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 492,
-          "line": 34,
-          "column": 5
-        },
-        "end": {
-          "offset": 507,
-          "line": 34,
-          "column": 20
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "noise_count",
-          "numExpression": null,
-          "start": {
-            "offset": 516,
-            "line": 35,
-            "column": 9
-          },
-          "end": {
-            "offset": 527,
-            "line": 35,
-            "column": 20
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 512,
-            "line": 35,
-            "column": 5
-          },
-          "end": {
-            "offset": 515,
-            "line": 35,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 512,
-          "line": 35,
-          "column": 5
-        },
-        "end": {
-          "offset": 528,
-          "line": 35,
-          "column": 21
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "noise_freq",
-          "numExpression": null,
-          "start": {
-            "offset": 537,
-            "line": 36,
-            "column": 9
-          },
-          "end": {
-            "offset": 547,
-            "line": 36,
-            "column": 19
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 533,
-            "line": 36,
-            "column": 5
-          },
-          "end": {
-            "offset": 536,
-            "line": 36,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 533,
-          "line": 36,
-          "column": 5
-        },
-        "end": {
-          "offset": 548,
-          "line": 36,
-          "column": 20
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "realstep",
-          "numExpression": null,
-          "start": {
-            "offset": 585,
-            "line": 39,
-            "column": 9
-          },
-          "end": {
-            "offset": 593,
-            "line": 39,
-            "column": 17
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 581,
-            "line": 39,
-            "column": 5
-          },
-          "end": {
-            "offset": 584,
-            "line": 39,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 581,
-          "line": 39,
-          "column": 5
-        },
-        "end": {
-          "offset": 594,
-          "line": 39,
-          "column": 18
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "psgtime",
-          "numExpression": null,
-          "start": {
-            "offset": 603,
-            "line": 40,
-            "column": 9
-          },
-          "end": {
-            "offset": 610,
-            "line": 40,
-            "column": 16
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 599,
-            "line": 40,
-            "column": 5
-          },
-          "end": {
-            "offset": 602,
-            "line": 40,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 599,
-          "line": 40,
-          "column": 5
-        },
-        "end": {
-          "offset": 611,
-          "line": 40,
-          "column": 17
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "psgstep",
-          "numExpression": null,
-          "start": {
-            "offset": 620,
-            "line": 41,
-            "column": 9
-          },
-          "end": {
-            "offset": 627,
-            "line": 41,
-            "column": 16
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 616,
-            "line": 41,
-            "column": 5
-          },
-          "end": {
-            "offset": 619,
-            "line": 41,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 616,
-          "line": 41,
-          "column": 5
-        },
-        "end": {
-          "offset": 628,
-          "line": 41,
-          "column": 17
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "adr",
-          "numExpression": null,
-          "start": {
-            "offset": 659,
-            "line": 44,
-            "column": 9
-          },
-          "end": {
-            "offset": 662,
-            "line": 44,
-            "column": 12
-          }
-        },
-        "varType": {
-          "type": "Struct",
-          "varType": "Struct",
-          "id": "u32",
-          "start": {
-            "offset": 655,
-            "line": 44,
-            "column": 5
-          },
-          "end": {
-            "offset": 658,
-            "line": 44,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 655,
-          "line": 44,
-          "column": 5
-        },
-        "end": {
-          "offset": 663,
-          "line": 44,
-          "column": 13
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "ch_out",
-          "numExpression": "3",
-          "start": {
-            "offset": 704,
-            "line": 47,
-            "column": 9
-          },
-          "end": {
-            "offset": 713,
-            "line": 47,
-            "column": 18
-          }
-        },
-        "varType": {
-          "type": "PrimitiveType",
-          "varType": "i32",
-          "size": 4,
-          "integer": true,
-          "unsigned": false,
-          "start": {
-            "offset": 700,
-            "line": 47,
-            "column": 5
-          },
-          "end": {
-            "offset": 703,
-            "line": 47,
-            "column": 8
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 700,
-          "line": 47,
-          "column": 5
-        },
-        "end": {
-          "offset": 714,
-          "line": 47,
-          "column": 19
+          "offset": 20,
+          "line": 2,
+          "column": 9
         }
       }
     ],
@@ -1510,8 +56,8 @@
       "column": 1
     },
     "end": {
-      "offset": 716,
-      "line": 48,
+      "offset": 22,
+      "line": 3,
       "column": 2
     }
   },
@@ -1519,13 +65,253 @@
     "type": "WhiteSpace",
     "value": "\n\n",
     "start": {
-      "offset": 716,
-      "line": 48,
+      "offset": 22,
+      "line": 3,
       "column": 2
     },
     "end": {
-      "offset": 718,
-      "line": 50,
+      "offset": 24,
+      "line": 5,
+      "column": 1
+    }
+  },
+  {
+    "type": "StructDefinition",
+    "id": "B",
+    "defines": [
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "b",
+          "numExpression": null,
+          "start": {
+            "offset": 42,
+            "line": 6,
+            "column": 7
+          },
+          "end": {
+            "offset": 43,
+            "line": 6,
+            "column": 8
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "start": {
+            "offset": 38,
+            "line": 6,
+            "column": 3
+          },
+          "end": {
+            "offset": 41,
+            "line": 6,
+            "column": 6
+          }
+        },
+        "initData": null,
+        "start": {
+          "offset": 38,
+          "line": 6,
+          "column": 3
+        },
+        "end": {
+          "offset": 44,
+          "line": 6,
+          "column": 9
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "a",
+          "numExpression": null,
+          "start": {
+            "offset": 49,
+            "line": 7,
+            "column": 5
+          },
+          "end": {
+            "offset": 50,
+            "line": 7,
+            "column": 6
+          }
+        },
+        "varType": {
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "A",
+          "start": {
+            "offset": 47,
+            "line": 7,
+            "column": 3
+          },
+          "end": {
+            "offset": 48,
+            "line": 7,
+            "column": 4
+          }
+        },
+        "initData": null,
+        "start": {
+          "offset": 47,
+          "line": 7,
+          "column": 3
+        },
+        "end": {
+          "offset": 51,
+          "line": 7,
+          "column": 7
+        }
+      }
+    ],
+    "start": {
+      "offset": 24,
+      "line": 5,
+      "column": 1
+    },
+    "end": {
+      "offset": 53,
+      "line": 8,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 53,
+      "line": 8,
+      "column": 2
+    },
+    "end": {
+      "offset": 54,
+      "line": 9,
+      "column": 1
+    }
+  },
+  {
+    "type": "StructDefinition",
+    "id": "C",
+    "defines": [
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "c",
+          "numExpression": null,
+          "start": {
+            "offset": 72,
+            "line": 10,
+            "column": 7
+          },
+          "end": {
+            "offset": 73,
+            "line": 10,
+            "column": 8
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "start": {
+            "offset": 68,
+            "line": 10,
+            "column": 3
+          },
+          "end": {
+            "offset": 71,
+            "line": 10,
+            "column": 6
+          }
+        },
+        "initData": null,
+        "start": {
+          "offset": 68,
+          "line": 10,
+          "column": 3
+        },
+        "end": {
+          "offset": 74,
+          "line": 10,
+          "column": 9
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "b",
+          "numExpression": null,
+          "start": {
+            "offset": 79,
+            "line": 11,
+            "column": 5
+          },
+          "end": {
+            "offset": 80,
+            "line": 11,
+            "column": 6
+          }
+        },
+        "varType": {
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "B",
+          "start": {
+            "offset": 77,
+            "line": 11,
+            "column": 3
+          },
+          "end": {
+            "offset": 78,
+            "line": 11,
+            "column": 4
+          }
+        },
+        "initData": null,
+        "start": {
+          "offset": 77,
+          "line": 11,
+          "column": 3
+        },
+        "end": {
+          "offset": 81,
+          "line": 11,
+          "column": 7
+        }
+      }
+    ],
+    "start": {
+      "offset": 54,
+      "line": 9,
+      "column": 1
+    },
+    "end": {
+      "offset": 83,
+      "line": 12,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n\n\n",
+    "start": {
+      "offset": 83,
+      "line": 12,
+      "column": 2
+    },
+    "end": {
+      "offset": 86,
+      "line": 15,
       "column": 1
     }
   },
@@ -1533,13 +319,13 @@
     "type": "CodeWithoutReturnValue",
     "code": "// ローカル変数の定義\n$.X = 1;\n",
     "start": {
-      "offset": 718,
-      "line": 50,
+      "offset": 86,
+      "line": 15,
       "column": 1
     },
     "end": {
-      "offset": 744,
-      "line": 53,
+      "offset": 112,
+      "line": 18,
       "column": 2
     }
   },
@@ -1547,13 +333,13 @@
     "type": "WhiteSpace",
     "value": "\n\n",
     "start": {
-      "offset": 744,
-      "line": 53,
+      "offset": 112,
+      "line": 18,
       "column": 2
     },
     "end": {
-      "offset": 746,
-      "line": 55,
+      "offset": 114,
+      "line": 20,
       "column": 1
     }
   },
@@ -1564,115 +350,69 @@
         "type": "MemoryLabel",
         "id": {
           "type": "MemoryLabelId",
-          "id": "psg",
-          "numExpression": null,
+          "id": "c",
+          "numExpression": "10",
           "start": {
-            "offset": 759,
-            "line": 56,
-            "column": 7
+            "offset": 125,
+            "line": 21,
+            "column": 5
           },
           "end": {
-            "offset": 762,
-            "line": 56,
+            "offset": 130,
+            "line": 21,
             "column": 10
           }
         },
         "varType": {
           "type": "Struct",
           "varType": "Struct",
-          "id": "PSG",
+          "id": "C",
           "start": {
-            "offset": 755,
-            "line": 56,
+            "offset": 123,
+            "line": 21,
             "column": 3
           },
           "end": {
-            "offset": 758,
-            "line": 56,
-            "column": 6
+            "offset": 124,
+            "line": 21,
+            "column": 4
           }
         },
         "initData": null,
         "start": {
-          "offset": 755,
-          "line": 56,
+          "offset": 123,
+          "line": 21,
           "column": 3
         },
         "end": {
-          "offset": 763,
-          "line": 56,
+          "offset": 131,
+          "line": 21,
           "column": 11
-        }
-      },
-      {
-        "type": "MemoryLabel",
-        "id": {
-          "type": "MemoryLabelId",
-          "id": "output",
-          "numExpression": "1024",
-          "start": {
-            "offset": 770,
-            "line": 57,
-            "column": 7
-          },
-          "end": {
-            "offset": 782,
-            "line": 57,
-            "column": 19
-          }
-        },
-        "varType": {
-          "type": "PrimitiveType",
-          "varType": "f32",
-          "size": 4,
-          "integer": false,
-          "unsigned": false,
-          "start": {
-            "offset": 766,
-            "line": 57,
-            "column": 3
-          },
-          "end": {
-            "offset": 769,
-            "line": 57,
-            "column": 6
-          }
-        },
-        "initData": null,
-        "start": {
-          "offset": 766,
-          "line": 57,
-          "column": 3
-        },
-        "end": {
-          "offset": 783,
-          "line": 57,
-          "column": 20
         }
       }
     ],
     "start": {
-      "offset": 746,
-      "line": 55,
+      "offset": 114,
+      "line": 20,
       "column": 1
     },
     "end": {
-      "offset": 785,
-      "line": 58,
+      "offset": 133,
+      "line": 22,
       "column": 2
     }
   },
   {
     "type": "WhiteSpace",
-    "value": "\n\n",
+    "value": "\n",
     "start": {
-      "offset": 785,
-      "line": 58,
+      "offset": 133,
+      "line": 22,
       "column": 2
     },
     "end": {
-      "offset": 787,
-      "line": 60,
+      "offset": 134,
+      "line": 23,
       "column": 1
     }
   },
@@ -1680,13 +420,139 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 787,
-      "line": 60,
+      "offset": 134,
+      "line": 23,
       "column": 1
     },
     "end": {
-      "offset": 788,
-      "line": 60,
+      "offset": 135,
+      "line": 23,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "module",
+    "start": {
+      "offset": 135,
+      "line": 23,
+      "column": 2
+    },
+    "end": {
+      "offset": 141,
+      "line": 23,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 141,
+      "line": 23,
+      "column": 8
+    },
+    "end": {
+      "offset": 142,
+      "line": 24,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 142,
+      "line": 24,
+      "column": 1
+    },
+    "end": {
+      "offset": 143,
+      "line": 24,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "memory",
+    "start": {
+      "offset": 143,
+      "line": 24,
+      "column": 2
+    },
+    "end": {
+      "offset": 149,
+      "line": 24,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 149,
+      "line": 24,
+      "column": 8
+    },
+    "end": {
+      "offset": 150,
+      "line": 24,
+      "column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "0",
+    "start": {
+      "offset": 150,
+      "line": 24,
+      "column": 9
+    },
+    "end": {
+      "offset": 151,
+      "line": 24,
+      "column": 10
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 151,
+      "line": 24,
+      "column": 10
+    },
+    "end": {
+      "offset": 152,
+      "line": 24,
+      "column": 11
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 152,
+      "line": 24,
+      "column": 11
+    },
+    "end": {
+      "offset": 153,
+      "line": 25,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 153,
+      "line": 25,
+      "column": 1
+    },
+    "end": {
+      "offset": 154,
+      "line": 25,
       "column": 2
     }
   },
@@ -1694,13 +560,13 @@
     "type": "Identifier",
     "name": "export",
     "start": {
-      "offset": 788,
-      "line": 60,
+      "offset": 154,
+      "line": 25,
       "column": 2
     },
     "end": {
-      "offset": 794,
-      "line": 60,
+      "offset": 160,
+      "line": 25,
       "column": 8
     }
   },
@@ -1708,13 +574,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 794,
-      "line": 60,
+      "offset": 160,
+      "line": 25,
       "column": 8
     },
     "end": {
-      "offset": 795,
-      "line": 60,
+      "offset": 161,
+      "line": 25,
       "column": 9
     }
   },
@@ -1722,13 +588,13 @@
     "type": "StringLiteral",
     "value": "\"test\"",
     "start": {
-      "offset": 795,
-      "line": 60,
+      "offset": 161,
+      "line": 25,
       "column": 9
     },
     "end": {
-      "offset": 801,
-      "line": 60,
+      "offset": 167,
+      "line": 25,
       "column": 15
     }
   },
@@ -1736,13 +602,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 801,
-      "line": 60,
+      "offset": 167,
+      "line": 25,
       "column": 15
     },
     "end": {
-      "offset": 802,
-      "line": 60,
+      "offset": 168,
+      "line": 25,
       "column": 16
     }
   },
@@ -1750,13 +616,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 802,
-      "line": 60,
+      "offset": 168,
+      "line": 25,
       "column": 16
     },
     "end": {
-      "offset": 803,
-      "line": 60,
+      "offset": 169,
+      "line": 25,
       "column": 17
     }
   },
@@ -1764,13 +630,13 @@
     "type": "Identifier",
     "name": "func",
     "start": {
-      "offset": 803,
-      "line": 60,
+      "offset": 169,
+      "line": 25,
       "column": 17
     },
     "end": {
-      "offset": 807,
-      "line": 60,
+      "offset": 173,
+      "line": 25,
       "column": 21
     }
   },
@@ -1778,13 +644,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 807,
-      "line": 60,
+      "offset": 173,
+      "line": 25,
       "column": 21
     },
     "end": {
-      "offset": 808,
-      "line": 60,
+      "offset": 174,
+      "line": 25,
       "column": 22
     }
   },
@@ -1792,13 +658,13 @@
     "type": "Identifier",
     "name": "$test",
     "start": {
-      "offset": 808,
-      "line": 60,
+      "offset": 174,
+      "line": 25,
       "column": 22
     },
     "end": {
-      "offset": 813,
-      "line": 60,
+      "offset": 179,
+      "line": 25,
       "column": 27
     }
   },
@@ -1806,13 +672,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 813,
-      "line": 60,
+      "offset": 179,
+      "line": 25,
       "column": 27
     },
     "end": {
-      "offset": 814,
-      "line": 60,
+      "offset": 180,
+      "line": 25,
       "column": 28
     }
   },
@@ -1820,13 +686,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 814,
-      "line": 60,
+      "offset": 180,
+      "line": 25,
       "column": 28
     },
     "end": {
-      "offset": 815,
-      "line": 60,
+      "offset": 181,
+      "line": 25,
       "column": 29
     }
   },
@@ -1834,13 +700,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 815,
-      "line": 60,
+      "offset": 181,
+      "line": 25,
       "column": 29
     },
     "end": {
-      "offset": 816,
-      "line": 61,
+      "offset": 182,
+      "line": 26,
       "column": 1
     }
   },
@@ -1848,13 +714,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 816,
-      "line": 61,
+      "offset": 182,
+      "line": 26,
       "column": 1
     },
     "end": {
-      "offset": 817,
-      "line": 61,
+      "offset": 183,
+      "line": 26,
       "column": 2
     }
   },
@@ -1862,13 +728,13 @@
     "type": "Identifier",
     "name": "func",
     "start": {
-      "offset": 817,
-      "line": 61,
+      "offset": 183,
+      "line": 26,
       "column": 2
     },
     "end": {
-      "offset": 821,
-      "line": 61,
+      "offset": 187,
+      "line": 26,
       "column": 6
     }
   },
@@ -1876,13 +742,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 821,
-      "line": 61,
+      "offset": 187,
+      "line": 26,
       "column": 6
     },
     "end": {
-      "offset": 822,
-      "line": 61,
+      "offset": 188,
+      "line": 26,
       "column": 7
     }
   },
@@ -1890,13 +756,13 @@
     "type": "Identifier",
     "name": "$test",
     "start": {
-      "offset": 822,
-      "line": 61,
+      "offset": 188,
+      "line": 26,
       "column": 7
     },
     "end": {
-      "offset": 827,
-      "line": 61,
+      "offset": 193,
+      "line": 26,
       "column": 12
     }
   },
@@ -1904,13 +770,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 827,
-      "line": 61,
+      "offset": 193,
+      "line": 26,
       "column": 12
     },
     "end": {
-      "offset": 828,
-      "line": 61,
+      "offset": 194,
+      "line": 26,
       "column": 13
     }
   },
@@ -1918,13 +784,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 828,
-      "line": 61,
+      "offset": 194,
+      "line": 26,
       "column": 13
     },
     "end": {
-      "offset": 829,
-      "line": 61,
+      "offset": 195,
+      "line": 26,
       "column": 14
     }
   },
@@ -1932,13 +798,13 @@
     "type": "Identifier",
     "name": "result",
     "start": {
-      "offset": 829,
-      "line": 61,
+      "offset": 195,
+      "line": 26,
       "column": 14
     },
     "end": {
-      "offset": 835,
-      "line": 61,
+      "offset": 201,
+      "line": 26,
       "column": 20
     }
   },
@@ -1946,13 +812,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 835,
-      "line": 61,
+      "offset": 201,
+      "line": 26,
       "column": 20
     },
     "end": {
-      "offset": 836,
-      "line": 61,
+      "offset": 202,
+      "line": 26,
       "column": 21
     }
   },
@@ -1960,13 +826,13 @@
     "type": "Identifier",
     "name": "i32",
     "start": {
-      "offset": 836,
-      "line": 61,
+      "offset": 202,
+      "line": 26,
       "column": 21
     },
     "end": {
-      "offset": 839,
-      "line": 61,
+      "offset": 205,
+      "line": 26,
       "column": 24
     }
   },
@@ -1974,13 +840,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 839,
-      "line": 61,
+      "offset": 205,
+      "line": 26,
       "column": 24
     },
     "end": {
-      "offset": 840,
-      "line": 61,
+      "offset": 206,
+      "line": 26,
       "column": 25
     }
   },
@@ -1988,13 +854,13 @@
     "type": "WhiteSpace",
     "value": "\n  ",
     "start": {
-      "offset": 840,
-      "line": 61,
+      "offset": 206,
+      "line": 26,
       "column": 25
     },
     "end": {
-      "offset": 843,
-      "line": 62,
+      "offset": 209,
+      "line": 27,
       "column": 3
     }
   },
@@ -2002,13 +868,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 843,
-      "line": 62,
+      "offset": 209,
+      "line": 27,
       "column": 3
     },
     "end": {
-      "offset": 844,
-      "line": 62,
+      "offset": 210,
+      "line": 27,
       "column": 4
     }
   },
@@ -2016,13 +882,13 @@
     "type": "Identifier",
     "name": "i32.add",
     "start": {
-      "offset": 844,
-      "line": 62,
+      "offset": 210,
+      "line": 27,
       "column": 4
     },
     "end": {
-      "offset": 851,
-      "line": 62,
+      "offset": 217,
+      "line": 27,
       "column": 11
     }
   },
@@ -2030,13 +896,13 @@
     "type": "WhiteSpace",
     "value": " \n    ",
     "start": {
-      "offset": 851,
-      "line": 62,
+      "offset": 217,
+      "line": 27,
       "column": 11
     },
     "end": {
-      "offset": 857,
-      "line": 63,
+      "offset": 223,
+      "line": 28,
       "column": 5
     }
   },
@@ -2044,13 +910,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 857,
-      "line": 63,
+      "offset": 223,
+      "line": 28,
       "column": 5
     },
     "end": {
-      "offset": 858,
-      "line": 63,
+      "offset": 224,
+      "line": 28,
       "column": 6
     }
   },
@@ -2058,13 +924,13 @@
     "type": "Identifier",
     "name": "i32.load",
     "start": {
-      "offset": 858,
-      "line": 63,
+      "offset": 224,
+      "line": 28,
       "column": 6
     },
     "end": {
-      "offset": 866,
-      "line": 63,
+      "offset": 232,
+      "line": 28,
       "column": 14
     }
   },
@@ -2072,13 +938,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 866,
-      "line": 63,
+      "offset": 232,
+      "line": 28,
       "column": 14
     },
     "end": {
-      "offset": 867,
-      "line": 63,
+      "offset": 233,
+      "line": 28,
       "column": 15
     }
   },
@@ -2086,42 +952,14 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 867,
-      "line": 63,
+      "offset": 233,
+      "line": 28,
       "column": 15
     },
     "end": {
-      "offset": 868,
-      "line": 63,
+      "offset": 234,
+      "line": 28,
       "column": 16
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "i32.const",
-    "start": {
-      "offset": 868,
-      "line": 63,
-      "column": 16
-    },
-    "end": {
-      "offset": 877,
-      "line": 63,
-      "column": 25
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": " ",
-    "start": {
-      "offset": 877,
-      "line": 63,
-      "column": 25
-    },
-    "end": {
-      "offset": 878,
-      "line": 63,
-      "column": 26
     }
   },
   {
@@ -2129,86 +967,145 @@
     "expression": [
       {
         "type": "JSPropertyName",
-        "name": "psg",
+        "name": "c",
         "prefix": "&",
         "start": {
-          "offset": 878,
-          "line": 63,
-          "column": 26
+          "offset": 234,
+          "line": 28,
+          "column": 16
         },
         "end": {
-          "offset": 882,
-          "line": 63,
-          "column": 30
+          "offset": 236,
+          "line": 28,
+          "column": 18
         },
         "child": {
-          "type": "JSPropertyName",
-          "name": "adr",
-          "prefix": null,
+          "type": "IndexExpression",
+          "expression": [
+            {
+              "type": "JSNumber",
+              "value": "0",
+              "start": {
+                "offset": 237,
+                "line": 28,
+                "column": 19
+              },
+              "end": {
+                "offset": 238,
+                "line": 28,
+                "column": 20
+              }
+            }
+          ],
           "start": {
-            "offset": 883,
-            "line": 63,
-            "column": 31
+            "offset": 236,
+            "line": 28,
+            "column": 18
           },
           "end": {
-            "offset": 886,
-            "line": 63,
-            "column": 34
+            "offset": 239,
+            "line": 28,
+            "column": 21
+          },
+          "child": {
+            "type": "JSPropertyName",
+            "name": "b",
+            "prefix": null,
+            "start": {
+              "offset": 240,
+              "line": 28,
+              "column": 22
+            },
+            "end": {
+              "offset": 241,
+              "line": 28,
+              "column": 23
+            },
+            "child": {
+              "type": "JSPropertyName",
+              "name": "a",
+              "prefix": null,
+              "start": {
+                "offset": 242,
+                "line": 28,
+                "column": 24
+              },
+              "end": {
+                "offset": 243,
+                "line": 28,
+                "column": 25
+              },
+              "child": {
+                "type": "JSPropertyName",
+                "name": "a",
+                "prefix": null,
+                "start": {
+                  "offset": 244,
+                  "line": 28,
+                  "column": 26
+                },
+                "end": {
+                  "offset": 245,
+                  "line": 28,
+                  "column": 27
+                }
+              }
+            }
           }
         },
         "top": true
       }
     ],
     "start": {
-      "offset": 878,
-      "line": 63,
-      "column": 26
+      "offset": 234,
+      "line": 28,
+      "column": 16
     },
     "end": {
-      "offset": 886,
-      "line": 63,
-      "column": 34
+      "offset": 245,
+      "line": 28,
+      "column": 27
     }
   },
   {
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 887,
-      "line": 63,
-      "column": 35
+      "offset": 246,
+      "line": 28,
+      "column": 28
     },
     "end": {
-      "offset": 888,
-      "line": 63,
-      "column": 36
+      "offset": 247,
+      "line": 28,
+      "column": 29
     }
   },
   {
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 888,
-      "line": 63,
-      "column": 36
+      "offset": 247,
+      "line": 28,
+      "column": 29
     },
     "end": {
-      "offset": 889,
-      "line": 63,
-      "column": 37
+      "offset": 248,
+      "line": 28,
+      "column": 30
     }
   },
   {
     "type": "WhiteSpace",
     "value": "\n    ",
     "start": {
-      "offset": 889,
-      "line": 63,
-      "column": 37
+      "offset": 248,
+      "line": 28,
+      "column": 30
     },
     "end": {
-      "offset": 894,
-      "line": 64,
+      "offset": 253,
+      "line": 29,
       "column": 5
     }
   },
@@ -2216,83 +1113,116 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 894,
-      "line": 64,
+      "offset": 253,
+      "line": 29,
       "column": 5
     },
     "end": {
-      "offset": 895,
-      "line": 64,
+      "offset": 254,
+      "line": 29,
       "column": 6
     }
   },
   {
-    "type": "Identifier",
-    "name": "i32.const",
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "c",
+        "prefix": "&",
+        "start": {
+          "offset": 254,
+          "line": 29,
+          "column": 6
+        },
+        "end": {
+          "offset": 256,
+          "line": 29,
+          "column": 8
+        },
+        "child": {
+          "type": "IndexExpression",
+          "expression": [
+            {
+              "type": "JSNumber",
+              "value": "0",
+              "start": {
+                "offset": 257,
+                "line": 29,
+                "column": 9
+              },
+              "end": {
+                "offset": 258,
+                "line": 29,
+                "column": 10
+              }
+            }
+          ],
+          "start": {
+            "offset": 256,
+            "line": 29,
+            "column": 8
+          },
+          "end": {
+            "offset": 259,
+            "line": 29,
+            "column": 11
+          },
+          "child": {
+            "type": "JSPropertyName",
+            "name": "c",
+            "prefix": null,
+            "start": {
+              "offset": 260,
+              "line": 29,
+              "column": 12
+            },
+            "end": {
+              "offset": 261,
+              "line": 29,
+              "column": 13
+            }
+          }
+        },
+        "top": true
+      }
+    ],
     "start": {
-      "offset": 895,
-      "line": 64,
+      "offset": 254,
+      "line": 29,
       "column": 6
     },
     "end": {
-      "offset": 904,
-      "line": 64,
-      "column": 15
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": " ",
-    "start": {
-      "offset": 904,
-      "line": 64,
-      "column": 15
-    },
-    "end": {
-      "offset": 905,
-      "line": 64,
-      "column": 16
-    }
-  },
-  {
-    "type": "CodeExpression",
-    "code": "$.X",
-    "start": {
-      "offset": 905,
-      "line": 64,
-      "column": 16
-    },
-    "end": {
-      "offset": 910,
-      "line": 64,
-      "column": 21
+      "offset": 261,
+      "line": 29,
+      "column": 13
     }
   },
   {
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 910,
-      "line": 64,
-      "column": 21
+      "offset": 262,
+      "line": 29,
+      "column": 14
     },
     "end": {
-      "offset": 911,
-      "line": 64,
-      "column": 22
+      "offset": 263,
+      "line": 29,
+      "column": 15
     }
   },
   {
     "type": "WhiteSpace",
     "value": "\n  ",
     "start": {
-      "offset": 911,
-      "line": 64,
-      "column": 22
+      "offset": 263,
+      "line": 29,
+      "column": 15
     },
     "end": {
-      "offset": 914,
-      "line": 65,
+      "offset": 266,
+      "line": 30,
       "column": 3
     }
   },
@@ -2300,13 +1230,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 914,
-      "line": 65,
+      "offset": 266,
+      "line": 30,
       "column": 3
     },
     "end": {
-      "offset": 915,
-      "line": 65,
+      "offset": 267,
+      "line": 30,
       "column": 4
     }
   },
@@ -2314,13 +1244,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 915,
-      "line": 65,
+      "offset": 267,
+      "line": 30,
       "column": 4
     },
     "end": {
-      "offset": 916,
-      "line": 66,
+      "offset": 268,
+      "line": 31,
       "column": 1
     }
   },
@@ -2328,13 +1258,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 916,
-      "line": 66,
+      "offset": 268,
+      "line": 31,
       "column": 1
     },
     "end": {
-      "offset": 917,
-      "line": 66,
+      "offset": 269,
+      "line": 31,
       "column": 2
     }
   },
@@ -2342,13 +1272,41 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 917,
-      "line": 66,
+      "offset": 269,
+      "line": 31,
       "column": 2
     },
     "end": {
-      "offset": 918,
-      "line": 67,
+      "offset": 270,
+      "line": 32,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 270,
+      "line": 32,
+      "column": 1
+    },
+    "end": {
+      "offset": 271,
+      "line": 32,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 271,
+      "line": 32,
+      "column": 2
+    },
+    "end": {
+      "offset": 272,
+      "line": 33,
       "column": 1
     }
   }
