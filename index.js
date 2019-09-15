@@ -5850,12 +5850,17 @@ var index = async () => {
               }
               break;
             case 'CodeExpression':
-              preprocessed.push(this.evalExpression(token.code));
+              preprocessed.push(`(; ${token.code} ;)`);
+              preprocessed.push(
+                this.evalExpression(token.code)
+              );
               break;
             case 'CodeWithoutReturnValue':
+              preprocessed.push(`(; ${token.code} ;)`);
               this.eval(token.code);
               break;
             case 'Code':
+              preprocessed.push(`(; ${token.code} ;)`);
               preprocessed.push(this.eval(token.code));
               break;
             case 'SourceInclude':
@@ -5865,9 +5870,12 @@ var index = async () => {
               preprocessed.push(...includedSource);
               break;
             case 'PropertyExpression':
-              preprocessed.push(
-                `i32.const ${this.parsePropertyExpression(token.expression, baseName, skip)}`
-              );
+              {
+                const result = this.parsePropertyExpression(token.expression, baseName, skip);
+                preprocessed.push(
+                  `i32.const ${result.value} (; ${result.jsSource} ;)`
+                );
+              }
               break;
             case 'WhiteSpace':
               preprocessed.push(skip ? ' ' : token.value);
@@ -5904,6 +5912,7 @@ var index = async () => {
 
       parsePropertyExpression(expressions, baseName, skip) {
         const parsed = [];
+        let parsedText = '';
         for (const expression of expressions) {
           switch (expression.type) {
             case 'JSPropertyName':
@@ -5914,7 +5923,7 @@ var index = async () => {
                 if (token.child) {
                   switch (token.child.type) {
                     case 'IndexExpression':
-                      let p = new Number(self.parsePropertyExpression(token.child.expression, baseName, skip));
+                      let p = new Number(self.parsePropertyExpression(token.child.expression, baseName, skip).value);
                       switch (expression.prefix) {
                         case '&':
                           relativeOffsets.push(`$.${propName}[$attributes].size * ${p}`);
@@ -5939,6 +5948,7 @@ var index = async () => {
                 }
               }
               buildPropName(expression);
+              parsedText += propName;
               switch (expression.prefix) {
                 case '&':
                   propName = '$.' + propName + '[$attributes].offset';
@@ -5958,16 +5968,14 @@ var index = async () => {
               parsed.push(propName);
               break;
             case 'WhiteSpace':
-              !skip && parsed.push(' ');
+              !skip && parsed.push(expression.value);
+              parsedText += expression.value;
               break;
             case 'JSNumber':
-              parsed.push(expression.value);
-              break;
             case 'JSOperator':
-              parsed.push(expression.value);
-              break;
             case 'Identifier':
-              parsed.push(expression.name);
+              parsed.push(expression.value);
+              parsedText += expression.value;
               break;
             default:
               error("illegal Property Expression", expression);
@@ -5978,7 +5986,7 @@ var index = async () => {
          //console.info(jsSource);
         let v = this.evalExpression(jsSource);
         // console.info(v);
-        return v;
+        return {value:v,jsSource:parsedText};
       }
 
       eval(code, options) {
