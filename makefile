@@ -31,7 +31,8 @@ test: $(TARGET)
 #	mwasm ./tests/test-map/test-map.mwat -o ./tests/test-map/test-map.wasm
 #	mwasm ./tests/test/test-js.mwat -o ./tests/test/test-js.wasm
 	mwasm ./tests/test-struct/test-struct.mwat -o ./tests/test-struct/test-struct.mwasm
-#	mwasm ./examples/psg-emulator/em2149.mwat -o ./examples/psg-emulator/em2149.wasm
+	mwasm ./tests/test-macro/test-macro.mwat -o ./tests/test-macro/test-macro.mwasm
+	mwasm ./examples/psg-emulator/em2149.mwat -o ./examples/psg-emulator/em2149.wasm
 
 .PHONY: clean
 clean:
