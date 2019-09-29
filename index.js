@@ -364,7 +364,7 @@ function peg$parse(input, options) {
           {
             macroName:macroName,
             macroParams:macroParams,
-            macroBody:macroBody//(macroBody && macroBody.length) ? normalize(extractList(macroBody,1)) : null
+            macroBody:macroBody && macroBody.length ? normalize(extractList(macroBody,1)) : null
           }
         );
       },
@@ -1737,13 +1737,38 @@ function peg$parse(input, options) {
   function peg$parseNumber() {
     var s0, s1, s2, s3, s4, s5, s6;
 
-    s0 = peg$parseDigit();
-    if (s0 === peg$FAILED) {
-      s0 = peg$currPos;
-      s1 = peg$currPos;
-      s2 = peg$parseNonZeroDigit();
-      if (s2 !== peg$FAILED) {
-        s3 = [];
+    s0 = peg$currPos;
+    s1 = peg$currPos;
+    s2 = peg$parseNonZeroDigit();
+    if (s2 !== peg$FAILED) {
+      s3 = [];
+      s4 = peg$currPos;
+      if (input.charCodeAt(peg$currPos) === 95) {
+        s5 = peg$c96;
+        peg$currPos++;
+      } else {
+        s5 = peg$FAILED;
+        if (peg$silentFails === 0) { peg$fail(peg$c97); }
+      }
+      if (s5 === peg$FAILED) {
+        s5 = null;
+      }
+      if (s5 !== peg$FAILED) {
+        s6 = peg$parseDigit();
+        if (s6 !== peg$FAILED) {
+          peg$savedPos = s4;
+          s5 = peg$c98(s6);
+          s4 = s5;
+        } else {
+          peg$currPos = s4;
+          s4 = peg$FAILED;
+        }
+      } else {
+        peg$currPos = s4;
+        s4 = peg$FAILED;
+      }
+      while (s4 !== peg$FAILED) {
+        s3.push(s4);
         s4 = peg$currPos;
         if (input.charCodeAt(peg$currPos) === 95) {
           s5 = peg$c96;
@@ -1769,50 +1794,25 @@ function peg$parse(input, options) {
           peg$currPos = s4;
           s4 = peg$FAILED;
         }
-        while (s4 !== peg$FAILED) {
-          s3.push(s4);
-          s4 = peg$currPos;
-          if (input.charCodeAt(peg$currPos) === 95) {
-            s5 = peg$c96;
-            peg$currPos++;
-          } else {
-            s5 = peg$FAILED;
-            if (peg$silentFails === 0) { peg$fail(peg$c97); }
-          }
-          if (s5 === peg$FAILED) {
-            s5 = null;
-          }
-          if (s5 !== peg$FAILED) {
-            s6 = peg$parseDigit();
-            if (s6 !== peg$FAILED) {
-              peg$savedPos = s4;
-              s5 = peg$c98(s6);
-              s4 = s5;
-            } else {
-              peg$currPos = s4;
-              s4 = peg$FAILED;
-            }
-          } else {
-            peg$currPos = s4;
-            s4 = peg$FAILED;
-          }
-        }
-        if (s3 !== peg$FAILED) {
-          s2 = [s2, s3];
-          s1 = s2;
-        } else {
-          peg$currPos = s1;
-          s1 = peg$FAILED;
-        }
+      }
+      if (s3 !== peg$FAILED) {
+        s2 = [s2, s3];
+        s1 = s2;
       } else {
         peg$currPos = s1;
         s1 = peg$FAILED;
       }
-      if (s1 !== peg$FAILED) {
-        s0 = input.substring(s0, peg$currPos);
-      } else {
-        s0 = s1;
-      }
+    } else {
+      peg$currPos = s1;
+      s1 = peg$FAILED;
+    }
+    if (s1 !== peg$FAILED) {
+      s0 = input.substring(s0, peg$currPos);
+    } else {
+      s0 = s1;
+    }
+    if (s0 === peg$FAILED) {
+      s0 = peg$parseDigit();
     }
 
     return s0;
@@ -4240,6 +4240,32 @@ function peg$parse(input, options) {
     return s0;
   }
 
+  function peg$parseMacroToken_() {
+    var s0;
+
+    s0 = peg$parseComment();
+    if (s0 === peg$FAILED) {
+      s0 = peg$parseStringLiteral();
+      if (s0 === peg$FAILED) {
+        s0 = peg$parsePreprocessor();
+        if (s0 === peg$FAILED) {
+          s0 = peg$parseMwasmNumericLiteral();
+          if (s0 === peg$FAILED) {
+            s0 = peg$parseIdentifier();
+            if (s0 === peg$FAILED) {
+              s0 = peg$parseParenthesis();
+              if (s0 === peg$FAILED) {
+                s0 = peg$parse__$();
+              }
+            }
+          }
+        }
+      }
+    }
+
+    return s0;
+  }
+
   function peg$parseMacroToken() {
     var s0, s1, s2, s3;
 
@@ -4262,7 +4288,7 @@ function peg$parse(input, options) {
       s2 = peg$FAILED;
     }
     if (s2 !== peg$FAILED) {
-      s3 = peg$parseToken();
+      s3 = peg$parseMacroToken_();
       if (s3 !== peg$FAILED) {
         s2 = [s2, s3];
         s1 = s2;
@@ -6449,6 +6475,63 @@ var index = async () => {
                 this.defineMember(token.defines, this.context, { type: token.type, preprocessed: preprocessed });
               }
               break;
+            // マクロ定義
+            case 'MacroDefinition':
+              {
+                if(token.macroName in this.context){
+                  error(`error:Macro name '${token.macroName}' is already defined.`, token);
+                } else {
+                  let context = this.context[token.macroName] = token;
+                }
+              }
+              break;
+            // マクロ実行
+            case 'MacroExecution':
+              {
+                const macrodef = this.context[token.macroName];
+                if(!macrodef){
+                  error(`error:Macro name '${token.macroName}' is not defined.`, token);
+                }
+                const macroBody = clone(macrodef.macroBody);
+                let macroExpandedTokens = [];
+
+                if(macroBody.length){
+                  const macroParamDefs = macrodef.macroParams.value;
+                  const macroParams = token.macroParams.params;
+                  // マクロの置換
+                  macroBody.forEach(t=>{
+                    let macroExpandedToken = t;
+                    for(let i in macroParamDefs){
+                      const replaceFromToken = macroParamDefs[i];
+                      const replaceToToken = macroParams[i];
+                      if(t.type == "Identifier" && t.name == replaceFromToken){
+                        macroExpandedToken = replaceToToken;
+                      }
+                    }
+                    if(macroExpandedToken instanceof Array){
+                      macroExpandedTokens.push(...macroExpandedToken);
+                    } else {
+                      macroExpandedTokens.push(macroExpandedToken);
+                    }
+                  });                
+                  let macroExpandedSource = this.preprocessTokens(macroExpandedTokens,baseName,skip);
+                  preprocessed.push(...macroExpandedSource);
+                }
+              }
+              break;
+              case 'IntegerLiteral':
+                preprocessed.push(token.sign + token.value);
+                break;
+              case 'BinaryIntegerLiteral':
+                preprocessed.push('0b' + token.value);
+                break;
+              case 'OctalIntegerLiteral':
+                preprocessed.push('0' + token.value);
+                break;
+              case 'HexIntegerLiteral':
+                preprocessed.push('0x' + token.value);
+                break;
+              case 'FloatLiteral':
             default:
               error(`unknown token type '${token.type}'`, token);
           }

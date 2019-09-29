@@ -15,7 +15,7 @@
       "request": "launch",
       "name": "Launch Program",
       "program": "${workspaceFolder}/index.js",
-      "args": ["./tests/test.mwat","-o","./tests/test.wasm"]
+      "args": ["./tests/test-macro/test-macro.mwat","-o","./tests/test-macro/test-macro.wasm"]
     }
   ]
 }
