@@ -6558,51 +6558,21 @@ var index = async () => {
               break;
             // マクロ実行
             case 'MacroExecution':
-              {
-                const macrodef = this.context[token.macroName];
-                if(!macrodef){
-                  error(`error:Macro name '${token.macroName}' is not defined.`, token);
-                }
-                const macroBody = clone(macrodef.macroBody);
-                let macroExpandedTokens = [];
-
-                if(macroBody.length){
-                  const macroParamDefs = macrodef.macroParams.value;
-                  const macroParams = token.macroParams.params;
-                  // マクロの置換
-                  macroBody.forEach(t=>{
-                    let macroExpandedToken = t;
-                    for(let i in macroParamDefs){
-                      const replaceFromToken = macroParamDefs[i];
-                      const replaceToToken = macroParams[i];
-                      if(t.type == "Identifier" && t.name == replaceFromToken){
-                        macroExpandedToken = replaceToToken;
-                      }
-                    }
-                    if(macroExpandedToken instanceof Array){
-                      macroExpandedTokens.push(...macroExpandedToken);
-                    } else {
-                      macroExpandedTokens.push(macroExpandedToken);
-                    }
-                  });                
-                  let macroExpandedSource = this.preprocessTokens(macroExpandedTokens,baseName,skip);
-                  preprocessed.push(...macroExpandedSource);
-                }
-              }
+              this.expandMacroParam(token,preprocessed,baseName,skip);
               break;
-              case 'IntegerLiteral':
-                preprocessed.push(token.sign + token.value);
-                break;
-              case 'BinaryIntegerLiteral':
-                preprocessed.push('0b' + token.value);
-                break;
-              case 'OctalIntegerLiteral':
-                preprocessed.push('0' + token.value);
-                break;
-              case 'HexIntegerLiteral':
-                preprocessed.push('0x' + token.value);
-                break;
-              case 'FloatLiteral':
+            case 'IntegerLiteral':
+              preprocessed.push(token.sign + token.value);
+              break;
+            case 'BinaryIntegerLiteral':
+              preprocessed.push('0b' + token.value);
+              break;
+            case 'OctalIntegerLiteral':
+              preprocessed.push('0' + token.value);
+              break;
+            case 'HexIntegerLiteral':
+              preprocessed.push('0x' + token.value);
+              break;
+            case 'FloatLiteral':
             default:
               error(`unknown token type '${token.type}'`, token);
           }
@@ -6610,6 +6580,49 @@ var index = async () => {
         return preprocessed;
       }
 
+      expandMacroParam(token,preprocessed,baseName,skip){
+        console.log('token:',token);
+        const macrodef = this.context[token.macroName];
+        if(!macrodef){
+          error(`error:Macro name '${token.macroName}' is not defined.`, token);
+        }
+        const macroBody = clone(macrodef.macroBody);
+        let macroExpandedTokens = [];
+
+        if(macroBody.length){
+          const macroParamDefs = macrodef.macroParams.value;
+          const macroParams = token.macroParams.params;
+          // マクロの置換
+          macroBody.forEach(t=>{
+            let macroExpandedToken = t;
+            for(let i in macroParamDefs){
+              const replaceFromToken = macroParamDefs[i];
+              const replaceToToken = macroParams[i];
+              //console.log('param:' ,replaceFromToken,t.name,t);
+              switch(t.type){
+                case 'Identifier':
+                  if(t.type == "Identifier" && t.name == replaceFromToken){
+                    macroExpandedToken = replaceToToken;
+                  }
+                  break;
+                case 'MacroExecution':
+                  {
+                    t.macroParams =  this.expandMacroParam(t,[],baseName,skip);
+                  }
+                  break;
+              }
+            }
+            if(macroExpandedToken instanceof Array){
+              macroExpandedTokens.push(...macroExpandedToken);
+            } else {
+              macroExpandedTokens.push(macroExpandedToken);
+            }
+          });                
+          let macroExpandedSource = this.preprocessTokens(macroExpandedTokens,baseName,skip);
+          preprocessed.push(...macroExpandedSource);
+        }
+        return preprocessed;
+      }
 
       parsePropertyExpression(expressions, baseName, skip) {
         const parsed = [];
