@@ -2280,7 +2280,7 @@ function peg$parse(input, options) {
           s4 = peg$parseNumber();
           if (s4 !== peg$FAILED) {
             peg$savedPos = s2;
-            s3 = peg$c110();
+            s3 = peg$c110(s1, s4);
             s2 = s3;
           } else {
             peg$currPos = s2;
@@ -2434,7 +2434,7 @@ function peg$parse(input, options) {
             s5 = peg$parseHexNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c110();
+              s4 = peg$c110(s1, s5);
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -2592,7 +2592,7 @@ function peg$parse(input, options) {
             s5 = peg$parseBinaryNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c110();
+              s4 = peg$c110(s1, s5);
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -6234,23 +6234,23 @@ class LiteralUtil {
     this.workBuffer = new ArrayBuffer(8);
     this.workView = new DataView(this.workBuffer);
     this.i32 = {
-      decimalIntegerStrToDataStr:this.decimalIntegerStrToi32DataStr.bind(this),
-      binaryIntegerStrToDataStr:this.binaryIntegerStrToi32DataStr.bind(this),
-      octalIntegerStrToDataStr:this.octalIntegerStrToi32DataStr.bind(this),
-      hexIntegerStrToDataStr:this.hexIntegerStrToi32DataStr.bind(this)
+      decimalIntegerStrToDataStr: this.decimalIntegerStrToi32DataStr.bind(this),
+      binaryIntegerStrToDataStr: this.binaryIntegerStrToi32DataStr.bind(this),
+      octalIntegerStrToDataStr: this.octalIntegerStrToi32DataStr.bind(this),
+      hexIntegerStrToDataStr: this.hexIntegerStrToi32DataStr.bind(this)
     };
     this.i64 = {
-      decimalIntegerStrToDataStr:this.decimalIntegerStrToi64DataStr.bind(this),
-      binaryIntegerStrToDataStr:this.binaryIntegerStrToi64DataStr.bind(this),
-      octalIntegerStrToDataStr:this.octalIntegerStrToi64DataStr.bind(this),
-      hexIntegerStrToDataStr:this.hexIntegerStrToi64DataStr.bind(this)
+      decimalIntegerStrToDataStr: this.decimalIntegerStrToi64DataStr.bind(this),
+      binaryIntegerStrToDataStr: this.binaryIntegerStrToi64DataStr.bind(this),
+      octalIntegerStrToDataStr: this.octalIntegerStrToi64DataStr.bind(this),
+      hexIntegerStrToDataStr: this.hexIntegerStrToi64DataStr.bind(this)
     };
     this.f32 = {
-      floatStrToDataStr:this.floatStrTof32DataStr.bind(this)
+      floatStrToDataStr: this.floatStrTof32DataStr.bind(this)
     };
 
     this.f64 = {
-      floatStrToDataStr:this.floatStrTof64DataStr.bind(this)
+      floatStrToDataStr: this.floatStrTof64DataStr.bind(this)
     };
   }
 
@@ -6372,7 +6372,7 @@ var index = async () => {
         case '--enable-bulk-memory':
         case '--enable-reference-types':
         case '--enable-annotations':
-          let feature = v.replace(/\-\-enable\-/,'').replace(/\-/g,'_');
+          let feature = v.replace(/\-\-enable\-/, '').replace(/\-/g, '_');
           console.log(feature);
           features[feature] = true;
           break;
@@ -6401,8 +6401,8 @@ var index = async () => {
     const wabt_ = wabt();
 
     class Context {
-      constructor(preprocessParser, mwasmParser) {
-        this.preprocessParser = preprocessParser;
+      constructor(preprocessParser$$1, mwasmParser) {
+        this.preprocessParser = preprocessParser$$1;
         this.mwasmParser = mwasmParser;
         this.includeFileTree = { parent: null, childs: {} };
         this.path = path;
@@ -6536,7 +6536,7 @@ var index = async () => {
                       size: 0
                     }
                   };
-                  this.defineMember(token.defines, context, { type: token.type, structName: token.id });
+                this.defineMember(token.defines, context, { type: token.type, structName: token.id });
               }
               break;
 
@@ -6549,7 +6549,7 @@ var index = async () => {
             // マクロ定義
             case 'MacroDefinition':
               {
-                if(token.macroName in this.context){
+                if (token.macroName in this.context) {
                   error(`error:Macro name '${token.macroName}' is already defined.`, token);
                 } else {
                   let context = this.context[token.macroName] = token;
@@ -6558,7 +6558,7 @@ var index = async () => {
               break;
             // マクロ実行
             case 'MacroExecution':
-              this.expandMacroParam(token,preprocessed,baseName,skip);
+              this.expandMacro(token, preprocessed, baseName, skip);
               break;
             case 'IntegerLiteral':
               preprocessed.push(token.sign + token.value);
@@ -6580,48 +6580,53 @@ var index = async () => {
         return preprocessed;
       }
 
-      expandMacroParam(token,preprocessed,baseName,skip){
-        console.log('token:',token);
+      expandMacro(token, preprocessed, baseName, skip) {
+        console.log('token:', token);
+
         const macrodef = this.context[token.macroName];
-        if(!macrodef){
+        if (!macrodef) {
           error(`error:Macro name '${token.macroName}' is not defined.`, token);
         }
         const macroBody = clone(macrodef.macroBody);
         let macroExpandedTokens = [];
 
-        if(macroBody.length){
+        if (macroBody.length) {
           const macroParamDefs = macrodef.macroParams.value;
           const macroParams = token.macroParams.params;
           // マクロの置換
-          macroBody.forEach(t=>{
+          macroBody.forEach(t => {
             let macroExpandedToken = t;
-            for(let i in macroParamDefs){
+
+            for (let i in macroParamDefs) {
               const replaceFromToken = macroParamDefs[i];
               const replaceToToken = macroParams[i];
               //console.log('param:' ,replaceFromToken,t.name,t);
-              switch(t.type){
-                case 'Identifier':
-                  if(t.type == "Identifier" && t.name == replaceFromToken){
-                    macroExpandedToken = replaceToToken;
-                  }
-                  break;
-                case 'MacroExecution':
-                  {
-                    t.macroParams =  this.expandMacroParam(t,[],baseName,skip);
-                  }
-                  break;
+              function replace(t){
+                switch (t.type) {
+                  case 'Identifier':
+                    if (t.type == "Identifier" && t.name == replaceFromToken) {
+                      return replaceToken;
+                    }
+                    break;
+                  case 'MacroExecution':
+                    for(let j in t.macroParams.params){
+                      t.macroParams.params[j] = replace(t.macroParams.params[j]);
+                    }
+                    break;
+                }
+                return t;
               }
+              macroExpandedToken = replace(t);
             }
-            if(macroExpandedToken instanceof Array){
+            if (macroExpandedToken instanceof Array) {
               macroExpandedTokens.push(...macroExpandedToken);
             } else {
               macroExpandedTokens.push(macroExpandedToken);
             }
-          });                
-          let macroExpandedSource = this.preprocessTokens(macroExpandedTokens,baseName,skip);
+          });
+          let macroExpandedSource = this.preprocessTokens(macroExpandedTokens, baseName, skip);
           preprocessed.push(...macroExpandedSource);
         }
-        return preprocessed;
       }
 
       parsePropertyExpression(expressions, baseName, skip) {
@@ -6697,10 +6702,10 @@ var index = async () => {
           }
         }
         let jsSource = parsed.join('');
-         //console.info(jsSource);
+        //console.info(jsSource);
         let v = this.evalExpression(jsSource);
         // console.info(v);
-        return {value:v,jsSource:parsedText};
+        return { value: v, jsSource: parsedText };
       }
 
       eval(code, options) {
@@ -6774,7 +6779,7 @@ var index = async () => {
                               case "PrimitiveType":
                                 att.offset += o;
                                 //console.log(att,m,att.offset,o);
-                                if(att.initData){
+                                if (att.initData) {
                                   opts.preprocessed.push(`(data (i32.const ${att.offset}) "${att.initData}")`);
                                 }
                                 break;
@@ -6791,7 +6796,7 @@ var index = async () => {
                     }
 
                     c[$attributes].num = num;
-                    offset += c[$attributes].size * num ;
+                    offset += c[$attributes].size * num;
                     currentContext[$attributes].size += c[$attributes].size * num;
                     c[$attributes].log2 = Math.log2(c[$attributes].size) | 0;
 
@@ -6807,15 +6812,15 @@ var index = async () => {
               // skip
               break;
             case "Offset":
-//                console.log(def.type,def.offset);
-                this.startOffset = this.parseOffset(def.offset);
+              //                console.log(def.type,def.offset);
+              this.startOffset = this.parseOffset(def.offset);
               break;
             case 'CodeExpression':
               {
                 const result = this.this.evalExpression(def.code);
                 result && opts.preprocessed.push(result);
               }
-              return ;
+              return;
             case 'CodeWithoutReturnValue':
               this.evalExpression(def.code);
               break;
@@ -6832,10 +6837,10 @@ var index = async () => {
         }
       }
 
-      parseOffset(token){
-        switch(token.type){
+      parseOffset(token) {
+        switch (token.type) {
           case 'CodeExpression':
-              return this.evalExpression(token.code);
+            return this.evalExpression(token.code);
           case 'CodeWithoutReturnValue':
             this.evalExpression(token.code);
             return 0;
@@ -6857,35 +6862,35 @@ var index = async () => {
           switch (data.type) {
             case 'MwasmArray':
               let result = '';
-              initData.value.forEach(d=>{
+              initData.value.forEach(d => {
                 result += makeDataString_(d);
               });
               return result;
             case 'IntegerLiteral':
-              return lib.decimalIntegerStrToDataStr(data.value,data.sign);
+              return lib.decimalIntegerStrToDataStr(data.value, data.sign);
             case 'BinaryIntegerLiteral':
-              return lib.binaryIntegerStrToDataStr(data.value,data.sign);
+              return lib.binaryIntegerStrToDataStr(data.value, data.sign);
             case 'OctalIntegerLiteral':
-              return lib.octalIntegerStrToDataStr(data.value,data.sign);
+              return lib.octalIntegerStrToDataStr(data.value, data.sign);
             case 'HexIntegerLiteral':
-              return lib.hexIntegerStrToDataStr(data.value,data.sign);
+              return lib.hexIntegerStrToDataStr(data.value, data.sign);
             case 'FloatLiteral':
-              return lib.floatStrToDataStr(data.sign,data.number,data.flac,data.expsign,deta.e);
+              return lib.floatStrToDataStr(data.sign, data.number, data.flac, data.expsign, deta.e);
             case 'HexFloatLiteral':
             case 'BinaryFloatLiteral':
               error('not implemented');
               break;
             default:
-              error(`illegal data type ${data.type}`,data);
+              error(`illegal data type ${data.type}`, data);
               break;
-            }
+          }
         }
         return makeDataString_(initData);
       }
     }
 
     const lib = getInstance(await fs.promises.readFile(__dirname + '/lib/mwasm-lib.wasm')).exports;
-    
+
     literalUtil = new LiteralUtil(lib);
 
     const mwasmParser = null;
@@ -6896,29 +6901,29 @@ var index = async () => {
     let backup = path.resolve(process.cwd());
     process.chdir(chdir);
 
-    const preprocessedSourceText = context.preprocess(startInput,null,false);
+    const preprocessedSourceText = context.preprocess(startInput, null, false);
 
-    const contextJson =  JSON.stringify(context.context,
-       (k,v)=>{
-         if(k === $attributes){
+    const contextJson = JSON.stringify(context.context,
+      (k, v) => {
+        if (k === $attributes) {
           delete v.start;
           delete v.end;
-         } 
-         return v;
+        }
+        return v;
       }
-    , 2);
+      , 2);
     await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.context.json', contextJson, 'utf-8');
     await fs.promises.writeFile(path.basename(args.input, '.mwat') + '.wat', preprocessedSourceText, 'utf-8');
     process.chdir(backup);
-    
+
     const encoder = new util.TextEncoder();
 
-    let wasmModule = wabt_.parseWat(path.basename(args.input, '.mwat') + '.wat', encoder.encode(preprocessedSourceText),features);
+    let wasmModule = wabt_.parseWat(path.basename(args.input, '.mwat') + '.wat', encoder.encode(preprocessedSourceText), features);
     wasmModule.resolveNames();
     wasmModule.validate(features);
     //let wasmModule = binaryen.parseText(preprocessedSourceText);
     if (args.output) {
-      let bin = wasmModule.toBinary({log:true,canonicalize_lebs:true,write_debug_names:true});
+      let bin = wasmModule.toBinary({ log: true, canonicalize_lebs: true, write_debug_names: true });
       await fs.promises.writeFile(args.output, Buffer.from(bin.buffer));
       //console.info(bin.log);
     } else {
