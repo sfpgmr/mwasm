@@ -2280,7 +2280,7 @@ function peg$parse(input, options) {
           s4 = peg$parseNumber();
           if (s4 !== peg$FAILED) {
             peg$savedPos = s2;
-            s3 = peg$c110(s1, s4);
+            s3 = peg$c110();
             s2 = s3;
           } else {
             peg$currPos = s2;
@@ -2434,7 +2434,7 @@ function peg$parse(input, options) {
             s5 = peg$parseHexNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c110(s1, s5);
+              s4 = peg$c110();
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -2592,7 +2592,7 @@ function peg$parse(input, options) {
             s5 = peg$parseBinaryNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c110(s1, s5);
+              s4 = peg$c110();
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -6196,7 +6196,12 @@ function getInstance(obj, imports = {}) {
 
 function error(message, token) {
   if (token) {
-    throw new Error(`Error: line:${token.start.line} column:${token.start.column} :${message}:`)
+    if(token.start){
+      throw new Error(`Error: line:${token.start.line} column:${token.start.column} :${message}:`)
+    } else {
+      console.log(token);
+      throw new Error(`Error: ${message}:${token}`);
+    }
   } else {
     throw new Error(message);
   }
@@ -6373,7 +6378,7 @@ var index = async () => {
         case '--enable-reference-types':
         case '--enable-annotations':
           let feature = v.replace(/\-\-enable\-/, '').replace(/\-/g, '_');
-          console.log(feature);
+          //console.log(feature);
           features[feature] = true;
           break;
         default:
@@ -6401,8 +6406,8 @@ var index = async () => {
     const wabt_ = wabt();
 
     class Context {
-      constructor(preprocessParser$$1, mwasmParser) {
-        this.preprocessParser = preprocessParser$$1;
+      constructor(preprocessParser, mwasmParser) {
+        this.preprocessParser = preprocessParser;
         this.mwasmParser = mwasmParser;
         this.includeFileTree = { parent: null, childs: {} };
         this.path = path;
@@ -6581,7 +6586,7 @@ var index = async () => {
       }
 
       expandMacro(token, preprocessed, baseName, skip) {
-        console.log('token:', token);
+        //console.log('token:', token);
 
         const macrodef = this.context[token.macroName];
         if (!macrodef) {
@@ -6589,6 +6594,7 @@ var index = async () => {
         }
         const macroBody = clone(macrodef.macroBody);
         let macroExpandedTokens = [];
+
 
         if (macroBody.length) {
           const macroParamDefs = macrodef.macroParams.value;
@@ -6600,30 +6606,47 @@ var index = async () => {
             for (let i in macroParamDefs) {
               const replaceFromToken = macroParamDefs[i];
               const replaceToToken = macroParams[i];
-              //console.log('param:' ,replaceFromToken,t.name,t);
+              //console.log('param:' ,replaceFromToken,replaceToToken,t.name,t);
               function replace(t){
                 switch (t.type) {
                   case 'Identifier':
-                    if (t.type == "Identifier" && t.name == replaceFromToken) {
-                      return replaceToken;
+                    if (t.name == replaceFromToken) {
+                      console.log(t.type,t.name,replaceFromToken,replaceToToken);
+                      return replaceToToken;
                     }
                     break;
                   case 'MacroExecution':
-                    for(let j in t.macroParams.params){
-                      t.macroParams.params[j] = replace(t.macroParams.params[j]);
+                    for(let pi in t.macroParams.params){
+                      const params = t.macroParams.params[pi];
+                      const replacedParams = [];
+                      for(const param of params){
+                        console.log(param.type,param.name,replaceFromToken);
+
+                        const replacedParam = replace(param);
+                        if(replacedParam instanceof Array){
+                          replacedParams.push(...replacedParam);
+                        } else {
+                          replacedParams.push(replacedParam);
+                        }
+                      }
+                      //console.log(replacedParams);
+                      t.macroParams.params[pi] = replacedParams;
                     }
                     break;
                 }
                 return t;
               }
               macroExpandedToken = replace(t);
+              if(macroExpandedToken != t){
+                break;
+              }
             }
             if (macroExpandedToken instanceof Array) {
               macroExpandedTokens.push(...macroExpandedToken);
             } else {
               macroExpandedTokens.push(macroExpandedToken);
             }
-          });
+        });
           let macroExpandedSource = this.preprocessTokens(macroExpandedTokens, baseName, skip);
           preprocessed.push(...macroExpandedSource);
         }

@@ -1,0 +1,494 @@
+{
+  "t": {
+    "type": "MacroDefinition",
+    "macroName": "t",
+    "macroParams": {
+      "type": "MacroParams",
+      "value": [
+        "a"
+      ],
+      "start": {
+        "offset": 13,
+        "line": 1,
+        "column": 14
+      },
+      "end": {
+        "offset": 16,
+        "line": 1,
+        "column": 17
+      }
+    },
+    "macroBody": [
+      {
+        "type": "WhiteSpace",
+        "value": "\n",
+        "start": {
+          "offset": 17,
+          "line": 1,
+          "column": 18
+        },
+        "end": {
+          "offset": 18,
+          "line": 2,
+          "column": 1
+        }
+      },
+      {
+        "type": "Parenthesis",
+        "kind": "(",
+        "start": {
+          "offset": 18,
+          "line": 2,
+          "column": 1
+        },
+        "end": {
+          "offset": 19,
+          "line": 2,
+          "column": 2
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "i32",
+        "start": {
+          "offset": 19,
+          "line": 2,
+          "column": 2
+        },
+        "end": {
+          "offset": 22,
+          "line": 2,
+          "column": 5
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": ".",
+        "start": {
+          "offset": 22,
+          "line": 2,
+          "column": 5
+        },
+        "end": {
+          "offset": 23,
+          "line": 2,
+          "column": 6
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "const",
+        "start": {
+          "offset": 23,
+          "line": 2,
+          "column": 6
+        },
+        "end": {
+          "offset": 28,
+          "line": 2,
+          "column": 11
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": " ",
+        "start": {
+          "offset": 28,
+          "line": 2,
+          "column": 11
+        },
+        "end": {
+          "offset": 29,
+          "line": 2,
+          "column": 12
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "a",
+        "start": {
+          "offset": 29,
+          "line": 2,
+          "column": 12
+        },
+        "end": {
+          "offset": 30,
+          "line": 2,
+          "column": 13
+        }
+      },
+      {
+        "type": "Parenthesis",
+        "kind": ")",
+        "start": {
+          "offset": 30,
+          "line": 2,
+          "column": 13
+        },
+        "end": {
+          "offset": 31,
+          "line": 2,
+          "column": 14
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": "\n",
+        "start": {
+          "offset": 31,
+          "line": 2,
+          "column": 14
+        },
+        "end": {
+          "offset": 32,
+          "line": 3,
+          "column": 1
+        }
+      }
+    ],
+    "start": {
+      "offset": 0,
+      "line": 1,
+      "column": 1
+    },
+    "end": {
+      "offset": 48,
+      "line": 3,
+      "column": 17
+    }
+  },
+  "offset": {
+    "type": "MacroDefinition",
+    "macroName": "offset",
+    "macroParams": {
+      "type": "MacroParams",
+      "value": [
+        "a",
+        "b"
+      ],
+      "start": {
+        "offset": 68,
+        "line": 4,
+        "column": 20
+      },
+      "end": {
+        "offset": 73,
+        "line": 4,
+        "column": 25
+      }
+    },
+    "macroBody": [
+      {
+        "type": "WhiteSpace",
+        "value": "\n",
+        "start": {
+          "offset": 74,
+          "line": 4,
+          "column": 26
+        },
+        "end": {
+          "offset": 75,
+          "line": 5,
+          "column": 1
+        }
+      },
+      {
+        "type": "Parenthesis",
+        "kind": "(",
+        "start": {
+          "offset": 75,
+          "line": 5,
+          "column": 1
+        },
+        "end": {
+          "offset": 76,
+          "line": 5,
+          "column": 2
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "a",
+        "start": {
+          "offset": 76,
+          "line": 5,
+          "column": 2
+        },
+        "end": {
+          "offset": 77,
+          "line": 5,
+          "column": 3
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": ".",
+        "start": {
+          "offset": 77,
+          "line": 5,
+          "column": 3
+        },
+        "end": {
+          "offset": 78,
+          "line": 5,
+          "column": 4
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "add",
+        "start": {
+          "offset": 78,
+          "line": 5,
+          "column": 4
+        },
+        "end": {
+          "offset": 81,
+          "line": 5,
+          "column": 7
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": " \n  ",
+        "start": {
+          "offset": 81,
+          "line": 5,
+          "column": 7
+        },
+        "end": {
+          "offset": 85,
+          "line": 6,
+          "column": 3
+        }
+      },
+      {
+        "type": "Parenthesis",
+        "kind": "(",
+        "start": {
+          "offset": 85,
+          "line": 6,
+          "column": 3
+        },
+        "end": {
+          "offset": 86,
+          "line": 6,
+          "column": 4
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "a",
+        "start": {
+          "offset": 86,
+          "line": 6,
+          "column": 4
+        },
+        "end": {
+          "offset": 87,
+          "line": 6,
+          "column": 5
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": ".",
+        "start": {
+          "offset": 87,
+          "line": 6,
+          "column": 5
+        },
+        "end": {
+          "offset": 88,
+          "line": 6,
+          "column": 6
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "const",
+        "start": {
+          "offset": 88,
+          "line": 6,
+          "column": 6
+        },
+        "end": {
+          "offset": 93,
+          "line": 6,
+          "column": 11
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": " ",
+        "start": {
+          "offset": 93,
+          "line": 6,
+          "column": 11
+        },
+        "end": {
+          "offset": 94,
+          "line": 6,
+          "column": 12
+        }
+      },
+      {
+        "type": "IntegerLiteral",
+        "sign": "+",
+        "value": "10",
+        "start": {
+          "offset": 94,
+          "line": 6,
+          "column": 12
+        },
+        "end": {
+          "offset": 96,
+          "line": 6,
+          "column": 14
+        }
+      },
+      {
+        "type": "Parenthesis",
+        "kind": ")",
+        "start": {
+          "offset": 96,
+          "line": 6,
+          "column": 14
+        },
+        "end": {
+          "offset": 97,
+          "line": 6,
+          "column": 15
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": "\n  ",
+        "start": {
+          "offset": 97,
+          "line": 6,
+          "column": 15
+        },
+        "end": {
+          "offset": 100,
+          "line": 7,
+          "column": 3
+        }
+      },
+      {
+        "type": "MacroExecution",
+        "macroName": "t",
+        "macroParams": {
+          "type": "MacroParams",
+          "params": [
+            [
+              {
+                "type": "Identifier",
+                "name": "b",
+                "start": {
+                  "offset": 105,
+                  "line": 7,
+                  "column": 8
+                },
+                "end": {
+                  "offset": 106,
+                  "line": 7,
+                  "column": 9
+                }
+              }
+            ]
+          ],
+          "start": {
+            "offset": 105,
+            "line": 7,
+            "column": 8
+          },
+          "end": {
+            "offset": 106,
+            "line": 7,
+            "column": 9
+          }
+        },
+        "start": {
+          "offset": 100,
+          "line": 7,
+          "column": 3
+        },
+        "end": {
+          "offset": 107,
+          "line": 7,
+          "column": 10
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": "\n",
+        "start": {
+          "offset": 107,
+          "line": 7,
+          "column": 10
+        },
+        "end": {
+          "offset": 108,
+          "line": 8,
+          "column": 1
+        }
+      },
+      {
+        "type": "Parenthesis",
+        "kind": ")",
+        "start": {
+          "offset": 108,
+          "line": 8,
+          "column": 1
+        },
+        "end": {
+          "offset": 109,
+          "line": 8,
+          "column": 2
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": "\n",
+        "start": {
+          "offset": 109,
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "offset": 110,
+          "line": 9,
+          "column": 1
+        }
+      }
+    ],
+    "start": {
+      "offset": 49,
+      "line": 4,
+      "column": 1
+    },
+    "end": {
+      "offset": 126,
+      "line": 9,
+      "column": 17
+    }
+  },
+  "_attributes_": {
+    "type": "MemoryMap",
+    "size": 4
+  },
+  "test_offset": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "i32",
+      "size": 4,
+      "integer": true,
+      "unsigned": false,
+      "offset": 0,
+      "initData": null,
+      "num": 1,
+      "log2": 2
+    }
+  }
+}
