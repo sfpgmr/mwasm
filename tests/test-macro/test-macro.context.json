@@ -167,13 +167,13 @@
         "b"
       ],
       "start": {
-        "offset": 68,
-        "line": 4,
+        "offset": 69,
+        "line": 5,
         "column": 20
       },
       "end": {
-        "offset": 73,
-        "line": 4,
+        "offset": 74,
+        "line": 5,
         "column": 25
       }
     },
@@ -182,13 +182,13 @@
         "type": "WhiteSpace",
         "value": "\n",
         "start": {
-          "offset": 74,
-          "line": 4,
+          "offset": 75,
+          "line": 5,
           "column": 26
         },
         "end": {
-          "offset": 75,
-          "line": 5,
+          "offset": 76,
+          "line": 6,
           "column": 1
         }
       },
@@ -196,13 +196,13 @@
         "type": "Parenthesis",
         "kind": "(",
         "start": {
-          "offset": 75,
-          "line": 5,
+          "offset": 76,
+          "line": 6,
           "column": 1
         },
         "end": {
-          "offset": 76,
-          "line": 5,
+          "offset": 77,
+          "line": 6,
           "column": 2
         }
       },
@@ -210,13 +210,13 @@
         "type": "Identifier",
         "name": "a",
         "start": {
-          "offset": 76,
-          "line": 5,
+          "offset": 77,
+          "line": 6,
           "column": 2
         },
         "end": {
-          "offset": 77,
-          "line": 5,
+          "offset": 78,
+          "line": 6,
           "column": 3
         }
       },
@@ -224,13 +224,13 @@
         "type": "Identifier",
         "name": ".",
         "start": {
-          "offset": 77,
-          "line": 5,
+          "offset": 78,
+          "line": 6,
           "column": 3
         },
         "end": {
-          "offset": 78,
-          "line": 5,
+          "offset": 79,
+          "line": 6,
           "column": 4
         }
       },
@@ -238,13 +238,13 @@
         "type": "Identifier",
         "name": "add",
         "start": {
-          "offset": 78,
-          "line": 5,
+          "offset": 79,
+          "line": 6,
           "column": 4
         },
         "end": {
-          "offset": 81,
-          "line": 5,
+          "offset": 82,
+          "line": 6,
           "column": 7
         }
       },
@@ -252,13 +252,13 @@
         "type": "WhiteSpace",
         "value": " \n  ",
         "start": {
-          "offset": 81,
-          "line": 5,
+          "offset": 82,
+          "line": 6,
           "column": 7
         },
         "end": {
-          "offset": 85,
-          "line": 6,
+          "offset": 86,
+          "line": 7,
           "column": 3
         }
       },
@@ -266,13 +266,13 @@
         "type": "Parenthesis",
         "kind": "(",
         "start": {
-          "offset": 85,
-          "line": 6,
+          "offset": 86,
+          "line": 7,
           "column": 3
         },
         "end": {
-          "offset": 86,
-          "line": 6,
+          "offset": 87,
+          "line": 7,
           "column": 4
         }
       },
@@ -280,13 +280,13 @@
         "type": "Identifier",
         "name": "a",
         "start": {
-          "offset": 86,
-          "line": 6,
+          "offset": 87,
+          "line": 7,
           "column": 4
         },
         "end": {
-          "offset": 87,
-          "line": 6,
+          "offset": 88,
+          "line": 7,
           "column": 5
         }
       },
@@ -294,13 +294,13 @@
         "type": "Identifier",
         "name": ".",
         "start": {
-          "offset": 87,
-          "line": 6,
+          "offset": 88,
+          "line": 7,
           "column": 5
         },
         "end": {
-          "offset": 88,
-          "line": 6,
+          "offset": 89,
+          "line": 7,
           "column": 6
         }
       },
@@ -308,13 +308,13 @@
         "type": "Identifier",
         "name": "const",
         "start": {
-          "offset": 88,
-          "line": 6,
+          "offset": 89,
+          "line": 7,
           "column": 6
         },
         "end": {
-          "offset": 93,
-          "line": 6,
+          "offset": 94,
+          "line": 7,
           "column": 11
         }
       },
@@ -322,13 +322,13 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 93,
-          "line": 6,
+          "offset": 94,
+          "line": 7,
           "column": 11
         },
         "end": {
-          "offset": 94,
-          "line": 6,
+          "offset": 95,
+          "line": 7,
           "column": 12
         }
       },
@@ -337,13 +337,13 @@
         "sign": "+",
         "value": "10",
         "start": {
-          "offset": 94,
-          "line": 6,
+          "offset": 95,
+          "line": 7,
           "column": 12
         },
         "end": {
-          "offset": 96,
-          "line": 6,
+          "offset": 97,
+          "line": 7,
           "column": 14
         }
       },
@@ -351,13 +351,13 @@
         "type": "Parenthesis",
         "kind": ")",
         "start": {
-          "offset": 96,
-          "line": 6,
+          "offset": 97,
+          "line": 7,
           "column": 14
         },
         "end": {
-          "offset": 97,
-          "line": 6,
+          "offset": 98,
+          "line": 7,
           "column": 15
         }
       },
@@ -365,13 +365,13 @@
         "type": "WhiteSpace",
         "value": "\n  ",
         "start": {
-          "offset": 97,
-          "line": 6,
+          "offset": 98,
+          "line": 7,
           "column": 15
         },
         "end": {
-          "offset": 100,
-          "line": 7,
+          "offset": 101,
+          "line": 8,
           "column": 3
         }
       },
@@ -386,37 +386,37 @@
                 "type": "Identifier",
                 "name": "b",
                 "start": {
-                  "offset": 105,
-                  "line": 7,
+                  "offset": 106,
+                  "line": 8,
                   "column": 8
                 },
                 "end": {
-                  "offset": 106,
-                  "line": 7,
+                  "offset": 107,
+                  "line": 8,
                   "column": 9
                 }
               }
             ]
           ],
           "start": {
-            "offset": 105,
-            "line": 7,
+            "offset": 106,
+            "line": 8,
             "column": 8
           },
           "end": {
-            "offset": 106,
-            "line": 7,
+            "offset": 107,
+            "line": 8,
             "column": 9
           }
         },
         "start": {
-          "offset": 100,
-          "line": 7,
+          "offset": 101,
+          "line": 8,
           "column": 3
         },
         "end": {
-          "offset": 107,
-          "line": 7,
+          "offset": 108,
+          "line": 8,
           "column": 10
         }
       },
@@ -424,13 +424,13 @@
         "type": "WhiteSpace",
         "value": "\n",
         "start": {
-          "offset": 107,
-          "line": 7,
+          "offset": 108,
+          "line": 8,
           "column": 10
         },
         "end": {
-          "offset": 108,
-          "line": 8,
+          "offset": 109,
+          "line": 9,
           "column": 1
         }
       },
@@ -438,13 +438,13 @@
         "type": "Parenthesis",
         "kind": ")",
         "start": {
-          "offset": 108,
-          "line": 8,
+          "offset": 109,
+          "line": 9,
           "column": 1
         },
         "end": {
-          "offset": 109,
-          "line": 8,
+          "offset": 110,
+          "line": 9,
           "column": 2
         }
       },
@@ -452,25 +452,311 @@
         "type": "WhiteSpace",
         "value": "\n",
         "start": {
-          "offset": 109,
-          "line": 8,
+          "offset": 110,
+          "line": 9,
           "column": 2
         },
         "end": {
-          "offset": 110,
-          "line": 9,
+          "offset": 111,
+          "line": 10,
           "column": 1
         }
       }
     ],
     "start": {
-      "offset": 49,
-      "line": 4,
+      "offset": 50,
+      "line": 5,
       "column": 1
     },
     "end": {
-      "offset": 126,
-      "line": 9,
+      "offset": 127,
+      "line": 10,
+      "column": 17
+    }
+  },
+  "macro_fp": {
+    "type": "MacroDefinition",
+    "macroName": "macro_fp",
+    "macroParams": {
+      "type": "MacroParams",
+      "value": [
+        "b"
+      ],
+      "start": {
+        "offset": 149,
+        "line": 12,
+        "column": 21
+      },
+      "end": {
+        "offset": 152,
+        "line": 12,
+        "column": 24
+      }
+    },
+    "macroBody": [
+      {
+        "type": "WhiteSpace",
+        "value": "\n",
+        "start": {
+          "offset": 153,
+          "line": 12,
+          "column": 25
+        },
+        "end": {
+          "offset": 154,
+          "line": 13,
+          "column": 1
+        }
+      },
+      {
+        "type": "Parenthesis",
+        "kind": "(",
+        "start": {
+          "offset": 154,
+          "line": 13,
+          "column": 1
+        },
+        "end": {
+          "offset": 155,
+          "line": 13,
+          "column": 2
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "f32",
+        "start": {
+          "offset": 155,
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "offset": 158,
+          "line": 13,
+          "column": 5
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": ".",
+        "start": {
+          "offset": 158,
+          "line": 13,
+          "column": 5
+        },
+        "end": {
+          "offset": 159,
+          "line": 13,
+          "column": 6
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "add",
+        "start": {
+          "offset": 159,
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "offset": 162,
+          "line": 13,
+          "column": 9
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": "\n  ",
+        "start": {
+          "offset": 162,
+          "line": 13,
+          "column": 9
+        },
+        "end": {
+          "offset": 165,
+          "line": 14,
+          "column": 3
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "b",
+        "start": {
+          "offset": 165,
+          "line": 14,
+          "column": 3
+        },
+        "end": {
+          "offset": 166,
+          "line": 14,
+          "column": 4
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": "\n  ",
+        "start": {
+          "offset": 166,
+          "line": 14,
+          "column": 4
+        },
+        "end": {
+          "offset": 169,
+          "line": 15,
+          "column": 3
+        }
+      },
+      {
+        "type": "Parenthesis",
+        "kind": "(",
+        "start": {
+          "offset": 169,
+          "line": 15,
+          "column": 3
+        },
+        "end": {
+          "offset": 170,
+          "line": 15,
+          "column": 4
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "f32",
+        "start": {
+          "offset": 170,
+          "line": 15,
+          "column": 4
+        },
+        "end": {
+          "offset": 173,
+          "line": 15,
+          "column": 7
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": ".",
+        "start": {
+          "offset": 173,
+          "line": 15,
+          "column": 7
+        },
+        "end": {
+          "offset": 174,
+          "line": 15,
+          "column": 8
+        }
+      },
+      {
+        "type": "Identifier",
+        "name": "const",
+        "start": {
+          "offset": 174,
+          "line": 15,
+          "column": 8
+        },
+        "end": {
+          "offset": 179,
+          "line": 15,
+          "column": 13
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": " ",
+        "start": {
+          "offset": 179,
+          "line": 15,
+          "column": 13
+        },
+        "end": {
+          "offset": 180,
+          "line": 15,
+          "column": 14
+        }
+      },
+      {
+        "type": "FloatLiteral",
+        "sign": "+",
+        "number": "0",
+        "flac": "5",
+        "start": {
+          "offset": 180,
+          "line": 15,
+          "column": 14
+        },
+        "end": {
+          "offset": 183,
+          "line": 15,
+          "column": 17
+        }
+      },
+      {
+        "type": "Parenthesis",
+        "kind": ")",
+        "start": {
+          "offset": 183,
+          "line": 15,
+          "column": 17
+        },
+        "end": {
+          "offset": 184,
+          "line": 15,
+          "column": 18
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": "\n",
+        "start": {
+          "offset": 184,
+          "line": 15,
+          "column": 18
+        },
+        "end": {
+          "offset": 185,
+          "line": 16,
+          "column": 1
+        }
+      },
+      {
+        "type": "Parenthesis",
+        "kind": ")",
+        "start": {
+          "offset": 185,
+          "line": 16,
+          "column": 1
+        },
+        "end": {
+          "offset": 186,
+          "line": 16,
+          "column": 2
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": "\n",
+        "start": {
+          "offset": 186,
+          "line": 16,
+          "column": 2
+        },
+        "end": {
+          "offset": 187,
+          "line": 17,
+          "column": 1
+        }
+      }
+    ],
+    "start": {
+      "offset": 129,
+      "line": 12,
+      "column": 1
+    },
+    "end": {
+      "offset": 203,
+      "line": 17,
       "column": 17
     }
   },

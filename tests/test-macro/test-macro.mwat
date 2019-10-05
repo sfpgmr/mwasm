@@ -1,10 +1,18 @@
 {@macro_def t(a)}
 (i32.const a)
 {@end_macro_def}
+
 {@macro_def offset (a,b)}
 (a.add 
   (a.const 10)
   {@@t b}
+)
+{@end_macro_def}
+
+{@macro_def macro_fp(b)}
+(f32.add
+  b
+  (f32.const 0.5)
 )
 {@end_macro_def}
 
@@ -18,5 +26,10 @@
 (func $test (result i32)
   (local $a i32)
   {@@offset i32,10}
+)
+(func $testfp (result f32)
+  {@@macro_fp
+    (f32.const 1)
+  }
 )
 )

@@ -3,6 +3,9 @@
 
 
 
+
+
+
 (module
 (memory 0)
 (export "test" (func $test))
@@ -14,6 +17,15 @@
   
 (i32.const +10)
 
+)
+
+)
+(func $testfp (result f32)
+  
+(f32.add
+  (f32.const +1)
+  
+  (f32.const +0.5)
 )
 
 )
