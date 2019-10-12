@@ -2,26 +2,10 @@
 $.X = 0x1;
 $.Y = 2;
 $.Z = 0x3;
-
-}
-(;;
-aaaaa
-;;)
-
-{@struct structA 
-
 }
 
 (module
-  (memory $memory 1
-    {@map 
-      offset 0
-      #label i32[16] ${[]} 
-      #label1 i64
-      #label2 i32
-      #label3 f32
-    }
-  )
+  (memory $memory 1 )
   (export "memory" (memory $memory))
   {@include './test_inc.mwat'}
   {@if $.X < 1}
@@ -55,8 +39,8 @@ aaaaa
   {@else}
     (export "testa" (func $testa))
     (func $testa (result i32)
-      i32.const @X;; comment
-      i32.const {$ $.X + $.Y }
+      i32.const @X
+      i32.const {$.X + $.Y }
       i32.add
     )
   {@endif}

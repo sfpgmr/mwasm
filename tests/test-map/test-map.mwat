@@ -1,7 +1,19 @@
-{@map 
-  offset {10};
-  i32 label[16] {return [1,2,3,4];};
+{@
+$.INDEX = 10;
+}
+
+{@map offset {return 10};
+  i32 label[16];
   i64 label2,label2_1,label2_2;
   i32 label3;
   f64 label4;
+  f32 label5[{$.INDEX}];
 }
+
+(module
+(memory 0)
+(export "test" (func $test))
+(func $test (result i32)
+  (&label5[9];)
+)
+)

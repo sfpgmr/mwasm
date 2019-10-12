@@ -15,7 +15,7 @@
 (i32.add 
   (i32.const +10)
   
-(i32.const +10)
+(i32.const 0x0001)
 
 )
 

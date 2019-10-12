@@ -351,7 +351,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "c",
-          "numExpression": "10",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "10",
+            "start": {
+              "offset": 127,
+              "line": 21,
+              "column": 7
+            },
+            "end": {
+              "offset": 129,
+              "line": 21,
+              "column": 9
+            }
+          },
           "start": {
             "offset": 125,
             "line": 21,

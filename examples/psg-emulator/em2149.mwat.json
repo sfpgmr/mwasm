@@ -36,7 +36,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "regmsk",
-          "numExpression": "16",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "16",
+            "start": {
+              "offset": 253,
+              "line": 11,
+              "column": 12
+            },
+            "end": {
+              "offset": 255,
+              "line": 11,
+              "column": 14
+            }
+          },
           "start": {
             "offset": 246,
             "line": 11,
@@ -336,7 +349,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "voltbl_",
-          "numExpression": "64",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "64",
+            "start": {
+              "offset": 413,
+              "line": 16,
+              "column": 17
+            },
+            "end": {
+              "offset": 415,
+              "line": 16,
+              "column": 19
+            }
+          },
           "start": {
             "offset": 405,
             "line": 16,
@@ -1356,7 +1382,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "reg",
-          "numExpression": "16",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "16",
+            "start": {
+              "offset": 837,
+              "line": 22,
+              "column": 13
+            },
+            "end": {
+              "offset": 839,
+              "line": 22,
+              "column": 15
+            }
+          },
           "start": {
             "offset": 833,
             "line": 22,
@@ -1678,7 +1717,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "count",
-          "numExpression": "3",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "3",
+            "start": {
+              "offset": 932,
+              "line": 28,
+              "column": 15
+            },
+            "end": {
+              "offset": 933,
+              "line": 28,
+              "column": 16
+            }
+          },
           "start": {
             "offset": 926,
             "line": 28,
@@ -1724,7 +1776,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "volume",
-          "numExpression": "3",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "3",
+            "start": {
+              "offset": 952,
+              "line": 29,
+              "column": 16
+            },
+            "end": {
+              "offset": 953,
+              "line": 29,
+              "column": 17
+            }
+          },
           "start": {
             "offset": 945,
             "line": 29,
@@ -1770,7 +1835,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "freq",
-          "numExpression": "3",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "3",
+            "start": {
+              "offset": 970,
+              "line": 30,
+              "column": 14
+            },
+            "end": {
+              "offset": 971,
+              "line": 30,
+              "column": 15
+            }
+          },
           "start": {
             "offset": 965,
             "line": 30,
@@ -1816,7 +1894,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "edge",
-          "numExpression": "3",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "3",
+            "start": {
+              "offset": 988,
+              "line": 31,
+              "column": 14
+            },
+            "end": {
+              "offset": 989,
+              "line": 31,
+              "column": 15
+            }
+          },
           "start": {
             "offset": 983,
             "line": 31,
@@ -1862,7 +1953,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "tmask",
-          "numExpression": "3",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "3",
+            "start": {
+              "offset": 1007,
+              "line": 32,
+              "column": 15
+            },
+            "end": {
+              "offset": 1008,
+              "line": 32,
+              "column": 16
+            }
+          },
           "start": {
             "offset": 1001,
             "line": 32,
@@ -1908,7 +2012,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "nmask",
-          "numExpression": "3",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "3",
+            "start": {
+              "offset": 1026,
+              "line": 33,
+              "column": 15
+            },
+            "end": {
+              "offset": 1027,
+              "line": 33,
+              "column": 16
+            }
+          },
           "start": {
             "offset": 1020,
             "line": 33,
@@ -2874,7 +2991,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "ch_out",
-          "numExpression": "3",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "3",
+            "start": {
+              "offset": 1537,
+              "line": 65,
+              "column": 16
+            },
+            "end": {
+              "offset": 1538,
+              "line": 65,
+              "column": 17
+            }
+          },
           "start": {
             "offset": 1530,
             "line": 65,
@@ -5708,7 +5838,20 @@
         "id": {
           "type": "MemoryLabelId",
           "id": "OutputBuffer",
-          "numExpression": "128",
+          "numExpression": {
+            "type": "JSNumber",
+            "value": "128",
+            "start": {
+              "offset": 2242,
+              "line": 90,
+              "column": 20
+            },
+            "end": {
+              "offset": 2245,
+              "line": 90,
+              "column": 23
+            }
+          },
           "start": {
             "offset": 2229,
             "line": 90,
