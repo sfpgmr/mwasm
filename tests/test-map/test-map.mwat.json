@@ -34,16 +34,16 @@
         "type": "Offset",
         "offset": {
           "type": "Code",
-          "code": "return 10",
+          "code": "return 0",
           "start": {
             "offset": 33,
             "line": 5,
             "column": 14
           },
           "end": {
-            "offset": 44,
+            "offset": 43,
             "line": 5,
-            "column": 25
+            "column": 24
           }
         },
         "start": {
@@ -52,7 +52,7 @@
           "column": 7
         },
         "end": {
-          "offset": 48,
+          "offset": 47,
           "line": 6,
           "column": 3
         }
@@ -63,28 +63,45 @@
           "type": "MemoryLabelId",
           "id": "label",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "16",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSPropertyName",
+                "name": "INDEX",
+                "prefix": null,
+                "start": {
+                  "offset": 57,
+                  "line": 6,
+                  "column": 13
+                },
+                "end": {
+                  "offset": 62,
+                  "line": 6,
+                  "column": 18
+                },
+                "top": true
+              }
+            ],
             "start": {
-              "offset": 58,
+              "offset": 57,
               "line": 6,
               "column": 13
             },
             "end": {
-              "offset": 60,
+              "offset": 62,
               "line": 6,
-              "column": 15
+              "column": 18
             }
           },
           "start": {
-            "offset": 52,
+            "offset": 51,
             "line": 6,
             "column": 7
           },
           "end": {
-            "offset": 61,
+            "offset": 63,
             "line": 6,
-            "column": 16
+            "column": 19
           }
         },
         "varType": {
@@ -94,26 +111,26 @@
           "integer": true,
           "unsigned": false,
           "start": {
-            "offset": 48,
+            "offset": 47,
             "line": 6,
             "column": 3
           },
           "end": {
-            "offset": 51,
+            "offset": 50,
             "line": 6,
             "column": 6
           }
         },
         "initData": null,
         "start": {
-          "offset": 48,
+          "offset": 47,
           "line": 6,
           "column": 3
         },
         "end": {
-          "offset": 62,
+          "offset": 64,
           "line": 6,
-          "column": 17
+          "column": 20
         }
       },
       {
@@ -123,12 +140,12 @@
           "id": "label2",
           "numExpression": null,
           "start": {
-            "offset": 69,
+            "offset": 71,
             "line": 7,
             "column": 7
           },
           "end": {
-            "offset": 75,
+            "offset": 77,
             "line": 7,
             "column": 13
           }
@@ -140,24 +157,24 @@
           "integer": true,
           "unsigned": false,
           "start": {
-            "offset": 65,
+            "offset": 67,
             "line": 7,
             "column": 3
           },
           "end": {
-            "offset": 68,
+            "offset": 70,
             "line": 7,
             "column": 6
           }
         },
         "initData": null,
         "start": {
-          "offset": 65,
+          "offset": 67,
           "line": 7,
           "column": 3
         },
         "end": {
-          "offset": 94,
+          "offset": 96,
           "line": 7,
           "column": 32
         }
@@ -169,12 +186,12 @@
           "id": "label2_1",
           "numExpression": null,
           "start": {
-            "offset": 76,
+            "offset": 78,
             "line": 7,
             "column": 14
           },
           "end": {
-            "offset": 84,
+            "offset": 86,
             "line": 7,
             "column": 22
           }
@@ -186,24 +203,24 @@
           "integer": true,
           "unsigned": false,
           "start": {
-            "offset": 65,
+            "offset": 67,
             "line": 7,
             "column": 3
           },
           "end": {
-            "offset": 68,
+            "offset": 70,
             "line": 7,
             "column": 6
           }
         },
         "initData": null,
         "start": {
-          "offset": 65,
+          "offset": 67,
           "line": 7,
           "column": 3
         },
         "end": {
-          "offset": 94,
+          "offset": 96,
           "line": 7,
           "column": 32
         }
@@ -215,12 +232,12 @@
           "id": "label2_2",
           "numExpression": null,
           "start": {
-            "offset": 85,
+            "offset": 87,
             "line": 7,
             "column": 23
           },
           "end": {
-            "offset": 93,
+            "offset": 95,
             "line": 7,
             "column": 31
           }
@@ -232,24 +249,24 @@
           "integer": true,
           "unsigned": false,
           "start": {
-            "offset": 65,
+            "offset": 67,
             "line": 7,
             "column": 3
           },
           "end": {
-            "offset": 68,
+            "offset": 70,
             "line": 7,
             "column": 6
           }
         },
         "initData": null,
         "start": {
-          "offset": 65,
+          "offset": 67,
           "line": 7,
           "column": 3
         },
         "end": {
-          "offset": 94,
+          "offset": 96,
           "line": 7,
           "column": 32
         }
@@ -261,12 +278,12 @@
           "id": "label3",
           "numExpression": null,
           "start": {
-            "offset": 101,
+            "offset": 103,
             "line": 8,
             "column": 7
           },
           "end": {
-            "offset": 107,
+            "offset": 109,
             "line": 8,
             "column": 13
           }
@@ -278,24 +295,24 @@
           "integer": true,
           "unsigned": false,
           "start": {
-            "offset": 97,
+            "offset": 99,
             "line": 8,
             "column": 3
           },
           "end": {
-            "offset": 100,
+            "offset": 102,
             "line": 8,
             "column": 6
           }
         },
         "initData": null,
         "start": {
-          "offset": 97,
+          "offset": 99,
           "line": 8,
           "column": 3
         },
         "end": {
-          "offset": 108,
+          "offset": 110,
           "line": 8,
           "column": 14
         }
@@ -307,12 +324,12 @@
           "id": "label4",
           "numExpression": null,
           "start": {
-            "offset": 115,
+            "offset": 117,
             "line": 9,
             "column": 7
           },
           "end": {
-            "offset": 121,
+            "offset": 123,
             "line": 9,
             "column": 13
           }
@@ -324,24 +341,24 @@
           "integer": false,
           "unsigned": false,
           "start": {
-            "offset": 111,
+            "offset": 113,
             "line": 9,
             "column": 3
           },
           "end": {
-            "offset": 114,
+            "offset": 116,
             "line": 9,
             "column": 6
           }
         },
         "initData": null,
         "start": {
-          "offset": 111,
+          "offset": 113,
           "line": 9,
           "column": 3
         },
         "end": {
-          "offset": 122,
+          "offset": 124,
           "line": 9,
           "column": 14
         }
@@ -352,28 +369,45 @@
           "type": "MemoryLabelId",
           "id": "label5",
           "numExpression": {
-            "type": "CodeExpression",
-            "code": "$.INDEX",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSPropertyName",
+                "name": "INDEX",
+                "prefix": null,
+                "start": {
+                  "offset": 138,
+                  "line": 10,
+                  "column": 14
+                },
+                "end": {
+                  "offset": 143,
+                  "line": 10,
+                  "column": 19
+                },
+                "top": true
+              }
+            ],
             "start": {
-              "offset": 136,
+              "offset": 138,
               "line": 10,
               "column": 14
             },
             "end": {
-              "offset": 145,
+              "offset": 143,
               "line": 10,
-              "column": 23
+              "column": 19
             }
           },
           "start": {
-            "offset": 129,
+            "offset": 131,
             "line": 10,
             "column": 7
           },
           "end": {
-            "offset": 146,
+            "offset": 144,
             "line": 10,
-            "column": 24
+            "column": 20
           }
         },
         "varType": {
@@ -383,26 +417,26 @@
           "integer": false,
           "unsigned": false,
           "start": {
-            "offset": 125,
+            "offset": 127,
             "line": 10,
             "column": 3
           },
           "end": {
-            "offset": 128,
+            "offset": 130,
             "line": 10,
             "column": 6
           }
         },
         "initData": null,
         "start": {
-          "offset": 125,
+          "offset": 127,
           "line": 10,
           "column": 3
         },
         "end": {
-          "offset": 147,
+          "offset": 145,
           "line": 10,
-          "column": 25
+          "column": 21
         }
       }
     ],
@@ -412,7 +446,7 @@
       "column": 1
     },
     "end": {
-      "offset": 149,
+      "offset": 147,
       "line": 11,
       "column": 2
     }
@@ -421,12 +455,12 @@
     "type": "WhiteSpace",
     "value": "\n\n",
     "start": {
-      "offset": 149,
+      "offset": 147,
       "line": 11,
       "column": 2
     },
     "end": {
-      "offset": 151,
+      "offset": 149,
       "line": 13,
       "column": 1
     }
@@ -435,12 +469,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 151,
+      "offset": 149,
       "line": 13,
       "column": 1
     },
     "end": {
-      "offset": 152,
+      "offset": 150,
       "line": 13,
       "column": 2
     }
@@ -449,12 +483,12 @@
     "type": "Identifier",
     "name": "module",
     "start": {
-      "offset": 152,
+      "offset": 150,
       "line": 13,
       "column": 2
     },
     "end": {
-      "offset": 158,
+      "offset": 156,
       "line": 13,
       "column": 8
     }
@@ -463,12 +497,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 158,
+      "offset": 156,
       "line": 13,
       "column": 8
     },
     "end": {
-      "offset": 159,
+      "offset": 157,
       "line": 14,
       "column": 1
     }
@@ -477,12 +511,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 159,
+      "offset": 157,
       "line": 14,
       "column": 1
     },
     "end": {
-      "offset": 160,
+      "offset": 158,
       "line": 14,
       "column": 2
     }
@@ -491,12 +525,12 @@
     "type": "Identifier",
     "name": "memory",
     "start": {
-      "offset": 160,
+      "offset": 158,
       "line": 14,
       "column": 2
     },
     "end": {
-      "offset": 166,
+      "offset": 164,
       "line": 14,
       "column": 8
     }
@@ -505,12 +539,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 166,
+      "offset": 164,
       "line": 14,
       "column": 8
     },
     "end": {
-      "offset": 167,
+      "offset": 165,
       "line": 14,
       "column": 9
     }
@@ -519,12 +553,12 @@
     "type": "Identifier",
     "name": "0",
     "start": {
-      "offset": 167,
+      "offset": 165,
       "line": 14,
       "column": 9
     },
     "end": {
-      "offset": 168,
+      "offset": 166,
       "line": 14,
       "column": 10
     }
@@ -533,12 +567,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 168,
+      "offset": 166,
       "line": 14,
       "column": 10
     },
     "end": {
-      "offset": 169,
+      "offset": 167,
       "line": 14,
       "column": 11
     }
@@ -547,12 +581,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 169,
+      "offset": 167,
       "line": 14,
       "column": 11
     },
     "end": {
-      "offset": 170,
+      "offset": 168,
       "line": 15,
       "column": 1
     }
@@ -561,12 +595,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 170,
+      "offset": 168,
       "line": 15,
       "column": 1
     },
     "end": {
-      "offset": 171,
+      "offset": 169,
       "line": 15,
       "column": 2
     }
@@ -575,12 +609,12 @@
     "type": "Identifier",
     "name": "export",
     "start": {
-      "offset": 171,
+      "offset": 169,
       "line": 15,
       "column": 2
     },
     "end": {
-      "offset": 177,
+      "offset": 175,
       "line": 15,
       "column": 8
     }
@@ -589,12 +623,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 177,
+      "offset": 175,
       "line": 15,
       "column": 8
     },
     "end": {
-      "offset": 178,
+      "offset": 176,
       "line": 15,
       "column": 9
     }
@@ -603,12 +637,12 @@
     "type": "StringLiteral",
     "value": "\"test\"",
     "start": {
-      "offset": 178,
+      "offset": 176,
       "line": 15,
       "column": 9
     },
     "end": {
-      "offset": 184,
+      "offset": 182,
       "line": 15,
       "column": 15
     }
@@ -617,12 +651,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 184,
+      "offset": 182,
       "line": 15,
       "column": 15
     },
     "end": {
-      "offset": 185,
+      "offset": 183,
       "line": 15,
       "column": 16
     }
@@ -631,12 +665,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 185,
+      "offset": 183,
       "line": 15,
       "column": 16
     },
     "end": {
-      "offset": 186,
+      "offset": 184,
       "line": 15,
       "column": 17
     }
@@ -645,12 +679,12 @@
     "type": "Identifier",
     "name": "func",
     "start": {
-      "offset": 186,
+      "offset": 184,
       "line": 15,
       "column": 17
     },
     "end": {
-      "offset": 190,
+      "offset": 188,
       "line": 15,
       "column": 21
     }
@@ -659,12 +693,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 190,
+      "offset": 188,
       "line": 15,
       "column": 21
     },
     "end": {
-      "offset": 191,
+      "offset": 189,
       "line": 15,
       "column": 22
     }
@@ -673,12 +707,12 @@
     "type": "Identifier",
     "name": "$test",
     "start": {
-      "offset": 191,
+      "offset": 189,
       "line": 15,
       "column": 22
     },
     "end": {
-      "offset": 196,
+      "offset": 194,
       "line": 15,
       "column": 27
     }
@@ -687,12 +721,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 196,
+      "offset": 194,
       "line": 15,
       "column": 27
     },
     "end": {
-      "offset": 197,
+      "offset": 195,
       "line": 15,
       "column": 28
     }
@@ -701,12 +735,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 197,
+      "offset": 195,
       "line": 15,
       "column": 28
     },
     "end": {
-      "offset": 198,
+      "offset": 196,
       "line": 15,
       "column": 29
     }
@@ -715,12 +749,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 198,
+      "offset": 196,
       "line": 15,
       "column": 29
     },
     "end": {
-      "offset": 199,
+      "offset": 197,
       "line": 16,
       "column": 1
     }
@@ -729,12 +763,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 199,
+      "offset": 197,
       "line": 16,
       "column": 1
     },
     "end": {
-      "offset": 200,
+      "offset": 198,
       "line": 16,
       "column": 2
     }
@@ -743,12 +777,12 @@
     "type": "Identifier",
     "name": "func",
     "start": {
-      "offset": 200,
+      "offset": 198,
       "line": 16,
       "column": 2
     },
     "end": {
-      "offset": 204,
+      "offset": 202,
       "line": 16,
       "column": 6
     }
@@ -757,12 +791,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 204,
+      "offset": 202,
       "line": 16,
       "column": 6
     },
     "end": {
-      "offset": 205,
+      "offset": 203,
       "line": 16,
       "column": 7
     }
@@ -771,12 +805,12 @@
     "type": "Identifier",
     "name": "$test",
     "start": {
-      "offset": 205,
+      "offset": 203,
       "line": 16,
       "column": 7
     },
     "end": {
-      "offset": 210,
+      "offset": 208,
       "line": 16,
       "column": 12
     }
@@ -785,12 +819,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 210,
+      "offset": 208,
       "line": 16,
       "column": 12
     },
     "end": {
-      "offset": 211,
+      "offset": 209,
       "line": 16,
       "column": 13
     }
@@ -799,12 +833,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 211,
+      "offset": 209,
       "line": 16,
       "column": 13
     },
     "end": {
-      "offset": 212,
+      "offset": 210,
       "line": 16,
       "column": 14
     }
@@ -813,12 +847,12 @@
     "type": "Identifier",
     "name": "result",
     "start": {
-      "offset": 212,
+      "offset": 210,
       "line": 16,
       "column": 14
     },
     "end": {
-      "offset": 218,
+      "offset": 216,
       "line": 16,
       "column": 20
     }
@@ -827,12 +861,12 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 218,
+      "offset": 216,
       "line": 16,
       "column": 20
     },
     "end": {
-      "offset": 219,
+      "offset": 217,
       "line": 16,
       "column": 21
     }
@@ -841,12 +875,12 @@
     "type": "Identifier",
     "name": "i32",
     "start": {
-      "offset": 219,
+      "offset": 217,
       "line": 16,
       "column": 21
     },
     "end": {
-      "offset": 222,
+      "offset": 220,
       "line": 16,
       "column": 24
     }
@@ -855,12 +889,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 222,
+      "offset": 220,
       "line": 16,
       "column": 24
     },
     "end": {
-      "offset": 223,
+      "offset": 221,
       "line": 16,
       "column": 25
     }
@@ -869,12 +903,12 @@
     "type": "WhiteSpace",
     "value": "\n  ",
     "start": {
-      "offset": 223,
+      "offset": 221,
       "line": 16,
       "column": 25
     },
     "end": {
-      "offset": 226,
+      "offset": 224,
       "line": 17,
       "column": 3
     }
@@ -883,12 +917,12 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 226,
+      "offset": 224,
       "line": 17,
       "column": 3
     },
     "end": {
-      "offset": 227,
+      "offset": 225,
       "line": 17,
       "column": 4
     }
@@ -898,114 +932,146 @@
     "expression": [
       {
         "type": "JSPropertyName",
-        "name": "label5",
+        "name": "label",
         "prefix": "&",
         "start": {
-          "offset": 227,
+          "offset": 225,
           "line": 17,
           "column": 4
         },
         "end": {
-          "offset": 234,
+          "offset": 231,
           "line": 17,
-          "column": 11
+          "column": 10
         },
         "child": {
           "type": "IndexExpression",
           "expression": [
             {
-              "type": "JSNumber",
-              "value": "9",
+              "type": "JSPropertyName",
+              "name": "INDEX",
+              "prefix": null,
               "start": {
-                "offset": 235,
+                "offset": 232,
                 "line": 17,
-                "column": 12
+                "column": 11
               },
               "end": {
-                "offset": 236,
+                "offset": 237,
                 "line": 17,
-                "column": 13
-              }
+                "column": 16
+              },
+              "top": true
             }
           ],
           "start": {
-            "offset": 234,
+            "offset": 231,
             "line": 17,
-            "column": 11
+            "column": 10
           },
           "end": {
-            "offset": 237,
+            "offset": 238,
             "line": 17,
-            "column": 14
+            "column": 17
           }
+        },
+        "top": true
+      },
+      {
+        "type": "WhiteSpace",
+        "value": " ",
+        "start": {
+          "offset": 238,
+          "line": 17,
+          "column": 17
+        },
+        "end": {
+          "offset": 239,
+          "line": 17,
+          "column": 18
+        }
+      },
+      {
+        "type": "JSOperator",
+        "value": "+",
+        "start": {
+          "offset": 239,
+          "line": 17,
+          "column": 18
+        },
+        "end": {
+          "offset": 240,
+          "line": 17,
+          "column": 19
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": " ",
+        "start": {
+          "offset": 240,
+          "line": 17,
+          "column": 19
+        },
+        "end": {
+          "offset": 241,
+          "line": 17,
+          "column": 20
+        }
+      },
+      {
+        "type": "JSPropertyName",
+        "name": "INDEX",
+        "prefix": null,
+        "start": {
+          "offset": 241,
+          "line": 17,
+          "column": 20
+        },
+        "end": {
+          "offset": 246,
+          "line": 17,
+          "column": 25
         },
         "top": true
       }
     ],
     "start": {
-      "offset": 227,
+      "offset": 225,
       "line": 17,
       "column": 4
     },
     "end": {
-      "offset": 237,
+      "offset": 246,
       "line": 17,
-      "column": 14
+      "column": 25
     }
   },
   {
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 238,
+      "offset": 247,
       "line": 17,
-      "column": 15
+      "column": 26
     },
     "end": {
-      "offset": 239,
+      "offset": 248,
       "line": 17,
-      "column": 16
+      "column": 27
     }
   },
   {
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 239,
+      "offset": 248,
       "line": 17,
-      "column": 16
+      "column": 27
     },
     "end": {
-      "offset": 240,
+      "offset": 249,
       "line": 18,
-      "column": 1
-    }
-  },
-  {
-    "type": "Parenthesis",
-    "kind": ")",
-    "start": {
-      "offset": 240,
-      "line": 18,
-      "column": 1
-    },
-    "end": {
-      "offset": 241,
-      "line": 18,
-      "column": 2
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": "\n",
-    "start": {
-      "offset": 241,
-      "line": 18,
-      "column": 2
-    },
-    "end": {
-      "offset": 242,
-      "line": 19,
       "column": 1
     }
   },
@@ -1013,12 +1079,40 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 242,
+      "offset": 249,
+      "line": 18,
+      "column": 1
+    },
+    "end": {
+      "offset": 250,
+      "line": 18,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 250,
+      "line": 18,
+      "column": 2
+    },
+    "end": {
+      "offset": 251,
+      "line": 19,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 251,
       "line": 19,
       "column": 1
     },
     "end": {
-      "offset": 243,
+      "offset": 252,
       "line": 19,
       "column": 2
     }
@@ -1027,12 +1121,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 243,
+      "offset": 252,
       "line": 19,
       "column": 2
     },
     "end": {
-      "offset": 244,
+      "offset": 253,
       "line": 20,
       "column": 1
     }

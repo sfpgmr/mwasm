@@ -7,6 +7,6 @@
 (memory 0)
 (export "test" (func $test))
 (func $test (result i32)
-  (i32.const 146 (; label5 ;))
+  (i32.const 50 (; label + INDEX ;))
 )
 )

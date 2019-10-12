@@ -5398,7 +5398,7 @@ function peg$parse(input, options) {
   }
 
   function peg$parseNumExpression() {
-    var s0, s1, s2, s3;
+    var s0, s1, s2, s3, s4, s5;
 
     s0 = peg$currPos;
     if (input.charCodeAt(peg$currPos) === 91) {
@@ -5409,22 +5409,31 @@ function peg$parse(input, options) {
       if (peg$silentFails === 0) { peg$fail(peg$c135); }
     }
     if (s1 !== peg$FAILED) {
-      s2 = peg$parseJSNumber();
-      if (s2 === peg$FAILED) {
-        s2 = peg$parseJSCodes();
-      }
+      s2 = peg$parse__();
       if (s2 !== peg$FAILED) {
-        if (input.charCodeAt(peg$currPos) === 93) {
-          s3 = peg$c138;
-          peg$currPos++;
-        } else {
-          s3 = peg$FAILED;
-          if (peg$silentFails === 0) { peg$fail(peg$c139); }
-        }
+        s3 = peg$parsePropertyExpression();
         if (s3 !== peg$FAILED) {
-          peg$savedPos = s0;
-          s1 = peg$c203(s2);
-          s0 = s1;
+          s4 = peg$parse__();
+          if (s4 !== peg$FAILED) {
+            if (input.charCodeAt(peg$currPos) === 93) {
+              s5 = peg$c138;
+              peg$currPos++;
+            } else {
+              s5 = peg$FAILED;
+              if (peg$silentFails === 0) { peg$fail(peg$c139); }
+            }
+            if (s5 !== peg$FAILED) {
+              peg$savedPos = s0;
+              s1 = peg$c203(s3);
+              s0 = s1;
+            } else {
+              peg$currPos = s0;
+              s0 = peg$FAILED;
+            }
+          } else {
+            peg$currPos = s0;
+            s0 = peg$FAILED;
+          }
         } else {
           peg$currPos = s0;
           s0 = peg$FAILED;
@@ -6604,6 +6613,7 @@ var index = async () => {
               //console.log(propName);
               parsed.push(propName);
               break;
+
             case 'WhiteSpace':
               !skip && parsed.push(expression.value);
               parsedText += expression.value;
@@ -6658,7 +6668,8 @@ var index = async () => {
                     let num;
                     if (def.id.numExpression) {
                       //num = this.evalExpression(def.id.numExpression);
-                      num = this.parseOffset(def.id.numExpression);
+                      // num = this.parseOffset(def.id.numExpression);
+                      num = this.parsePropertyExpression(def.id.numExpression.expression).value;
                       if (isNaN(num)) {
                         error(`error:number suffix is illegal.`, def);
                       }

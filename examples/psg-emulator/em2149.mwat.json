@@ -37,8 +37,23 @@
           "type": "MemoryLabelId",
           "id": "regmsk",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "16",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "16",
+                "start": {
+                  "offset": 253,
+                  "line": 11,
+                  "column": 12
+                },
+                "end": {
+                  "offset": 255,
+                  "line": 11,
+                  "column": 14
+                }
+              }
+            ],
             "start": {
               "offset": 253,
               "line": 11,
@@ -350,8 +365,23 @@
           "type": "MemoryLabelId",
           "id": "voltbl_",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "64",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "64",
+                "start": {
+                  "offset": 413,
+                  "line": 16,
+                  "column": 17
+                },
+                "end": {
+                  "offset": 415,
+                  "line": 16,
+                  "column": 19
+                }
+              }
+            ],
             "start": {
               "offset": 413,
               "line": 16,
@@ -1383,8 +1413,23 @@
           "type": "MemoryLabelId",
           "id": "reg",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "16",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "16",
+                "start": {
+                  "offset": 837,
+                  "line": 22,
+                  "column": 13
+                },
+                "end": {
+                  "offset": 839,
+                  "line": 22,
+                  "column": 15
+                }
+              }
+            ],
             "start": {
               "offset": 837,
               "line": 22,
@@ -1718,8 +1763,23 @@
           "type": "MemoryLabelId",
           "id": "count",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "3",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "3",
+                "start": {
+                  "offset": 932,
+                  "line": 28,
+                  "column": 15
+                },
+                "end": {
+                  "offset": 933,
+                  "line": 28,
+                  "column": 16
+                }
+              }
+            ],
             "start": {
               "offset": 932,
               "line": 28,
@@ -1777,8 +1837,23 @@
           "type": "MemoryLabelId",
           "id": "volume",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "3",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "3",
+                "start": {
+                  "offset": 952,
+                  "line": 29,
+                  "column": 16
+                },
+                "end": {
+                  "offset": 953,
+                  "line": 29,
+                  "column": 17
+                }
+              }
+            ],
             "start": {
               "offset": 952,
               "line": 29,
@@ -1836,8 +1911,23 @@
           "type": "MemoryLabelId",
           "id": "freq",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "3",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "3",
+                "start": {
+                  "offset": 970,
+                  "line": 30,
+                  "column": 14
+                },
+                "end": {
+                  "offset": 971,
+                  "line": 30,
+                  "column": 15
+                }
+              }
+            ],
             "start": {
               "offset": 970,
               "line": 30,
@@ -1895,8 +1985,23 @@
           "type": "MemoryLabelId",
           "id": "edge",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "3",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "3",
+                "start": {
+                  "offset": 988,
+                  "line": 31,
+                  "column": 14
+                },
+                "end": {
+                  "offset": 989,
+                  "line": 31,
+                  "column": 15
+                }
+              }
+            ],
             "start": {
               "offset": 988,
               "line": 31,
@@ -1954,8 +2059,23 @@
           "type": "MemoryLabelId",
           "id": "tmask",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "3",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "3",
+                "start": {
+                  "offset": 1007,
+                  "line": 32,
+                  "column": 15
+                },
+                "end": {
+                  "offset": 1008,
+                  "line": 32,
+                  "column": 16
+                }
+              }
+            ],
             "start": {
               "offset": 1007,
               "line": 32,
@@ -2013,8 +2133,23 @@
           "type": "MemoryLabelId",
           "id": "nmask",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "3",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "3",
+                "start": {
+                  "offset": 1026,
+                  "line": 33,
+                  "column": 15
+                },
+                "end": {
+                  "offset": 1027,
+                  "line": 33,
+                  "column": 16
+                }
+              }
+            ],
             "start": {
               "offset": 1026,
               "line": 33,
@@ -2992,8 +3127,23 @@
           "type": "MemoryLabelId",
           "id": "ch_out",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "3",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "3",
+                "start": {
+                  "offset": 1537,
+                  "line": 65,
+                  "column": 16
+                },
+                "end": {
+                  "offset": 1538,
+                  "line": 65,
+                  "column": 17
+                }
+              }
+            ],
             "start": {
               "offset": 1537,
               "line": 65,
@@ -5839,8 +5989,23 @@
           "type": "MemoryLabelId",
           "id": "OutputBuffer",
           "numExpression": {
-            "type": "JSNumber",
-            "value": "128",
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "128",
+                "start": {
+                  "offset": 2242,
+                  "line": 90,
+                  "column": 20
+                },
+                "end": {
+                  "offset": 2245,
+                  "line": 90,
+                  "column": 23
+                }
+              }
+            ],
             "start": {
               "offset": 2242,
               "line": 90,
