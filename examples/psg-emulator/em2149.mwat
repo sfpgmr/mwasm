@@ -1,14 +1,24 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; mwasm サンプルコード
+;; PSG エミュレータ
+;;
+;; 以下のコード参考にをWebAssembly化してみた
+;; https://github.com/digital-sound-antiques/emu2149
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 {@
+  ;; 定数定義 ;;
   $.GETA_BITS = 24;
   $.EMU2149_VOL_YM2149 = 0;
   $.EMU2149_VOL_AY_3_8910 = 1;
   $.EMU2149_VOL_DEFAULT  =  $.EMU2149_VOL_AY_3_8910;
   $.SHIFT_BITS = 1 << $.GETA_BITS;
   $.SHIFT_BITS_MASK = (1 << $.GETA_BITS) - 1;
+  $.REG_MAX = 16;
 }
 
+;; 構造体 定義;;
 {@struct PSG
-i32 regmsk[16] = [
+i32 regmsk[REG_MAX] = [
     0xff, 0x0f, 0xff, 0x0f, 0xff, 0x0f, 0x1f, 0x3f,
     0x1f, 0x1f, 0x1f, 0xff, 0xff, 0x0f, 0xff, 0xff
 ];
@@ -19,7 +29,7 @@ i32 regmsk[16] = [
    0x02, 0x02, 0x03, 0x03, 0x05, 0x05, 0x07, 0x07, 0x0B, 0x0B, 0x0F, 0x0F,
    0x16, 0x16, 0x1F, 0x1F, 0x2D, 0x2D, 0x3F, 0x3F, 0x5A, 0x5A, 0x7F, 0x7F,
    0xB4, 0xB4, 0xFF, 0xFF];
-    i32 reg[16];
+    i32 reg[REG_MAX];
     i32 voltbl;
     i32 out;
 
@@ -67,6 +77,12 @@ i32 regmsk[16] = [
 
 }
 
+;; リニアメモリ配置定義
+{@map offset 0x1000;
+  PSG psg;
+  f32 OutputBuffer[128];
+}
+
 
 (module
   (export "setQuality" (func $set_quality))
@@ -85,10 +101,6 @@ i32 regmsk[16] = [
   (export "writeReg" (func $write_reg))
   (export "memory" (memory $memory))
   (memory $memory 1 )
-{@map offset 0x1000;
-  PSG psg;
-  f32 OutputBuffer[128];
-}
   (func $internal_refresh
      (i32.store (i32.const 0 ) (i32.load (&PSG.clk;)))
      (if

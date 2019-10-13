@@ -2,20 +2,274 @@
 
 ## 概要
 
-mwasm用のプリプロセッサです。定数式はJavaScriptの構文を採用し、アセンブラでいうところのマクロ機能の一部を実現します。
+Web Asesembly Text Format （S式）用のプリプロセッサです。
+
+定数式はJavaScriptの構文を採用し、アセンブラでいうところのマクロ機能の一部を実現します。
+
+## 動機
+
+wasmのテキスト・モード(wat)でコードを書こうしたときに、定数ラベルや定数式を処理できれば楽にコーディングできるのではないかと考えたことがきっかけです。
+
+## 実装について
+
+構文パーサはpeg\.jsを使用しています。
+プリプロセスを実行する部分はnode.jsを使用しており、プリプロセス後のソースコードをwabtに引き渡し、wasmバイナリ化しています。
+
+## インストール方法
+
+1. `git clone`します。
+2. クローンしたディレクトリにて `npm install`を実行します。
+3. cliを使用する場合はさらに`npm install -g`します。
+
+## 状態
+
+作成中の状態です。wsl上でのみ実行できることを確認しています。node.js環境で動作します。
+自分用に作成しているので、エラー処理などかなりいい加減なものになっていますのでご注意ください。
+
+## サンプルの実行
+
+`npm run test`でテストが走ります。
+
+## コマンドライン
+
+bin/mwasm コマンドで実行します。
+
+mwasm ソーステキスト名 [-o wasmバイナリ出力ファイル名]
+
+-oを指定しない場合はコンソールにプリプロセス後のソースコードを表示します。
+
+## プリプロセッサの構文について
+
+### { JSステートメントブロック }
+
+JSステートメントをプリプロセス時に実行します。結果をreturnで返すとその位置に値が埋め込まれます。
+コンテキストオブジェクトとして`$`が用意されており、コードブロック内で書き込み・参照が可能です。
+ローカル変数なども定義できますが、コードブロック中でのみ有効です。
+
+```
+{
+  // JSによるWASMソースコード生成
+  let instructions = '';
+  for(let i = 0;i < 4; ++ i ){
+    ++$.X; 
+    instructions += `
+  i32.const ${$.X + $.Y}
+  i32.add`;
+  }
+  return instructions;
+}
+```
+
+### {@ JSステートメントブロック } 
+
+JSステートメントをプロプロセス時に実行しますが値を埋め込みません。
 
 ```
 {@
+// コンテキスト$ にプロパティを設定する
+$.X = 0x1;
+$.Y = 2;
+$.Z = 0x3;
+}
+```
+
+
+### {$ JS式}
+
+JS式を実行し、結果をその位置に埋め込みます。
+
+```
+i32.const {$ $.X + $.Y }
+```
+### {$.プロパティ式}
+
+プロパティ式を実行し、結果をその位置に埋め込みます。
+
+```
+i32.const {$.X + 1}
+```
+
+### {@struct}
+
+構造体を定義します。
+
+### {@map}
+
+リニアメモリ中のメモリ配置を定義します。定義にには{@struct}で定義した構造体も型として使用できます。
+```
+{@struct A 
+  i32 a;
+}
+
+{@struct B 
+  i32 b;
+  A a;
+}
+{@struct C 
+  i32 c;
+  B b;
+}
+
+
+{@
+// ローカル変数の定義
+$.X = 1;
+}
+
+{@map 
+  C c[10];
+}
+(module
+(memory 0)
+(export "test" (func $test))
+(func $test (result i32)
+  (i32.add 
+    (i32.load (&c[0].b.a.a;))
+    (&c[0].c;)
+  )
+)
+)
+```
+### &メモリ・マップor構造体指定式; 
+
+メモリオフセットを計算し、i32のconst値として展開します。
+
+```
+{@map
+  i32 a;
+  i32 b;
+}
+
+(&b;) ;;(i32.const 4)
+
+```
+
+構造体定義名を指定した場合は、先頭のオフセットを0とした場合のオフセットを返します。
+```
+{@struct C
+  i32 a;
+  i32 b;
+}
+
+(#C;);; (i32.const 8)
+
+```
+
+### \#メモリ・マップor構造体指定式; 
+
+構造体の大きさを計算し、i32のconst値として展開します。
+
+```
+{@struct C
+  i32 a;
+  i32 b;
+}
+
+{@map
+  C c;
+}
+
+(#c;);; (i32.const 8)
+(#C;);; (i32.const 8)
+
+```
+### {@macro_def} / {@end_macro_def} 
+
+マクロを定義します。
+
+```
+{@macro_def t(a)}
+(i32.const a)
+{@end_macro_def}
+
+{@macro_def offset (a,b)}
+(a.add 
+  (a.const 10)
+  {@@t b}
+)
+{@end_macro_def}
+
+{@macro_def macro_fp(b)}
+(f32.add
+  b
+  (f32.const 0.5)
+)
+{@end_macro_def}
+
+{@map
+  i32 test_offset;
+}
+
+(module
+(memory 0)
+(export "test" (func $test))
+(func $test (result i32)
+  (local $a i32)
+  {@@offset i32,0x0001}
+)
+(func $testfp (result f32)
+  {@@macro_fp
+    (f32.const 1)
+  }
+)
+)
+```
+
+### {@include JS式}
+
+JS式の結果得られるpathにあるファイルをインクルードします。
+
+```
+{@include './test_inc.mwat'}
+```
+
+### {@if JS式}　ソース１ [{@else} ソース２] {@endif}
+
+JS式が真の場合ソース1を埋め込み、そうでない場合はソース2を埋め込みます。
+`@else ソース2`は省略可能です。
+
+```
+{@if $.X < 1}
+
+...ソース1
+
+{@else}
+
+...ソース2
+
+{@endif}
+
+```
+
+## 開発について
+
+* パッケージのバンドルには[rollup](https://rollupjs.org/guide/en)を使用しています。
+* 構文パーサは[peg.js](https://pegjs.org/)を使用しております。
+
+## 実装例
+
+```
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; mwasm サンプルコード
+;; PSG エミュレータ
+;;
+;; 以下のコード参考にをWebAssembly化してみた
+;; https://github.com/digital-sound-antiques/emu2149
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+{@
+  ;; 定数定義 ;;
   $.GETA_BITS = 24;
   $.EMU2149_VOL_YM2149 = 0;
   $.EMU2149_VOL_AY_3_8910 = 1;
   $.EMU2149_VOL_DEFAULT  =  $.EMU2149_VOL_AY_3_8910;
   $.SHIFT_BITS = 1 << $.GETA_BITS;
   $.SHIFT_BITS_MASK = (1 << $.GETA_BITS) - 1;
+  $.REG_MAX = 16;
 }
 
+;; 構造体 定義;;
 {@struct PSG
-i32 regmsk[16] = [
+i32 regmsk[REG_MAX] = [
     0xff, 0x0f, 0xff, 0x0f, 0xff, 0x0f, 0x1f, 0x3f,
     0x1f, 0x1f, 0x1f, 0xff, 0xff, 0x0f, 0xff, 0xff
 ];
@@ -26,7 +280,7 @@ i32 regmsk[16] = [
    0x02, 0x02, 0x03, 0x03, 0x05, 0x05, 0x07, 0x07, 0x0B, 0x0B, 0x0F, 0x0F,
    0x16, 0x16, 0x1F, 0x1F, 0x2D, 0x2D, 0x3F, 0x3F, 0x5A, 0x5A, 0x7F, 0x7F,
    0xB4, 0xB4, 0xFF, 0xFF];
-    i32 reg[16];
+    i32 reg[REG_MAX];
     i32 voltbl;
     i32 out;
 
@@ -74,6 +328,12 @@ i32 regmsk[16] = [
 
 }
 
+;; リニアメモリ配置定義
+{@map offset 0x1000;
+  PSG psg;
+  f32 OutputBuffer[128];
+}
+
 
 (module
   (export "setQuality" (func $set_quality))
@@ -92,12 +352,9 @@ i32 regmsk[16] = [
   (export "writeReg" (func $write_reg))
   (export "memory" (memory $memory))
   (memory $memory 1 )
-{@map
-  PSG psg;
-  f32 OutputBuffer[128];
-}
   (func $internal_refresh
-    (if
+     (i32.store (i32.const 0 ) (i32.load (&PSG.clk;)))
+     (if
       ;; condition
       (i32.load (&psg.quality;))
       (then 
@@ -735,44 +992,7 @@ i32 regmsk[16] = [
     call $mix_output
   )
 
-  (func $calc2 (param $numOfSamples i32)(result i32)
-    (if (i32.eqz (i32.load (&psg.quality;)))
-      (then
-        (block $loop-normal-exit
-          (loop $loop-normal
-          )
-            
-        call $update_output
-        call $mix_output
-        return
-      )
-    )
-    (block $rate_loop_exit
-      (loop $rate_loop
-        (br_if $rate_loop_exit 
-          (i32.le_u (i32.load(&psg.realstep;)) (i32.load(&psg.psgtime;)))
-        )
-        (i32.store
-          (&psg.psgtime;)
-          (i32.add
-            (i32.load(&psg.psgtime;))
-            (i32.load(&psg.psgstep;))
-          )
-        )
-        call $update_output
-        (br $rate_loop)
-      )
-    )
-    (i32.store
-      (&psg.psgtime;)
-      (i32.sub
-        (i32.load(&psg.psgtime;))
-        (i32.load(&psg.realstep;))
-      )
-    )
 
-    call $mix_output
-  )
 
   (func $write_reg (param $reg i32) (param $val i32) (local $c i32) (local $w i32)
     (if (i32.gt_u (local.get $reg) (i32.const 15))
@@ -982,119 +1202,3 @@ i32 regmsk[16] = [
   )
 )
 ```
-
-## 動機
-
-wasmのテキスト・モード(wat)でコードを書こうしたときに、定数ラベルや定数式を処理できれば楽にコーディングできるのではないかと考えたことがきっかけです。
-
-## 実装について
-
-構文パーサはpeg\.jsを使用しています。
-プリプロセスを実行する部分はnode.jsを使用しており、プリプロセス後のソースコードをwabtに引き渡し、wasmバイナリ化しています。
-
-## インストール方法
-
-1. `git clone`します。
-2. クローンしたディレクトリにて `npm install`を実行します。
-3. cliを使用する場合はさらに`npm install -g`します。
-
-## 状態
-
-作成中の状態です。wsl上でのみ実行できることを確認しています。node.js環境でのみ動作します。
-自分用に作成しているので、エラー処理などかなりいい加減なものになっていますのでご注意ください。
-
-
-## サンプルの実行
-
-`npm run test`でテストが走ります。
-
-## コマンドライン
-
-bin/mwasm コマンドで実行します。
-
-mwasm ソーステキスト名 [-o wasmバイナリ出力ファイル名]
-
--oを指定しない場合はコンソールにプリプロセス後のソースコードを表示します。
-
-## プリプロセッサの構文について
-
-### { JSステートメントブロック }
-
-JSステートメントをプリプロセス時に実行します。結果をreturnで返すとその位置に値が埋め込まれます。
-コンテキストオブジェクトとして`$`が用意されており、コードブロック内で書き込み・参照が可能です。
-ローカル変数なども定義できますが、コードブロック中でのみ有効です。
-
-```
-{
-  // JSによるWASMソースコード生成
-  let instructions = '';
-  for(let i = 0;i < 4; ++ i ){
-    ++$.X; 
-    instructions += `
-  i32.const ${$.X + $.Y}
-  i32.add`;
-  }
-  return instructions;
-}
-```
-
-### {@ JSステートメントブロック } 
-
-JSステートメントをプロプロセス時に実行しますが値を埋め込みません。
-
-```
-{@
-// コンテキスト$ にプロパティを設定する
-$.X = 0x1;
-$.Y = 2;
-$.Z = 0x3;
-}
-```
-
-
-### {$ JS式}
-
-JS式を実行し、結果をその位置に埋め込みます。
-
-```
-i32.const {$ $.X + $.Y }
-```
-
-### {@struct}
-
-構造体を定義します。
-
-### {@map}
-
-リニアメモリ中のメモリ配置を定義します。定義にには{@struct}で定義した構造体も型として使用できます。
-
-### {@include JS式}
-
-JS式の結果得られるpathにあるファイルをインクルードします。
-
-```
-{@include './test_inc.mwat'}
-```
-
-### {@if JS式}　ソース１ [{@else} ソース２] {@endif}
-
-JS式が真の場合ソース1を埋め込み、そうでない場合はソース2を埋め込みます。
-`@else ソース2`は省略可能です。
-
-```
-{@if $.X < 1}
-
-...ソース1
-
-{@else}
-
-...ソース2
-
-{@endif}
-
-```
-
-## 開発について
-
-* パッケージのバンドルには[rollup](https://rollupjs.org/guide/en)を使用しています。
-* 構文パーサは[peg.js](https://pegjs.org/)を使用しております。

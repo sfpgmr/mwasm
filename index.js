@@ -6683,7 +6683,7 @@ var index = async () => {
                 default:
                   propName = '$.' + propName;
               }
-              //console.log(propName);
+              console.log(propName);
               parsed.push(propName);
               break;
 
