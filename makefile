@@ -27,7 +27,7 @@ run: $(TARGET)
 .PHONY: test
 #test: run
 test: $(TARGET)
-#	mwasm ./tests/test/test.mwat -o ./tests/test/test.wasm
+	mwasm ./tests/test/test.mwat -o ./tests/test/test.wasm
 	mwasm ./tests/test-map/test-map.mwat -o ./tests/test-map/test-map.wasm
 	mwasm ./tests/test/test-js.mwat -o ./tests/test/test-js.wasm
 	mwasm ./tests/test-struct/test-struct.mwat -o ./tests/test-struct/test-struct.mwasm

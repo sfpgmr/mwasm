@@ -11,8 +11,8 @@ $.Z = 0x3;
   {@if $.X < 1}
     (export "test" (func $test))
     (func $test (result i32)
-      i32.const {$ $.X };; comment
-      i32.const {$ $.X + $.Y }
+      i32.const {$.X };; comment
+      i32.const {$.X + $.Y}
       {@if $.Y}
         i32.add
         {
@@ -39,7 +39,7 @@ $.Z = 0x3;
   {@else}
     (export "testa" (func $testa))
     (func $testa (result i32)
-      i32.const @X
+      i32.const {$.X}
       i32.const {$.X + $.Y }
       i32.add
     )

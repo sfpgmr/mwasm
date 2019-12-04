@@ -768,21 +768,21 @@
           "column": 17
         },
         "end": {
-          "offset": 237,
+          "offset": 235,
           "line": 14,
-          "column": 25
+          "column": 23
         }
       },
       {
         "type": "WhiteSpace",
         "value": "      ",
         "start": {
-          "offset": 248,
+          "offset": 246,
           "line": 15,
           "column": 1
         },
         "end": {
-          "offset": 254,
+          "offset": 252,
           "line": 15,
           "column": 7
         }
@@ -791,12 +791,12 @@
         "type": "Identifier",
         "name": "i32.const",
         "start": {
-          "offset": 254,
+          "offset": 252,
           "line": 15,
           "column": 7
         },
         "end": {
-          "offset": 263,
+          "offset": 261,
           "line": 15,
           "column": 16
         }
@@ -805,40 +805,40 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 263,
+          "offset": 261,
           "line": 15,
           "column": 16
         },
         "end": {
-          "offset": 264,
+          "offset": 262,
           "line": 15,
           "column": 17
         }
       },
       {
         "type": "CodeExpression",
-        "code": "$.X + $.Y ",
+        "code": "$.X + $.Y",
         "start": {
-          "offset": 264,
+          "offset": 262,
           "line": 15,
           "column": 17
         },
         "end": {
-          "offset": 278,
+          "offset": 273,
           "line": 15,
-          "column": 31
+          "column": 28
         }
       },
       {
         "type": "WhiteSpace",
         "value": "\n      ",
         "start": {
-          "offset": 278,
+          "offset": 273,
           "line": 15,
-          "column": 31
+          "column": 28
         },
         "end": {
-          "offset": 285,
+          "offset": 280,
           "line": 16,
           "column": 7
         }
@@ -851,12 +851,12 @@
             "type": "WhiteSpace",
             "value": "\n        ",
             "start": {
-              "offset": 294,
+              "offset": 289,
               "line": 16,
               "column": 16
             },
             "end": {
-              "offset": 303,
+              "offset": 298,
               "line": 17,
               "column": 9
             }
@@ -865,12 +865,12 @@
             "type": "Identifier",
             "name": "i32.add",
             "start": {
-              "offset": 303,
+              "offset": 298,
               "line": 17,
               "column": 9
             },
             "end": {
-              "offset": 310,
+              "offset": 305,
               "line": 17,
               "column": 16
             }
@@ -879,12 +879,12 @@
             "type": "WhiteSpace",
             "value": "\n        ",
             "start": {
-              "offset": 310,
+              "offset": 305,
               "line": 17,
               "column": 16
             },
             "end": {
-              "offset": 319,
+              "offset": 314,
               "line": 18,
               "column": 9
             }
@@ -893,12 +893,12 @@
             "type": "Code",
             "code": "\n          // JSによるWASMソースコード生成\n          let instructions = '';\n          for(let i = 0;i < 4; ++ i ){\n            ++$.X; \n            instructions += `\n    i32.const ${$.X + $.Y}\n    i32.add`;\n          }\n          return instructions;\n        ",
             "start": {
-              "offset": 319,
+              "offset": 314,
               "line": 18,
               "column": 9
             },
             "end": {
-              "offset": 567,
+              "offset": 562,
               "line": 28,
               "column": 10
             }
@@ -907,12 +907,12 @@
             "type": "WhiteSpace",
             "value": "\n        \n        ",
             "start": {
-              "offset": 567,
+              "offset": 562,
               "line": 28,
               "column": 10
             },
             "end": {
-              "offset": 585,
+              "offset": 580,
               "line": 30,
               "column": 9
             }
@@ -921,12 +921,12 @@
             "type": "WhiteSpace",
             "value": "        ",
             "start": {
-              "offset": 612,
+              "offset": 607,
               "line": 31,
               "column": 1
             },
             "end": {
-              "offset": 620,
+              "offset": 615,
               "line": 31,
               "column": 9
             }
@@ -935,12 +935,12 @@
             "type": "WhiteSpace",
             "value": "        ",
             "start": {
-              "offset": 640,
+              "offset": 635,
               "line": 32,
               "column": 1
             },
             "end": {
-              "offset": 648,
+              "offset": 643,
               "line": 32,
               "column": 9
             }
@@ -949,12 +949,12 @@
             "type": "WhiteSpace",
             "value": "        ",
             "start": {
-              "offset": 660,
+              "offset": 655,
               "line": 33,
               "column": 1
             },
             "end": {
-              "offset": 668,
+              "offset": 663,
               "line": 33,
               "column": 9
             }
@@ -963,12 +963,12 @@
             "type": "WhiteSpace",
             "value": "        ",
             "start": {
-              "offset": 688,
+              "offset": 683,
               "line": 34,
               "column": 1
             },
             "end": {
-              "offset": 696,
+              "offset": 691,
               "line": 34,
               "column": 9
             }
@@ -977,12 +977,12 @@
             "type": "WhiteSpace",
             "value": "        ",
             "start": {
-              "offset": 707,
+              "offset": 702,
               "line": 35,
               "column": 1
             },
             "end": {
-              "offset": 715,
+              "offset": 710,
               "line": 35,
               "column": 9
             }
@@ -991,12 +991,12 @@
             "type": "WhiteSpace",
             "value": "\n      ",
             "start": {
-              "offset": 738,
+              "offset": 733,
               "line": 36,
               "column": 1
             },
             "end": {
-              "offset": 745,
+              "offset": 740,
               "line": 37,
               "column": 7
             }
@@ -1004,12 +1004,12 @@
         ],
         "else": null,
         "start": {
-          "offset": 285,
+          "offset": 280,
           "line": 16,
           "column": 7
         },
         "end": {
-          "offset": 753,
+          "offset": 748,
           "line": 37,
           "column": 15
         }
@@ -1018,12 +1018,12 @@
         "type": "WhiteSpace",
         "value": "\n    ",
         "start": {
-          "offset": 753,
+          "offset": 748,
           "line": 37,
           "column": 15
         },
         "end": {
-          "offset": 758,
+          "offset": 753,
           "line": 38,
           "column": 5
         }
@@ -1032,12 +1032,12 @@
         "type": "Parenthesis",
         "kind": ")",
         "start": {
-          "offset": 758,
+          "offset": 753,
           "line": 38,
           "column": 5
         },
         "end": {
-          "offset": 759,
+          "offset": 754,
           "line": 38,
           "column": 6
         }
@@ -1046,12 +1046,12 @@
         "type": "WhiteSpace",
         "value": "\n  ",
         "start": {
-          "offset": 759,
+          "offset": 754,
           "line": 38,
           "column": 6
         },
         "end": {
-          "offset": 762,
+          "offset": 757,
           "line": 39,
           "column": 3
         }
@@ -1062,12 +1062,12 @@
         "type": "WhiteSpace",
         "value": "\n    ",
         "start": {
-          "offset": 769,
+          "offset": 764,
           "line": 39,
           "column": 10
         },
         "end": {
-          "offset": 774,
+          "offset": 769,
           "line": 40,
           "column": 5
         }
@@ -1076,12 +1076,12 @@
         "type": "Parenthesis",
         "kind": "(",
         "start": {
-          "offset": 774,
+          "offset": 769,
           "line": 40,
           "column": 5
         },
         "end": {
-          "offset": 775,
+          "offset": 770,
           "line": 40,
           "column": 6
         }
@@ -1090,12 +1090,12 @@
         "type": "Identifier",
         "name": "export",
         "start": {
-          "offset": 775,
+          "offset": 770,
           "line": 40,
           "column": 6
         },
         "end": {
-          "offset": 781,
+          "offset": 776,
           "line": 40,
           "column": 12
         }
@@ -1104,12 +1104,12 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 781,
+          "offset": 776,
           "line": 40,
           "column": 12
         },
         "end": {
-          "offset": 782,
+          "offset": 777,
           "line": 40,
           "column": 13
         }
@@ -1118,12 +1118,12 @@
         "type": "StringLiteral",
         "value": "\"testa\"",
         "start": {
-          "offset": 782,
+          "offset": 777,
           "line": 40,
           "column": 13
         },
         "end": {
-          "offset": 789,
+          "offset": 784,
           "line": 40,
           "column": 20
         }
@@ -1132,12 +1132,12 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 789,
+          "offset": 784,
           "line": 40,
           "column": 20
         },
         "end": {
-          "offset": 790,
+          "offset": 785,
           "line": 40,
           "column": 21
         }
@@ -1146,12 +1146,12 @@
         "type": "Parenthesis",
         "kind": "(",
         "start": {
-          "offset": 790,
+          "offset": 785,
           "line": 40,
           "column": 21
         },
         "end": {
-          "offset": 791,
+          "offset": 786,
           "line": 40,
           "column": 22
         }
@@ -1160,12 +1160,12 @@
         "type": "Identifier",
         "name": "func",
         "start": {
-          "offset": 791,
+          "offset": 786,
           "line": 40,
           "column": 22
         },
         "end": {
-          "offset": 795,
+          "offset": 790,
           "line": 40,
           "column": 26
         }
@@ -1174,12 +1174,12 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 795,
+          "offset": 790,
           "line": 40,
           "column": 26
         },
         "end": {
-          "offset": 796,
+          "offset": 791,
           "line": 40,
           "column": 27
         }
@@ -1188,12 +1188,12 @@
         "type": "Identifier",
         "name": "$testa",
         "start": {
-          "offset": 796,
+          "offset": 791,
           "line": 40,
           "column": 27
         },
         "end": {
-          "offset": 802,
+          "offset": 797,
           "line": 40,
           "column": 33
         }
@@ -1202,12 +1202,12 @@
         "type": "Parenthesis",
         "kind": ")",
         "start": {
-          "offset": 802,
+          "offset": 797,
           "line": 40,
           "column": 33
         },
         "end": {
-          "offset": 803,
+          "offset": 798,
           "line": 40,
           "column": 34
         }
@@ -1216,12 +1216,12 @@
         "type": "Parenthesis",
         "kind": ")",
         "start": {
-          "offset": 803,
+          "offset": 798,
           "line": 40,
           "column": 34
         },
         "end": {
-          "offset": 804,
+          "offset": 799,
           "line": 40,
           "column": 35
         }
@@ -1230,12 +1230,12 @@
         "type": "WhiteSpace",
         "value": "\n    ",
         "start": {
-          "offset": 804,
+          "offset": 799,
           "line": 40,
           "column": 35
         },
         "end": {
-          "offset": 809,
+          "offset": 804,
           "line": 41,
           "column": 5
         }
@@ -1244,12 +1244,12 @@
         "type": "Parenthesis",
         "kind": "(",
         "start": {
-          "offset": 809,
+          "offset": 804,
           "line": 41,
           "column": 5
         },
         "end": {
-          "offset": 810,
+          "offset": 805,
           "line": 41,
           "column": 6
         }
@@ -1258,12 +1258,12 @@
         "type": "Identifier",
         "name": "func",
         "start": {
-          "offset": 810,
+          "offset": 805,
           "line": 41,
           "column": 6
         },
         "end": {
-          "offset": 814,
+          "offset": 809,
           "line": 41,
           "column": 10
         }
@@ -1272,12 +1272,12 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 814,
+          "offset": 809,
           "line": 41,
           "column": 10
         },
         "end": {
-          "offset": 815,
+          "offset": 810,
           "line": 41,
           "column": 11
         }
@@ -1286,12 +1286,12 @@
         "type": "Identifier",
         "name": "$testa",
         "start": {
-          "offset": 815,
+          "offset": 810,
           "line": 41,
           "column": 11
         },
         "end": {
-          "offset": 821,
+          "offset": 816,
           "line": 41,
           "column": 17
         }
@@ -1300,12 +1300,12 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 821,
+          "offset": 816,
           "line": 41,
           "column": 17
         },
         "end": {
-          "offset": 822,
+          "offset": 817,
           "line": 41,
           "column": 18
         }
@@ -1314,12 +1314,12 @@
         "type": "Parenthesis",
         "kind": "(",
         "start": {
-          "offset": 822,
+          "offset": 817,
           "line": 41,
           "column": 18
         },
         "end": {
-          "offset": 823,
+          "offset": 818,
           "line": 41,
           "column": 19
         }
@@ -1328,12 +1328,12 @@
         "type": "Identifier",
         "name": "result",
         "start": {
-          "offset": 823,
+          "offset": 818,
           "line": 41,
           "column": 19
         },
         "end": {
-          "offset": 829,
+          "offset": 824,
           "line": 41,
           "column": 25
         }
@@ -1342,12 +1342,12 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 829,
+          "offset": 824,
           "line": 41,
           "column": 25
         },
         "end": {
-          "offset": 830,
+          "offset": 825,
           "line": 41,
           "column": 26
         }
@@ -1356,12 +1356,12 @@
         "type": "Identifier",
         "name": "i32",
         "start": {
-          "offset": 830,
+          "offset": 825,
           "line": 41,
           "column": 26
         },
         "end": {
-          "offset": 833,
+          "offset": 828,
           "line": 41,
           "column": 29
         }
@@ -1370,12 +1370,12 @@
         "type": "Parenthesis",
         "kind": ")",
         "start": {
-          "offset": 833,
+          "offset": 828,
           "line": 41,
           "column": 29
         },
         "end": {
-          "offset": 834,
+          "offset": 829,
           "line": 41,
           "column": 30
         }
@@ -1384,12 +1384,12 @@
         "type": "WhiteSpace",
         "value": "\n      ",
         "start": {
-          "offset": 834,
+          "offset": 829,
           "line": 41,
           "column": 30
         },
         "end": {
-          "offset": 841,
+          "offset": 836,
           "line": 42,
           "column": 7
         }
@@ -1398,12 +1398,12 @@
         "type": "Identifier",
         "name": "i32.const",
         "start": {
-          "offset": 841,
+          "offset": 836,
           "line": 42,
           "column": 7
         },
         "end": {
-          "offset": 850,
+          "offset": 845,
           "line": 42,
           "column": 16
         }
@@ -1412,40 +1412,40 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 850,
+          "offset": 845,
           "line": 42,
           "column": 16
         },
         "end": {
-          "offset": 851,
+          "offset": 846,
           "line": 42,
           "column": 17
         }
       },
       {
-        "type": "Identifier",
-        "name": "@X",
+        "type": "CodeExpression",
+        "code": "$.X",
         "start": {
-          "offset": 851,
+          "offset": 846,
           "line": 42,
           "column": 17
         },
         "end": {
-          "offset": 853,
+          "offset": 851,
           "line": 42,
-          "column": 19
+          "column": 22
         }
       },
       {
         "type": "WhiteSpace",
         "value": "\n      ",
         "start": {
-          "offset": 853,
+          "offset": 851,
           "line": 42,
-          "column": 19
+          "column": 22
         },
         "end": {
-          "offset": 860,
+          "offset": 858,
           "line": 43,
           "column": 7
         }
@@ -1454,12 +1454,12 @@
         "type": "Identifier",
         "name": "i32.const",
         "start": {
-          "offset": 860,
+          "offset": 858,
           "line": 43,
           "column": 7
         },
         "end": {
-          "offset": 869,
+          "offset": 867,
           "line": 43,
           "column": 16
         }
@@ -1468,12 +1468,12 @@
         "type": "WhiteSpace",
         "value": " ",
         "start": {
-          "offset": 869,
+          "offset": 867,
           "line": 43,
           "column": 16
         },
         "end": {
-          "offset": 870,
+          "offset": 868,
           "line": 43,
           "column": 17
         }
@@ -1482,12 +1482,12 @@
         "type": "CodeExpression",
         "code": "$.X + $.Y ",
         "start": {
-          "offset": 870,
+          "offset": 868,
           "line": 43,
           "column": 17
         },
         "end": {
-          "offset": 882,
+          "offset": 880,
           "line": 43,
           "column": 29
         }
@@ -1496,12 +1496,12 @@
         "type": "WhiteSpace",
         "value": "\n      ",
         "start": {
-          "offset": 882,
+          "offset": 880,
           "line": 43,
           "column": 29
         },
         "end": {
-          "offset": 889,
+          "offset": 887,
           "line": 44,
           "column": 7
         }
@@ -1510,12 +1510,12 @@
         "type": "Identifier",
         "name": "i32.add",
         "start": {
-          "offset": 889,
+          "offset": 887,
           "line": 44,
           "column": 7
         },
         "end": {
-          "offset": 896,
+          "offset": 894,
           "line": 44,
           "column": 14
         }
@@ -1524,12 +1524,12 @@
         "type": "WhiteSpace",
         "value": "\n    ",
         "start": {
-          "offset": 896,
+          "offset": 894,
           "line": 44,
           "column": 14
         },
         "end": {
-          "offset": 901,
+          "offset": 899,
           "line": 45,
           "column": 5
         }
@@ -1538,12 +1538,12 @@
         "type": "Parenthesis",
         "kind": ")",
         "start": {
-          "offset": 901,
+          "offset": 899,
           "line": 45,
           "column": 5
         },
         "end": {
-          "offset": 902,
+          "offset": 900,
           "line": 45,
           "column": 6
         }
@@ -1552,12 +1552,12 @@
         "type": "WhiteSpace",
         "value": "\n  ",
         "start": {
-          "offset": 902,
+          "offset": 900,
           "line": 45,
           "column": 6
         },
         "end": {
-          "offset": 905,
+          "offset": 903,
           "line": 46,
           "column": 3
         }
@@ -1569,7 +1569,7 @@
       "column": 3
     },
     "end": {
-      "offset": 913,
+      "offset": 911,
       "line": 46,
       "column": 11
     }
@@ -1578,12 +1578,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 913,
+      "offset": 911,
       "line": 46,
       "column": 11
     },
     "end": {
-      "offset": 914,
+      "offset": 912,
       "line": 47,
       "column": 1
     }
@@ -1592,12 +1592,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 914,
+      "offset": 912,
       "line": 47,
       "column": 1
     },
     "end": {
-      "offset": 915,
+      "offset": 913,
       "line": 47,
       "column": 2
     }
@@ -1606,12 +1606,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 915,
+      "offset": 913,
       "line": 47,
       "column": 2
     },
     "end": {
-      "offset": 916,
+      "offset": 914,
       "line": 48,
       "column": 1
     }

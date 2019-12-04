@@ -24,13 +24,13 @@
   "homepage": "https://github.com/sfpgmr/mwasm#readme",
   "devDependencies": {
     "pegjs": "^0.10.0",
-    "rollup": "^1.17.0",
+    "rollup": "^1.27.8",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-resolve": "^4.2.4"
   },
   "dependencies": {
-    "ava": "^2.3.0",
+    "ava": "^2.4.0",
     "binaryen": "^84.0.0",
-    "wabt": "^1.0.11"
+    "wabt": "^1.0.12"
   }
 }

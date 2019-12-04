@@ -5,6 +5,7 @@
   "EMU2149_VOL_DEFAULT": 1,
   "SHIFT_BITS": 16777216,
   "SHIFT_BITS_MASK": 16777215,
+  "REG_MAX": 16,
   "PSG": {
     "_attributes_": {
       "type": "StructDefinition",

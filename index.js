@@ -6455,7 +6455,7 @@ var index = async () => {
                 }
               } else {
                 if (token.else) {
-                  processed.push(...this.preprocessTokens(token.else, baseName, skip));
+                  preprocessed.push(...this.preprocessTokens(token.else, baseName, skip));
                 }
               }
               break;
@@ -6683,7 +6683,7 @@ var index = async () => {
                 default:
                   propName = '$.' + propName;
               }
-              console.log(propName);
+              //console.log(propName);
               parsed.push(propName);
               break;
 
@@ -6934,7 +6934,7 @@ var index = async () => {
     }
 
   } catch (e) {
-    console.error(e.message, e.stack);
+    console.error(e.message);
     process.exit();
   }
 };

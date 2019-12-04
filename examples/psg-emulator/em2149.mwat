@@ -6,7 +6,7 @@
 ;; https://github.com/digital-sound-antiques/emu2149
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 {@
-  ;; 定数定義 ;;
+  //;; 定数定義 ;;
   $.GETA_BITS = 24;
   $.EMU2149_VOL_YM2149 = 0;
   $.EMU2149_VOL_AY_3_8910 = 1;
@@ -16,72 +16,6 @@
   $.REG_MAX = 16;
 }
 
-;; 構造体 定義;;
-{@struct PSG
-i32 regmsk[REG_MAX] = [
-    0xff, 0x0f, 0xff, 0x0f, 0xff, 0x0f, 0x1f, 0x3f,
-    0x1f, 0x1f, 0x1f, 0xff, 0xff, 0x0f, 0xff, 0xff
-];
-    (;; Volume Table ;;)
-    i32 voltbl_[64] = [ 0 , 0x01, 0x01, 0x02, 0x02, 0x03, 0x03, 0x04, 0x05, 0x06, 0x07, 0x09,
-   0x0B, 0x0D, 0x0F, 0x12, 0x16, 0x1A, 0x1F, 0x25, 0x2D, 0x35, 0x3F, 0x4C,
-   0x5A, 0x6A, 0x7F, 0x97, 0xB4, 0xD6, 0xFF, 0xFF, 0x00, 0x00, 0x01, 0x01,
-   0x02, 0x02, 0x03, 0x03, 0x05, 0x05, 0x07, 0x07, 0x0B, 0x0B, 0x0F, 0x0F,
-   0x16, 0x16, 0x1F, 0x1F, 0x2D, 0x2D, 0x3F, 0x3F, 0x5A, 0x5A, 0x7F, 0x7F,
-   0xB4, 0xB4, 0xFF, 0xFF];
-    i32 reg[REG_MAX];
-    i32 voltbl;
-    i32 out;
-
-    i32 clk, rate, base_incr, quality;
-
-    i32 count[3];
-    i32 volume[3];
-    i32 freq[3];
-    i32 edge[3];
-    i32 tmask[3];
-    i32 nmask[3];
-    i32 mask;
-
-    i32 base_count;
-
-    i32 env_volume;
-    i32 env_ptr;
-    i32 env_face;
-
-    i32 env_continue;
-    i32 env_attack;
-    i32 env_alternate;
-    i32 env_hold;
-    i32 env_pause;
-    i32 env_reset;
-
-    i32 env_freq;
-    i32 env_count;
-
-    i32 noise_seed;
-    i32 noise_count;
-    i32 noise_freq;
-
-    (;; rate converter ;;)
-    i32 realstep;
-    i32 psgtime;
-    i32 psgstep;
-
-    (;; I/O Ctrl ;;)
-    i32 adr;
-
-    (;; output of channels ;;)
-    i32 ch_out[3];
-
-
-}
-
-;; リニアメモリ配置定義
-{@map offset 0x1000;
-  PSG psg;
-  f32 OutputBuffer[128];
-}
 
 
 (module
@@ -101,6 +35,73 @@ i32 regmsk[REG_MAX] = [
   (export "writeReg" (func $write_reg))
   (export "memory" (memory $memory))
   (memory $memory 1 )
+  ;; 構造体 定義;;
+  {@struct PSG
+  i32 regmsk[REG_MAX] = [
+      0xff, 0x0f, 0xff, 0x0f, 0xff, 0x0f, 0x1f, 0x3f,
+      0x1f, 0x1f, 0x1f, 0xff, 0xff, 0x0f, 0xff, 0xff
+  ];
+      (;; Volume Table ;;)
+      i32 voltbl_[64] = [ 0 , 0x01, 0x01, 0x02, 0x02, 0x03, 0x03, 0x04, 0x05, 0x06, 0x07, 0x09,
+    0x0B, 0x0D, 0x0F, 0x12, 0x16, 0x1A, 0x1F, 0x25, 0x2D, 0x35, 0x3F, 0x4C,
+    0x5A, 0x6A, 0x7F, 0x97, 0xB4, 0xD6, 0xFF, 0xFF, 0x00, 0x00, 0x01, 0x01,
+    0x02, 0x02, 0x03, 0x03, 0x05, 0x05, 0x07, 0x07, 0x0B, 0x0B, 0x0F, 0x0F,
+    0x16, 0x16, 0x1F, 0x1F, 0x2D, 0x2D, 0x3F, 0x3F, 0x5A, 0x5A, 0x7F, 0x7F,
+    0xB4, 0xB4, 0xFF, 0xFF];
+      i32 reg[REG_MAX];
+      i32 voltbl;
+      i32 out;
+
+      i32 clk, rate, base_incr, quality;
+
+      i32 count[3];
+      i32 volume[3];
+      i32 freq[3];
+      i32 edge[3];
+      i32 tmask[3];
+      i32 nmask[3];
+      i32 mask;
+
+      i32 base_count;
+
+      i32 env_volume;
+      i32 env_ptr;
+      i32 env_face;
+
+      i32 env_continue;
+      i32 env_attack;
+      i32 env_alternate;
+      i32 env_hold;
+      i32 env_pause;
+      i32 env_reset;
+
+      i32 env_freq;
+      i32 env_count;
+
+      i32 noise_seed;
+      i32 noise_count;
+      i32 noise_freq;
+
+      (;; rate converter ;;)
+      i32 realstep;
+      i32 psgtime;
+      i32 psgstep;
+
+      (;; I/O Ctrl ;;)
+      i32 adr;
+
+      (;; output of channels ;;)
+      i32 ch_out[3];
+
+
+  }
+
+  ;; リニアメモリ配置定義
+  {@map offset 0x1000;
+    PSG psg;
+    f32 OutputBuffer[128];
+  }
+
   (func $internal_refresh
      (i32.store (i32.const 0 ) (i32.load (&PSG.clk;)))
      (if
