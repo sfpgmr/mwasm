@@ -6212,7 +6212,8 @@ class LiteralUtil {
       decimalIntegerStrToDataStr: this.decimalIntegerStrToi32DataStr.bind(this),
       binaryIntegerStrToDataStr: this.binaryIntegerStrToi32DataStr.bind(this),
       octalIntegerStrToDataStr: this.octalIntegerStrToi32DataStr.bind(this),
-      hexIntegerStrToDataStr: this.hexIntegerStrToi32DataStr.bind(this)
+      hexIntegerStrToDataStr: this.hexIntegerStrToi32DataStr.bind(this),
+      valueToDataStr: this.i32ToDataStr.bind(this)
     };
     this.i64 = {
       decimalIntegerStrToDataStr: this.decimalIntegerStrToi64DataStr.bind(this),
@@ -6221,11 +6222,13 @@ class LiteralUtil {
       hexIntegerStrToDataStr: this.hexIntegerStrToi64DataStr.bind(this)
     };
     this.f32 = {
-      floatStrToDataStr: this.floatStrTof32DataStr.bind(this)
+      floatStrToDataStr: this.floatStrTof32DataStr.bind(this),
+      valueToDataStr: this.f32ToDataStr.bind(this)
     };
 
     this.f64 = {
-      floatStrToDataStr: this.floatStrTof64DataStr.bind(this)
+      floatStrToDataStr: this.floatStrTof64DataStr.bind(this),
+      valueToDataStr: this.f64ToDataStr.bind(this)
     };
   }
 
@@ -6304,6 +6307,21 @@ class LiteralUtil {
     for (let i = 0, e = str.length; i < e; ++i) {
       view.setUint16(i * 2, str.charCodeAt(i), true);
     }
+  }
+
+  f32ToDataStr(n){
+    this.workView.setFloat32(0,n,true);
+    return this.byteToString(4);
+  }
+
+  f64ToDataStr(n){
+    this.workView.setFloat64(0,n,true);
+    return this.byteToString(8);
+  }
+
+  i32ToDataStr(n){
+    this.workView.setInt32(0,n,true);
+    return this.byteToString(4);
   }
 
 }
@@ -6896,7 +6914,13 @@ var index = async () => {
               error('not implemented');
               break;
             case 'CodeExpression':
-              return self.evalExpression(data.value);
+              console.log(data,varType);
+              if(lib.valueToDataStr){
+                return lib.valueToDataStr(self.evalExpression(data.code));
+
+              } else {
+                error(`${varType} is not supported.`,data);
+              }
               break;
             default:
               error(`illegal data type ${data.type}`, data);

@@ -24,6 +24,7 @@
       "integer": false,
       "unsigned": false,
       "offset": 4,
+      "initData": "\\db\\0f\\49\\40",
       "num": 1,
       "log2": 2
     }
