@@ -1,0 +1,1431 @@
+[
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 0,
+      "line": 1,
+      "column": 1
+    },
+    "end": {
+      "offset": 1,
+      "line": 1,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "module",
+    "start": {
+      "offset": 1,
+      "line": 1,
+      "column": 2
+    },
+    "end": {
+      "offset": 7,
+      "line": 1,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 7,
+      "line": 1,
+      "column": 8
+    },
+    "end": {
+      "offset": 10,
+      "line": 2,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 10,
+      "line": 2,
+      "column": 3
+    },
+    "end": {
+      "offset": 11,
+      "line": 2,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "memory",
+    "start": {
+      "offset": 11,
+      "line": 2,
+      "column": 4
+    },
+    "end": {
+      "offset": 17,
+      "line": 2,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 17,
+      "line": 2,
+      "column": 10
+    },
+    "end": {
+      "offset": 18,
+      "line": 2,
+      "column": 11
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$memory",
+    "start": {
+      "offset": 18,
+      "line": 2,
+      "column": 11
+    },
+    "end": {
+      "offset": 25,
+      "line": 2,
+      "column": 18
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 25,
+      "line": 2,
+      "column": 18
+    },
+    "end": {
+      "offset": 26,
+      "line": 2,
+      "column": 19
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "1",
+    "start": {
+      "offset": 26,
+      "line": 2,
+      "column": 19
+    },
+    "end": {
+      "offset": 27,
+      "line": 2,
+      "column": 20
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 27,
+      "line": 2,
+      "column": 20
+    },
+    "end": {
+      "offset": 28,
+      "line": 2,
+      "column": 21
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 28,
+      "line": 2,
+      "column": 21
+    },
+    "end": {
+      "offset": 29,
+      "line": 2,
+      "column": 22
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 29,
+      "line": 2,
+      "column": 22
+    },
+    "end": {
+      "offset": 32,
+      "line": 3,
+      "column": 3
+    }
+  },
+  {
+    "type": "MemoryMap",
+    "defines": [
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "XX",
+          "numExpression": null,
+          "start": {
+            "offset": 46,
+            "line": 4,
+            "column": 9
+          },
+          "end": {
+            "offset": 48,
+            "line": 4,
+            "column": 11
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "f32",
+          "size": 4,
+          "integer": false,
+          "unsigned": false,
+          "start": {
+            "offset": 42,
+            "line": 4,
+            "column": 5
+          },
+          "end": {
+            "offset": 45,
+            "line": 4,
+            "column": 8
+          }
+        },
+        "initData": {
+          "type": "FloatLiteral",
+          "sign": "+",
+          "number": "10",
+          "flac": "0",
+          "start": {
+            "offset": 51,
+            "line": 4,
+            "column": 14
+          },
+          "end": {
+            "offset": 55,
+            "line": 4,
+            "column": 18
+          }
+        },
+        "start": {
+          "offset": 42,
+          "line": 4,
+          "column": 5
+        },
+        "end": {
+          "offset": 56,
+          "line": 4,
+          "column": 19
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "YY",
+          "numExpression": null,
+          "start": {
+            "offset": 65,
+            "line": 5,
+            "column": 9
+          },
+          "end": {
+            "offset": 67,
+            "line": 5,
+            "column": 11
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "f32",
+          "size": 4,
+          "integer": false,
+          "unsigned": false,
+          "start": {
+            "offset": 61,
+            "line": 5,
+            "column": 5
+          },
+          "end": {
+            "offset": 64,
+            "line": 5,
+            "column": 8
+          }
+        },
+        "initData": {
+          "type": "CodeExpression",
+          "code": "1.4; ",
+          "start": {
+            "offset": 70,
+            "line": 5,
+            "column": 14
+          },
+          "end": {
+            "offset": 79,
+            "line": 5,
+            "column": 23
+          }
+        },
+        "start": {
+          "offset": 61,
+          "line": 5,
+          "column": 5
+        },
+        "end": {
+          "offset": 80,
+          "line": 5,
+          "column": 24
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "ZZ",
+          "numExpression": {
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "10",
+                "start": {
+                  "offset": 92,
+                  "line": 6,
+                  "column": 12
+                },
+                "end": {
+                  "offset": 94,
+                  "line": 6,
+                  "column": 14
+                }
+              }
+            ],
+            "start": {
+              "offset": 92,
+              "line": 6,
+              "column": 12
+            },
+            "end": {
+              "offset": 94,
+              "line": 6,
+              "column": 14
+            }
+          },
+          "start": {
+            "offset": 89,
+            "line": 6,
+            "column": 9
+          },
+          "end": {
+            "offset": 95,
+            "line": 6,
+            "column": 15
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "start": {
+            "offset": 85,
+            "line": 6,
+            "column": 5
+          },
+          "end": {
+            "offset": 88,
+            "line": 6,
+            "column": 8
+          }
+        },
+        "initData": {
+          "type": "MwasmArray",
+          "value": [
+            {
+              "type": "IntegerLiteral",
+              "sign": "+",
+              "value": "0",
+              "start": {
+                "offset": 99,
+                "line": 6,
+                "column": 19
+              },
+              "end": {
+                "offset": 100,
+                "line": 6,
+                "column": 20
+              }
+            },
+            {
+              "type": "IntegerLiteral",
+              "sign": "+",
+              "value": "1",
+              "start": {
+                "offset": 101,
+                "line": 6,
+                "column": 21
+              },
+              "end": {
+                "offset": 102,
+                "line": 6,
+                "column": 22
+              }
+            },
+            {
+              "type": "IntegerLiteral",
+              "sign": "+",
+              "value": "2",
+              "start": {
+                "offset": 103,
+                "line": 6,
+                "column": 23
+              },
+              "end": {
+                "offset": 104,
+                "line": 6,
+                "column": 24
+              }
+            },
+            {
+              "type": "IntegerLiteral",
+              "sign": "+",
+              "value": "3",
+              "start": {
+                "offset": 105,
+                "line": 6,
+                "column": 25
+              },
+              "end": {
+                "offset": 106,
+                "line": 6,
+                "column": 26
+              }
+            },
+            {
+              "type": "IntegerLiteral",
+              "sign": "+",
+              "value": "4",
+              "start": {
+                "offset": 107,
+                "line": 6,
+                "column": 27
+              },
+              "end": {
+                "offset": 108,
+                "line": 6,
+                "column": 28
+              }
+            },
+            {
+              "type": "IntegerLiteral",
+              "sign": "+",
+              "value": "5",
+              "start": {
+                "offset": 109,
+                "line": 6,
+                "column": 29
+              },
+              "end": {
+                "offset": 110,
+                "line": 6,
+                "column": 30
+              }
+            },
+            {
+              "type": "IntegerLiteral",
+              "sign": "+",
+              "value": "6",
+              "start": {
+                "offset": 111,
+                "line": 6,
+                "column": 31
+              },
+              "end": {
+                "offset": 112,
+                "line": 6,
+                "column": 32
+              }
+            },
+            {
+              "type": "IntegerLiteral",
+              "sign": "+",
+              "value": "7",
+              "start": {
+                "offset": 113,
+                "line": 6,
+                "column": 33
+              },
+              "end": {
+                "offset": 114,
+                "line": 6,
+                "column": 34
+              }
+            },
+            {
+              "type": "IntegerLiteral",
+              "sign": "+",
+              "value": "8",
+              "start": {
+                "offset": 115,
+                "line": 6,
+                "column": 35
+              },
+              "end": {
+                "offset": 116,
+                "line": 6,
+                "column": 36
+              }
+            },
+            {
+              "type": "IntegerLiteral",
+              "sign": "+",
+              "value": "9",
+              "start": {
+                "offset": 117,
+                "line": 6,
+                "column": 37
+              },
+              "end": {
+                "offset": 118,
+                "line": 6,
+                "column": 38
+              }
+            }
+          ],
+          "start": {
+            "offset": 98,
+            "line": 6,
+            "column": 18
+          },
+          "end": {
+            "offset": 119,
+            "line": 6,
+            "column": 39
+          }
+        },
+        "start": {
+          "offset": 85,
+          "line": 6,
+          "column": 5
+        },
+        "end": {
+          "offset": 120,
+          "line": 6,
+          "column": 40
+        }
+      }
+    ],
+    "start": {
+      "offset": 32,
+      "line": 3,
+      "column": 3
+    },
+    "end": {
+      "offset": 124,
+      "line": 7,
+      "column": 4
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 124,
+      "line": 7,
+      "column": 4
+    },
+    "end": {
+      "offset": 127,
+      "line": 8,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 127,
+      "line": 8,
+      "column": 3
+    },
+    "end": {
+      "offset": 128,
+      "line": 8,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "export",
+    "start": {
+      "offset": 128,
+      "line": 8,
+      "column": 4
+    },
+    "end": {
+      "offset": 134,
+      "line": 8,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 134,
+      "line": 8,
+      "column": 10
+    },
+    "end": {
+      "offset": 135,
+      "line": 8,
+      "column": 11
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "\"memory\"",
+    "start": {
+      "offset": 135,
+      "line": 8,
+      "column": 11
+    },
+    "end": {
+      "offset": 143,
+      "line": 8,
+      "column": 19
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 143,
+      "line": 8,
+      "column": 19
+    },
+    "end": {
+      "offset": 144,
+      "line": 8,
+      "column": 20
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 144,
+      "line": 8,
+      "column": 20
+    },
+    "end": {
+      "offset": 145,
+      "line": 8,
+      "column": 21
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "memory",
+    "start": {
+      "offset": 145,
+      "line": 8,
+      "column": 21
+    },
+    "end": {
+      "offset": 151,
+      "line": 8,
+      "column": 27
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 151,
+      "line": 8,
+      "column": 27
+    },
+    "end": {
+      "offset": 152,
+      "line": 8,
+      "column": 28
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$memory",
+    "start": {
+      "offset": 152,
+      "line": 8,
+      "column": 28
+    },
+    "end": {
+      "offset": 159,
+      "line": 8,
+      "column": 35
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 159,
+      "line": 8,
+      "column": 35
+    },
+    "end": {
+      "offset": 160,
+      "line": 8,
+      "column": 36
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 160,
+      "line": 8,
+      "column": 36
+    },
+    "end": {
+      "offset": 161,
+      "line": 8,
+      "column": 37
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 161,
+      "line": 8,
+      "column": 37
+    },
+    "end": {
+      "offset": 164,
+      "line": 9,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 164,
+      "line": 9,
+      "column": 3
+    },
+    "end": {
+      "offset": 165,
+      "line": 9,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "export",
+    "start": {
+      "offset": 165,
+      "line": 9,
+      "column": 4
+    },
+    "end": {
+      "offset": 171,
+      "line": 9,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 171,
+      "line": 9,
+      "column": 10
+    },
+    "end": {
+      "offset": 172,
+      "line": 9,
+      "column": 11
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "\"memoryAdd\"",
+    "start": {
+      "offset": 172,
+      "line": 9,
+      "column": 11
+    },
+    "end": {
+      "offset": 183,
+      "line": 9,
+      "column": 22
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 183,
+      "line": 9,
+      "column": 22
+    },
+    "end": {
+      "offset": 184,
+      "line": 9,
+      "column": 23
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 184,
+      "line": 9,
+      "column": 23
+    },
+    "end": {
+      "offset": 185,
+      "line": 9,
+      "column": 24
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 185,
+      "line": 9,
+      "column": 24
+    },
+    "end": {
+      "offset": 189,
+      "line": 9,
+      "column": 28
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 189,
+      "line": 9,
+      "column": 28
+    },
+    "end": {
+      "offset": 190,
+      "line": 9,
+      "column": 29
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$memoryAdd",
+    "start": {
+      "offset": 190,
+      "line": 9,
+      "column": 29
+    },
+    "end": {
+      "offset": 200,
+      "line": 9,
+      "column": 39
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 200,
+      "line": 9,
+      "column": 39
+    },
+    "end": {
+      "offset": 201,
+      "line": 9,
+      "column": 40
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 201,
+      "line": 9,
+      "column": 40
+    },
+    "end": {
+      "offset": 202,
+      "line": 9,
+      "column": 41
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 202,
+      "line": 9,
+      "column": 41
+    },
+    "end": {
+      "offset": 205,
+      "line": 10,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 205,
+      "line": 10,
+      "column": 3
+    },
+    "end": {
+      "offset": 206,
+      "line": 10,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 206,
+      "line": 10,
+      "column": 4
+    },
+    "end": {
+      "offset": 210,
+      "line": 10,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 210,
+      "line": 10,
+      "column": 8
+    },
+    "end": {
+      "offset": 211,
+      "line": 10,
+      "column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$memoryAdd",
+    "start": {
+      "offset": 211,
+      "line": 10,
+      "column": 9
+    },
+    "end": {
+      "offset": 221,
+      "line": 10,
+      "column": 19
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 221,
+      "line": 10,
+      "column": 19
+    },
+    "end": {
+      "offset": 222,
+      "line": 10,
+      "column": 20
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 222,
+      "line": 10,
+      "column": 20
+    },
+    "end": {
+      "offset": 223,
+      "line": 10,
+      "column": 21
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "result",
+    "start": {
+      "offset": 223,
+      "line": 10,
+      "column": 21
+    },
+    "end": {
+      "offset": 229,
+      "line": 10,
+      "column": 27
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 229,
+      "line": 10,
+      "column": 27
+    },
+    "end": {
+      "offset": 230,
+      "line": 10,
+      "column": 28
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "f32",
+    "start": {
+      "offset": 230,
+      "line": 10,
+      "column": 28
+    },
+    "end": {
+      "offset": 233,
+      "line": 10,
+      "column": 31
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 233,
+      "line": 10,
+      "column": 31
+    },
+    "end": {
+      "offset": 234,
+      "line": 10,
+      "column": 32
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n    ",
+    "start": {
+      "offset": 234,
+      "line": 10,
+      "column": 32
+    },
+    "end": {
+      "offset": 239,
+      "line": 11,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 239,
+      "line": 11,
+      "column": 5
+    },
+    "end": {
+      "offset": 240,
+      "line": 11,
+      "column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "f32.add",
+    "start": {
+      "offset": 240,
+      "line": 11,
+      "column": 6
+    },
+    "end": {
+      "offset": 247,
+      "line": 11,
+      "column": 13
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n      ",
+    "start": {
+      "offset": 247,
+      "line": 11,
+      "column": 13
+    },
+    "end": {
+      "offset": 254,
+      "line": 12,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 254,
+      "line": 12,
+      "column": 7
+    },
+    "end": {
+      "offset": 255,
+      "line": 12,
+      "column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "f32.load",
+    "start": {
+      "offset": 255,
+      "line": 12,
+      "column": 8
+    },
+    "end": {
+      "offset": 263,
+      "line": 12,
+      "column": 16
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 263,
+      "line": 12,
+      "column": 16
+    },
+    "end": {
+      "offset": 264,
+      "line": 12,
+      "column": 17
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 264,
+      "line": 12,
+      "column": 17
+    },
+    "end": {
+      "offset": 265,
+      "line": 12,
+      "column": 18
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "XX",
+        "prefix": "&",
+        "start": {
+          "offset": 265,
+          "line": 12,
+          "column": 18
+        },
+        "end": {
+          "offset": 268,
+          "line": 12,
+          "column": 21
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 265,
+      "line": 12,
+      "column": 18
+    },
+    "end": {
+      "offset": 268,
+      "line": 12,
+      "column": 21
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 269,
+      "line": 12,
+      "column": 22
+    },
+    "end": {
+      "offset": 270,
+      "line": 12,
+      "column": 23
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 270,
+      "line": 12,
+      "column": 23
+    },
+    "end": {
+      "offset": 271,
+      "line": 12,
+      "column": 24
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n      ",
+    "start": {
+      "offset": 271,
+      "line": 12,
+      "column": 24
+    },
+    "end": {
+      "offset": 278,
+      "line": 13,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 278,
+      "line": 13,
+      "column": 7
+    },
+    "end": {
+      "offset": 279,
+      "line": 13,
+      "column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "f32.load",
+    "start": {
+      "offset": 279,
+      "line": 13,
+      "column": 8
+    },
+    "end": {
+      "offset": 287,
+      "line": 13,
+      "column": 16
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 287,
+      "line": 13,
+      "column": 16
+    },
+    "end": {
+      "offset": 288,
+      "line": 13,
+      "column": 17
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 288,
+      "line": 13,
+      "column": 17
+    },
+    "end": {
+      "offset": 289,
+      "line": 13,
+      "column": 18
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "YY",
+        "prefix": "&",
+        "start": {
+          "offset": 289,
+          "line": 13,
+          "column": 18
+        },
+        "end": {
+          "offset": 292,
+          "line": 13,
+          "column": 21
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 289,
+      "line": 13,
+      "column": 18
+    },
+    "end": {
+      "offset": 292,
+      "line": 13,
+      "column": 21
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 293,
+      "line": 13,
+      "column": 22
+    },
+    "end": {
+      "offset": 294,
+      "line": 13,
+      "column": 23
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 294,
+      "line": 13,
+      "column": 23
+    },
+    "end": {
+      "offset": 295,
+      "line": 13,
+      "column": 24
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n    ",
+    "start": {
+      "offset": 295,
+      "line": 13,
+      "column": 24
+    },
+    "end": {
+      "offset": 300,
+      "line": 14,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 300,
+      "line": 14,
+      "column": 5
+    },
+    "end": {
+      "offset": 301,
+      "line": 14,
+      "column": 6
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 301,
+      "line": 14,
+      "column": 6
+    },
+    "end": {
+      "offset": 304,
+      "line": 15,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 304,
+      "line": 15,
+      "column": 3
+    },
+    "end": {
+      "offset": 305,
+      "line": 15,
+      "column": 4
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 305,
+      "line": 15,
+      "column": 4
+    },
+    "end": {
+      "offset": 306,
+      "line": 16,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 306,
+      "line": 16,
+      "column": 1
+    },
+    "end": {
+      "offset": 307,
+      "line": 16,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 307,
+      "line": 16,
+      "column": 2
+    },
+    "end": {
+      "offset": 308,
+      "line": 17,
+      "column": 1
+    }
+  }
+]

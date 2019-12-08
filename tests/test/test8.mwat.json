@@ -761,11 +761,11 @@
       {
         "type": "JSPropertyName",
         "name": "circleArea",
-        "prefix": null,
+        "prefix": "%",
         "start": {
-          "offset": 464,
+          "offset": 463,
           "line": 27,
-          "column": 16
+          "column": 15
         },
         "end": {
           "offset": 474,
@@ -905,9 +905,9 @@
       }
     ],
     "start": {
-      "offset": 464,
+      "offset": 463,
       "line": 27,
-      "column": 16
+      "column": 15
     },
     "end": {
       "offset": 488,
@@ -963,11 +963,11 @@
       {
         "type": "JSPropertyName",
         "name": "data",
-        "prefix": null,
+        "prefix": "%",
         "start": {
-          "offset": 527,
+          "offset": 526,
           "line": 29,
-          "column": 6
+          "column": 5
         },
         "end": {
           "offset": 531,
@@ -978,9 +978,9 @@
       }
     ],
     "start": {
-      "offset": 527,
+      "offset": 526,
       "line": 29,
-      "column": 6
+      "column": 5
     },
     "end": {
       "offset": 531,

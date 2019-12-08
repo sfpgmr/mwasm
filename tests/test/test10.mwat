@@ -1,0 +1,24 @@
+{@
+ $.attributes = $attributes;
+
+}
+(module
+  (memory $memory 1 )
+  {@map
+    i32 XX;
+    i32 YY;
+    i64 ZZ;
+    i32 AA,BB;
+  }
+  (export "memory" (memory $memory))
+  (export "memoryAdd" (func $memoryAdd))
+  (func $memoryAdd
+    (i32.store 
+      (&AA;)
+      (i32.add
+        (i32.load (&XX;))
+        (i32.load (&YY;))
+      )
+    )
+  )
+)

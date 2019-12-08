@@ -747,11 +747,11 @@
       {
         "type": "JSPropertyName",
         "name": "circleArea",
-        "prefix": null,
+        "prefix": "%",
         "start": {
-          "offset": 244,
+          "offset": 243,
           "line": 17,
-          "column": 17
+          "column": 16
         },
         "end": {
           "offset": 254,
@@ -891,9 +891,9 @@
       }
     ],
     "start": {
-      "offset": 244,
+      "offset": 243,
       "line": 17,
-      "column": 17
+      "column": 16
     },
     "end": {
       "offset": 268,

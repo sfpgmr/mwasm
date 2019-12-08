@@ -37,6 +37,8 @@ test: $(TARGET)
 	mwasm ./tests/test/test7.mwat -o ./tests/test/test7.wasm
 	mwasm ./tests/test/test8.mwat -o ./tests/test/test8.wasm
 	mwasm ./tests/test/test9.mwat -o ./tests/test/test9.wasm
+	mwasm ./tests/test/test10.mwat -o ./tests/test/test10.wasm
+	mwasm ./tests/test/test11.mwat -o ./tests/test/test11.wasm
 	mwasm ./tests/test-map/test-map.mwat -o ./tests/test-map/test-map.wasm
 	mwasm ./tests/test-map/test-map2.mwat -o ./tests/test-map/test-map2.wasm
 	mwasm ./tests/test-map/test-map3.mwat -o ./tests/test-map/test-map3.wasm

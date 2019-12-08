@@ -3634,12 +3634,21 @@ function peg$parse(input, options) {
     var s0, s1, s2, s3, s4, s5;
 
     s0 = peg$currPos;
+    s1 = peg$currPos;
+    peg$silentFails++;
     if (input.charCodeAt(peg$currPos) === 37) {
-      s1 = peg$c152;
+      s2 = peg$c152;
       peg$currPos++;
     } else {
-      s1 = peg$FAILED;
+      s2 = peg$FAILED;
       if (peg$silentFails === 0) { peg$fail(peg$c153); }
+    }
+    peg$silentFails--;
+    if (s2 !== peg$FAILED) {
+      peg$currPos = s1;
+      s1 = void 0;
+    } else {
+      s1 = peg$FAILED;
     }
     if (s1 !== peg$FAILED) {
       s2 = peg$parse_();
@@ -6489,7 +6498,7 @@ var index = async () => {
               break;
             case 'ValueExpression':
               {
-                token.expression.prefix = token.prefix;
+                //console.log(token);
                 const result = this.parsePropertyExpression(token.expression, baseName, skip);
                 preprocessed.push(
                   `${result.value} (; ${result.jsSource} ;)`
@@ -6685,7 +6694,7 @@ var index = async () => {
                 default:
                   propName = '$.' + propName;
               }
-              console.log(expression.prefix,propName);
+              // console.log(expression.prefix,propName);
               parsed.push(propName);
               break;
 
@@ -6880,7 +6889,7 @@ var index = async () => {
             case 'HexIntegerLiteral':
               return lib.hexIntegerStrToDataStr(data.value, data.sign);
             case 'FloatLiteral':
-              return lib.floatStrToDataStr(data.sign, data.number, data.flac, data.expsign, deta.e);
+              return lib.floatStrToDataStr(data.sign, data.number, data.flac, data.expsign, data.e);
             case 'HexFloatLiteral':
             case 'BinaryFloatLiteral':
               error('not implemented');

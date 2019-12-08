@@ -1,0 +1,72 @@
+{
+  "attributes": "_attributes_",
+  "_attributes_": {
+    "type": "MemoryMap",
+    "size": 24
+  },
+  "XX": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "i32",
+      "size": 4,
+      "integer": true,
+      "unsigned": false,
+      "offset": 0,
+      "initData": null,
+      "num": 1,
+      "log2": 2
+    }
+  },
+  "YY": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "i32",
+      "size": 4,
+      "integer": true,
+      "unsigned": false,
+      "offset": 4,
+      "initData": null,
+      "num": 1,
+      "log2": 2
+    }
+  },
+  "ZZ": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "i64",
+      "size": 8,
+      "integer": true,
+      "unsigned": false,
+      "offset": 8,
+      "initData": null,
+      "num": 1,
+      "log2": 3
+    }
+  },
+  "AA": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "i32",
+      "size": 4,
+      "integer": true,
+      "unsigned": false,
+      "offset": 16,
+      "initData": null,
+      "num": 1,
+      "log2": 2
+    }
+  },
+  "BB": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "i32",
+      "size": 4,
+      "integer": true,
+      "unsigned": false,
+      "offset": 20,
+      "initData": null,
+      "num": 1,
+      "log2": 2
+    }
+  }
+}

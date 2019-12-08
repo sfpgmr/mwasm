@@ -747,11 +747,11 @@
       {
         "type": "JSPropertyName",
         "name": "BAR",
-        "prefix": null,
+        "prefix": "%",
         "start": {
-          "offset": 252,
+          "offset": 251,
           "line": 15,
-          "column": 19
+          "column": 18
         },
         "end": {
           "offset": 255,
@@ -922,9 +922,9 @@
       }
     ],
     "start": {
-      "offset": 252,
+      "offset": 251,
       "line": 15,
-      "column": 19
+      "column": 18
     },
     "end": {
       "offset": 277,

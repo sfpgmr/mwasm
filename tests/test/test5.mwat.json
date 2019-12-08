@@ -747,11 +747,11 @@
       {
         "type": "JSPropertyName",
         "name": "R",
-        "prefix": null,
+        "prefix": "%",
         "start": {
-          "offset": 239,
+          "offset": 238,
           "line": 13,
-          "column": 19
+          "column": 18
         },
         "end": {
           "offset": 240,
@@ -922,9 +922,9 @@
       }
     ],
     "start": {
-      "offset": 239,
+      "offset": 238,
       "line": 13,
-      "column": 19
+      "column": 18
     },
     "end": {
       "offset": 262,

@@ -1165,11 +1165,11 @@
       {
         "type": "JSPropertyName",
         "name": "INDEX",
-        "prefix": null,
+        "prefix": "%",
         "start": {
-          "offset": 277,
+          "offset": 276,
           "line": 18,
-          "column": 17
+          "column": 16
         },
         "end": {
           "offset": 282,
@@ -1236,9 +1236,9 @@
       }
     ],
     "start": {
-      "offset": 277,
+      "offset": 276,
       "line": 18,
-      "column": 17
+      "column": 16
     },
     "end": {
       "offset": 287,

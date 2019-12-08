@@ -985,11 +985,11 @@
       {
         "type": "JSPropertyName",
         "name": "BAR",
-        "prefix": null,
+        "prefix": "%",
         "start": {
-          "offset": 340,
+          "offset": 339,
           "line": 17,
-          "column": 33
+          "column": 32
         },
         "end": {
           "offset": 343,
@@ -1000,9 +1000,9 @@
       }
     ],
     "start": {
-      "offset": 340,
+      "offset": 339,
       "line": 17,
-      "column": 33
+      "column": 32
     },
     "end": {
       "offset": 343,
@@ -1128,11 +1128,11 @@
       {
         "type": "JSPropertyName",
         "name": "FLAG_FOO",
-        "prefix": null,
+        "prefix": "%",
         "start": {
-          "offset": 386,
+          "offset": 385,
           "line": 18,
-          "column": 23
+          "column": 22
         },
         "end": {
           "offset": 394,
@@ -1143,9 +1143,9 @@
       }
     ],
     "start": {
-      "offset": 386,
+      "offset": 385,
       "line": 18,
-      "column": 23
+      "column": 22
     },
     "end": {
       "offset": 394,
@@ -1397,11 +1397,11 @@
       {
         "type": "JSPropertyName",
         "name": "BAR",
-        "prefix": null,
+        "prefix": "%",
         "start": {
-          "offset": 514,
+          "offset": 513,
           "line": 22,
-          "column": 33
+          "column": 32
         },
         "end": {
           "offset": 517,
@@ -1412,9 +1412,9 @@
       }
     ],
     "start": {
-      "offset": 514,
+      "offset": 513,
       "line": 22,
-      "column": 33
+      "column": 32
     },
     "end": {
       "offset": 517,
@@ -1610,11 +1610,11 @@
       {
         "type": "JSPropertyName",
         "name": "ERROR",
-        "prefix": null,
+        "prefix": "%",
         "start": {
-          "offset": 585,
+          "offset": 584,
           "line": 25,
-          "column": 23
+          "column": 22
         },
         "end": {
           "offset": 590,
@@ -1625,9 +1625,9 @@
       }
     ],
     "start": {
-      "offset": 585,
+      "offset": 584,
       "line": 25,
-      "column": 23
+      "column": 22
     },
     "end": {
       "offset": 590,

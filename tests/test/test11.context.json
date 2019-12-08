@@ -1,0 +1,45 @@
+{
+  "_attributes_": {
+    "type": "MemoryMap",
+    "size": 48
+  },
+  "XX": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "f32",
+      "size": 4,
+      "integer": false,
+      "unsigned": false,
+      "offset": 0,
+      "initData": "\\41\\20\\00\\00",
+      "num": 1,
+      "log2": 2
+    }
+  },
+  "YY": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "f32",
+      "size": 4,
+      "integer": false,
+      "unsigned": false,
+      "offset": 4,
+      "initData": "\\3f\\d9\\99\\9a",
+      "num": 1,
+      "log2": 2
+    }
+  },
+  "ZZ": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "i32",
+      "size": 4,
+      "integer": true,
+      "unsigned": false,
+      "offset": 8,
+      "initData": "\\00\\00\\00\\00\\01\\00\\00\\00\\02\\00\\00\\00\\03\\00\\00\\00\\04\\00\\00\\00\\05\\00\\00\\00\\06\\00\\00\\00\\07\\00\\00\\00\\08\\00\\00\\00\\09\\00\\00\\00",
+      "num": 10,
+      "log2": 2
+    }
+  }
+}
