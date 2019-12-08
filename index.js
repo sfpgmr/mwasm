@@ -6870,6 +6870,7 @@ var index = async () => {
         const initData = def.initData;
         const varType = def.varType.varType;
         const lib = literalUtil[varType];
+        const self = this;
 
         function makeDataString_(data) {
           //console.logconsole.log(data.type);
@@ -6893,6 +6894,9 @@ var index = async () => {
             case 'HexFloatLiteral':
             case 'BinaryFloatLiteral':
               error('not implemented');
+              break;
+            case 'CodeExpression':
+              return self.evalExpression(data.value);
               break;
             default:
               error(`illegal data type ${data.type}`, data);

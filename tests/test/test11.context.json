@@ -24,7 +24,6 @@
       "integer": false,
       "unsigned": false,
       "offset": 4,
-      "initData": "\\3f\\d9\\99\\9a",
       "num": 1,
       "log2": 2
     }
