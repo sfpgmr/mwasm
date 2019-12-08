@@ -2,6 +2,8 @@
 $.INDEX = 10;
 }
 
+(module
+(memory 0)
 {@map offset {return 0};
   i32 label[INDEX];
   i64 label2,label2_1,label2_2;
@@ -9,9 +11,6 @@ $.INDEX = 10;
   f64 label4;
   f32 label5[INDEX];
 }
-
-(module
-(memory 0)
 (export "test" (func $test))
 (func $test (result i32)
   (i32.add

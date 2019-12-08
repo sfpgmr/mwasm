@@ -6489,6 +6489,7 @@ var index = async () => {
               break;
             case 'ValueExpression':
               {
+                token.expression.prefix = token.prefix;
                 const result = this.parsePropertyExpression(token.expression, baseName, skip);
                 preprocessed.push(
                   `${result.value} (; ${result.jsSource} ;)`
@@ -6645,6 +6646,7 @@ var index = async () => {
                           relativeOffsets.push(`$.${propName}[$attributes].size * ${p}`);
                           break;
                         case '#':
+                          break;
                         default:
                           propName += "['" + p + "']";
                       }
@@ -6678,12 +6680,12 @@ var index = async () => {
                   propName = '$.' + propName + '[$attributes].log2';
                   break;
                 case '%':
-                  propName = '$.' + propName;
+                  propName = '$.' + propName; 
                   break;
                 default:
                   propName = '$.' + propName;
               }
-              //console.log(propName);
+              console.log(expression.prefix,propName);
               parsed.push(propName);
               break;
 
