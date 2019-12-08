@@ -1,0 +1,20 @@
+{@struct A 
+  i32 a;
+  f32 b;
+  f32 c;
+}
+
+
+(module
+(memory 0)
+{@map 
+  A a;
+}
+(export "test" (func $test))
+(func $test (result f32)
+  (f32.add 
+    (f32.load (&a.a;))
+    (f32.load (#a.a;))
+  )
+)
+)

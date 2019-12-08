@@ -1,0 +1,22 @@
+(module
+  (memory $memory 1 )
+  (export "memory" (memory $memory))
+  (export "test" (func $test))
+  (func $test (result i32)
+    i32.const 0
+    i32.load
+    {
+      let offset = 4;
+      // JSによるWASMソースコード生成
+      let instructions = '';
+      for(let i = 0;i < 16; ++ i ){
+        instructions += `
+    i32.const ${offset}
+    i32.load 
+    i32.add`;
+        offset += 4;
+      }
+      return instructions;
+    }
+  )
+)

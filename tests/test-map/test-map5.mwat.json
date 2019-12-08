@@ -1,0 +1,1131 @@
+[
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 0,
+      "line": 1,
+      "column": 1
+    },
+    "end": {
+      "offset": 1,
+      "line": 1,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "module",
+    "start": {
+      "offset": 1,
+      "line": 1,
+      "column": 2
+    },
+    "end": {
+      "offset": 7,
+      "line": 1,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 7,
+      "line": 1,
+      "column": 8
+    },
+    "end": {
+      "offset": 8,
+      "line": 2,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 8,
+      "line": 2,
+      "column": 1
+    },
+    "end": {
+      "offset": 9,
+      "line": 2,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "memory",
+    "start": {
+      "offset": 9,
+      "line": 2,
+      "column": 2
+    },
+    "end": {
+      "offset": 15,
+      "line": 2,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 15,
+      "line": 2,
+      "column": 8
+    },
+    "end": {
+      "offset": 16,
+      "line": 2,
+      "column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "0",
+    "start": {
+      "offset": 16,
+      "line": 2,
+      "column": 9
+    },
+    "end": {
+      "offset": 17,
+      "line": 2,
+      "column": 10
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 17,
+      "line": 2,
+      "column": 10
+    },
+    "end": {
+      "offset": 18,
+      "line": 2,
+      "column": 11
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 18,
+      "line": 2,
+      "column": 11
+    },
+    "end": {
+      "offset": 19,
+      "line": 3,
+      "column": 1
+    }
+  },
+  {
+    "type": "MemoryMap",
+    "defines": [
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "sin_table",
+          "numExpression": {
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "32",
+                "start": {
+                  "offset": 54,
+                  "line": 5,
+                  "column": 17
+                },
+                "end": {
+                  "offset": 56,
+                  "line": 5,
+                  "column": 19
+                }
+              }
+            ],
+            "start": {
+              "offset": 54,
+              "line": 5,
+              "column": 17
+            },
+            "end": {
+              "offset": 56,
+              "line": 5,
+              "column": 19
+            }
+          },
+          "start": {
+            "offset": 44,
+            "line": 5,
+            "column": 7
+          },
+          "end": {
+            "offset": 57,
+            "line": 5,
+            "column": 20
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "f32",
+          "size": 4,
+          "integer": false,
+          "unsigned": false,
+          "start": {
+            "offset": 40,
+            "line": 5,
+            "column": 3
+          },
+          "end": {
+            "offset": 43,
+            "line": 5,
+            "column": 6
+          }
+        },
+        "initData": null,
+        "start": {
+          "offset": 40,
+          "line": 5,
+          "column": 3
+        },
+        "end": {
+          "offset": 58,
+          "line": 5,
+          "column": 21
+        }
+      },
+      {
+        "type": "Code",
+        "code": "\n    // 正弦波で初期値をセットしておく\n    const buffer = new ArrayBuffer(4);\n    const view = new DataView(buffer);\n    let data = \"\";\n    for(let i = 0,ei = 32;i < ei;++i){\n      view.setFloat32(0,Math.sin(2 * Math.PI * i / 32),true);\n      for(let j = 0;j < 4;++j){\n        data += '\\\\' + (view.getUint8(j) | 0).toString(16).padStart(2,'0');\n      }\n    }\n    const offset = $.sin_table[$attributes].offset;\n    // dataとして出力\n    return `(data (i32.const ${offset}) \"${data}\")`;\n  ",
+        "start": {
+          "offset": 61,
+          "line": 6,
+          "column": 3
+        },
+        "end": {
+          "offset": 531,
+          "line": 20,
+          "column": 4
+        }
+      }
+    ],
+    "start": {
+      "offset": 19,
+      "line": 3,
+      "column": 1
+    },
+    "end": {
+      "offset": 547,
+      "line": 22,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 547,
+      "line": 22,
+      "column": 2
+    },
+    "end": {
+      "offset": 548,
+      "line": 23,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 548,
+      "line": 23,
+      "column": 1
+    },
+    "end": {
+      "offset": 549,
+      "line": 23,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "export",
+    "start": {
+      "offset": 549,
+      "line": 23,
+      "column": 2
+    },
+    "end": {
+      "offset": 555,
+      "line": 23,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 555,
+      "line": 23,
+      "column": 8
+    },
+    "end": {
+      "offset": 556,
+      "line": 23,
+      "column": 9
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "\"sin_table\"",
+    "start": {
+      "offset": 556,
+      "line": 23,
+      "column": 9
+    },
+    "end": {
+      "offset": 567,
+      "line": 23,
+      "column": 20
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 567,
+      "line": 23,
+      "column": 20
+    },
+    "end": {
+      "offset": 568,
+      "line": 23,
+      "column": 21
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 568,
+      "line": 23,
+      "column": 21
+    },
+    "end": {
+      "offset": 569,
+      "line": 23,
+      "column": 22
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 569,
+      "line": 23,
+      "column": 22
+    },
+    "end": {
+      "offset": 573,
+      "line": 23,
+      "column": 26
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 573,
+      "line": 23,
+      "column": 26
+    },
+    "end": {
+      "offset": 574,
+      "line": 23,
+      "column": 27
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$sin_table",
+    "start": {
+      "offset": 574,
+      "line": 23,
+      "column": 27
+    },
+    "end": {
+      "offset": 584,
+      "line": 23,
+      "column": 37
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 584,
+      "line": 23,
+      "column": 37
+    },
+    "end": {
+      "offset": 585,
+      "line": 23,
+      "column": 38
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 585,
+      "line": 23,
+      "column": 38
+    },
+    "end": {
+      "offset": 586,
+      "line": 23,
+      "column": 39
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 586,
+      "line": 23,
+      "column": 39
+    },
+    "end": {
+      "offset": 587,
+      "line": 24,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 587,
+      "line": 24,
+      "column": 1
+    },
+    "end": {
+      "offset": 588,
+      "line": 24,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 588,
+      "line": 24,
+      "column": 2
+    },
+    "end": {
+      "offset": 592,
+      "line": 24,
+      "column": 6
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 592,
+      "line": 24,
+      "column": 6
+    },
+    "end": {
+      "offset": 593,
+      "line": 24,
+      "column": 7
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$sin_table",
+    "start": {
+      "offset": 593,
+      "line": 24,
+      "column": 7
+    },
+    "end": {
+      "offset": 603,
+      "line": 24,
+      "column": 17
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 603,
+      "line": 24,
+      "column": 17
+    },
+    "end": {
+      "offset": 604,
+      "line": 24,
+      "column": 18
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 604,
+      "line": 24,
+      "column": 18
+    },
+    "end": {
+      "offset": 605,
+      "line": 24,
+      "column": 19
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "param",
+    "start": {
+      "offset": 605,
+      "line": 24,
+      "column": 19
+    },
+    "end": {
+      "offset": 610,
+      "line": 24,
+      "column": 24
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 610,
+      "line": 24,
+      "column": 24
+    },
+    "end": {
+      "offset": 611,
+      "line": 24,
+      "column": 25
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$a",
+    "start": {
+      "offset": 611,
+      "line": 24,
+      "column": 25
+    },
+    "end": {
+      "offset": 613,
+      "line": 24,
+      "column": 27
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 613,
+      "line": 24,
+      "column": 27
+    },
+    "end": {
+      "offset": 614,
+      "line": 24,
+      "column": 28
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32",
+    "start": {
+      "offset": 614,
+      "line": 24,
+      "column": 28
+    },
+    "end": {
+      "offset": 617,
+      "line": 24,
+      "column": 31
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 617,
+      "line": 24,
+      "column": 31
+    },
+    "end": {
+      "offset": 618,
+      "line": 24,
+      "column": 32
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 618,
+      "line": 24,
+      "column": 32
+    },
+    "end": {
+      "offset": 619,
+      "line": 24,
+      "column": 33
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 619,
+      "line": 24,
+      "column": 33
+    },
+    "end": {
+      "offset": 620,
+      "line": 24,
+      "column": 34
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "result",
+    "start": {
+      "offset": 620,
+      "line": 24,
+      "column": 34
+    },
+    "end": {
+      "offset": 626,
+      "line": 24,
+      "column": 40
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 626,
+      "line": 24,
+      "column": 40
+    },
+    "end": {
+      "offset": 627,
+      "line": 24,
+      "column": 41
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "f32",
+    "start": {
+      "offset": 627,
+      "line": 24,
+      "column": 41
+    },
+    "end": {
+      "offset": 630,
+      "line": 24,
+      "column": 44
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 630,
+      "line": 24,
+      "column": 44
+    },
+    "end": {
+      "offset": 631,
+      "line": 24,
+      "column": 45
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 631,
+      "line": 24,
+      "column": 45
+    },
+    "end": {
+      "offset": 634,
+      "line": 25,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 634,
+      "line": 25,
+      "column": 3
+    },
+    "end": {
+      "offset": 635,
+      "line": 25,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "f32.load",
+    "start": {
+      "offset": 635,
+      "line": 25,
+      "column": 4
+    },
+    "end": {
+      "offset": 643,
+      "line": 25,
+      "column": 12
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n    ",
+    "start": {
+      "offset": 643,
+      "line": 25,
+      "column": 12
+    },
+    "end": {
+      "offset": 648,
+      "line": 26,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 648,
+      "line": 26,
+      "column": 5
+    },
+    "end": {
+      "offset": 649,
+      "line": 26,
+      "column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 649,
+      "line": 26,
+      "column": 6
+    },
+    "end": {
+      "offset": 657,
+      "line": 26,
+      "column": 14
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " \n      ",
+    "start": {
+      "offset": 657,
+      "line": 26,
+      "column": 14
+    },
+    "end": {
+      "offset": 665,
+      "line": 27,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 665,
+      "line": 27,
+      "column": 7
+    },
+    "end": {
+      "offset": 666,
+      "line": 27,
+      "column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.add",
+    "start": {
+      "offset": 666,
+      "line": 27,
+      "column": 8
+    },
+    "end": {
+      "offset": 673,
+      "line": 27,
+      "column": 15
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n        ",
+    "start": {
+      "offset": 673,
+      "line": 27,
+      "column": 15
+    },
+    "end": {
+      "offset": 682,
+      "line": 28,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 682,
+      "line": 28,
+      "column": 9
+    },
+    "end": {
+      "offset": 683,
+      "line": 28,
+      "column": 10
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "sin_table",
+        "prefix": "&",
+        "start": {
+          "offset": 683,
+          "line": 28,
+          "column": 10
+        },
+        "end": {
+          "offset": 693,
+          "line": 28,
+          "column": 20
+        },
+        "child": {
+          "type": "IndexExpression",
+          "expression": [
+            {
+              "type": "JSNumber",
+              "value": "0",
+              "start": {
+                "offset": 694,
+                "line": 28,
+                "column": 21
+              },
+              "end": {
+                "offset": 695,
+                "line": 28,
+                "column": 22
+              }
+            }
+          ],
+          "start": {
+            "offset": 693,
+            "line": 28,
+            "column": 20
+          },
+          "end": {
+            "offset": 696,
+            "line": 28,
+            "column": 23
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 683,
+      "line": 28,
+      "column": 10
+    },
+    "end": {
+      "offset": 696,
+      "line": 28,
+      "column": 23
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 697,
+      "line": 28,
+      "column": 24
+    },
+    "end": {
+      "offset": 698,
+      "line": 28,
+      "column": 25
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n        ",
+    "start": {
+      "offset": 698,
+      "line": 28,
+      "column": 25
+    },
+    "end": {
+      "offset": 707,
+      "line": 29,
+      "column": 9
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 707,
+      "line": 29,
+      "column": 9
+    },
+    "end": {
+      "offset": 708,
+      "line": 29,
+      "column": 10
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "local.get",
+    "start": {
+      "offset": 708,
+      "line": 29,
+      "column": 10
+    },
+    "end": {
+      "offset": 717,
+      "line": 29,
+      "column": 19
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 717,
+      "line": 29,
+      "column": 19
+    },
+    "end": {
+      "offset": 718,
+      "line": 29,
+      "column": 20
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$a",
+    "start": {
+      "offset": 718,
+      "line": 29,
+      "column": 20
+    },
+    "end": {
+      "offset": 720,
+      "line": 29,
+      "column": 22
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 720,
+      "line": 29,
+      "column": 22
+    },
+    "end": {
+      "offset": 721,
+      "line": 29,
+      "column": 23
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n      ",
+    "start": {
+      "offset": 721,
+      "line": 29,
+      "column": 23
+    },
+    "end": {
+      "offset": 728,
+      "line": 30,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 728,
+      "line": 30,
+      "column": 7
+    },
+    "end": {
+      "offset": 729,
+      "line": 30,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n    ",
+    "start": {
+      "offset": 729,
+      "line": 30,
+      "column": 8
+    },
+    "end": {
+      "offset": 734,
+      "line": 31,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 734,
+      "line": 31,
+      "column": 5
+    },
+    "end": {
+      "offset": 735,
+      "line": 31,
+      "column": 6
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 735,
+      "line": 31,
+      "column": 6
+    },
+    "end": {
+      "offset": 738,
+      "line": 32,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 738,
+      "line": 32,
+      "column": 3
+    },
+    "end": {
+      "offset": 739,
+      "line": 32,
+      "column": 4
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 739,
+      "line": 32,
+      "column": 4
+    },
+    "end": {
+      "offset": 740,
+      "line": 33,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 740,
+      "line": 33,
+      "column": 1
+    },
+    "end": {
+      "offset": 741,
+      "line": 33,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 741,
+      "line": 33,
+      "column": 2
+    },
+    "end": {
+      "offset": 742,
+      "line": 34,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 742,
+      "line": 34,
+      "column": 1
+    },
+    "end": {
+      "offset": 743,
+      "line": 34,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 743,
+      "line": 34,
+      "column": 2
+    },
+    "end": {
+      "offset": 744,
+      "line": 35,
+      "column": 1
+    }
+  }
+]

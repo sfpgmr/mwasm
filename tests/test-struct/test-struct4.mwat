@@ -1,0 +1,28 @@
+{@struct A 
+  i32 a;
+}
+
+{@struct B 
+  i32 b;
+  A a;
+}
+
+{@struct C 
+  i32 c;
+  B b;
+}
+
+{@map 
+  C c[10];
+}
+
+(module
+(memory 0)
+(export "test" (func $test))
+(func $test (result i32)
+  (i32.add 
+    (i32.load (&c[0].b.a.a;))
+    (#c[0].b.a.a;)
+  )
+)
+)

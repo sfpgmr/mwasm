@@ -1,0 +1,1061 @@
+[
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 0,
+      "line": 1,
+      "column": 1
+    },
+    "end": {
+      "offset": 1,
+      "line": 2,
+      "column": 1
+    }
+  },
+  {
+    "type": "CodeWithoutReturnValue",
+    "code": "// JS コードブロック\n\n // $には関数などもセットできる\n $.circleArea = r =>{\n   return r * r * Math.PI;\n }\n \n // $には配列などもセットできる\n $.array = [0,1,2,3,4,5];\n\n // thisにはrequireメソッドあり\n // ファイルシステムを使ってみる\n const fs = this.require('fs');\n // ソースファイルを読み込んで$にセットしてみる\n $.data = fs.readFileSync(\"./test8_inc.wat\",\"utf-8\");\n\n",
+    "start": {
+      "offset": 1,
+      "line": 2,
+      "column": 1
+    },
+    "end": {
+      "offset": 297,
+      "line": 19,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n\n",
+    "start": {
+      "offset": 297,
+      "line": 19,
+      "column": 2
+    },
+    "end": {
+      "offset": 299,
+      "line": 21,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 299,
+      "line": 21,
+      "column": 1
+    },
+    "end": {
+      "offset": 300,
+      "line": 21,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "module",
+    "start": {
+      "offset": 300,
+      "line": 21,
+      "column": 2
+    },
+    "end": {
+      "offset": 306,
+      "line": 21,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 306,
+      "line": 21,
+      "column": 8
+    },
+    "end": {
+      "offset": 309,
+      "line": 22,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 309,
+      "line": 22,
+      "column": 3
+    },
+    "end": {
+      "offset": 310,
+      "line": 22,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "memory",
+    "start": {
+      "offset": 310,
+      "line": 22,
+      "column": 4
+    },
+    "end": {
+      "offset": 316,
+      "line": 22,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 316,
+      "line": 22,
+      "column": 10
+    },
+    "end": {
+      "offset": 317,
+      "line": 22,
+      "column": 11
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$memory",
+    "start": {
+      "offset": 317,
+      "line": 22,
+      "column": 11
+    },
+    "end": {
+      "offset": 324,
+      "line": 22,
+      "column": 18
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 324,
+      "line": 22,
+      "column": 18
+    },
+    "end": {
+      "offset": 325,
+      "line": 22,
+      "column": 19
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "1",
+    "start": {
+      "offset": 325,
+      "line": 22,
+      "column": 19
+    },
+    "end": {
+      "offset": 326,
+      "line": 22,
+      "column": 20
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 326,
+      "line": 22,
+      "column": 20
+    },
+    "end": {
+      "offset": 327,
+      "line": 22,
+      "column": 21
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 327,
+      "line": 22,
+      "column": 21
+    },
+    "end": {
+      "offset": 328,
+      "line": 22,
+      "column": 22
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 328,
+      "line": 22,
+      "column": 22
+    },
+    "end": {
+      "offset": 331,
+      "line": 23,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 331,
+      "line": 23,
+      "column": 3
+    },
+    "end": {
+      "offset": 332,
+      "line": 23,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "export",
+    "start": {
+      "offset": 332,
+      "line": 23,
+      "column": 4
+    },
+    "end": {
+      "offset": 338,
+      "line": 23,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 338,
+      "line": 23,
+      "column": 10
+    },
+    "end": {
+      "offset": 339,
+      "line": 23,
+      "column": 11
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "\"memory\"",
+    "start": {
+      "offset": 339,
+      "line": 23,
+      "column": 11
+    },
+    "end": {
+      "offset": 347,
+      "line": 23,
+      "column": 19
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 347,
+      "line": 23,
+      "column": 19
+    },
+    "end": {
+      "offset": 348,
+      "line": 23,
+      "column": 20
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 348,
+      "line": 23,
+      "column": 20
+    },
+    "end": {
+      "offset": 349,
+      "line": 23,
+      "column": 21
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "memory",
+    "start": {
+      "offset": 349,
+      "line": 23,
+      "column": 21
+    },
+    "end": {
+      "offset": 355,
+      "line": 23,
+      "column": 27
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 355,
+      "line": 23,
+      "column": 27
+    },
+    "end": {
+      "offset": 356,
+      "line": 23,
+      "column": 28
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$memory",
+    "start": {
+      "offset": 356,
+      "line": 23,
+      "column": 28
+    },
+    "end": {
+      "offset": 363,
+      "line": 23,
+      "column": 35
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 363,
+      "line": 23,
+      "column": 35
+    },
+    "end": {
+      "offset": 364,
+      "line": 23,
+      "column": 36
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 364,
+      "line": 23,
+      "column": 36
+    },
+    "end": {
+      "offset": 365,
+      "line": 23,
+      "column": 37
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 365,
+      "line": 23,
+      "column": 37
+    },
+    "end": {
+      "offset": 368,
+      "line": 24,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 368,
+      "line": 24,
+      "column": 3
+    },
+    "end": {
+      "offset": 369,
+      "line": 24,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "export",
+    "start": {
+      "offset": 369,
+      "line": 24,
+      "column": 4
+    },
+    "end": {
+      "offset": 375,
+      "line": 24,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 375,
+      "line": 24,
+      "column": 10
+    },
+    "end": {
+      "offset": 376,
+      "line": 24,
+      "column": 11
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "\"test\"",
+    "start": {
+      "offset": 376,
+      "line": 24,
+      "column": 11
+    },
+    "end": {
+      "offset": 382,
+      "line": 24,
+      "column": 17
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 382,
+      "line": 24,
+      "column": 17
+    },
+    "end": {
+      "offset": 383,
+      "line": 24,
+      "column": 18
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 383,
+      "line": 24,
+      "column": 18
+    },
+    "end": {
+      "offset": 384,
+      "line": 24,
+      "column": 19
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 384,
+      "line": 24,
+      "column": 19
+    },
+    "end": {
+      "offset": 388,
+      "line": 24,
+      "column": 23
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 388,
+      "line": 24,
+      "column": 23
+    },
+    "end": {
+      "offset": 389,
+      "line": 24,
+      "column": 24
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$test",
+    "start": {
+      "offset": 389,
+      "line": 24,
+      "column": 24
+    },
+    "end": {
+      "offset": 394,
+      "line": 24,
+      "column": 29
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 394,
+      "line": 24,
+      "column": 29
+    },
+    "end": {
+      "offset": 395,
+      "line": 24,
+      "column": 30
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 395,
+      "line": 24,
+      "column": 30
+    },
+    "end": {
+      "offset": 396,
+      "line": 24,
+      "column": 31
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 396,
+      "line": 24,
+      "column": 31
+    },
+    "end": {
+      "offset": 399,
+      "line": 25,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 399,
+      "line": 25,
+      "column": 3
+    },
+    "end": {
+      "offset": 400,
+      "line": 25,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 400,
+      "line": 25,
+      "column": 4
+    },
+    "end": {
+      "offset": 404,
+      "line": 25,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 404,
+      "line": 25,
+      "column": 8
+    },
+    "end": {
+      "offset": 405,
+      "line": 25,
+      "column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$test",
+    "start": {
+      "offset": 405,
+      "line": 25,
+      "column": 9
+    },
+    "end": {
+      "offset": 410,
+      "line": 25,
+      "column": 14
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 410,
+      "line": 25,
+      "column": 14
+    },
+    "end": {
+      "offset": 411,
+      "line": 25,
+      "column": 15
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 411,
+      "line": 25,
+      "column": 15
+    },
+    "end": {
+      "offset": 412,
+      "line": 25,
+      "column": 16
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "result",
+    "start": {
+      "offset": 412,
+      "line": 25,
+      "column": 16
+    },
+    "end": {
+      "offset": 418,
+      "line": 25,
+      "column": 22
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 418,
+      "line": 25,
+      "column": 22
+    },
+    "end": {
+      "offset": 419,
+      "line": 25,
+      "column": 23
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "f32",
+    "start": {
+      "offset": 419,
+      "line": 25,
+      "column": 23
+    },
+    "end": {
+      "offset": 422,
+      "line": 25,
+      "column": 26
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 422,
+      "line": 25,
+      "column": 26
+    },
+    "end": {
+      "offset": 423,
+      "line": 25,
+      "column": 27
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n    ",
+    "start": {
+      "offset": 423,
+      "line": 25,
+      "column": 27
+    },
+    "end": {
+      "offset": 428,
+      "line": 26,
+      "column": 5
+    }
+  },
+  {
+    "type": "Comment",
+    "value": "(; 式の結果を定数として埋め込む ;)",
+    "start": {
+      "offset": 428,
+      "line": 26,
+      "column": 5
+    },
+    "end": {
+      "offset": 448,
+      "line": 26,
+      "column": 25
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n    ",
+    "start": {
+      "offset": 448,
+      "line": 26,
+      "column": 25
+    },
+    "end": {
+      "offset": 453,
+      "line": 27,
+      "column": 5
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "f32.const",
+    "start": {
+      "offset": 453,
+      "line": 27,
+      "column": 5
+    },
+    "end": {
+      "offset": 462,
+      "line": 27,
+      "column": 14
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 462,
+      "line": 27,
+      "column": 14
+    },
+    "end": {
+      "offset": 463,
+      "line": 27,
+      "column": 15
+    }
+  },
+  {
+    "type": "ValueExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "circleArea",
+        "prefix": null,
+        "start": {
+          "offset": 464,
+          "line": 27,
+          "column": 16
+        },
+        "end": {
+          "offset": 474,
+          "line": 27,
+          "column": 26
+        },
+        "top": true
+      },
+      {
+        "type": "JSOperator",
+        "value": "(",
+        "start": {
+          "offset": 474,
+          "line": 27,
+          "column": 26
+        },
+        "end": {
+          "offset": 475,
+          "line": 27,
+          "column": 27
+        }
+      },
+      {
+        "type": "JSNumber",
+        "value": "1",
+        "start": {
+          "offset": 475,
+          "line": 27,
+          "column": 27
+        },
+        "end": {
+          "offset": 476,
+          "line": 27,
+          "column": 28
+        }
+      },
+      {
+        "type": "JSOperator",
+        "value": ")",
+        "start": {
+          "offset": 476,
+          "line": 27,
+          "column": 28
+        },
+        "end": {
+          "offset": 477,
+          "line": 27,
+          "column": 29
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": " ",
+        "start": {
+          "offset": 477,
+          "line": 27,
+          "column": 29
+        },
+        "end": {
+          "offset": 478,
+          "line": 27,
+          "column": 30
+        }
+      },
+      {
+        "type": "JSOperator",
+        "value": "+",
+        "start": {
+          "offset": 478,
+          "line": 27,
+          "column": 30
+        },
+        "end": {
+          "offset": 479,
+          "line": 27,
+          "column": 31
+        }
+      },
+      {
+        "type": "WhiteSpace",
+        "value": " ",
+        "start": {
+          "offset": 479,
+          "line": 27,
+          "column": 31
+        },
+        "end": {
+          "offset": 480,
+          "line": 27,
+          "column": 32
+        }
+      },
+      {
+        "type": "JSPropertyName",
+        "name": "array",
+        "prefix": null,
+        "start": {
+          "offset": 480,
+          "line": 27,
+          "column": 32
+        },
+        "end": {
+          "offset": 485,
+          "line": 27,
+          "column": 37
+        },
+        "child": {
+          "type": "IndexExpression",
+          "expression": [
+            {
+              "type": "JSNumber",
+              "value": "4",
+              "start": {
+                "offset": 486,
+                "line": 27,
+                "column": 38
+              },
+              "end": {
+                "offset": 487,
+                "line": 27,
+                "column": 39
+              }
+            }
+          ],
+          "start": {
+            "offset": 485,
+            "line": 27,
+            "column": 37
+          },
+          "end": {
+            "offset": 488,
+            "line": 27,
+            "column": 40
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 464,
+      "line": 27,
+      "column": 16
+    },
+    "end": {
+      "offset": 488,
+      "line": 27,
+      "column": 40
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n    ",
+    "start": {
+      "offset": 489,
+      "line": 27,
+      "column": 41
+    },
+    "end": {
+      "offset": 494,
+      "line": 28,
+      "column": 5
+    }
+  },
+  {
+    "type": "Comment",
+    "value": "(; fsによって読み込んだソースコードを展開する;)",
+    "start": {
+      "offset": 494,
+      "line": 28,
+      "column": 5
+    },
+    "end": {
+      "offset": 521,
+      "line": 28,
+      "column": 32
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n    ",
+    "start": {
+      "offset": 521,
+      "line": 28,
+      "column": 32
+    },
+    "end": {
+      "offset": 526,
+      "line": 29,
+      "column": 5
+    }
+  },
+  {
+    "type": "ValueExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "data",
+        "prefix": null,
+        "start": {
+          "offset": 527,
+          "line": 29,
+          "column": 6
+        },
+        "end": {
+          "offset": 531,
+          "line": 29,
+          "column": 10
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 527,
+      "line": 29,
+      "column": 6
+    },
+    "end": {
+      "offset": 531,
+      "line": 29,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " \n  ",
+    "start": {
+      "offset": 532,
+      "line": 29,
+      "column": 11
+    },
+    "end": {
+      "offset": 536,
+      "line": 30,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 536,
+      "line": 30,
+      "column": 3
+    },
+    "end": {
+      "offset": 537,
+      "line": 30,
+      "column": 4
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 537,
+      "line": 30,
+      "column": 4
+    },
+    "end": {
+      "offset": 538,
+      "line": 31,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 538,
+      "line": 31,
+      "column": 1
+    },
+    "end": {
+      "offset": 539,
+      "line": 31,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 539,
+      "line": 31,
+      "column": 2
+    },
+    "end": {
+      "offset": 540,
+      "line": 32,
+      "column": 1
+    }
+  }
+]
