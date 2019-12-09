@@ -1,16 +1,23 @@
 (module
   (memory $memory 1 )
   {@map
-    f32 XX = 10.0;
-    f32 YY = {$ Math.PI };
-    i32 ZZ[10] = [0,1,2,3,4,5,6,7,8,9];
+    i32 XX = 10;
+    i32 YY[10] = [0,1,2,3,4,5,6,7,8,9];
   }
   (export "memory" (memory $memory))
   (export "memoryAdd" (func $memoryAdd))
-  (func $memoryAdd (result f32)
-    (f32.add
-      (f32.load (&XX;))
-      (f32.load (&YY;))
+  (func $memoryAdd (param $yy_index i32) (result i32)
+    (i32.add
+      (i32.load (&XX;))
+      (i32.load 
+        (i32.add
+          (&YY;)
+          (i32.shl
+            (local.get $yy_index)
+            (@YY;) ;; @(メモリラベル);でメモリラベルの型サイズのlog2を埋め込む
+          )
+        )
+      )
     )
   )
 )

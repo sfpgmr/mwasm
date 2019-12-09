@@ -1,0 +1,26 @@
+(module
+  (memory $memory 1 )
+  {@map
+    f32 sin_table[256] = {
+      // sin関数のテーブル化
+      let a = [];
+      for(i = 0;i < 256;++i){
+        a.push(Math.sin(Math.PI * 2 / i));
+      }
+      return a;
+    };
+  }
+  (export "memory" (memory $memory))
+  (export "sin_table" (func $sin_table))
+  (func $sin_table (param $a i32 ) (result f32)
+    (f32.load 
+      (i32.add
+        (&sin_table;)
+        (i32.shl
+          (local.get $a)
+          (@sin_table;)
+        )
+      )
+    )
+  )
+)
