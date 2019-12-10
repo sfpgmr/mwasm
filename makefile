@@ -51,6 +51,8 @@ test: $(TARGET)
 	mwasm ./tests/test-struct/test-struct3.mwat -o ./tests/test-struct/test-struct3.mwasm
 	mwasm ./tests/test-struct/test-struct4.mwat -o ./tests/test-struct/test-struct4.mwasm
 	mwasm ./tests/test-struct/test-struct5.mwat -o ./tests/test-struct/test-struct5.mwasm
+	mwasm ./tests/test-struct/test-struct6.mwat -o ./tests/test-struct/test-struct6.mwasm
+	mwasm ./tests/test-struct/test-struct7.mwat -o ./tests/test-struct/test-struct7.mwasm
 	mwasm ./tests/test-macro/test-macro.mwat -o ./tests/test-macro/test-macro.mwasm
 	mwasm ./examples/psg-emulator/em2149.mwat -o ./examples/psg-emulator/em2149.wasm
 

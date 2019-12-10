@@ -3176,6 +3176,9 @@ function peg$parse(input, options) {
         s3 = peg$parseMwasmNumericLiteral();
         if (s3 === peg$FAILED) {
           s3 = peg$parseJSString();
+          if (s3 === peg$FAILED) {
+            s3 = peg$parseMwasmArray();
+          }
         }
         if (s3 !== peg$FAILED) {
           s4 = [];
@@ -3195,6 +3198,9 @@ function peg$parse(input, options) {
                 s9 = peg$parseMwasmNumericLiteral();
                 if (s9 === peg$FAILED) {
                   s9 = peg$parseJSString();
+                  if (s9 === peg$FAILED) {
+                    s9 = peg$parseMwasmArray();
+                  }
                 }
                 if (s9 !== peg$FAILED) {
                   s6 = [s6, s7, s8, s9];
@@ -3233,6 +3239,9 @@ function peg$parse(input, options) {
                   s9 = peg$parseMwasmNumericLiteral();
                   if (s9 === peg$FAILED) {
                     s9 = peg$parseJSString();
+                    if (s9 === peg$FAILED) {
+                      s9 = peg$parseMwasmArray();
+                    }
                   }
                   if (s9 !== peg$FAILED) {
                     s6 = [s6, s7, s8, s9];
@@ -6914,13 +6923,12 @@ var index = async () => {
         const lib = literalUtil[varType];
         const self = this;
 
-        function makeDataString_(data) {
-          //console.logconsole.log(data.type);
+        function makeDataString_(data,lib,varType,self,initData) {
           switch (data.type) {
             case 'MwasmArray':
               let result = '';
               initData.value.forEach(d => {
-                result += makeDataString_(d);
+                result += makeDataString_(d,lib,varType,self,initData);
               });
               return result;
             case 'IntegerLiteral':
@@ -6938,7 +6946,7 @@ var index = async () => {
               error('not implemented.');
               break;
             case 'CodeExpression':
-              console.log(num,data.code,varType);
+              //console.log(num,data.code,varType);
               if(lib.valueToDataStr){
                 const res = self.evalExpression(data.code);
                 return lib.valueToDataStr(res);
@@ -6963,7 +6971,19 @@ var index = async () => {
               break;
           }
         }
-        return makeDataString_(initData);
+        if(varType == 'Struct'){
+          console.log(def,initData);
+          const targetStructDefinition = this.context[def.varType.id];
+          for(const prop in targetStructDefinition){
+            if($attributes != prop){
+              console.log(prop,targetStructDefinition[prop]);
+
+            }
+          }
+          error(`Struct Initializer is not supported.`,def);     
+        } else {
+          return makeDataString_(initData,lib,varType,self,initData);
+        }       
       }
     }
 

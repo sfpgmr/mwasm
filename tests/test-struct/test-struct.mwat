@@ -6,22 +6,17 @@
   i32 b;
   A a;
 }
+
 {@struct C 
   i32 c;
   B b;
 }
 
-
-{@
-// ローカル変数の定義
-$.X = 1;
-}
-
+(module
+(memory 0)
 {@map 
   C c[10];
 }
-(module
-(memory 0)
 (export "test" (func $test))
 (func $test (result i32)
   (i32.add 

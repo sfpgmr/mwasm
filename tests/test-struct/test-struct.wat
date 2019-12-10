@@ -4,13 +4,9 @@
 
 
 
-(; // ローカル変数の定義
-$.X = 1;
- ;)
-
-
 (module
 (memory 0)
+
 (export "test" (func $test))
 (func $test (result i32)
   (i32.add 
