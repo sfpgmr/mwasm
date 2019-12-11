@@ -6918,6 +6918,7 @@ var index = async () => {
       }
 
       makeDataString(def, num) {
+        console.log(def.id.numExpression,num);
         const initData = def.initData;
         const varType = def.varType.varType;
         const lib = literalUtil[varType];
@@ -6972,11 +6973,27 @@ var index = async () => {
           }
         }
         if(varType == 'Struct'){
-          console.log(def,initData);
-          const targetStructDefinition = this.context[def.varType.id];
-          for(const prop in targetStructDefinition){
-            if($attributes != prop){
-              console.log(prop,targetStructDefinition[prop]);
+          let result = '';
+          function makeDataStringForStruct (def){
+            const targetStructDefinition = this.context[def.varType.id];
+            for(const prop in targetStructDefinition){
+              if($attributes != prop){
+                const def = targetStructDefinition[prop];
+                if(def.varType.varType == 'Struct'){
+                         
+                } else {
+                  result += makeDataString_(def.initData,def.varType.varType,self,def.initData);
+                }
+                // console.log(prop,targetStructDefinition[prop]);
+
+              }
+            }
+          }
+          console.log(def,num);
+          if(num){
+            if(initData.type == 'MwasmArray'){
+              const values = initData.value;
+            } else {
 
             }
           }
