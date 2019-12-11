@@ -762,7 +762,7 @@
   },
   "_attributes_": {
     "type": "MemoryMap",
-    "size": 4
+    "size": 0
   },
   "test_offset": {
     "_attributes_": {
@@ -773,7 +773,7 @@
       "unsigned": false,
       "offset": 0,
       "initData": null,
-      "num": 1,
+      "num": 0,
       "log2": 2
     }
   }

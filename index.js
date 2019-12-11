@@ -2536,7 +2536,7 @@ function peg$parse(input, options) {
             s5 = peg$parseHexNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c121();
+              s4 = peg$c121(s1, s5);
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -2694,7 +2694,7 @@ function peg$parse(input, options) {
             s5 = peg$parseBinaryNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c121();
+              s4 = peg$c121(s1, s5);
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -6802,14 +6802,12 @@ var index = async () => {
                     let c;
                     let num;
                     if (def.id.numExpression) {
-                      //num = this.evalExpression(def.id.numExpression);
-                      // num = this.parseOffset(def.id.numExpression);
                       num = this.parsePropertyExpression(def.id.numExpression.expression).value;
                       if (isNaN(num)) {
                         error(`error:number suffix is illegal.`, def);
                       }
                     } else {
-                      num = 1;
+                      num = 0;
                     }
                     if (def.varType.type == "PrimitiveType") {
                       // Native Type
@@ -6830,7 +6828,17 @@ var index = async () => {
                       if (structType[$attributes].type != 'StructDefinition') {
                         error(`error:Struct '${def.varType.id}' is not struct type.`, def);
                       }
-                      const initData = def.initData ? this.makeDataString(def) : null;
+                      let num;
+                      if (def.id.numExpression) {
+                        num = this.parsePropertyExpression(def.id.numExpression.expression).value;
+                        if (isNaN(num)) {
+                          error(`error:number suffix is illegal.`, def);
+                        }
+                      } else {
+                        num = 0;
+                      }
+  
+                      const initData = def.initData ? this.makeDataString(def,num) : null;
                       c = currentContext[def.id.id] = Object.assign(clone(structType), {
                         [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset + this.startOffset, initData: initData })
                       });
@@ -6973,28 +6981,10 @@ var index = async () => {
           }
         }
         if(varType == 'Struct'){
-          let result = '';
-          function makeDataStringForStruct (def){
-            const targetStructDefinition = this.context[def.varType.id];
-            for(const prop in targetStructDefinition){
-              if($attributes != prop){
-                const def = targetStructDefinition[prop];
-                if(def.varType.varType == 'Struct'){
-                         
-                } else {
-                  result += makeDataString_(def.initData,def.varType.varType,self,def.initData);
-                }
-                // console.log(prop,targetStructDefinition[prop]);
-
-              }
-            }
-          }
-          console.log(def,num);
           if(num){
             if(initData.type == 'MwasmArray'){
               const values = initData.value;
-            } else {
-
+              console.log(values);
             }
           }
           error(`Struct Initializer is not supported.`,def);     

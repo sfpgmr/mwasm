@@ -2,7 +2,7 @@
   "INDEX": 10,
   "_attributes_": {
     "type": "MemoryMap",
-    "size": 116
+    "size": 80
   },
   "label": {
     "_attributes_": {
@@ -26,7 +26,7 @@
       "unsigned": false,
       "offset": 40,
       "initData": null,
-      "num": 1,
+      "num": 0,
       "log2": 3
     }
   },
@@ -37,9 +37,9 @@
       "size": 8,
       "integer": true,
       "unsigned": false,
-      "offset": 48,
+      "offset": 40,
       "initData": null,
-      "num": 1,
+      "num": 0,
       "log2": 3
     }
   },
@@ -50,9 +50,9 @@
       "size": 8,
       "integer": true,
       "unsigned": false,
-      "offset": 56,
+      "offset": 40,
       "initData": null,
-      "num": 1,
+      "num": 0,
       "log2": 3
     }
   },
@@ -63,9 +63,9 @@
       "size": 4,
       "integer": true,
       "unsigned": false,
-      "offset": 64,
+      "offset": 40,
       "initData": null,
-      "num": 1,
+      "num": 0,
       "log2": 2
     }
   },
@@ -76,9 +76,9 @@
       "size": 8,
       "integer": false,
       "unsigned": false,
-      "offset": 68,
+      "offset": 40,
       "initData": null,
-      "num": 1,
+      "num": 0,
       "log2": 3
     }
   },
@@ -89,7 +89,7 @@
       "size": 4,
       "integer": false,
       "unsigned": false,
-      "offset": 76,
+      "offset": 40,
       "initData": null,
       "num": 10,
       "log2": 2

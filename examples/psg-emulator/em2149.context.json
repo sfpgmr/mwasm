@@ -9,7 +9,7 @@
   "PSG": {
     "_attributes_": {
       "type": "StructDefinition",
-      "size": 572
+      "size": 468
     },
     "regmsk": {
       "_attributes_": {
@@ -59,7 +59,7 @@
         "unsigned": false,
         "offset": 384,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -70,9 +70,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 388,
+        "offset": 384,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -83,9 +83,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 392,
+        "offset": 384,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -96,9 +96,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 396,
+        "offset": 384,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -109,9 +109,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 400,
+        "offset": 384,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -122,9 +122,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 404,
+        "offset": 384,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -135,7 +135,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 408,
+        "offset": 384,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -148,7 +148,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 420,
+        "offset": 396,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -161,7 +161,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 432,
+        "offset": 408,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -174,7 +174,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 444,
+        "offset": 420,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -187,7 +187,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 456,
+        "offset": 432,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -200,7 +200,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 468,
+        "offset": 444,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -213,9 +213,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 480,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -226,9 +226,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 484,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -239,9 +239,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 488,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -252,9 +252,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 492,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -265,9 +265,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 496,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -278,9 +278,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 500,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -291,9 +291,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 504,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -304,9 +304,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 508,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -317,9 +317,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 512,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -330,9 +330,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 516,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -343,9 +343,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 520,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -356,9 +356,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 524,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -369,9 +369,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 528,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -382,9 +382,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 532,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -395,9 +395,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 536,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -408,9 +408,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 540,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -421,9 +421,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 544,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -434,9 +434,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 548,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -447,9 +447,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 552,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -460,9 +460,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 556,
+        "offset": 456,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -473,7 +473,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 560,
+        "offset": 456,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -482,16 +482,16 @@
   },
   "_attributes_": {
     "type": "MemoryMap",
-    "size": 1084
+    "size": 512
   },
   "psg": {
     "_attributes_": {
       "type": "StructDefinition",
-      "size": 572,
+      "size": 468,
       "offset": 4096,
       "initData": null,
-      "num": 1,
-      "log2": 9
+      "num": 0,
+      "log2": 8
     },
     "regmsk": {
       "_attributes_": {
@@ -541,7 +541,7 @@
         "unsigned": false,
         "offset": 4480,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -552,9 +552,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4484,
+        "offset": 4480,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -565,9 +565,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4488,
+        "offset": 4480,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -578,9 +578,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4492,
+        "offset": 4480,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -591,9 +591,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4496,
+        "offset": 4480,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -604,9 +604,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4500,
+        "offset": 4480,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -617,7 +617,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4504,
+        "offset": 4480,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -630,7 +630,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4516,
+        "offset": 4492,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -643,7 +643,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4528,
+        "offset": 4504,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -656,7 +656,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4540,
+        "offset": 4516,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -669,7 +669,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4552,
+        "offset": 4528,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -682,7 +682,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4564,
+        "offset": 4540,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -695,9 +695,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4576,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -708,9 +708,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4580,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -721,9 +721,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4584,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -734,9 +734,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4588,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -747,9 +747,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4592,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -760,9 +760,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4596,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -773,9 +773,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4600,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -786,9 +786,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4604,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -799,9 +799,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4608,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -812,9 +812,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4612,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -825,9 +825,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4616,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -838,9 +838,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4620,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -851,9 +851,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4624,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -864,9 +864,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4628,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -877,9 +877,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4632,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -890,9 +890,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4636,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -903,9 +903,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4640,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -916,9 +916,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4644,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -929,9 +929,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4648,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -942,9 +942,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4652,
+        "offset": 4552,
         "initData": null,
-        "num": 1,
+        "num": 0,
         "log2": 2
       }
     },
@@ -955,7 +955,7 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 4656,
+        "offset": 4552,
         "initData": null,
         "num": 3,
         "log2": 2
@@ -969,7 +969,7 @@
       "size": 4,
       "integer": false,
       "unsigned": false,
-      "offset": 4668,
+      "offset": 4096,
       "initData": null,
       "num": 128,
       "log2": 2
