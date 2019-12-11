@@ -1,15 +1,10 @@
-{@struct A 
-  i32 a;
-  i32 b;
-}
+
 
 (module
 (memory 0)
-{@map
-  A a[10] = [[0,1]];
-}
+
 (export "test" (func $test))
 (func $test (result i32)
-    (&A.b;)
+    (i32.const 0 (; A.b ;))
 )
 )

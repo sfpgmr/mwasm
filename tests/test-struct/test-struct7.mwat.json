@@ -844,5 +844,33 @@
       "line": 15,
       "column": 1
     }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 149,
+      "line": 15,
+      "column": 1
+    },
+    "end": {
+      "offset": 150,
+      "line": 15,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 150,
+      "line": 15,
+      "column": 2
+    },
+    "end": {
+      "offset": 151,
+      "line": 16,
+      "column": 1
+    }
   }
 ]

@@ -2536,7 +2536,7 @@ function peg$parse(input, options) {
             s5 = peg$parseHexNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c121(s1, s5);
+              s4 = peg$c121();
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -2694,7 +2694,7 @@ function peg$parse(input, options) {
             s5 = peg$parseBinaryNumber();
             if (s5 !== peg$FAILED) {
               peg$savedPos = s3;
-              s4 = peg$c121(s1, s5);
+              s4 = peg$c121();
               s3 = s4;
             } else {
               peg$currPos = s3;
@@ -6175,7 +6175,7 @@ function getInstance(obj, imports = {}) {
 
 function error(message, token) {
   if (token) {
-    if(token.start){
+    if (token.start) {
       throw new Error(`Error: line:${token.start.line} column:${token.start.column} :${message}:`)
     } else {
       //console.log(token);
@@ -6318,42 +6318,42 @@ class LiteralUtil {
     }
   }
 
-  f32ToDataStr(n){
-    if(n instanceof Array){
+  f32ToDataStr(n) {
+    if (n instanceof Array) {
       let dataStr = '';
-      for(let i = 0,e = n.length;i < e;++i){
-        this.workView.setFloat32(0,n[i],true);
+      for (let i = 0, e = n.length; i < e; ++i) {
+        this.workView.setFloat32(0, n[i], true);
         dataStr += this.byteToString(4);
       }
       return dataStr;
     }
-    this.workView.setFloat32(0,n,true);
+    this.workView.setFloat32(0, n, true);
     return this.byteToString(4);
   }
 
-  f64ToDataStr(n){
-    if(n instanceof Array){
+  f64ToDataStr(n) {
+    if (n instanceof Array) {
       let dataStr = '';
-      for(let i = 0,e = n.length;i < e;++i){
-        this.workView.setFloat64(0,n[i],true);
+      for (let i = 0, e = n.length; i < e; ++i) {
+        this.workView.setFloat64(0, n[i], true);
         dataStr += this.byteToString(4);
       }
       return dataStr;
-    }    
-    this.workView.setFloat64(0,n,true);
+    }
+    this.workView.setFloat64(0, n, true);
     return this.byteToString(8);
   }
 
-  i32ToDataStr(n){
-    if(n instanceof Array){
+  i32ToDataStr(n) {
+    if (n instanceof Array) {
       let dataStr = '';
-      for(let i = 0,e = n.length;i < e;++i){
-        this.workView.setInt32(0,n[i],true);
+      for (let i = 0, e = n.length; i < e; ++i) {
+        this.workView.setInt32(0, n[i], true);
         dataStr += this.byteToString(4);
       }
       return dataStr;
-    }    
-    this.workView.setInt32(0,n,true);
+    }
+    this.workView.setInt32(0, n, true);
     return this.byteToString(4);
   }
 
@@ -6642,7 +6642,7 @@ var index = async () => {
               const replaceFromToken = macroParamDefs[i];
               const replaceToToken = macroParams[i];
               //console.log('param:' ,replaceFromToken,replaceToToken,t.name,t);
-              function replace(t){
+              function replace(t) {
                 switch (t.type) {
                   case 'Identifier':
                     if (t.name == replaceFromToken) {
@@ -6651,14 +6651,14 @@ var index = async () => {
                     }
                     break;
                   case 'MacroExecution':
-                    for(let pi in t.macroParams.params){
+                    for (let pi in t.macroParams.params) {
                       const params = t.macroParams.params[pi];
                       const replacedParams = [];
-                      for(const param of params){
+                      for (const param of params) {
                         //console.log(param.type,param.name,replaceFromToken);
 
                         const replacedParam = replace(param);
-                        if(replacedParam instanceof Array){
+                        if (replacedParam instanceof Array) {
                           replacedParams.push(...replacedParam);
                         } else {
                           replacedParams.push(replacedParam);
@@ -6672,7 +6672,7 @@ var index = async () => {
                 return t;
               }
               macroExpandedToken = replace(t);
-              if(macroExpandedToken != t){
+              if (macroExpandedToken != t) {
                 break;
               }
             }
@@ -6681,7 +6681,7 @@ var index = async () => {
             } else {
               macroExpandedTokens.push(macroExpandedToken);
             }
-        });
+          });
           let macroExpandedSource = this.preprocessTokens(macroExpandedTokens, baseName, skip);
           preprocessed.push(...macroExpandedSource);
         }
@@ -6740,7 +6740,7 @@ var index = async () => {
                   propName = '$.' + propName + '[$attributes].log2';
                   break;
                 case '%':
-                  propName = '$.' + propName; 
+                  propName = '$.' + propName;
                   break;
                 default:
                   propName = '$.' + propName;
@@ -6837,8 +6837,8 @@ var index = async () => {
                       } else {
                         num = 0;
                       }
-  
-                      const initData = def.initData ? this.makeDataString(def,num) : null;
+
+                      const initData = def.initData ? this.makeDataString(def, num) : null;
                       c = currentContext[def.id.id] = Object.assign(clone(structType), {
                         [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset + this.startOffset, initData: initData })
                       });
@@ -6926,53 +6926,83 @@ var index = async () => {
       }
 
       makeDataString(def, num) {
-        console.log(def.id.numExpression,num);
+        console.log(def.id.numExpression, num);
         const initData = def.initData;
-        const varType = def.varType.varType;
-        const lib = literalUtil[varType];
+        const varType = def.varType;
+        const lib = literalUtil[varType.varType];
         const self = this;
 
-        function makeDataString_(data,lib,varType,self,initData) {
+        function makeDataString_(data, lib, varType, self) {
           switch (data.type) {
             case 'MwasmArray':
               let result = '';
-              initData.value.forEach(d => {
-                result += makeDataString_(d,lib,varType,self,initData);
-              });
+              const values = data.value;
+              if (varType.varType == 'Struct') {
+                let i = 0;
+                const structDefinition = self.context[varType.varType.id];
+                for (const p in structDefinition) {
+                  if (i == values.length) break;
+                  result += makeDataString_(values[i++], lib, p.varType, self);
+                }
+              } else {
+                values.forEach(d => {
+                  result += makeDataString_(d, lib, varType.varType, self);
+                });
+              }
               return result;
             case 'IntegerLiteral':
-              return lib.decimalIntegerStrToDataStr(data.value, data.sign);
+              if (varType.varType == 'i32' || varType.varType == 'i64') {
+                return lib.decimalIntegerStrToDataStr(data.value, data.sign);
+              } else {
+                error(`type missmatch  ${varType.varType} != ${data.type}`, def);
+              }
             case 'BinaryIntegerLiteral':
-              return lib.binaryIntegerStrToDataStr(data.value, data.sign);
+              if (varType.varType == 'i32' || varType.varType == 'i64') {
+                return lib.binaryIntegerStrToDataStr(data.value, data.sign);
+              } else {
+                error(`type missmatch  ${varType.varType} != ${data.type}`, def);
+              }
             case 'OctalIntegerLiteral':
-              return lib.octalIntegerStrToDataStr(data.value, data.sign);
+              if (varType.varType == 'i32' || varType.varType == 'i64') {
+                return lib.octalIntegerStrToDataStr(data.value, data.sign);
+              } else {
+                error(`type missmatch  ${varType.varType} != ${data.type}`, def);
+              }
             case 'HexIntegerLiteral':
-              return lib.hexIntegerStrToDataStr(data.value, data.sign);
+              if (varType.varType == 'i32' || varType.varType == 'i64') {
+                return lib.hexIntegerStrToDataStr(data.value, data.sign);
+              } else {
+                error(`type missmatch  ${varType.varType} != ${data.type}`, def);
+              }
             case 'FloatLiteral':
-              return lib.floatStrToDataStr(data.sign, data.number, data.flac, data.expsign, data.e);
+              if (varType.varType == 'f32' || varType.varType == 'f64') {
+                return lib.floatStrToDataStr(data.sign, data.number, data.flac, data.expsign, data.e);
+              } else {
+                error(`type missmatch  ${varType.varType} != ${data.type}`, def);
+              }
             case 'HexFloatLiteral':
             case 'BinaryFloatLiteral':
-              error('not implemented.');
+              error('not implemented.', def);
               break;
             case 'CodeExpression':
               //console.log(num,data.code,varType);
-              if(lib.valueToDataStr){
+              if (lib.valueToDataStr) {
                 const res = self.evalExpression(data.code);
                 return lib.valueToDataStr(res);
 
               } else {
-                error(`${varType} is not supported.`,data);
+                error(`${varType.varType} is not supported.`, data);
               }
               break;
             case 'Code':
-              if(lib.valueToDataStr){
+              if (lib.valueToDataStr) {
                 const res = self.eval(data.code);
-                if(num && res.length && num < res.length){
+                if (num && res.length && num < res.length) {
                   error(`init data array length is too long.`);
                 }
                 return lib.valueToDataStr(res);
               } else {
-                error(`${varType} is not supported.`,data);
+                error(`${varType.varType} is not supported.`, data);
               }
               break;
             default:
@@ -6980,17 +7010,7 @@ var index = async () => {
               break;
           }
         }
-        if(varType == 'Struct'){
-          if(num){
-            if(initData.type == 'MwasmArray'){
-              const values = initData.value;
-              console.log(values);
-            }
-          }
-          error(`Struct Initializer is not supported.`,def);     
-        } else {
-          return makeDataString_(initData,lib,varType,self,initData);
-        }       
+        return makeDataString_(initData, lib, varType, self);
       }
     }
 
