@@ -6166,7 +6166,6 @@ var preprocessParser = {
 
 const $attributes = '_attributes_';//Symbol('attributes');
 
-
 function getInstance(obj, imports = {}) {
   const bin = new WebAssembly.Module(obj);
   const inst = new WebAssembly.Instance(bin, imports);
@@ -6927,26 +6926,46 @@ var index = async () => {
 
       makeDataString(def, num) {
         console.log(def.id.numExpression, num);
-        const initData = def.initData;
-        const varType = def.varType;
-        const lib = literalUtil[varType.varType];
         const self = this;
+        const initData = def.initData;
 
-        function makeDataString_(data, lib, varType, self) {
+        function makeDataString_(data, def) {
+          const varType = def.varType;
+          const lib = literalUtil[varType.varType];
+          let num;
+          if (def.id.numExpression) {
+            num = self.parsePropertyExpression(def.id.numExpression.expression).value;
+            if (isNaN(num)) {
+              error(`error:number suffix is illegal.`, def);
+            }
+          } else {
+            num = 0;
+          }
           switch (data.type) {
             case 'MwasmArray':
               let result = '';
               const values = data.value;
               if (varType.varType == 'Struct') {
-                let i = 0;
-                const structDefinition = self.context[varType.varType.id];
-                for (const p in structDefinition) {
-                  if (i == values.length) break;
-                  result += makeDataString_(values[i++], lib, p.varType, self);
+                if(num){
+                  values.forEach(d=>{
+                    const structDefinition = self.context[varType.varType.id];
+                    let i = 0;
+                    for (const p in structDefinition) {
+                      if (i == values.length) break;
+                      result += makeDataString_(d[i++], p);
+                    }
+                  });
+                } else {
+                  const structDefinition = self.context[varType.varType.id];
+                  let i = 0;
+                  for (const p in structDefinition) {
+                    if (i == values.length) break;
+                    result += makeDataString_(values[i++], p);
+                  }
                 }
               } else {
                 values.forEach(d => {
-                  result += makeDataString_(d, lib, varType.varType, self);
+                  result += makeDataString_(d, def);
                 });
               }
               return result;
@@ -7010,7 +7029,7 @@ var index = async () => {
               break;
           }
         }
-        return makeDataString_(initData, lib, varType, self);
+        return makeDataString_(initData, def);
       }
     }
 
