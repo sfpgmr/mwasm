@@ -6925,12 +6925,10 @@ var index = async () => {
       }
 
       makeDataString(def, num) {
-        console.log(def.id.numExpression, num);
         const self = this;
         const initData = def.initData;
 
-        function makeDataString_(data, def) {
-          const varType = def.varType;
+        function makeDataString_(data, varType,def) {
           const lib = literalUtil[varType.varType];
           let num;
           if (def.id.numExpression) {
@@ -6948,24 +6946,27 @@ var index = async () => {
               if (varType.varType == 'Struct') {
                 if(num){
                   values.forEach(d=>{
-                    const structDefinition = self.context[varType.varType.id];
+                    const structDefinition = self.context[varType.id];
+                    console.log(varType,structDefinition);
                     let i = 0;
                     for (const p in structDefinition) {
+                      console.log(p,structDefinition[p]);
                       if (i == values.length) break;
-                      result += makeDataString_(d[i++], p);
+                      result += makeDataString_(d[i++], structDefinition[p][$attributes],structDefinition[p][$attributes]);
                     }
                   });
                 } else {
                   const structDefinition = self.context[varType.varType.id];
                   let i = 0;
                   for (const p in structDefinition) {
+              console.log(p,values);
                     if (i == values.length) break;
-                    result += makeDataString_(values[i++], p);
+                    result += makeDataString_(values[i++], structDefinition[p]);
                   }
                 }
               } else {
                 values.forEach(d => {
-                  result += makeDataString_(d, def);
+                  result += makeDataString_(d, varType,def);
                 });
               }
               return result;
@@ -7029,7 +7030,7 @@ var index = async () => {
               break;
           }
         }
-        return makeDataString_(initData, def);
+        return makeDataString_(initData, def.varType,def);
       }
     }
 
