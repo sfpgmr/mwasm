@@ -319,7 +319,7 @@
                 {
                   "type": "IntegerLiteral",
                   "sign": "+",
-                  "value": "0",
+                  "value": "1",
                   "start": {
                     "offset": 72,
                     "line": 9,
@@ -334,7 +334,7 @@
                 {
                   "type": "IntegerLiteral",
                   "sign": "+",
-                  "value": "1",
+                  "value": "2",
                   "start": {
                     "offset": 74,
                     "line": 9,

@@ -6,7 +6,7 @@
 (module
 (memory 0)
 {@map
-  A a[10] = [[0,1]];
+  A a[10] = [[1,2]];
 }
 (export "test" (func $test))
 (func $test (result i32)
