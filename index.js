@@ -6843,7 +6843,12 @@ var index = async () => {
                       });
 
                       if (initData) {
-                        opts.preprocessed.push(`(data (i32.const ${offset + this.startOffset}) "${initData}")`);
+                        for(const data of initData){
+                          if(data.dataString.length){
+                            opts.preprocessed.push(`(data (i32.const ${data.offset}) "${data.dataString}")`);
+                          }
+                        }
+  
                       }
 
                       function calcStructMemberOffset(st, o) {
@@ -6856,7 +6861,11 @@ var index = async () => {
                                 att.offset += o;
                                 //console.log(att,m,att.offset,o);
                                 if (att.initData) {
-                                  opts.preprocessed.push(`(data (i32.const ${att.offset}) "${att.initData}")`);
+                                  for(const data of att.initData){
+                                    if(data.dataString.length){
+                                      opts.preprocessed.push(`(data (i32.const ${data.offset}) "${data.dataString}")`);
+                                    }
+                                  }
                                 }
                                 break;
                               case "StructDefinition":
@@ -6978,7 +6987,7 @@ var index = async () => {
                     makeDataStringFromStruct(d.value,varType);
                   });
                   if(values.length < num){
-                    currentOffset += (num - values.length) * varType.size;
+                    currentOffset += (num - values.length) * self.context[varType.id][$attributes].size;
                     result = {
                       offset:currentOffset,
                       dataString:''

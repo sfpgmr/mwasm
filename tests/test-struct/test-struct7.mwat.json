@@ -94,6 +94,80 @@
           "line": 3,
           "column": 9
         }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "c",
+          "numExpression": {
+            "type": "PropertyExpression",
+            "expression": [
+              {
+                "type": "JSNumber",
+                "value": "4",
+                "start": {
+                  "offset": 38,
+                  "line": 4,
+                  "column": 9
+                },
+                "end": {
+                  "offset": 39,
+                  "line": 4,
+                  "column": 10
+                }
+              }
+            ],
+            "start": {
+              "offset": 38,
+              "line": 4,
+              "column": 9
+            },
+            "end": {
+              "offset": 39,
+              "line": 4,
+              "column": 10
+            }
+          },
+          "start": {
+            "offset": 36,
+            "line": 4,
+            "column": 7
+          },
+          "end": {
+            "offset": 40,
+            "line": 4,
+            "column": 11
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "start": {
+            "offset": 32,
+            "line": 4,
+            "column": 3
+          },
+          "end": {
+            "offset": 35,
+            "line": 4,
+            "column": 6
+          }
+        },
+        "initData": null,
+        "start": {
+          "offset": 32,
+          "line": 4,
+          "column": 3
+        },
+        "end": {
+          "offset": 41,
+          "line": 4,
+          "column": 12
+        }
       }
     ],
     "start": {
@@ -102,8 +176,8 @@
       "column": 1
     },
     "end": {
-      "offset": 31,
-      "line": 4,
+      "offset": 43,
+      "line": 5,
       "column": 2
     }
   },
@@ -111,13 +185,13 @@
     "type": "WhiteSpace",
     "value": "\n\n",
     "start": {
-      "offset": 31,
-      "line": 4,
+      "offset": 43,
+      "line": 5,
       "column": 2
     },
     "end": {
-      "offset": 33,
-      "line": 6,
+      "offset": 45,
+      "line": 7,
       "column": 1
     }
   },
@@ -125,13 +199,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 33,
-      "line": 6,
+      "offset": 45,
+      "line": 7,
       "column": 1
     },
     "end": {
-      "offset": 34,
-      "line": 6,
+      "offset": 46,
+      "line": 7,
       "column": 2
     }
   },
@@ -139,13 +213,13 @@
     "type": "Identifier",
     "name": "module",
     "start": {
-      "offset": 34,
-      "line": 6,
+      "offset": 46,
+      "line": 7,
       "column": 2
     },
     "end": {
-      "offset": 40,
-      "line": 6,
+      "offset": 52,
+      "line": 7,
       "column": 8
     }
   },
@@ -153,13 +227,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 40,
-      "line": 6,
+      "offset": 52,
+      "line": 7,
       "column": 8
     },
     "end": {
-      "offset": 41,
-      "line": 7,
+      "offset": 53,
+      "line": 8,
       "column": 1
     }
   },
@@ -167,13 +241,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 41,
-      "line": 7,
+      "offset": 53,
+      "line": 8,
       "column": 1
     },
     "end": {
-      "offset": 42,
-      "line": 7,
+      "offset": 54,
+      "line": 8,
       "column": 2
     }
   },
@@ -181,13 +255,13 @@
     "type": "Identifier",
     "name": "memory",
     "start": {
-      "offset": 42,
-      "line": 7,
+      "offset": 54,
+      "line": 8,
       "column": 2
     },
     "end": {
-      "offset": 48,
-      "line": 7,
+      "offset": 60,
+      "line": 8,
       "column": 8
     }
   },
@@ -195,13 +269,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 48,
-      "line": 7,
+      "offset": 60,
+      "line": 8,
       "column": 8
     },
     "end": {
-      "offset": 49,
-      "line": 7,
+      "offset": 61,
+      "line": 8,
       "column": 9
     }
   },
@@ -209,13 +283,13 @@
     "type": "Identifier",
     "name": "0",
     "start": {
-      "offset": 49,
-      "line": 7,
+      "offset": 61,
+      "line": 8,
       "column": 9
     },
     "end": {
-      "offset": 50,
-      "line": 7,
+      "offset": 62,
+      "line": 8,
       "column": 10
     }
   },
@@ -223,13 +297,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 50,
-      "line": 7,
+      "offset": 62,
+      "line": 8,
       "column": 10
     },
     "end": {
-      "offset": 51,
-      "line": 7,
+      "offset": 63,
+      "line": 8,
       "column": 11
     }
   },
@@ -237,13 +311,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 51,
-      "line": 7,
+      "offset": 63,
+      "line": 8,
       "column": 11
     },
     "end": {
-      "offset": 52,
-      "line": 8,
+      "offset": 64,
+      "line": 9,
       "column": 1
     }
   },
@@ -262,36 +336,36 @@
                 "type": "JSNumber",
                 "value": "10",
                 "start": {
-                  "offset": 64,
-                  "line": 9,
+                  "offset": 76,
+                  "line": 10,
                   "column": 7
                 },
                 "end": {
-                  "offset": 66,
-                  "line": 9,
+                  "offset": 78,
+                  "line": 10,
                   "column": 9
                 }
               }
             ],
             "start": {
-              "offset": 64,
-              "line": 9,
+              "offset": 76,
+              "line": 10,
               "column": 7
             },
             "end": {
-              "offset": 66,
-              "line": 9,
+              "offset": 78,
+              "line": 10,
               "column": 9
             }
           },
           "start": {
-            "offset": 62,
-            "line": 9,
+            "offset": 74,
+            "line": 10,
             "column": 5
           },
           "end": {
-            "offset": 67,
-            "line": 9,
+            "offset": 79,
+            "line": 10,
             "column": 10
           }
         },
@@ -300,13 +374,13 @@
           "varType": "Struct",
           "id": "A",
           "start": {
-            "offset": 60,
-            "line": 9,
+            "offset": 72,
+            "line": 10,
             "column": 3
           },
           "end": {
-            "offset": 61,
-            "line": 9,
+            "offset": 73,
+            "line": 10,
             "column": 4
           }
         },
@@ -321,13 +395,13 @@
                   "sign": "+",
                   "value": "1",
                   "start": {
-                    "offset": 72,
-                    "line": 9,
+                    "offset": 84,
+                    "line": 10,
                     "column": 15
                   },
                   "end": {
-                    "offset": 73,
-                    "line": 9,
+                    "offset": 85,
+                    "line": 10,
                     "column": 16
                   }
                 },
@@ -336,60 +410,150 @@
                   "sign": "+",
                   "value": "2",
                   "start": {
-                    "offset": 74,
-                    "line": 9,
+                    "offset": 86,
+                    "line": 10,
                     "column": 17
                   },
                   "end": {
-                    "offset": 75,
-                    "line": 9,
+                    "offset": 87,
+                    "line": 10,
                     "column": 18
                   }
                 }
               ],
               "start": {
-                "offset": 71,
-                "line": 9,
+                "offset": 83,
+                "line": 10,
                 "column": 14
               },
               "end": {
-                "offset": 76,
-                "line": 9,
+                "offset": 88,
+                "line": 10,
                 "column": 19
+              }
+            },
+            {
+              "type": "MwasmArray",
+              "value": [
+                {
+                  "type": "IntegerLiteral",
+                  "sign": "+",
+                  "value": "3",
+                  "start": {
+                    "offset": 90,
+                    "line": 10,
+                    "column": 21
+                  },
+                  "end": {
+                    "offset": 91,
+                    "line": 10,
+                    "column": 22
+                  }
+                },
+                {
+                  "type": "IntegerLiteral",
+                  "sign": "+",
+                  "value": "4",
+                  "start": {
+                    "offset": 92,
+                    "line": 10,
+                    "column": 23
+                  },
+                  "end": {
+                    "offset": 93,
+                    "line": 10,
+                    "column": 24
+                  }
+                }
+              ],
+              "start": {
+                "offset": 89,
+                "line": 10,
+                "column": 20
+              },
+              "end": {
+                "offset": 94,
+                "line": 10,
+                "column": 25
+              }
+            },
+            {
+              "type": "MwasmArray",
+              "value": [
+                {
+                  "type": "IntegerLiteral",
+                  "sign": "+",
+                  "value": "5",
+                  "start": {
+                    "offset": 96,
+                    "line": 10,
+                    "column": 27
+                  },
+                  "end": {
+                    "offset": 97,
+                    "line": 10,
+                    "column": 28
+                  }
+                },
+                {
+                  "type": "IntegerLiteral",
+                  "sign": "+",
+                  "value": "6",
+                  "start": {
+                    "offset": 98,
+                    "line": 10,
+                    "column": 29
+                  },
+                  "end": {
+                    "offset": 99,
+                    "line": 10,
+                    "column": 30
+                  }
+                }
+              ],
+              "start": {
+                "offset": 95,
+                "line": 10,
+                "column": 26
+              },
+              "end": {
+                "offset": 100,
+                "line": 10,
+                "column": 31
               }
             }
           ],
           "start": {
-            "offset": 70,
-            "line": 9,
+            "offset": 82,
+            "line": 10,
             "column": 13
           },
           "end": {
-            "offset": 77,
-            "line": 9,
-            "column": 20
+            "offset": 101,
+            "line": 10,
+            "column": 32
           }
         },
         "start": {
-          "offset": 60,
-          "line": 9,
+          "offset": 72,
+          "line": 10,
           "column": 3
         },
         "end": {
-          "offset": 78,
-          "line": 9,
-          "column": 21
+          "offset": 102,
+          "line": 10,
+          "column": 33
         }
       }
     ],
     "start": {
-      "offset": 52,
-      "line": 8,
+      "offset": 64,
+      "line": 9,
       "column": 1
     },
     "end": {
-      "offset": 80,
-      "line": 10,
+      "offset": 104,
+      "line": 11,
       "column": 2
     }
   },
@@ -397,13 +561,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 80,
-      "line": 10,
+      "offset": 104,
+      "line": 11,
       "column": 2
     },
     "end": {
-      "offset": 81,
-      "line": 11,
+      "offset": 105,
+      "line": 12,
       "column": 1
     }
   },
@@ -411,13 +575,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 81,
-      "line": 11,
+      "offset": 105,
+      "line": 12,
       "column": 1
     },
     "end": {
-      "offset": 82,
-      "line": 11,
+      "offset": 106,
+      "line": 12,
       "column": 2
     }
   },
@@ -425,13 +589,13 @@
     "type": "Identifier",
     "name": "export",
     "start": {
-      "offset": 82,
-      "line": 11,
+      "offset": 106,
+      "line": 12,
       "column": 2
     },
     "end": {
-      "offset": 88,
-      "line": 11,
+      "offset": 112,
+      "line": 12,
       "column": 8
     }
   },
@@ -439,13 +603,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 88,
-      "line": 11,
+      "offset": 112,
+      "line": 12,
       "column": 8
     },
     "end": {
-      "offset": 89,
-      "line": 11,
+      "offset": 113,
+      "line": 12,
       "column": 9
     }
   },
@@ -453,13 +617,13 @@
     "type": "StringLiteral",
     "value": "\"test\"",
     "start": {
-      "offset": 89,
-      "line": 11,
+      "offset": 113,
+      "line": 12,
       "column": 9
     },
     "end": {
-      "offset": 95,
-      "line": 11,
+      "offset": 119,
+      "line": 12,
       "column": 15
     }
   },
@@ -467,13 +631,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 95,
-      "line": 11,
+      "offset": 119,
+      "line": 12,
       "column": 15
     },
     "end": {
-      "offset": 96,
-      "line": 11,
+      "offset": 120,
+      "line": 12,
       "column": 16
     }
   },
@@ -481,13 +645,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 96,
-      "line": 11,
+      "offset": 120,
+      "line": 12,
       "column": 16
     },
     "end": {
-      "offset": 97,
-      "line": 11,
+      "offset": 121,
+      "line": 12,
       "column": 17
     }
   },
@@ -495,13 +659,13 @@
     "type": "Identifier",
     "name": "func",
     "start": {
-      "offset": 97,
-      "line": 11,
+      "offset": 121,
+      "line": 12,
       "column": 17
     },
     "end": {
-      "offset": 101,
-      "line": 11,
+      "offset": 125,
+      "line": 12,
       "column": 21
     }
   },
@@ -509,13 +673,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 101,
-      "line": 11,
+      "offset": 125,
+      "line": 12,
       "column": 21
     },
     "end": {
-      "offset": 102,
-      "line": 11,
+      "offset": 126,
+      "line": 12,
       "column": 22
     }
   },
@@ -523,13 +687,13 @@
     "type": "Identifier",
     "name": "$test",
     "start": {
-      "offset": 102,
-      "line": 11,
+      "offset": 126,
+      "line": 12,
       "column": 22
     },
     "end": {
-      "offset": 107,
-      "line": 11,
+      "offset": 131,
+      "line": 12,
       "column": 27
     }
   },
@@ -537,13 +701,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 107,
-      "line": 11,
+      "offset": 131,
+      "line": 12,
       "column": 27
     },
     "end": {
-      "offset": 108,
-      "line": 11,
+      "offset": 132,
+      "line": 12,
       "column": 28
     }
   },
@@ -551,13 +715,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 108,
-      "line": 11,
+      "offset": 132,
+      "line": 12,
       "column": 28
     },
     "end": {
-      "offset": 109,
-      "line": 11,
+      "offset": 133,
+      "line": 12,
       "column": 29
     }
   },
@@ -565,13 +729,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 109,
-      "line": 11,
+      "offset": 133,
+      "line": 12,
       "column": 29
     },
     "end": {
-      "offset": 110,
-      "line": 12,
+      "offset": 134,
+      "line": 13,
       "column": 1
     }
   },
@@ -579,13 +743,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 110,
-      "line": 12,
+      "offset": 134,
+      "line": 13,
       "column": 1
     },
     "end": {
-      "offset": 111,
-      "line": 12,
+      "offset": 135,
+      "line": 13,
       "column": 2
     }
   },
@@ -593,13 +757,13 @@
     "type": "Identifier",
     "name": "func",
     "start": {
-      "offset": 111,
-      "line": 12,
+      "offset": 135,
+      "line": 13,
       "column": 2
     },
     "end": {
-      "offset": 115,
-      "line": 12,
+      "offset": 139,
+      "line": 13,
       "column": 6
     }
   },
@@ -607,13 +771,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 115,
-      "line": 12,
+      "offset": 139,
+      "line": 13,
       "column": 6
     },
     "end": {
-      "offset": 116,
-      "line": 12,
+      "offset": 140,
+      "line": 13,
       "column": 7
     }
   },
@@ -621,13 +785,13 @@
     "type": "Identifier",
     "name": "$test",
     "start": {
-      "offset": 116,
-      "line": 12,
+      "offset": 140,
+      "line": 13,
       "column": 7
     },
     "end": {
-      "offset": 121,
-      "line": 12,
+      "offset": 145,
+      "line": 13,
       "column": 12
     }
   },
@@ -635,13 +799,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 121,
-      "line": 12,
+      "offset": 145,
+      "line": 13,
       "column": 12
     },
     "end": {
-      "offset": 122,
-      "line": 12,
+      "offset": 146,
+      "line": 13,
       "column": 13
     }
   },
@@ -649,13 +813,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 122,
-      "line": 12,
+      "offset": 146,
+      "line": 13,
       "column": 13
     },
     "end": {
-      "offset": 123,
-      "line": 12,
+      "offset": 147,
+      "line": 13,
       "column": 14
     }
   },
@@ -663,13 +827,13 @@
     "type": "Identifier",
     "name": "result",
     "start": {
-      "offset": 123,
-      "line": 12,
+      "offset": 147,
+      "line": 13,
       "column": 14
     },
     "end": {
-      "offset": 129,
-      "line": 12,
+      "offset": 153,
+      "line": 13,
       "column": 20
     }
   },
@@ -677,13 +841,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 129,
-      "line": 12,
+      "offset": 153,
+      "line": 13,
       "column": 20
     },
     "end": {
-      "offset": 130,
-      "line": 12,
+      "offset": 154,
+      "line": 13,
       "column": 21
     }
   },
@@ -691,13 +855,13 @@
     "type": "Identifier",
     "name": "i32",
     "start": {
-      "offset": 130,
-      "line": 12,
+      "offset": 154,
+      "line": 13,
       "column": 21
     },
     "end": {
-      "offset": 133,
-      "line": 12,
+      "offset": 157,
+      "line": 13,
       "column": 24
     }
   },
@@ -705,13 +869,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 133,
-      "line": 12,
+      "offset": 157,
+      "line": 13,
       "column": 24
     },
     "end": {
-      "offset": 134,
-      "line": 12,
+      "offset": 158,
+      "line": 13,
       "column": 25
     }
   },
@@ -719,13 +883,13 @@
     "type": "WhiteSpace",
     "value": "\n    ",
     "start": {
-      "offset": 134,
-      "line": 12,
+      "offset": 158,
+      "line": 13,
       "column": 25
     },
     "end": {
-      "offset": 139,
-      "line": 13,
+      "offset": 163,
+      "line": 14,
       "column": 5
     }
   },
@@ -733,13 +897,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 139,
-      "line": 13,
+      "offset": 163,
+      "line": 14,
       "column": 5
     },
     "end": {
-      "offset": 140,
-      "line": 13,
+      "offset": 164,
+      "line": 14,
       "column": 6
     }
   },
@@ -751,13 +915,13 @@
         "name": "A",
         "prefix": "&",
         "start": {
-          "offset": 140,
-          "line": 13,
+          "offset": 164,
+          "line": 14,
           "column": 6
         },
         "end": {
-          "offset": 142,
-          "line": 13,
+          "offset": 166,
+          "line": 14,
           "column": 8
         },
         "child": {
@@ -765,13 +929,13 @@
           "name": "b",
           "prefix": null,
           "start": {
-            "offset": 143,
-            "line": 13,
+            "offset": 167,
+            "line": 14,
             "column": 9
           },
           "end": {
-            "offset": 144,
-            "line": 13,
+            "offset": 168,
+            "line": 14,
             "column": 10
           }
         },
@@ -779,13 +943,13 @@
       }
     ],
     "start": {
-      "offset": 140,
-      "line": 13,
+      "offset": 164,
+      "line": 14,
       "column": 6
     },
     "end": {
-      "offset": 144,
-      "line": 13,
+      "offset": 168,
+      "line": 14,
       "column": 10
     }
   },
@@ -793,13 +957,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 145,
-      "line": 13,
+      "offset": 169,
+      "line": 14,
       "column": 11
     },
     "end": {
-      "offset": 146,
-      "line": 13,
+      "offset": 170,
+      "line": 14,
       "column": 12
     }
   },
@@ -807,40 +971,12 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 146,
-      "line": 13,
+      "offset": 170,
+      "line": 14,
       "column": 12
     },
     "end": {
-      "offset": 147,
-      "line": 14,
-      "column": 1
-    }
-  },
-  {
-    "type": "Parenthesis",
-    "kind": ")",
-    "start": {
-      "offset": 147,
-      "line": 14,
-      "column": 1
-    },
-    "end": {
-      "offset": 148,
-      "line": 14,
-      "column": 2
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": "\n",
-    "start": {
-      "offset": 148,
-      "line": 14,
-      "column": 2
-    },
-    "end": {
-      "offset": 149,
+      "offset": 171,
       "line": 15,
       "column": 1
     }
@@ -849,12 +985,12 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 149,
+      "offset": 171,
       "line": 15,
       "column": 1
     },
     "end": {
-      "offset": 150,
+      "offset": 172,
       "line": 15,
       "column": 2
     }
@@ -863,13 +999,41 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 150,
+      "offset": 172,
       "line": 15,
       "column": 2
     },
     "end": {
-      "offset": 151,
+      "offset": 173,
       "line": 16,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 173,
+      "line": 16,
+      "column": 1
+    },
+    "end": {
+      "offset": 174,
+      "line": 16,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 174,
+      "line": 16,
+      "column": 2
+    },
+    "end": {
+      "offset": 175,
+      "line": 17,
       "column": 1
     }
   }
