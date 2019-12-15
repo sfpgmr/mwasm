@@ -4,13 +4,19 @@
   i32 c[4];
 }
 
+{@struct B
+  i32 d;
+  i32 e;
+  A f[10];
+}
+
 (module
 (memory 0)
 {@map
-  A a[10] = [[1,2],[3,4],[5,6]];
+  B b[10] = [[1,2,[3]],[3,4],[5,6]];
 }
 (export "test" (func $test))
 (func $test (result i32)
-    (&A.b;)
+    (&B.d;)
 )
 )

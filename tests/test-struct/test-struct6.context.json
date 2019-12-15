@@ -2,7 +2,7 @@
   "A": {
     "_attributes_": {
       "type": "StructDefinition",
-      "size": 0
+      "size": 8
     },
     "a": {
       "_attributes_": {
@@ -13,7 +13,7 @@
         "unsigned": false,
         "offset": 0,
         "initData": null,
-        "num": 0,
+        "num": 1,
         "log2": 2
       }
     },
@@ -24,25 +24,25 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 0,
+        "offset": 4,
         "initData": null,
-        "num": 0,
+        "num": 1,
         "log2": 2
       }
     }
   },
   "_attributes_": {
     "type": "MemoryMap",
-    "size": 0
+    "size": 8
   },
   "a": {
     "_attributes_": {
       "type": "StructDefinition",
-      "size": 0,
+      "size": 8,
       "offset": 0,
       "initData": null,
-      "num": 0,
-      "log2": 0
+      "num": 1,
+      "log2": 3
     },
     "a": {
       "_attributes_": {
@@ -53,7 +53,7 @@
         "unsigned": false,
         "offset": 0,
         "initData": null,
-        "num": 0,
+        "num": 1,
         "log2": 2
       }
     },
@@ -64,9 +64,9 @@
         "size": 4,
         "integer": true,
         "unsigned": false,
-        "offset": 0,
+        "offset": 4,
         "initData": null,
-        "num": 0,
+        "num": 1,
         "log2": 2
       }
     }
