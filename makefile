@@ -24,9 +24,9 @@ $(MWASM_LIB): %.wasm : %.wat
 run: $(TARGET)
 	mwasm ./examples/psg-emulator/em2149.mwat -o ./examples/psg-emulator/em2149.wasm
 
-.PHONY: test
+.PHONY: test-all
 #test: run
-test: $(TARGET)
+test-all: $(TARGET)
 	mwasm ./tests/test/test.mwat -o ./tests/test/test.wasm
 	mwasm ./tests/test/test1.mwat -o ./tests/test/test1.wasm
 	mwasm ./tests/test/test2.mwat -o ./tests/test/test2.wasm
@@ -55,6 +55,11 @@ test: $(TARGET)
 	mwasm ./tests/test-struct/test-struct7.mwat -o ./tests/test-struct/test-struct7.mwasm
 	mwasm ./tests/test-macro/test-macro.mwat -o ./tests/test-macro/test-macro.mwasm
 	mwasm ./examples/psg-emulator/em2149.mwat -o ./examples/psg-emulator/em2149.wasm
+
+
+.PHONY: test 
+test: $(TARGET)
+	mwasm ./tests/test-struct/test-struct7.mwat -o ./tests/test-struct/test-struct7.mwasm
 
 .PHONY: clean
 clean:

@@ -6968,18 +6968,19 @@ var index = async () => {
             case 'MwasmArray':
               const values = data.value;
               if (varType.varType == 'Struct') {
-                function makeDataStringFromStruct(data, varType) {
-                  const structDefinition = self.context[varType.id];
+                const structDefinition = self.context[varType.id];
+                function makeDataStringFromStruct(data, structDefinition) {
                   let i = 0;
                   for (const p in structDefinition) {
                     if (p != $attributes) {
                       const memberDefinition = structDefinition[p][$attributes];
+                      //console.log(memberDefinition);
                       if (i >= data.length) {
                         currentOffset += memberDefinition.size * memberDefinition.num;
                       } else {
                         if (memberDefinition.type == 'StructDefinition') {
-                          console.log('p != $attributes:', structDefinition[p], memberDefinition,varType);
-//                          makeDataStringFromStruct(data[i++],)
+                          console.log(p + ' != $attributes:', structDefinition[p], memberDefinition);
+                          makeDataStringFromStruct(data[i++],structDefinition[p]);
                         } else {
                           makeDataString_(data[i++], memberDefinition, memberDefinition);
                         }
@@ -7001,14 +7002,14 @@ var index = async () => {
 
                 if (num) {
                   values.forEach(d => {
-                    makeDataStringFromStruct(d.value, varType);
+                    makeDataStringFromStruct(d.value, structDefinition);
                   });
                   if (values.length < num) {
                     currentOffset += (num - values.length - 1) * (self.context[varType.id] && self.context[varType.id][$attributes].size) || varType.size;
                     result.offset = currentOffset;
                   }
                 } else {
-                  makeDataStringFromStruct(data.value, varType);
+                  makeDataStringFromStruct(data.value, structDefinition);
                 }
               } else {
                 //console.log(num,varType.size,currentOffset);
