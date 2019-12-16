@@ -589,161 +589,131 @@
                   "sign": "+",
                   "value": "1",
                   "start": {
-                    "offset": 127,
-                    "line": 16,
-                    "column": 15
+                    "offset": 132,
+                    "line": 17,
+                    "column": 6
                   },
                   "end": {
-                    "offset": 128,
-                    "line": 16,
-                    "column": 16
+                    "offset": 133,
+                    "line": 17,
+                    "column": 7
                   }
                 },
                 {
                   "type": "IntegerLiteral",
                   "sign": "+",
-                  "value": "2",
+                  "value": "0",
                   "start": {
-                    "offset": 129,
-                    "line": 16,
-                    "column": 17
+                    "offset": 134,
+                    "line": 17,
+                    "column": 8
                   },
                   "end": {
-                    "offset": 130,
-                    "line": 16,
-                    "column": 18
+                    "offset": 135,
+                    "line": 17,
+                    "column": 9
                   }
                 },
                 {
                   "type": "MwasmArray",
                   "value": [
                     {
-                      "type": "IntegerLiteral",
-                      "sign": "+",
-                      "value": "3",
+                      "type": "MwasmArray",
+                      "value": [
+                        {
+                          "type": "IntegerLiteral",
+                          "sign": "+",
+                          "value": "1",
+                          "start": {
+                            "offset": 145,
+                            "line": 18,
+                            "column": 8
+                          },
+                          "end": {
+                            "offset": 146,
+                            "line": 18,
+                            "column": 9
+                          }
+                        },
+                        {
+                          "type": "IntegerLiteral",
+                          "sign": "+",
+                          "value": "1",
+                          "start": {
+                            "offset": 147,
+                            "line": 18,
+                            "column": 10
+                          },
+                          "end": {
+                            "offset": 148,
+                            "line": 18,
+                            "column": 11
+                          }
+                        },
+                        {
+                          "type": "MwasmArray",
+                          "value": [
+                            {
+                              "type": "IntegerLiteral",
+                              "sign": "+",
+                              "value": "0",
+                              "start": {
+                                "offset": 150,
+                                "line": 18,
+                                "column": 13
+                              },
+                              "end": {
+                                "offset": 151,
+                                "line": 18,
+                                "column": 14
+                              }
+                            }
+                          ],
+                          "start": {
+                            "offset": 149,
+                            "line": 18,
+                            "column": 12
+                          },
+                          "end": {
+                            "offset": 152,
+                            "line": 18,
+                            "column": 15
+                          }
+                        }
+                      ],
                       "start": {
-                        "offset": 132,
-                        "line": 16,
-                        "column": 20
+                        "offset": 144,
+                        "line": 18,
+                        "column": 7
                       },
                       "end": {
-                        "offset": 133,
-                        "line": 16,
-                        "column": 21
+                        "offset": 153,
+                        "line": 18,
+                        "column": 16
                       }
                     }
                   ],
                   "start": {
-                    "offset": 131,
-                    "line": 16,
-                    "column": 19
+                    "offset": 136,
+                    "line": 17,
+                    "column": 10
                   },
                   "end": {
-                    "offset": 134,
-                    "line": 16,
-                    "column": 22
+                    "offset": 159,
+                    "line": 19,
+                    "column": 6
                   }
                 }
               ],
               "start": {
-                "offset": 126,
-                "line": 16,
-                "column": 14
+                "offset": 131,
+                "line": 17,
+                "column": 5
               },
               "end": {
-                "offset": 135,
-                "line": 16,
-                "column": 23
-              }
-            },
-            {
-              "type": "MwasmArray",
-              "value": [
-                {
-                  "type": "IntegerLiteral",
-                  "sign": "+",
-                  "value": "3",
-                  "start": {
-                    "offset": 137,
-                    "line": 16,
-                    "column": 25
-                  },
-                  "end": {
-                    "offset": 138,
-                    "line": 16,
-                    "column": 26
-                  }
-                },
-                {
-                  "type": "IntegerLiteral",
-                  "sign": "+",
-                  "value": "4",
-                  "start": {
-                    "offset": 139,
-                    "line": 16,
-                    "column": 27
-                  },
-                  "end": {
-                    "offset": 140,
-                    "line": 16,
-                    "column": 28
-                  }
-                }
-              ],
-              "start": {
-                "offset": 136,
-                "line": 16,
-                "column": 24
-              },
-              "end": {
-                "offset": 141,
-                "line": 16,
-                "column": 29
-              }
-            },
-            {
-              "type": "MwasmArray",
-              "value": [
-                {
-                  "type": "IntegerLiteral",
-                  "sign": "+",
-                  "value": "5",
-                  "start": {
-                    "offset": 143,
-                    "line": 16,
-                    "column": 31
-                  },
-                  "end": {
-                    "offset": 144,
-                    "line": 16,
-                    "column": 32
-                  }
-                },
-                {
-                  "type": "IntegerLiteral",
-                  "sign": "+",
-                  "value": "6",
-                  "start": {
-                    "offset": 145,
-                    "line": 16,
-                    "column": 33
-                  },
-                  "end": {
-                    "offset": 146,
-                    "line": 16,
-                    "column": 34
-                  }
-                }
-              ],
-              "start": {
-                "offset": 142,
-                "line": 16,
-                "column": 30
-              },
-              "end": {
-                "offset": 147,
-                "line": 16,
-                "column": 35
+                "offset": 160,
+                "line": 19,
+                "column": 7
               }
             }
           ],
@@ -753,9 +723,9 @@
             "column": 13
           },
           "end": {
-            "offset": 148,
-            "line": 16,
-            "column": 36
+            "offset": 164,
+            "line": 20,
+            "column": 4
           }
         },
         "start": {
@@ -764,9 +734,9 @@
           "column": 3
         },
         "end": {
-          "offset": 149,
-          "line": 16,
-          "column": 37
+          "offset": 165,
+          "line": 20,
+          "column": 5
         }
       }
     ],
@@ -776,8 +746,8 @@
       "column": 1
     },
     "end": {
-      "offset": 151,
-      "line": 17,
+      "offset": 167,
+      "line": 21,
       "column": 2
     }
   },
@@ -785,13 +755,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 151,
-      "line": 17,
+      "offset": 167,
+      "line": 21,
       "column": 2
     },
     "end": {
-      "offset": 152,
-      "line": 18,
+      "offset": 168,
+      "line": 22,
       "column": 1
     }
   },
@@ -799,13 +769,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 152,
-      "line": 18,
+      "offset": 168,
+      "line": 22,
       "column": 1
     },
     "end": {
-      "offset": 153,
-      "line": 18,
+      "offset": 169,
+      "line": 22,
       "column": 2
     }
   },
@@ -813,13 +783,13 @@
     "type": "Identifier",
     "name": "export",
     "start": {
-      "offset": 153,
-      "line": 18,
+      "offset": 169,
+      "line": 22,
       "column": 2
     },
     "end": {
-      "offset": 159,
-      "line": 18,
+      "offset": 175,
+      "line": 22,
       "column": 8
     }
   },
@@ -827,13 +797,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 159,
-      "line": 18,
+      "offset": 175,
+      "line": 22,
       "column": 8
     },
     "end": {
-      "offset": 160,
-      "line": 18,
+      "offset": 176,
+      "line": 22,
       "column": 9
     }
   },
@@ -841,13 +811,13 @@
     "type": "StringLiteral",
     "value": "\"test\"",
     "start": {
-      "offset": 160,
-      "line": 18,
+      "offset": 176,
+      "line": 22,
       "column": 9
     },
     "end": {
-      "offset": 166,
-      "line": 18,
+      "offset": 182,
+      "line": 22,
       "column": 15
     }
   },
@@ -855,13 +825,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 166,
-      "line": 18,
+      "offset": 182,
+      "line": 22,
       "column": 15
     },
     "end": {
-      "offset": 167,
-      "line": 18,
+      "offset": 183,
+      "line": 22,
       "column": 16
     }
   },
@@ -869,13 +839,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 167,
-      "line": 18,
+      "offset": 183,
+      "line": 22,
       "column": 16
     },
     "end": {
-      "offset": 168,
-      "line": 18,
+      "offset": 184,
+      "line": 22,
       "column": 17
     }
   },
@@ -883,13 +853,13 @@
     "type": "Identifier",
     "name": "func",
     "start": {
-      "offset": 168,
-      "line": 18,
+      "offset": 184,
+      "line": 22,
       "column": 17
     },
     "end": {
-      "offset": 172,
-      "line": 18,
+      "offset": 188,
+      "line": 22,
       "column": 21
     }
   },
@@ -897,13 +867,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 172,
-      "line": 18,
+      "offset": 188,
+      "line": 22,
       "column": 21
     },
     "end": {
-      "offset": 173,
-      "line": 18,
+      "offset": 189,
+      "line": 22,
       "column": 22
     }
   },
@@ -911,13 +881,13 @@
     "type": "Identifier",
     "name": "$test",
     "start": {
-      "offset": 173,
-      "line": 18,
+      "offset": 189,
+      "line": 22,
       "column": 22
     },
     "end": {
-      "offset": 178,
-      "line": 18,
+      "offset": 194,
+      "line": 22,
       "column": 27
     }
   },
@@ -925,13 +895,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 178,
-      "line": 18,
+      "offset": 194,
+      "line": 22,
       "column": 27
     },
     "end": {
-      "offset": 179,
-      "line": 18,
+      "offset": 195,
+      "line": 22,
       "column": 28
     }
   },
@@ -939,13 +909,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 179,
-      "line": 18,
+      "offset": 195,
+      "line": 22,
       "column": 28
     },
     "end": {
-      "offset": 180,
-      "line": 18,
+      "offset": 196,
+      "line": 22,
       "column": 29
     }
   },
@@ -953,13 +923,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 180,
-      "line": 18,
+      "offset": 196,
+      "line": 22,
       "column": 29
     },
     "end": {
-      "offset": 181,
-      "line": 19,
+      "offset": 197,
+      "line": 23,
       "column": 1
     }
   },
@@ -967,13 +937,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 181,
-      "line": 19,
+      "offset": 197,
+      "line": 23,
       "column": 1
     },
     "end": {
-      "offset": 182,
-      "line": 19,
+      "offset": 198,
+      "line": 23,
       "column": 2
     }
   },
@@ -981,13 +951,13 @@
     "type": "Identifier",
     "name": "func",
     "start": {
-      "offset": 182,
-      "line": 19,
+      "offset": 198,
+      "line": 23,
       "column": 2
     },
     "end": {
-      "offset": 186,
-      "line": 19,
+      "offset": 202,
+      "line": 23,
       "column": 6
     }
   },
@@ -995,13 +965,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 186,
-      "line": 19,
+      "offset": 202,
+      "line": 23,
       "column": 6
     },
     "end": {
-      "offset": 187,
-      "line": 19,
+      "offset": 203,
+      "line": 23,
       "column": 7
     }
   },
@@ -1009,13 +979,13 @@
     "type": "Identifier",
     "name": "$test",
     "start": {
-      "offset": 187,
-      "line": 19,
+      "offset": 203,
+      "line": 23,
       "column": 7
     },
     "end": {
-      "offset": 192,
-      "line": 19,
+      "offset": 208,
+      "line": 23,
       "column": 12
     }
   },
@@ -1023,13 +993,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 192,
-      "line": 19,
+      "offset": 208,
+      "line": 23,
       "column": 12
     },
     "end": {
-      "offset": 193,
-      "line": 19,
+      "offset": 209,
+      "line": 23,
       "column": 13
     }
   },
@@ -1037,13 +1007,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 193,
-      "line": 19,
+      "offset": 209,
+      "line": 23,
       "column": 13
     },
     "end": {
-      "offset": 194,
-      "line": 19,
+      "offset": 210,
+      "line": 23,
       "column": 14
     }
   },
@@ -1051,13 +1021,13 @@
     "type": "Identifier",
     "name": "result",
     "start": {
-      "offset": 194,
-      "line": 19,
+      "offset": 210,
+      "line": 23,
       "column": 14
     },
     "end": {
-      "offset": 200,
-      "line": 19,
+      "offset": 216,
+      "line": 23,
       "column": 20
     }
   },
@@ -1065,13 +1035,13 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 200,
-      "line": 19,
+      "offset": 216,
+      "line": 23,
       "column": 20
     },
     "end": {
-      "offset": 201,
-      "line": 19,
+      "offset": 217,
+      "line": 23,
       "column": 21
     }
   },
@@ -1079,13 +1049,13 @@
     "type": "Identifier",
     "name": "i32",
     "start": {
-      "offset": 201,
-      "line": 19,
+      "offset": 217,
+      "line": 23,
       "column": 21
     },
     "end": {
-      "offset": 204,
-      "line": 19,
+      "offset": 220,
+      "line": 23,
       "column": 24
     }
   },
@@ -1093,13 +1063,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 204,
-      "line": 19,
+      "offset": 220,
+      "line": 23,
       "column": 24
     },
     "end": {
-      "offset": 205,
-      "line": 19,
+      "offset": 221,
+      "line": 23,
       "column": 25
     }
   },
@@ -1107,13 +1077,13 @@
     "type": "WhiteSpace",
     "value": "\n    ",
     "start": {
-      "offset": 205,
-      "line": 19,
+      "offset": 221,
+      "line": 23,
       "column": 25
     },
     "end": {
-      "offset": 210,
-      "line": 20,
+      "offset": 226,
+      "line": 24,
       "column": 5
     }
   },
@@ -1121,13 +1091,13 @@
     "type": "Parenthesis",
     "kind": "(",
     "start": {
-      "offset": 210,
-      "line": 20,
+      "offset": 226,
+      "line": 24,
       "column": 5
     },
     "end": {
-      "offset": 211,
-      "line": 20,
+      "offset": 227,
+      "line": 24,
       "column": 6
     }
   },
@@ -1139,13 +1109,13 @@
         "name": "B",
         "prefix": "&",
         "start": {
-          "offset": 211,
-          "line": 20,
+          "offset": 227,
+          "line": 24,
           "column": 6
         },
         "end": {
-          "offset": 213,
-          "line": 20,
+          "offset": 229,
+          "line": 24,
           "column": 8
         },
         "child": {
@@ -1153,13 +1123,13 @@
           "name": "d",
           "prefix": null,
           "start": {
-            "offset": 214,
-            "line": 20,
+            "offset": 230,
+            "line": 24,
             "column": 9
           },
           "end": {
-            "offset": 215,
-            "line": 20,
+            "offset": 231,
+            "line": 24,
             "column": 10
           }
         },
@@ -1167,13 +1137,13 @@
       }
     ],
     "start": {
-      "offset": 211,
-      "line": 20,
+      "offset": 227,
+      "line": 24,
       "column": 6
     },
     "end": {
-      "offset": 215,
-      "line": 20,
+      "offset": 231,
+      "line": 24,
       "column": 10
     }
   },
@@ -1181,13 +1151,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 216,
-      "line": 20,
+      "offset": 232,
+      "line": 24,
       "column": 11
     },
     "end": {
-      "offset": 217,
-      "line": 20,
+      "offset": 233,
+      "line": 24,
       "column": 12
     }
   },
@@ -1195,13 +1165,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 217,
-      "line": 20,
+      "offset": 233,
+      "line": 24,
       "column": 12
     },
     "end": {
-      "offset": 218,
-      "line": 21,
+      "offset": 234,
+      "line": 25,
       "column": 1
     }
   },
@@ -1209,13 +1179,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 218,
-      "line": 21,
+      "offset": 234,
+      "line": 25,
       "column": 1
     },
     "end": {
-      "offset": 219,
-      "line": 21,
+      "offset": 235,
+      "line": 25,
       "column": 2
     }
   },
@@ -1223,13 +1193,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 219,
-      "line": 21,
+      "offset": 235,
+      "line": 25,
       "column": 2
     },
     "end": {
-      "offset": 220,
-      "line": 22,
+      "offset": 236,
+      "line": 26,
       "column": 1
     }
   },
@@ -1237,13 +1207,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 220,
-      "line": 22,
+      "offset": 236,
+      "line": 26,
       "column": 1
     },
     "end": {
-      "offset": 221,
-      "line": 22,
+      "offset": 237,
+      "line": 26,
       "column": 2
     }
   },
@@ -1251,13 +1221,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 221,
-      "line": 22,
+      "offset": 237,
+      "line": 26,
       "column": 2
     },
     "end": {
-      "offset": 222,
-      "line": 23,
+      "offset": 238,
+      "line": 27,
       "column": 1
     }
   }

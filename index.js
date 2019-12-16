@@ -6564,12 +6564,12 @@ var index = async () => {
               } else {
                 // 
                 let context = this.context[token.id] =
-                  {
-                    [$attributes]: {
-                      type: token.type,
-                      size: 0
-                    }
-                  };
+                {
+                  [$attributes]: {
+                    type: token.type,
+                    size: 0
+                  }
+                };
                 this.defineMember(token.defines, context, { type: token.type, structName: token.id });
               }
               break;
@@ -6815,12 +6815,12 @@ var index = async () => {
                         [$attributes]: Object.assign(clone(def.varType), { offset: offset + this.startOffset, initData: initData })
                       };
                       if (initData) {
-                        console.log(opts);
-                        for(const data of initData){
-                          if(data.dataString.length && opts.preprocessed){
+                        //console.log(opts);
+                        for (const data of initData) {
+                          if (data.dataString.length && opts.preprocessed) {
                             opts.preprocessed.push(`(data (i32.const ${data.offset}) "${data.dataString}")`);
                           }
-                        }                       
+                        }
                       }
 
                     } else {
@@ -6842,18 +6842,18 @@ var index = async () => {
                         num = 1;
                       }
 
-                      const initData = def.initData ? this.makeDataString(def,offset + this.startOffset) : null;
+                      const initData = def.initData ? this.makeDataString(def, offset + this.startOffset) : null;
                       c = currentContext[def.id.id] = Object.assign(clone(structType), {
                         [$attributes]: Object.assign(clone(structType[$attributes]), { offset: offset + this.startOffset, initData: initData })
                       });
 
                       if (initData) {
-                        for(const data of initData){
-                          if(data.dataString.length){
+                        for (const data of initData) {
+                          if (data.dataString.length) {
                             opts.preprocessed.push(`(data (i32.const ${data.offset}) "${data.dataString}")`);
                           }
                         }
-  
+
                       }
 
                       function calcStructMemberOffset(st, o) {
@@ -6866,8 +6866,8 @@ var index = async () => {
                                 att.offset += o;
                                 //console.log(att,m,att.offset,o);
                                 if (att.initData) {
-                                  for(const data of att.initData){
-                                    if(data.dataString.length){
+                                  for (const data of att.initData) {
+                                    if (data.dataString.length && opts) {
                                       opts.preprocessed.push(`(data (i32.const ${data.offset}) "${data.dataString}")`);
                                     }
                                   }
@@ -6942,15 +6942,15 @@ var index = async () => {
         error(`error: '${token.type}' is unrecogniezed.`);
       }
 
-      makeDataString(def,offset) {
+      makeDataString(def, offset) {
         const self = this;
         const initData = def.initData;
         const results = [];
-        let result = {offset:offset,dataString:''};
+        let result = { offset: offset, dataString: '' };
         let currentOffset = offset;
         results.push(result);
 
-        function makeDataString_(data, varType,def) {
+        function makeDataString_(data, varType, def) {
           const lib = literalUtil[varType.varType];
           let num;
           if (def.id && def.id.numExpression) {
@@ -6958,7 +6958,7 @@ var index = async () => {
             if (isNaN(num)) {
               error(`error:number suffix is illegal.`, def);
             }
-          } else if(varType.num){
+          } else if (varType.num) {
             num = varType.num;
           } else {
             num = 0;
@@ -6968,58 +6968,63 @@ var index = async () => {
             case 'MwasmArray':
               const values = data.value;
               if (varType.varType == 'Struct') {
-                function makeDataStringFromStruct(data,varType){
+                function makeDataStringFromStruct(data, varType) {
                   const structDefinition = self.context[varType.id];
                   let i = 0;
                   for (const p in structDefinition) {
-                    if(p != $attributes){
-                      //console.log('p != $attributes:',p);
+                    if (p != $attributes) {
                       const memberDefinition = structDefinition[p][$attributes];
                       if (i >= data.length) {
                         currentOffset += memberDefinition.size * memberDefinition.num;
-  　                   } else {
-                        makeDataString_(data[i++], memberDefinition,memberDefinition);
+                      } else {
+                        if (memberDefinition.type == 'StructDefinition') {
+                          console.log('p != $attributes:', structDefinition[p], memberDefinition,varType);
+//                          makeDataStringFromStruct(data[i++],)
+                        } else {
+                          makeDataString_(data[i++], memberDefinition, memberDefinition);
+                        }
                       }
                     }
                   }
-                  if(i >= data.length){
-                    if(!result.dataString.length){
+                  if (i >= data.length) {
+                    if (!result.dataString.length) {
                       result.offset = currentOffset;
                     } else {
                       result = {
-                        offset:currentOffset,
-                        dataString:''
+                        offset: currentOffset,
+                        dataString: ''
                       };
                       results.push(result);
                     }
                   }
                 }
-                if(num){
-                  values.forEach(d=>{
-                    makeDataStringFromStruct(d.value,varType);
+
+                if (num) {
+                  values.forEach(d => {
+                    makeDataStringFromStruct(d.value, varType);
                   });
-                  if(values.length < num){
+                  if (values.length < num) {
                     currentOffset += (num - values.length - 1) * (self.context[varType.id] && self.context[varType.id][$attributes].size) || varType.size;
                     result.offset = currentOffset;
                   }
                 } else {
-                  makeDataStringFromStruct(data.value,varType);
+                  makeDataStringFromStruct(data.value, varType);
                 }
               } else {
-                console.log(num,varType.size,currentOffset);
+                //console.log(num,varType.size,currentOffset);
                 values.forEach(d => {
-                  makeDataString_(d, varType,def);
+                  makeDataString_(d, varType, def);
                 });
-                console.log(currentOffset);
-                if(values.length < num){
+                //console.log(currentOffset);
+                if (values.length < num) {
                   const size = (self.context[varType.id] && self.context[varType.id][$attributes].size) || varType.size;
                   currentOffset += (num - values.length - 1) * size;
-                  if(!result.dataString.length){
+                  if (!result.dataString.length) {
                     result.offset = currentOffset;
                   } else {
                     result = {
-                      offset:currentOffset,
-                      dataString:''
+                      offset: currentOffset,
+                      dataString: ''
                     };
                     results.push(result);
                   }
@@ -7030,7 +7035,7 @@ var index = async () => {
               if (varType.varType == 'i32' || varType.varType == 'i64') {
                 result.dataString += lib.decimalIntegerStrToDataStr(data.value, data.sign);
               } else {
-                console.log(varType,def);
+                //console.log(varType,def);
                 error(`type missmatch  ${varType.varType} != ${data.type}`, def);
               }
               break;
@@ -7050,14 +7055,14 @@ var index = async () => {
               break;
             case 'HexIntegerLiteral':
               if (varType.varType == 'i32' || varType.varType == 'i64') {
-                result.dataString +=  lib.hexIntegerStrToDataStr(data.value, data.sign);
+                result.dataString += lib.hexIntegerStrToDataStr(data.value, data.sign);
               } else {
                 error(`type missmatch  ${varType.varType} != ${data.type}`, def);
               }
               break;
             case 'FloatLiteral':
               if (varType.varType == 'f32' || varType.varType == 'f64') {
-                result.dataString +=  lib.floatStrToDataStr(data.sign, data.number, data.flac, data.expsign, data.e);
+                result.dataString += lib.floatStrToDataStr(data.sign, data.number, data.flac, data.expsign, data.e);
               } else {
                 error(`type missmatch  ${varType.varType} != ${data.type}`, def);
               }
@@ -7070,7 +7075,7 @@ var index = async () => {
               //console.log(num,data.code,varType);
               if (lib.valueToDataStr) {
                 const res = self.evalExpression(data.code);
-                result.dataString +=  lib.valueToDataStr(res);
+                result.dataString += lib.valueToDataStr(res);
 
               } else {
                 error(`${varType.varType} is not supported.`, data);
@@ -7094,8 +7099,8 @@ var index = async () => {
           //console.log(varType);
           currentOffset += varType.size;
         }
-        makeDataString_(initData,def.varType,def);
-        console.info(results);
+        makeDataString_(initData, def.varType, def);
+        //console.info(results);
         return results;
       }
     }
@@ -7142,7 +7147,7 @@ var index = async () => {
     }
 
   } catch (e) {
-    console.error(e.message,e.stack);
+    console.error(e.message, e.stack);
     process.exit();
   }
 };

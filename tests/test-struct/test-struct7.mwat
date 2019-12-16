@@ -13,7 +13,11 @@
 (module
 (memory 0)
 {@map
-  B b[10] = [[1,2,[3]],[3,4],[5,6]];
+  B b[10] = [
+    [1,0,[
+      [1,1,[0]]
+    ]]
+  ];
 }
 (export "test" (func $test))
 (func $test (result i32)

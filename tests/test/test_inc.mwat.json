@@ -364,156 +364,30 @@
     }
   },
   {
-    "type": "PropertyGet",
-    "propertyName": "X",
+    "type": "Identifier",
+    "name": "2",
     "start": {
       "offset": 77,
       "line": 4,
       "column": 13
     },
     "end": {
-      "offset": 79,
+      "offset": 78,
       "line": 4,
-      "column": 15
-    }
-  },
-  {
-    "type": "Comment",
-    "value": ";; comment\n",
-    "start": {
-      "offset": 79,
-      "line": 4,
-      "column": 15
-    },
-    "end": {
-      "offset": 90,
-      "line": 5,
-      "column": 1
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": "  ",
-    "start": {
-      "offset": 90,
-      "line": 5,
-      "column": 1
-    },
-    "end": {
-      "offset": 92,
-      "line": 5,
-      "column": 3
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "i32.const",
-    "start": {
-      "offset": 92,
-      "line": 5,
-      "column": 3
-    },
-    "end": {
-      "offset": 101,
-      "line": 5,
-      "column": 12
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": " ",
-    "start": {
-      "offset": 101,
-      "line": 5,
-      "column": 12
-    },
-    "end": {
-      "offset": 102,
-      "line": 5,
-      "column": 13
-    }
-  },
-  {
-    "type": "CodeExpression",
-    "code": "$.X + $.Y ",
-    "start": {
-      "offset": 102,
-      "line": 5,
-      "column": 13
-    },
-    "end": {
-      "offset": 116,
-      "line": 5,
-      "column": 27
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": "\n  ",
-    "start": {
-      "offset": 116,
-      "line": 5,
-      "column": 27
-    },
-    "end": {
-      "offset": 119,
-      "line": 6,
-      "column": 3
-    }
-  },
-  {
-    "type": "Identifier",
-    "name": "i32.add",
-    "start": {
-      "offset": 119,
-      "line": 6,
-      "column": 3
-    },
-    "end": {
-      "offset": 126,
-      "line": 6,
-      "column": 10
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": "\n  ",
-    "start": {
-      "offset": 126,
-      "line": 6,
-      "column": 10
-    },
-    "end": {
-      "offset": 129,
-      "line": 7,
-      "column": 3
-    }
-  },
-  {
-    "type": "Code",
-    "code": "\n    // JSによるWASMソースコード生成\n    let instructions = '';\n    for(let i = 0;i < 4; ++ i ){\n      ++$.X; \n      instructions += `\ni32.const ${$.X + $.Y}\ni32.add`;\n    }\n    return instructions;\n  ",
-    "start": {
-      "offset": 129,
-      "line": 7,
-      "column": 3
-    },
-    "end": {
-      "offset": 321,
-      "line": 17,
-      "column": 4
+      "column": 14
     }
   },
   {
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 321,
-      "line": 17,
-      "column": 4
+      "offset": 78,
+      "line": 4,
+      "column": 14
     },
     "end": {
-      "offset": 322,
-      "line": 18,
+      "offset": 79,
+      "line": 5,
       "column": 1
     }
   },
@@ -521,27 +395,27 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 322,
-      "line": 18,
+      "offset": 79,
+      "line": 5,
       "column": 1
     },
     "end": {
-      "offset": 323,
-      "line": 18,
+      "offset": 80,
+      "line": 5,
       "column": 2
     }
   },
   {
     "type": "WhiteSpace",
-    "value": "\n\n",
+    "value": "\n",
     "start": {
-      "offset": 323,
-      "line": 18,
+      "offset": 80,
+      "line": 5,
       "column": 2
     },
     "end": {
-      "offset": 325,
-      "line": 20,
+      "offset": 81,
+      "line": 6,
       "column": 1
     }
   },
@@ -549,28 +423,14 @@
     "type": "SourceInclude",
     "pathExpression": "'./test_inc2.mwat'",
     "start": {
-      "offset": 325,
-      "line": 20,
+      "offset": 81,
+      "line": 6,
       "column": 1
     },
     "end": {
-      "offset": 354,
-      "line": 20,
+      "offset": 110,
+      "line": 6,
       "column": 30
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": "\n\n",
-    "start": {
-      "offset": 354,
-      "line": 20,
-      "column": 30
-    },
-    "end": {
-      "offset": 356,
-      "line": 22,
-      "column": 1
     }
   }
 ]

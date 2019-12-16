@@ -364,8 +364,25 @@
     }
   },
   {
-    "type": "PropertyGet",
-    "propertyName": "X",
+    "type": "ValueExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "X",
+        "prefix": "%",
+        "start": {
+          "offset": 77,
+          "line": 4,
+          "column": 13
+        },
+        "end": {
+          "offset": 79,
+          "line": 4,
+          "column": 15
+        },
+        "top": true
+      }
+    ],
     "start": {
       "offset": 77,
       "line": 4,
@@ -378,29 +395,15 @@
     }
   },
   {
-    "type": "Comment",
-    "value": ";; comment\n",
-    "start": {
-      "offset": 79,
-      "line": 4,
-      "column": 15
-    },
-    "end": {
-      "offset": 90,
-      "line": 5,
-      "column": 1
-    }
-  },
-  {
     "type": "WhiteSpace",
-    "value": "  ",
+    "value": "\n  ",
     "start": {
-      "offset": 90,
-      "line": 5,
-      "column": 1
+      "offset": 80,
+      "line": 4,
+      "column": 16
     },
     "end": {
-      "offset": 92,
+      "offset": 83,
       "line": 5,
       "column": 3
     }
@@ -409,12 +412,12 @@
     "type": "Identifier",
     "name": "i32.const",
     "start": {
-      "offset": 92,
+      "offset": 83,
       "line": 5,
       "column": 3
     },
     "end": {
-      "offset": 101,
+      "offset": 92,
       "line": 5,
       "column": 12
     }
@@ -423,40 +426,40 @@
     "type": "WhiteSpace",
     "value": " ",
     "start": {
-      "offset": 101,
+      "offset": 92,
       "line": 5,
       "column": 12
     },
     "end": {
-      "offset": 102,
+      "offset": 93,
       "line": 5,
       "column": 13
     }
   },
   {
     "type": "CodeExpression",
-    "code": "$.X + $.Y ",
+    "code": "$.X + $.Y; ",
     "start": {
-      "offset": 102,
+      "offset": 93,
       "line": 5,
       "column": 13
     },
     "end": {
-      "offset": 116,
+      "offset": 106,
       "line": 5,
-      "column": 27
+      "column": 26
     }
   },
   {
     "type": "WhiteSpace",
     "value": "\n  ",
     "start": {
-      "offset": 116,
+      "offset": 106,
       "line": 5,
-      "column": 27
+      "column": 26
     },
     "end": {
-      "offset": 119,
+      "offset": 109,
       "line": 6,
       "column": 3
     }
@@ -465,55 +468,27 @@
     "type": "Identifier",
     "name": "i32.add",
     "start": {
-      "offset": 119,
+      "offset": 109,
       "line": 6,
       "column": 3
     },
     "end": {
-      "offset": 126,
-      "line": 6,
-      "column": 10
-    }
-  },
-  {
-    "type": "WhiteSpace",
-    "value": "\n  ",
-    "start": {
-      "offset": 126,
+      "offset": 116,
       "line": 6,
       "column": 10
-    },
-    "end": {
-      "offset": 129,
-      "line": 7,
-      "column": 3
-    }
-  },
-  {
-    "type": "Code",
-    "code": "\n    // JSによるWASMソースコード生成\n    let instructions = '';\n    for(let i = 0;i < 4; ++ i ){\n      ++$.X; \n      instructions += `\ni32.const ${$.X + $.Y}\ni32.add`;\n    }\n    return instructions;\n  ",
-    "start": {
-      "offset": 129,
-      "line": 7,
-      "column": 3
-    },
-    "end": {
-      "offset": 321,
-      "line": 17,
-      "column": 4
     }
   },
   {
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 321,
-      "line": 17,
-      "column": 4
+      "offset": 116,
+      "line": 6,
+      "column": 10
     },
     "end": {
-      "offset": 322,
-      "line": 18,
+      "offset": 117,
+      "line": 7,
       "column": 1
     }
   },
@@ -521,13 +496,13 @@
     "type": "Parenthesis",
     "kind": ")",
     "start": {
-      "offset": 322,
-      "line": 18,
+      "offset": 117,
+      "line": 7,
       "column": 1
     },
     "end": {
-      "offset": 323,
-      "line": 18,
+      "offset": 118,
+      "line": 7,
       "column": 2
     }
   },
@@ -535,13 +510,13 @@
     "type": "WhiteSpace",
     "value": "\n",
     "start": {
-      "offset": 323,
-      "line": 18,
+      "offset": 118,
+      "line": 7,
       "column": 2
     },
     "end": {
-      "offset": 324,
-      "line": 19,
+      "offset": 119,
+      "line": 8,
       "column": 1
     }
   }

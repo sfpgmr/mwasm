@@ -47,7 +47,7 @@
   "B": {
     "_attributes_": {
       "type": "StructDefinition",
-      "size": 48
+      "size": 248
     },
     "d": {
       "_attributes_": {
@@ -77,47 +77,71 @@
     },
     "f": {
       "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "i32",
-        "size": 4,
-        "integer": true,
-        "unsigned": false,
+        "type": "StructDefinition",
+        "size": 24,
         "offset": 8,
         "initData": null,
         "num": 10,
-        "log2": 2
+        "log2": 4
+      },
+      "a": {
+        "_attributes_": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "offset": 8,
+          "initData": null,
+          "num": 1,
+          "log2": 2
+        }
+      },
+      "b": {
+        "_attributes_": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "offset": 12,
+          "initData": null,
+          "num": 1,
+          "log2": 2
+        }
+      },
+      "c": {
+        "_attributes_": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "offset": 16,
+          "initData": null,
+          "num": 4,
+          "log2": 2
+        }
       }
     }
   },
   "_attributes_": {
     "type": "MemoryMap",
-    "size": 480
+    "size": 2480
   },
   "b": {
     "_attributes_": {
       "type": "StructDefinition",
-      "size": 48,
+      "size": 248,
       "offset": 0,
       "initData": [
         {
-          "offset": 0,
-          "dataString": "\\01\\00\\00\\00\\02\\00\\00\\00\\03\\00\\00\\00"
-        },
-        {
-          "offset": 48,
-          "dataString": "\\03\\00\\00\\00\\04\\00\\00\\00"
-        },
-        {
-          "offset": 96,
-          "dataString": "\\05\\00\\00\\00\\06\\00\\00\\00"
-        },
-        {
-          "offset": 432,
-          "dataString": ""
+          "offset": 1992,
+          "dataString": "\\01\\00\\00\\00\\00\\00\\00\\00"
         }
       ],
       "num": 10,
-      "log2": 5
+      "log2": 7
     },
     "d": {
       "_attributes_": {
@@ -147,15 +171,51 @@
     },
     "f": {
       "_attributes_": {
-        "type": "PrimitiveType",
-        "varType": "i32",
-        "size": 4,
-        "integer": true,
-        "unsigned": false,
+        "type": "StructDefinition",
+        "size": 24,
         "offset": 8,
         "initData": null,
         "num": 10,
-        "log2": 2
+        "log2": 4
+      },
+      "a": {
+        "_attributes_": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "offset": 8,
+          "initData": null,
+          "num": 1,
+          "log2": 2
+        }
+      },
+      "b": {
+        "_attributes_": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "offset": 12,
+          "initData": null,
+          "num": 1,
+          "log2": 2
+        }
+      },
+      "c": {
+        "_attributes_": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "offset": 16,
+          "initData": null,
+          "num": 4,
+          "log2": 2
+        }
       }
     }
   }
