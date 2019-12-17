@@ -7,6 +7,7 @@
   "scripts": {
     "build": "make ./index.js",
     "test": "make test",
+    "test-all": "make test-all",
     "trace": "make clean && make trace"
   },
   "repository": {
