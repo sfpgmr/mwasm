@@ -587,7 +587,7 @@
                 {
                   "type": "IntegerLiteral",
                   "sign": "+",
-                  "value": "1",
+                  "value": "0",
                   "start": {
                     "offset": 132,
                     "line": 17,
@@ -602,7 +602,7 @@
                 {
                   "type": "IntegerLiteral",
                   "sign": "+",
-                  "value": "0",
+                  "value": "1",
                   "start": {
                     "offset": 134,
                     "line": 17,
@@ -623,7 +623,7 @@
                         {
                           "type": "IntegerLiteral",
                           "sign": "+",
-                          "value": "1",
+                          "value": "2",
                           "start": {
                             "offset": 145,
                             "line": 18,
@@ -638,7 +638,7 @@
                         {
                           "type": "IntegerLiteral",
                           "sign": "+",
-                          "value": "1",
+                          "value": "3",
                           "start": {
                             "offset": 147,
                             "line": 18,
@@ -656,7 +656,7 @@
                             {
                               "type": "IntegerLiteral",
                               "sign": "+",
-                              "value": "0",
+                              "value": "4",
                               "start": {
                                 "offset": 150,
                                 "line": 18,
