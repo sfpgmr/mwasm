@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="JavaScript,wasm">
+  <meta name="description" content="WASMでPSGエミュレータを作る">
+  <meta name="author" content="SFPGMR">
+  <title>WASMでPSG Emulatorを作る</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple@3.3.1/dist/siimple.min.css">
+  <script>
+    if (!window.location.hostname.match(/localhost/)) {
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-15457703-9', 'auto');
+      ga('send', 'pageview');
+    }
+  </script>
+  <style>
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: black;
+      height: 10px;
+      width: 100%;
+      border-radius: 6px;
+      margin: auto;
+    }
+
+    input[type="range"]:focus,
+    input[type="range"]:active {
+      outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      background: rgb(255, 94, 0);
+      height: 20px;
+      width: 20px;
+      border-radius: 25%;
+    }
+  </style>
+</head>
+
+<body class="siimple-content siimple-content--medium">
+  <div class="siimple-box siimple-box--orange">
+    <h1 class="siimple-box-title">WASMでPSGエミュレータを作る</h1>
+    <p class="siimple-box-detail">レポジトリ：
+      <a href="https://github.com/sfpgmr/mwasm/tree/dev/examples/psg-emulator" class="siimple-link">https://github.com/sfpgmr/mwasm/tree/dev/examples/psg-emulator</a>
+      </p>
+
+  </div>
+  <p>PSG-ONボタンでパラメータUIが有効になります。</p>
+  <button class="siimple-btn siimple-btn--orange" id="start" disabled>PSG-ON</button>
+
+  <div class="siimple-grid">
+    <div class="siimple-grid-row">
+      <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+        <label class="siimple-label">
+          A Tone Period
+        </label>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--8 siimple-grid-col--sm-8">
+        <input type="range" min="0" max="4095" value="0" id="A-Period" />
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--1 siimple-grid-col--sm-4">
+        <span id="A-Period-Text" class="siimple-tag siimple-tag--primary siimple-tag--rounded"></span>
+      </div>
+    </div>
+    <div class="siimple-grid-row">
+      <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+        <label class="siimple-label">
+          B Tone Period
+        </label>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--8 siimple-grid-col--sm-8">
+        <input type="range" min="0" max="4095" value="0" id="B-Period" />
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--1 siimple-grid-col--sm-4">
+        <span id="B-Period-Text" class="siimple-tag siimple-tag--primary siimple-tag--rounded"></span>
+      </div>
+    </div>
+    <div class="siimple-grid-row">
+      <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+        <label class="siimple-label">
+          C Tone Period
+        </label>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--8 siimple-grid-col--sm-8">
+        <input type="range" min="0" max="4095" value="0" id="C-Period" />
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--1 siimple-grid-col--sm-4">
+        <span id="C-Period-Text" class="siimple-tag siimple-tag--primary siimple-tag--rounded"></span>
+      </div>
+    </div>
+    <div class="siimple-grid-row">
+      <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+        <label class="siimple-label">
+          Noise Period
+        </label>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--8 siimple-grid-col--sm-8">
+        <input type="range" min="0" max="31" value="0" id="Noise-Period" />
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--1 siimple-grid-col--sm-4">
+        <span id="Noise-Period-Text" class="siimple-tag siimple-tag--primary siimple-tag--rounded"></span>
+      </div>
+    </div>
+    <div class="siimple-grid-row">
+      <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+        <label class="siimple-label">
+          Enable
+        </label>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--8 siimple-grid-col--sm-8">
+        <label class="siimple-label">Noise</label>
+        <label class="siimple-label">A</label>
+        <div class="siimple-checkbox">
+          <input type="checkbox" id="Noise-A" >
+          <label for="Noise-A"></label>
+        </div>
+        <label class="siimple-label">B</label>
+        <div class="siimple-checkbox">
+          <input type="checkbox" id="Noise-B" >
+          <label for="Noise-B"></label>
+        </div>
+        <label class="siimple-label">C</label>
+        <div class="siimple-checkbox">
+          <input type="checkbox" id="Noise-C" >
+          <label for="Noise-C"></label>
+        </div>
+        <label class="siimple-label">Tone</label>
+
+        <label class="siimple-label">A</label>
+
+        <div class="siimple-checkbox">
+          <input type="checkbox" id="Tone-A" >
+          <label for="Tone-A"></label>
+        </div>
+        <label class="siimple-label">B</label>
+        <div class="siimple-checkbox">
+          <input type="checkbox" id="Tone-B" >
+          <label for="Tone-B"></label>
+        </div>
+        <label class="siimple-label">C</label>
+        <div class="siimple-checkbox">
+          <input type="checkbox" id="Tone-C" >
+          <label for="Tone-C"></label>
+        </div>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--1 siimple-grid-col--sm-4">
+        <span id="Noise-Period-Text" class="siimple-tag siimple-tag--primary siimple-tag--rounded"></span>
+      </div>
+    </div>
+    <div class="siimple-grid-row">
+      <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+        <label class="siimple-label">
+          A Env/Volume
+        </label>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--2 siimple-grid-col--sm-12">
+        <label class="siimple-label">Env</label>
+        <div class="siimple-checkbox">
+          <input type="checkbox" id="Env-A" >
+          <label for="Env-A"></label>
+        </div>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-8">
+        <input type="range" min="0" max="15" value="0" id="Volume-A" />
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--1 siimple-grid-col--sm-4">
+        <span id="Volume-A-Text" class="siimple-tag siimple-tag--primary siimple-tag--rounded"></span>
+      </div>
+    </div>
+    <div class="siimple-grid-row">
+      <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+        <label class="siimple-label">
+          B Env/Volume
+        </label>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--2 siimple-grid-col--sm-12">
+        <label class="siimple-label">Env</label>
+        <div class="siimple-checkbox">
+          <input type="checkbox" id="Env-B" >
+          <label for="Env-B"></label>
+        </div>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-8">
+        <input type="range" min="0" max="15" value="0" id="Volume-B" />
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--1 siimple-grid-col--sm-4">
+        <span id="Volume-B-Text" class="siimple-tag siimple-tag--primary siimple-tag--rounded"></span>
+      </div>
+    </div>
+    <div class="siimple-grid-row">
+      <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+        <label class="siimple-label">
+          C Env/Volume
+        </label>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--2 siimple-grid-col--sm-12">
+        <label class="siimple-label">Env</label>
+        <div class="siimple-checkbox">
+          <input type="checkbox" id="Env-C" >
+          <label for="Env-C"></label>
+        </div>
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-8">
+        <input type="range" min="0" max="15" value="0" id="Volume-C" />
+      </div>
+      <div class="siimple-grid-col siimple-grid-col--1 siimple-grid-col--sm-4">
+        <span id="Volume-C-Text" class="siimple-tag siimple-tag--primary siimple-tag--rounded"></span>
+      </div>
+    </div>
+    <div class="siimple-grid-row">
+        <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+          <label class="siimple-label">
+            Env Period
+          </label>
+        </div>
+        <div class="siimple-grid-col siimple-grid-col--8 siimple-grid-col--sm-8">
+          <input type="range" min="0" max="65535" value="0" id="Env-Period" />
+        </div>
+        <div class="siimple-grid-col siimple-grid-col--1 siimple-grid-col--sm-4">
+          <span id="Env-Period-Text" class="siimple-tag siimple-tag--primary siimple-tag--rounded"></span>
+        </div>
+    </div>
+    <div class="siimple-grid-row">
+        <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
+          <label class="siimple-label">
+            Env Shape
+          </label>
+        </div>
+        <div class="siimple-grid-col siimple-grid-col--9 siimple-grid-col--sm-8">
+          <label class="siimple-label">Continue</label>
+          <div class="siimple-checkbox">
+            <input type="checkbox" id="Continue" >
+            <label for="Continue"></label>
+          </div>
+          <label class="siimple-label">Attack</label>
+          <div class="siimple-checkbox">
+              <input type="checkbox" id="Attack" >
+              <label for="Attack"></label>
+          </div>
+          <label class="siimple-label">Alternate</label>
+          <div class="siimple-checkbox">
+              <input type="checkbox" id="Alternate" >
+              <label for="Alternate"></label>
+          </div>
+          <label class="siimple-label">Hold</label>
+          <div class="siimple-checkbox">
+              <input type="checkbox" id="Hold" >
+              <label for="Hold"></label>
+          </div>
+        </div>
+    </div>  
+  </div>
+
+  </div>
+
+  <script type="module">
+    window.addEventListener('load', async () => {
+      let psgBin = await (await fetch('./em2149.wasm')).arrayBuffer();
+
+      {
+        let psg = (await WebAssembly.instantiateStreaming(fetch('./em2149.wasm'))).instance.exports;
+        psg.init(3580000, 44100);
+        psg.reset();
+        psg.setRate(44100);
+        psg.setQuality(1);
+        psg.setVolumeMode(1);
+        let a = psg.setMask(0xff);
+        console.log(a);
+        let b = psg.toggleMask(0);
+        console.log(a == b);
+        psg.reset();
+        console.log(psg.readIo());
+        //console.log(psg.writeIO);
+        //console.log(psg.writeIO);
+        for (let i = 0; i < 16; ++i) {
+          psg.writeReg(i, i);
+          console.log(i, psg.readReg(i), i == psg.readReg(i));
+        }
+        //debugger;
+        psg.writeReg(0, 0x5d);
+        psg.writeReg(1, 0xd);
+        psg.writeReg(2, 0x5d);
+        psg.writeReg(3, 0x1);
+        psg.writeReg(4, 0x5d);
+        psg.writeReg(5, 0x2);
+        psg.writeReg(6, 0x10);
+        psg.writeReg(12, 2);
+        psg.writeReg(13, 0b1001);
+        psg.writeReg(8, 0b10000);
+        psg.writeReg(7, 0b111110);
+        for (let i = 0; i < 256; ++i) {
+          console.log(psg.calc());
+        }
+      }
+
+      let psg;
+      let play = false;
+      let vol;
+      let enable = 0x3f;
+      let envShape = 0;
+      const startButton = document.getElementById('start');
+      let inputs = document.querySelectorAll('input');
+
+      for(const i of inputs){
+        i.disabled = 'disabled';
+      }
+
+      ['A','B','C'].forEach((ch,i)=>{
+        // Tone
+        const period = document.getElementById(ch + '-Period');
+        period.addEventListener('input',function(){
+          document.getElementById(ch + '-Period-Text').innerText = this.value;
+          psg.writeReg(i * 2,this.value & 0xff);
+          psg.writeReg(i * 2 + 1,(this.value & 0xf00) >> 8);
+        });
+
+        // Noise On/OFF
+        const noise = document.getElementById('Noise-' + ch);
+        noise.addEventListener('click',function(){
+          const m = (1 << (i+3)) ^ 0x3f; 
+          let v = ((this.checked?0:1) << (i+3));
+          enable = (enable & m) | v;
+          console.log(m,v,(enable).toString(2));
+          psg.writeReg(7,enable);
+        });
+
+        // Tone On/OFF
+        const tone = document.getElementById('Tone-' + ch);
+        tone.addEventListener('click',function(){
+          const m = (1 << i) ^ 0x3f; 
+          let v = ((this.checked?0:1) << i);
+          enable = (enable & m) | v;
+          console.log(m,v,(enable).toString(2));
+          psg.writeReg(7,enable);
+        });
+
+
+        // Volume 
+        const volume = document.getElementById('Volume-' + ch);
+        volume.addEventListener('input',function(){
+          document.getElementById('Volume-' + ch + '-Text').innerText = this.value;
+          let v = document.getElementById('Env-' + ch).checked?16:0 | this.value; 
+          psg.writeReg(8 + i,v);
+        });
+
+        // Envelope On/Off
+        const env = document.getElementById('Env-' + ch);
+        env.addEventListener('click',function(){
+          let v = this.checked?16:0;
+          v = v | volume.value;
+          psg.writeReg(8 + i,v);
+        });
+
+      });
+
+      // Noise Period
+
+      const noise = document.getElementById('Noise-Period');
+      noise.addEventListener('input',function(){
+        document.getElementById('Noise-Period-Text').innerText = this.value;
+        psg.writeReg(6,this.value);
+      });
+
+      // Enevlope Period
+
+      const envPeriod = document.getElementById('Env-Period');
+      envPeriod.addEventListener('input',function(){
+        document.getElementById('Env-Period-Text').innerText = this.value;
+        psg.writeReg(11,this.value & 0xff);
+        psg.writeReg(12,(this.value & 0xff00) >> 8 );
+      });
+
+      // Envelope Shape
+
+      ['Continue','Attack','Alternate','Hold'].reverse().forEach((p,i)=>{
+        const param = document.getElementById(p);
+        param.addEventListener('click',function(){
+          let m = (1 << i) ^ 0xf;
+          let v = (this.checked?1:0) << i;
+          envShape = (envShape & m) | v;
+          psg.writeReg(13,envShape);
+        });
+      });
+
+      startButton.addEventListener('click', async () => {
+        if (!psg) {
+          var audioctx = new AudioContext();
+          await audioctx.audioWorklet.addModule("./psg.js");
+          psg = new AudioWorkletNode(audioctx, "PSG", {
+            outputChannelCount: [2],
+            processorOptions: {
+              wasmBinary: psgBin,
+              clock: 17900000
+            }
+          });
+
+          psg.writeReg = (function (reg, value) {
+            this.port.postMessage(
+              {
+                message: 'writeReg', reg: reg, value: value
+              }
+            )
+          }).bind(psg);
+
+          psg.port.onmessage = function (e) {
+            console.log(e.data);
+          };
+
+          // psg.writeReg(8, 31);
+          // psg.writeReg(0, 0x32);
+          // psg.writeReg(1, 0x01);
+          // psg.writeReg(2, 0x5d);
+          // psg.writeReg(3, 0x02);
+          // psg.writeReg(4, 0x4d);
+          // psg.writeReg(5, 0x03);
+          //psg.writeReg(7, enable);
+
+          vol = new GainNode(audioctx, { gain: 1.0 });
+          psg.connect(vol).connect(audioctx.destination);
+          console.log(audioctx.destination.channelCount);
+
+        }
+        if (!play) {
+          for(const i of inputs){
+            i.disabled = '';
+          }
+          play = true;
+          // psg.writeReg(8, 0b10000);
+          // psg.writeReg(9, 0b10000);
+          // psg.writeReg(10, 0b10000);
+          // psg.writeReg(12, 0xe);
+          // psg.writeReg(13, 0b1000);
+          psg.writeReg(7, enable);
+          // psg.writeReg(6, 0b10000);
+          vol.gain.value = 1.0;
+          startButton.innerText = 'PSG-OFF';
+        } else {
+          play = false;
+          psg.writeReg(7, 0x3f);
+          vol.gain.value = 0.0;
+          startButton.innerText = 'PSG-ON';
+        }
+      });
+
+
+      startButton.removeAttribute('disabled');
+    });
+  </script>
+</body>
+
+</html>

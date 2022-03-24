@@ -1,0 +1,39 @@
+{
+  "name": "mwasm",
+  "version": "0.0.2",
+  "description": "wasmテキストフォーマットにマクロ機能を追加するプリプロセッサ",
+  "main": "index.js",
+  "bin":{"mwasm":"./bin/mwasm.js"},
+  "type": "module",
+  "scripts": {
+    "build": "make ./index.js",
+    "test": "make test",
+    "test-all": "make test-all",
+    "trace": "make clean && make trace"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfpgmr/mwasm.git"
+  },
+  "keywords": [
+    "wasm"
+  ],
+  "author": "S.F.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfpgmr/mwasm/issues"
+  },
+  "homepage": "https://github.com/sfpgmr/mwasm#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "audit": "^0.0.6",
+    "ava": "^4.1.0",
+    "pegjs": "^0.10.0",
+    "rollup": "^2.70.1",
+    "binaryen": "^106.0.0",
+    "wabt": "^1.0.28"
+  },
+  "dependencies": {
+  }
+}

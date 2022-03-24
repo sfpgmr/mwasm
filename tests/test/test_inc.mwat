@@ -1,0 +1,6 @@
+;; code
+(export "test2" (func $test2))
+(func $test2 (result i32)
+  i32.const 2
+)
+{@include './test_inc2.mwat'}

@@ -1,0 +1,523 @@
+[
+  {
+    "type": "Comment",
+    "value": ";; code\n",
+    "start": {
+      "offset": 0,
+      "line": 1,
+      "column": 1
+    },
+    "end": {
+      "offset": 8,
+      "line": 2,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 8,
+      "line": 2,
+      "column": 1
+    },
+    "end": {
+      "offset": 9,
+      "line": 2,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "export",
+    "start": {
+      "offset": 9,
+      "line": 2,
+      "column": 2
+    },
+    "end": {
+      "offset": 15,
+      "line": 2,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 15,
+      "line": 2,
+      "column": 8
+    },
+    "end": {
+      "offset": 16,
+      "line": 2,
+      "column": 9
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "\"test3\"",
+    "start": {
+      "offset": 16,
+      "line": 2,
+      "column": 9
+    },
+    "end": {
+      "offset": 23,
+      "line": 2,
+      "column": 16
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 23,
+      "line": 2,
+      "column": 16
+    },
+    "end": {
+      "offset": 24,
+      "line": 2,
+      "column": 17
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 24,
+      "line": 2,
+      "column": 17
+    },
+    "end": {
+      "offset": 25,
+      "line": 2,
+      "column": 18
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 25,
+      "line": 2,
+      "column": 18
+    },
+    "end": {
+      "offset": 29,
+      "line": 2,
+      "column": 22
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 29,
+      "line": 2,
+      "column": 22
+    },
+    "end": {
+      "offset": 30,
+      "line": 2,
+      "column": 23
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$test2",
+    "start": {
+      "offset": 30,
+      "line": 2,
+      "column": 23
+    },
+    "end": {
+      "offset": 36,
+      "line": 2,
+      "column": 29
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 36,
+      "line": 2,
+      "column": 29
+    },
+    "end": {
+      "offset": 37,
+      "line": 2,
+      "column": 30
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 37,
+      "line": 2,
+      "column": 30
+    },
+    "end": {
+      "offset": 38,
+      "line": 2,
+      "column": 31
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 38,
+      "line": 2,
+      "column": 31
+    },
+    "end": {
+      "offset": 39,
+      "line": 3,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 39,
+      "line": 3,
+      "column": 1
+    },
+    "end": {
+      "offset": 40,
+      "line": 3,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 40,
+      "line": 3,
+      "column": 2
+    },
+    "end": {
+      "offset": 44,
+      "line": 3,
+      "column": 6
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 44,
+      "line": 3,
+      "column": 6
+    },
+    "end": {
+      "offset": 45,
+      "line": 3,
+      "column": 7
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$test3",
+    "start": {
+      "offset": 45,
+      "line": 3,
+      "column": 7
+    },
+    "end": {
+      "offset": 51,
+      "line": 3,
+      "column": 13
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 51,
+      "line": 3,
+      "column": 13
+    },
+    "end": {
+      "offset": 52,
+      "line": 3,
+      "column": 14
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 52,
+      "line": 3,
+      "column": 14
+    },
+    "end": {
+      "offset": 53,
+      "line": 3,
+      "column": 15
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "result",
+    "start": {
+      "offset": 53,
+      "line": 3,
+      "column": 15
+    },
+    "end": {
+      "offset": 59,
+      "line": 3,
+      "column": 21
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 59,
+      "line": 3,
+      "column": 21
+    },
+    "end": {
+      "offset": 60,
+      "line": 3,
+      "column": 22
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32",
+    "start": {
+      "offset": 60,
+      "line": 3,
+      "column": 22
+    },
+    "end": {
+      "offset": 63,
+      "line": 3,
+      "column": 25
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 63,
+      "line": 3,
+      "column": 25
+    },
+    "end": {
+      "offset": 64,
+      "line": 3,
+      "column": 26
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 64,
+      "line": 3,
+      "column": 26
+    },
+    "end": {
+      "offset": 67,
+      "line": 4,
+      "column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.const",
+    "start": {
+      "offset": 67,
+      "line": 4,
+      "column": 3
+    },
+    "end": {
+      "offset": 76,
+      "line": 4,
+      "column": 12
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 76,
+      "line": 4,
+      "column": 12
+    },
+    "end": {
+      "offset": 77,
+      "line": 4,
+      "column": 13
+    }
+  },
+  {
+    "type": "ValueExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "X",
+        "prefix": "%",
+        "start": {
+          "offset": 77,
+          "line": 4,
+          "column": 13
+        },
+        "end": {
+          "offset": 79,
+          "line": 4,
+          "column": 15
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 77,
+      "line": 4,
+      "column": 13
+    },
+    "end": {
+      "offset": 79,
+      "line": 4,
+      "column": 15
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 80,
+      "line": 4,
+      "column": 16
+    },
+    "end": {
+      "offset": 83,
+      "line": 5,
+      "column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.const",
+    "start": {
+      "offset": 83,
+      "line": 5,
+      "column": 3
+    },
+    "end": {
+      "offset": 92,
+      "line": 5,
+      "column": 12
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 92,
+      "line": 5,
+      "column": 12
+    },
+    "end": {
+      "offset": 93,
+      "line": 5,
+      "column": 13
+    }
+  },
+  {
+    "type": "CodeExpression",
+    "code": "$.X + $.Y; ",
+    "start": {
+      "offset": 93,
+      "line": 5,
+      "column": 13
+    },
+    "end": {
+      "offset": 106,
+      "line": 5,
+      "column": 26
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 106,
+      "line": 5,
+      "column": 26
+    },
+    "end": {
+      "offset": 109,
+      "line": 6,
+      "column": 3
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.add",
+    "start": {
+      "offset": 109,
+      "line": 6,
+      "column": 3
+    },
+    "end": {
+      "offset": 116,
+      "line": 6,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 116,
+      "line": 6,
+      "column": 10
+    },
+    "end": {
+      "offset": 117,
+      "line": 7,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 117,
+      "line": 7,
+      "column": 1
+    },
+    "end": {
+      "offset": 118,
+      "line": 7,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 118,
+      "line": 7,
+      "column": 2
+    },
+    "end": {
+      "offset": 119,
+      "line": 8,
+      "column": 1
+    }
+  }
+]

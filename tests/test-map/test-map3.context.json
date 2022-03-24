@@ -1,0 +1,20 @@
+{
+  "INDEX": 5,
+  "_attributes_": {
+    "type": "MemoryMap",
+    "size": 40
+  },
+  "label": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "i32",
+      "size": 4,
+      "integer": true,
+      "unsigned": false,
+      "offset": 0,
+      "initData": null,
+      "num": 10,
+      "log2": 2
+    }
+  }
+}

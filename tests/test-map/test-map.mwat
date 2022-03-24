@@ -1,0 +1,21 @@
+{@
+$.INDEX = 10;
+}
+
+(module
+(memory 0)
+{@map offset {return 0};
+  i32 label[INDEX];
+  i64 label2,label2_1,label2_2;
+  i32 label3;
+  f64 label4;
+  f32 label5[INDEX];
+}
+(export "test" (func $test))
+(func $test (result i32)
+  (i32.add
+    (&label[INDEX] + INDEX;)
+    (i32.const %INDEX + 10;)
+  )
+)
+)

@@ -1,0 +1,19 @@
+{
+  "_attributes_": {
+    "type": "MemoryMap",
+    "size": 128
+  },
+  "sin_table": {
+    "_attributes_": {
+      "type": "PrimitiveType",
+      "varType": "f32",
+      "size": 4,
+      "integer": false,
+      "unsigned": false,
+      "offset": 0,
+      "initData": null,
+      "num": 32,
+      "log2": 2
+    }
+  }
+}

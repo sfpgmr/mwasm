@@ -1,0 +1,1170 @@
+[
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 0,
+      "line": 1,
+      "column": 1
+    },
+    "end": {
+      "offset": 1,
+      "line": 1,
+      "column": 2
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "module",
+    "start": {
+      "offset": 1,
+      "line": 1,
+      "column": 2
+    },
+    "end": {
+      "offset": 7,
+      "line": 1,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 7,
+      "line": 1,
+      "column": 8
+    },
+    "end": {
+      "offset": 10,
+      "line": 2,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 10,
+      "line": 2,
+      "column": 3
+    },
+    "end": {
+      "offset": 11,
+      "line": 2,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "memory",
+    "start": {
+      "offset": 11,
+      "line": 2,
+      "column": 4
+    },
+    "end": {
+      "offset": 17,
+      "line": 2,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 17,
+      "line": 2,
+      "column": 10
+    },
+    "end": {
+      "offset": 18,
+      "line": 2,
+      "column": 11
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "0",
+    "start": {
+      "offset": 18,
+      "line": 2,
+      "column": 11
+    },
+    "end": {
+      "offset": 19,
+      "line": 2,
+      "column": 12
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 19,
+      "line": 2,
+      "column": 12
+    },
+    "end": {
+      "offset": 20,
+      "line": 2,
+      "column": 13
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 20,
+      "line": 2,
+      "column": 13
+    },
+    "end": {
+      "offset": 23,
+      "line": 3,
+      "column": 3
+    }
+  },
+  {
+    "type": "Comment",
+    "value": ";; 構造体の定義\n",
+    "start": {
+      "offset": 23,
+      "line": 3,
+      "column": 3
+    },
+    "end": {
+      "offset": 33,
+      "line": 4,
+      "column": 1
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "  ",
+    "start": {
+      "offset": 33,
+      "line": 4,
+      "column": 1
+    },
+    "end": {
+      "offset": 35,
+      "line": 4,
+      "column": 3
+    }
+  },
+  {
+    "type": "StructDefinition",
+    "id": "A",
+    "defines": [
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "a",
+          "numExpression": null,
+          "start": {
+            "offset": 55,
+            "line": 5,
+            "column": 9
+          },
+          "end": {
+            "offset": 56,
+            "line": 5,
+            "column": 10
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "start": {
+            "offset": 51,
+            "line": 5,
+            "column": 5
+          },
+          "end": {
+            "offset": 54,
+            "line": 5,
+            "column": 8
+          }
+        },
+        "initData": null,
+        "start": {
+          "offset": 51,
+          "line": 5,
+          "column": 5
+        },
+        "end": {
+          "offset": 57,
+          "line": 5,
+          "column": 11
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "b",
+          "numExpression": null,
+          "start": {
+            "offset": 66,
+            "line": 6,
+            "column": 9
+          },
+          "end": {
+            "offset": 67,
+            "line": 6,
+            "column": 10
+          }
+        },
+        "varType": {
+          "type": "PrimitiveType",
+          "varType": "i32",
+          "size": 4,
+          "integer": true,
+          "unsigned": false,
+          "start": {
+            "offset": 62,
+            "line": 6,
+            "column": 5
+          },
+          "end": {
+            "offset": 65,
+            "line": 6,
+            "column": 8
+          }
+        },
+        "initData": null,
+        "start": {
+          "offset": 62,
+          "line": 6,
+          "column": 5
+        },
+        "end": {
+          "offset": 68,
+          "line": 6,
+          "column": 11
+        }
+      }
+    ],
+    "start": {
+      "offset": 35,
+      "line": 4,
+      "column": 3
+    },
+    "end": {
+      "offset": 72,
+      "line": 7,
+      "column": 4
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 72,
+      "line": 7,
+      "column": 4
+    },
+    "end": {
+      "offset": 75,
+      "line": 8,
+      "column": 3
+    }
+  },
+  {
+    "type": "Comment",
+    "value": ";; メモリーマップ\n",
+    "start": {
+      "offset": 75,
+      "line": 8,
+      "column": 3
+    },
+    "end": {
+      "offset": 86,
+      "line": 9,
+      "column": 1
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "  ",
+    "start": {
+      "offset": 86,
+      "line": 9,
+      "column": 1
+    },
+    "end": {
+      "offset": 88,
+      "line": 9,
+      "column": 3
+    }
+  },
+  {
+    "type": "MemoryMap",
+    "defines": [
+      {
+        "type": "Offset",
+        "offset": {
+          "type": "JSNumber",
+          "value": "0",
+          "start": {
+            "offset": 101,
+            "line": 9,
+            "column": 16
+          },
+          "end": {
+            "offset": 102,
+            "line": 9,
+            "column": 17
+          }
+        },
+        "start": {
+          "offset": 94,
+          "line": 9,
+          "column": 9
+        },
+        "end": {
+          "offset": 108,
+          "line": 10,
+          "column": 5
+        }
+      },
+      {
+        "type": "MemoryLabel",
+        "id": {
+          "type": "MemoryLabelId",
+          "id": "a",
+          "numExpression": null,
+          "start": {
+            "offset": 110,
+            "line": 10,
+            "column": 7
+          },
+          "end": {
+            "offset": 111,
+            "line": 10,
+            "column": 8
+          }
+        },
+        "varType": {
+          "type": "Struct",
+          "varType": "Struct",
+          "id": "A",
+          "start": {
+            "offset": 108,
+            "line": 10,
+            "column": 5
+          },
+          "end": {
+            "offset": 109,
+            "line": 10,
+            "column": 6
+          }
+        },
+        "initData": null,
+        "start": {
+          "offset": 108,
+          "line": 10,
+          "column": 5
+        },
+        "end": {
+          "offset": 112,
+          "line": 10,
+          "column": 9
+        }
+      }
+    ],
+    "start": {
+      "offset": 88,
+      "line": 9,
+      "column": 3
+    },
+    "end": {
+      "offset": 116,
+      "line": 11,
+      "column": 4
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n\n  ",
+    "start": {
+      "offset": 116,
+      "line": 11,
+      "column": 4
+    },
+    "end": {
+      "offset": 120,
+      "line": 13,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 120,
+      "line": 13,
+      "column": 3
+    },
+    "end": {
+      "offset": 121,
+      "line": 13,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "export",
+    "start": {
+      "offset": 121,
+      "line": 13,
+      "column": 4
+    },
+    "end": {
+      "offset": 127,
+      "line": 13,
+      "column": 10
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 127,
+      "line": 13,
+      "column": 10
+    },
+    "end": {
+      "offset": 128,
+      "line": 13,
+      "column": 11
+    }
+  },
+  {
+    "type": "StringLiteral",
+    "value": "\"test\"",
+    "start": {
+      "offset": 128,
+      "line": 13,
+      "column": 11
+    },
+    "end": {
+      "offset": 134,
+      "line": 13,
+      "column": 17
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 134,
+      "line": 13,
+      "column": 17
+    },
+    "end": {
+      "offset": 135,
+      "line": 13,
+      "column": 18
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 135,
+      "line": 13,
+      "column": 18
+    },
+    "end": {
+      "offset": 136,
+      "line": 13,
+      "column": 19
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 136,
+      "line": 13,
+      "column": 19
+    },
+    "end": {
+      "offset": 140,
+      "line": 13,
+      "column": 23
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 140,
+      "line": 13,
+      "column": 23
+    },
+    "end": {
+      "offset": 141,
+      "line": 13,
+      "column": 24
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$test",
+    "start": {
+      "offset": 141,
+      "line": 13,
+      "column": 24
+    },
+    "end": {
+      "offset": 146,
+      "line": 13,
+      "column": 29
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 146,
+      "line": 13,
+      "column": 29
+    },
+    "end": {
+      "offset": 147,
+      "line": 13,
+      "column": 30
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 147,
+      "line": 13,
+      "column": 30
+    },
+    "end": {
+      "offset": 148,
+      "line": 13,
+      "column": 31
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 148,
+      "line": 13,
+      "column": 31
+    },
+    "end": {
+      "offset": 151,
+      "line": 14,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 151,
+      "line": 14,
+      "column": 3
+    },
+    "end": {
+      "offset": 152,
+      "line": 14,
+      "column": 4
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "func",
+    "start": {
+      "offset": 152,
+      "line": 14,
+      "column": 4
+    },
+    "end": {
+      "offset": 156,
+      "line": 14,
+      "column": 8
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 156,
+      "line": 14,
+      "column": 8
+    },
+    "end": {
+      "offset": 157,
+      "line": 14,
+      "column": 9
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "$test",
+    "start": {
+      "offset": 157,
+      "line": 14,
+      "column": 9
+    },
+    "end": {
+      "offset": 162,
+      "line": 14,
+      "column": 14
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 162,
+      "line": 14,
+      "column": 14
+    },
+    "end": {
+      "offset": 163,
+      "line": 14,
+      "column": 15
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 163,
+      "line": 14,
+      "column": 15
+    },
+    "end": {
+      "offset": 164,
+      "line": 14,
+      "column": 16
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "result",
+    "start": {
+      "offset": 164,
+      "line": 14,
+      "column": 16
+    },
+    "end": {
+      "offset": 170,
+      "line": 14,
+      "column": 22
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 170,
+      "line": 14,
+      "column": 22
+    },
+    "end": {
+      "offset": 171,
+      "line": 14,
+      "column": 23
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32",
+    "start": {
+      "offset": 171,
+      "line": 14,
+      "column": 23
+    },
+    "end": {
+      "offset": 174,
+      "line": 14,
+      "column": 26
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 174,
+      "line": 14,
+      "column": 26
+    },
+    "end": {
+      "offset": 175,
+      "line": 14,
+      "column": 27
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n    ",
+    "start": {
+      "offset": 175,
+      "line": 14,
+      "column": 27
+    },
+    "end": {
+      "offset": 180,
+      "line": 15,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 180,
+      "line": 15,
+      "column": 5
+    },
+    "end": {
+      "offset": 181,
+      "line": 15,
+      "column": 6
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.add",
+    "start": {
+      "offset": 181,
+      "line": 15,
+      "column": 6
+    },
+    "end": {
+      "offset": 188,
+      "line": 15,
+      "column": 13
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " \n      ",
+    "start": {
+      "offset": 188,
+      "line": 15,
+      "column": 13
+    },
+    "end": {
+      "offset": 196,
+      "line": 16,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 196,
+      "line": 16,
+      "column": 7
+    },
+    "end": {
+      "offset": 197,
+      "line": 16,
+      "column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 197,
+      "line": 16,
+      "column": 8
+    },
+    "end": {
+      "offset": 205,
+      "line": 16,
+      "column": 16
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 205,
+      "line": 16,
+      "column": 16
+    },
+    "end": {
+      "offset": 206,
+      "line": 16,
+      "column": 17
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 206,
+      "line": 16,
+      "column": 17
+    },
+    "end": {
+      "offset": 207,
+      "line": 16,
+      "column": 18
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "a",
+        "prefix": "&",
+        "start": {
+          "offset": 207,
+          "line": 16,
+          "column": 18
+        },
+        "end": {
+          "offset": 209,
+          "line": 16,
+          "column": 20
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "a",
+          "prefix": null,
+          "start": {
+            "offset": 210,
+            "line": 16,
+            "column": 21
+          },
+          "end": {
+            "offset": 211,
+            "line": 16,
+            "column": 22
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 207,
+      "line": 16,
+      "column": 18
+    },
+    "end": {
+      "offset": 211,
+      "line": 16,
+      "column": 22
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 212,
+      "line": 16,
+      "column": 23
+    },
+    "end": {
+      "offset": 213,
+      "line": 16,
+      "column": 24
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 213,
+      "line": 16,
+      "column": 24
+    },
+    "end": {
+      "offset": 214,
+      "line": 16,
+      "column": 25
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 214,
+      "line": 16,
+      "column": 25
+    },
+    "end": {
+      "offset": 215,
+      "line": 16,
+      "column": 26
+    }
+  },
+  {
+    "type": "Comment",
+    "value": ";;メンバはドット演算子で指定\n",
+    "start": {
+      "offset": 215,
+      "line": 16,
+      "column": 26
+    },
+    "end": {
+      "offset": 231,
+      "line": 17,
+      "column": 1
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "      ",
+    "start": {
+      "offset": 231,
+      "line": 17,
+      "column": 1
+    },
+    "end": {
+      "offset": 237,
+      "line": 17,
+      "column": 7
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 237,
+      "line": 17,
+      "column": 7
+    },
+    "end": {
+      "offset": 238,
+      "line": 17,
+      "column": 8
+    }
+  },
+  {
+    "type": "Identifier",
+    "name": "i32.load",
+    "start": {
+      "offset": 238,
+      "line": 17,
+      "column": 8
+    },
+    "end": {
+      "offset": 246,
+      "line": 17,
+      "column": 16
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": " ",
+    "start": {
+      "offset": 246,
+      "line": 17,
+      "column": 16
+    },
+    "end": {
+      "offset": 247,
+      "line": 17,
+      "column": 17
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": "(",
+    "start": {
+      "offset": 247,
+      "line": 17,
+      "column": 17
+    },
+    "end": {
+      "offset": 248,
+      "line": 17,
+      "column": 18
+    }
+  },
+  {
+    "type": "PropertyExpression",
+    "expression": [
+      {
+        "type": "JSPropertyName",
+        "name": "a",
+        "prefix": "&",
+        "start": {
+          "offset": 248,
+          "line": 17,
+          "column": 18
+        },
+        "end": {
+          "offset": 250,
+          "line": 17,
+          "column": 20
+        },
+        "child": {
+          "type": "JSPropertyName",
+          "name": "b",
+          "prefix": null,
+          "start": {
+            "offset": 251,
+            "line": 17,
+            "column": 21
+          },
+          "end": {
+            "offset": 252,
+            "line": 17,
+            "column": 22
+          }
+        },
+        "top": true
+      }
+    ],
+    "start": {
+      "offset": 248,
+      "line": 17,
+      "column": 18
+    },
+    "end": {
+      "offset": 252,
+      "line": 17,
+      "column": 22
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 253,
+      "line": 17,
+      "column": 23
+    },
+    "end": {
+      "offset": 254,
+      "line": 17,
+      "column": 24
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 254,
+      "line": 17,
+      "column": 24
+    },
+    "end": {
+      "offset": 255,
+      "line": 17,
+      "column": 25
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n    ",
+    "start": {
+      "offset": 255,
+      "line": 17,
+      "column": 25
+    },
+    "end": {
+      "offset": 260,
+      "line": 18,
+      "column": 5
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 260,
+      "line": 18,
+      "column": 5
+    },
+    "end": {
+      "offset": 261,
+      "line": 18,
+      "column": 6
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n  ",
+    "start": {
+      "offset": 261,
+      "line": 18,
+      "column": 6
+    },
+    "end": {
+      "offset": 264,
+      "line": 19,
+      "column": 3
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 264,
+      "line": 19,
+      "column": 3
+    },
+    "end": {
+      "offset": 265,
+      "line": 19,
+      "column": 4
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 265,
+      "line": 19,
+      "column": 4
+    },
+    "end": {
+      "offset": 266,
+      "line": 20,
+      "column": 1
+    }
+  },
+  {
+    "type": "Parenthesis",
+    "kind": ")",
+    "start": {
+      "offset": 266,
+      "line": 20,
+      "column": 1
+    },
+    "end": {
+      "offset": 267,
+      "line": 20,
+      "column": 2
+    }
+  },
+  {
+    "type": "WhiteSpace",
+    "value": "\n",
+    "start": {
+      "offset": 267,
+      "line": 20,
+      "column": 2
+    },
+    "end": {
+      "offset": 268,
+      "line": 21,
+      "column": 1
+    }
+  }
+]

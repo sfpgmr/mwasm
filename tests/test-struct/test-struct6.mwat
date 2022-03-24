@@ -1,0 +1,20 @@
+(module
+  (memory 0)
+  ;; 構造体の定義
+  {@struct A 
+    i32 a;
+    i32 b;
+  }
+  ;; メモリーマップ
+  {@map offset 0;
+    A a;
+  }
+
+  (export "test" (func $test))
+  (func $test (result i32)
+    (i32.add 
+      (i32.load (&a.a;)) ;;メンバはドット演算子で指定
+      (i32.load (&a.b;))
+    )
+  )
+)
